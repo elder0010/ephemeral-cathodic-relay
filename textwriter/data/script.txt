@@ -1,0 +1,55 @@
+//page 00
+#SETPOS=0,0#
+Hey
+It's me, 
+I really really hope you still got that one I left you, down there.
+Well, if you’re reading this it means you still have that 8296.
+When I said it was built like a tank I was dead serious.
+How ironic: history's first personal computer happens to be the last one working.
+I have two news for you
+First one is bad.#DELAY=20# Very bad.#DELAY=20#
+They are on us. 
+They managed to read every data, every image to predict our intentions 
+They still don’t have pictures of me, but they know that I exist. 
+The last photo you got from me was the last one you’ll ever have until we manage to meet again in person.
+Second one: 
+I like to think out of the box and I found a way to send you pictures of me anyway. 
+Images that those machines can’t see nor understand.
+It’s a little invention of mine.
+I like to call them
+
+//page 01
+#NEWPAGE#
+EPHEMERAL #DELAY=20# CATHODIC #DELAY=20# RELAY #DELAY=40#
+t’s ECR for short. 🙂
+This bulky, gorgeous display of yours is a very powerful device and hides an incredible feature.
+Even if a 8296 PET has no graphic modes and  only display characters with a 1 bit colour depth
+I found a way to take advantage of the cathodic falloff of its CRT display
+the 8296 tube is painted with unusually slow phosphors 
+look how slow it is to make the cursor really disappear #DELAY=80#
+Can you count how many shades of green you see before it disappears? #DELAY=80#
+You can’t!
+They are endless, it’s a true, non linear analog fade out 
+That’s where my idea came in.
+I measured time and light of that fade out
+and I made a conversion routine that converts time in a grayscale value
+It’s called the Cathodic Exposure Chart, CEC.
+(Love high tech acronyms)
+#IMAGE=0,500#
+
+//page 02
+Let’s say that I want to represent 4 specific shades of gray
+I just have to delay the character tracing by a specific amount of time to set the correct exposure
+0#DELAY=40#1#DELAY=40#2#DELAY=40#3#DELAY=40#
+Now I can exploit the phosphor falloff to act as an analog grayscale image generator
+look at this example, it will be much easier to understand:
+#IMAGE=1,500#
+See? 
+It’s just done by sweeping a single line from the top to the bottom of the screen.
+there are way more gray levels than we could achieve back in 2024 with those shitty RTX cards
+This one is a horizontal one, look at the 80 columns in all of their glory!
+#IMAGE=2,500#
+You can achieve any kind of shading, just by delaying the brighter areas of the image
+#IMAGE=3,500#
+The only limit is that images are, as the name implies, ephemeral. 
+I thought that could be a problem with more complex images so I started to test this on some simple renders

@@ -1,0 +1,23 @@
+.label irqack=$585
+.label screen_addr_lo=$2000
+.label screen_addr_hi=$22a2
+.label dst_addr=$48a
+.label msk_amount=$52f
+.label mask_tb_hi=$503
+.label init=$410
+.label mask_tb_lo=$4fd
+.label px_number=$2581
+.label wait_for_draw=$41e
+.label clear_screen=$448
+.label waitloop=$429
+.label mask_dst_addr=$50b
+.label init_irq=$537
+.label pixels_colour_amt=$2563
+.label pixels_delay=$2545
+.label mask_colours=$4b4
+.label timer_irq=$55f
+.label tb_hi=$482
+.label tb_lo=$47c
+.label msk_ct=$52d
+.label draw_img=$468 {
+}

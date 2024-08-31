@@ -17,9 +17,9 @@ I like to think out of the box and I found a way to send you pictures of me anyw
 Images that those machines can't see nor understand.
 It's a little invention of mine.
 I like to call them
+#PAGE#
 
 //page 01
-#NEWPAGE#
 EPHEMERAL #DELAY=20# CATHODIC #DELAY=20# RELAY #DELAY=40#
 t's ECR for short. 🙂
 This bulky, gorgeous display of yours is a very powerful device and hides an incredible feature.
@@ -36,6 +36,7 @@ and I made a conversion routine that converts time in a grayscale value
 It's called the Cathodic Exposure Chart, CEC.
 (Love high tech acronyms)
 #IMAGE=0,500#
+#PAGE#
 
 //page 02
 Let's say that I want to represent 4 specific shades of gray
@@ -53,3 +54,4 @@ You can achieve any kind of shading, just by delaying the brighter areas of the 
 #IMAGE=3,500#
 The only limit is that images are, as the name implies, ephemeral.
 I thought that could be a problem with more complex images so I started to test this on some simple renders
+#PAGE#

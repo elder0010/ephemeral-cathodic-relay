@@ -15,3 +15,8 @@
     .eval page_nr = page_nr+1
 }
 
+.function NewLine(){
+    print("Going to next line");
+    .eval row = row+1
+    .eval col = 0
+}

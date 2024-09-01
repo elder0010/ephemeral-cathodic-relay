@@ -1,16 +1,32 @@
-.label irqack=$464
-.label screen_rows_lo=$e52
-.label newline=$4be
-.label screen_rows_hi=$e6b
-.label text_addr=$49c
-.label move_text_pt=$4d0
-.label timer_irq=$457
-.label commands_indexes=$2012
-.label reset_cursor=$48d
-.label commands_pages=$2000
-.label script=$4df
-.label clear_screen=$46d
+.label irqack=$46b
+.label command_address=$4e6
+.label screen_rows_lo=$f03
+.label newline=$4c5
+.label screen_rows_hi=$f1c
+.label delay_tk=$551
+.label event_fn=$468
+.label reset_cursor=$494
+.label event_setpos=$580
+.label script=$598
+.label clear_screen=$474
+.label point_next_event=$512 {
+}
+.label init_irq=$433
+.label handle_events=$4e6
+.label write_next_char=$4a3
+.label event_page=$56c
+.label event_image=$597
+.label e0_init=$521
+.label write_fn=$465
+.label text_addr=$4a3
+.label move_text_pt=$4d7 {
+}
+.label event=$4ed
+.label timer_irq=$45b
+.label commands_indexes=$2037
+.label noevent=$520
+.label commands_pages=$2025
+.label delay_val=$553
+.label event_delay=$521
 .label commands_sequence=$2000 {
 }
-.label init_irq=$42f
-.label write_next_char=$49c

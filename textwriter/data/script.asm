@@ -14,7 +14,7 @@
 .text ("When I said it was built like a tank I was dead serious.")
 .byte 0
 
-.text ("How ironic: history's first personal computer happens to be the last one working.")
+.text ("How ironic: history's first personal computer happens to be the last one.")
 .byte 0
 
 .text ("I have two news for you")

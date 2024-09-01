@@ -47,7 +47,7 @@ text_addr:
         jsr clear_screen
         jmp move_text_pt
 newline:
-    .break 
+    //.break 
         inc row_pt
         ldx row_pt
         lda screen_rows_lo,x 
@@ -59,11 +59,42 @@ newline:
 !:
 
 move_text_pt:
-        clc 
-        lda text_addr+1
-        adc #1
-        sta text_addr+1
-        bcc !+
-        inc text_addr+2
-!:
+        :inc_addr(text_addr, 1)
         rts 
+
+handle_events:
+
+command_address:
+        lda commands_indexes
+        cmp col_pt
+        bne noevent 
+event:
+
+        //handle event
+        cmp #EVENT_DELAY
+        bne !+
+        jsr event_delay
+        jmp point_next_event
+!:
+        cmp #EVENT_PAGE
+        bne !+
+        jsr event_page
+        jmp point_next_event
+!:
+        cmp #EVENT_SETPOS
+        bne !+
+        jsr event_setpos
+        jmp point_next_event
+!:
+        cmp #EVENT_IMAGE
+        bne !+
+        jsr event_image
+  //      jmp point_next_event
+!:
+point_next_event:
+        :inc_addr(command_address, 1)
+noevent:
+        rts
+
+
+

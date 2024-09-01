@@ -17,8 +17,11 @@ Code: Elder0010
         sei
         jsr clear_screen
 
+        lda #0
+        sta page_index_pt
+        
         :set_addr(script, text_addr)
-        :set_addr_zp(screen, text_row_zp_addr)
+        :set_addr_zp(commands_sequence, event_address_zp)
 
         jsr reset_cursor
 
@@ -31,6 +34,9 @@ Code: Elder0010
 
 .pc = * "Functions"
 .import source "functions.asm"
+
+.pc = * "Event functions"
+.import source "events.asm"
 
 .pc = * "Text"
 script:

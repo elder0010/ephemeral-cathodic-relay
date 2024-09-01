@@ -1,7 +1,6 @@
 .var screen_rows_list = List()
 .for (var y=0;y<ROWS;y++){
     .eval screen_rows_list.add(screen+[y*COLS])
-    .print(toHexString(screen+[y*COLS]))
 }
 
 screen_rows_lo:

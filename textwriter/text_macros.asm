@@ -22,19 +22,22 @@
 */
 
 .macro SetPos(row, col){
-    .eval row = row
-    .eval col = col
+    .byte EVENT_SETPOS
+    .byte row
+    .byte col
 }
 
 .macro Delay(time){
-    .eval time = time
+    .byte EVENT_DELAY
+    .byte time
 }
 
 .macro Page(){
-    .eval page_nr = page_nr+1
+    .byte EVENT_PAGE
 }
 
 .macro Image(index, delay){
-    .eval index = index
-    .eval delay = delay
+    .byte EVENT_IMAGE
+    .byte index
+    .byte delay
 }

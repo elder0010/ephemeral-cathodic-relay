@@ -1,7 +1,6 @@
 //page 00
-#SETPOS=0,0#
 Hey
-It's me, 
+It's me,
 I really really hope you still got that one I left you, down there.
 Well, if you're reading this it means you still have that 8296.
 When I said it was built like a tank I was dead serious.
@@ -21,7 +20,7 @@ I like to call them
 
 //page 01
 EPHEMERAL #DELAY=20# CATHODIC #DELAY=20# RELAY #DELAY=40#
-t's ECR for short. 🙂
+t's ECR for short.
 This bulky, gorgeous display of yours is a very powerful device and hides an incredible feature.
 Even if a 8296 PET has no graphic modes and  only display characters with a 1 bit colour depth
 I found a way to take advantage of the cathodic falloff of its CRT display

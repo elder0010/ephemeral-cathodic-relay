@@ -2,7 +2,7 @@ import re
 
 filename = "textwriter/data/script.txt"
 text_asm_file = "textwriter/data/script.asm"
-
+commands_asm_file = "textwriter/data/commands.asm"
 
 class ScriptParser:
 
@@ -40,6 +40,8 @@ class ScriptParser:
                     index = line.find(command, last_index)
                     
                     last_index = index+len(command)
+
+                    #data structure is a list of tuples with the command, page, line and index (in the line)
                     pages_commands_indexes[f"page_{current_page}"].append((command, current_page, line_ct, index-command_index_delta))
                     #print(f"{command} with index: {index-command_index_delta}")
                     command_index_delta += len(command)
@@ -87,7 +89,83 @@ class ScriptParser:
         f_out.close()
 
         return pages_commands_indexes
+    
+
+    def get_asm_command(self, command_string):
+        found = False 
+        command_string = command_string.replace("#", "")
+
+        if ("SETPOS" in command_string):
+            found = True
+            command = f':SetPos({command_string.split("=")[1]})'
+            #print (f"Command: {command}")
+
+        if ("PAGE" in command_string):
+            found = True
+            command = f':Page()'
+            #print (f"Command: {command}")
+
+        if ("DELAY" in command_string):
+            found = True
+            command = f':Delay({command_string.split("=")[1]})'
+            #print (f"Command: {command}")
+        
+        if ("IMAGE" in command_string):
+            found = True
+            command = f':Image({command_string.split("=")[1]})'
+            #print (f"Command: {command}")
+
+        if not found:
+            raise Exception("Invalid command in script: " + command_string)
+        
+        return command
+
+    def prepare_commands_file(self, pages_commands_indexes):
+
+        print("--------------------")
+        sequence_commands = []
+        sequence_pages = []
+        sequence_indexes = []
+
+        for page in pages_commands_indexes:
+            #print (f"Page: {page}")
+            commands = pages_commands_indexes[page]
+            #print (f"Commands: {commands}")
+            for command in commands:
+               # print (f"Command string: {command}")
+                sequence_commands.append(self.get_asm_command(command[0]))
+                sequence_pages.append(command[1])
+                sequence_indexes.append(command[2])
+        
+        print (f"Sequence commands: {sequence_commands}")
+        print (f"Sequence pages: {sequence_pages}")
+        print (f"Sequence indexes: {sequence_indexes}")
+
+        commands_asm = f".const COMMANDS_NUMBER={len(sequence_commands)}\n"
+
+        commands_asm += '\n.pc=commands_data "Commands data"\n'
+        commands_asm += "\n//commands sequence\n"
+        commands_asm += f'commands_sequence:\n'
+        for i in range(len(sequence_commands)):
+            commands_asm += f'{sequence_commands[i]}\n'
+
+        commands_asm += "\n//pages sequence\n"
+        commands_asm += f'commands_pages:\n'
+        for i in range(len(sequence_pages)):
+            commands_asm += f'.byte {sequence_pages[i]}\n'
+
+        commands_asm += "\n//indexes sequence\n"
+        commands_asm += f'commands_indexes:\n'
+        for i in range(len(sequence_indexes)):
+            commands_asm += f'.byte {sequence_indexes[i]}\n'
+
+        f_out = open(commands_asm_file, "w")
+        f_out.write(commands_asm)
+        f_out.close()
+        return commands
+
 
 pages_commands_indexes = ScriptParser().parse_text()
+commands = ScriptParser().prepare_commands_file(pages_commands_indexes)
             
-print(pages_commands_indexes)
+#print(pages_commands_indexes)

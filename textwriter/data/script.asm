@@ -1,7 +1,4 @@
 //page 00
-.text ("")
-.byte 0
-
 .text ("Hey")
 .byte 0
 
@@ -72,7 +69,7 @@
 .text (" RELAY")
 .byte 0
 
-.text ("t's ECR for short. 🙂")
+.text ("t's ECR for short.")
 .byte 0
 
 .text ("This bulky, gorgeous display of yours is a very powerful device and hides an incredible feature.")

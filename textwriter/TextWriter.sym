@@ -1,0 +1,16 @@
+.label irqack=$464
+.label screen_rows_lo=$e52
+.label newline=$4be
+.label screen_rows_hi=$e6b
+.label text_addr=$49c
+.label move_text_pt=$4d0
+.label timer_irq=$457
+.label commands_indexes=$2012
+.label reset_cursor=$48d
+.label commands_pages=$2000
+.label script=$4df
+.label clear_screen=$46d
+.label commands_sequence=$2000 {
+}
+.label init_irq=$42f
+.label write_next_char=$49c

@@ -50,6 +50,11 @@ text_addr:
 
         inc script_col_pt
         inc col_pt
+
+          lda #WHITE_PIXEL
+        ldy col_pt
+        sta (text_row_zp_addr),y
+
         lda col_pt
         cmp #COLS
         bne !+
@@ -65,6 +70,13 @@ text_addr:
         jmp move_text_pt
 newline:
     //.break 
+
+       lda #BLACK_PIXEL
+        ldy col_pt
+
+        sta (text_row_zp_addr),y
+
+
         inc script_row_pt
         inc row_pt
         ldx row_pt
@@ -77,7 +89,11 @@ newline:
 
         lda default_col_val
         sta col_pt
+       // jmp nocursor
 !:
+
+        
+//nocursor
 
 move_text_pt:
         :inc_addr(text_addr, 1)

@@ -12,6 +12,8 @@ e0_init:
         lda (command_sequence_pt),y //skip event byte
         sta delay_val+1
 
+        sty can_cursor+1
+
         :inc_addr_zp(command_sequence_pt, 2) //skip event byte and delay byte
         
         :disable_function(write_fn)
@@ -27,7 +29,7 @@ delay_val:
         //event delay finished
         lda #0
         sta e0_init+1
-
+        sta can_cursor+1
         :enable_function(write_fn)
         :set_addr(handle_events, event_fn)
 !:
@@ -55,13 +57,18 @@ event_page:
 
 //SETPOS
 event_setpos:
+
+        lda #BLACK_PIXEL
+        ldy col_pt
+        sta (text_row_zp_addr),y
+
         ldy #1
         lda (command_sequence_pt),y 
         sta row_pt
         iny 
         lda (command_sequence_pt),y 
         sta col_pt
-
+        
         ldx row_pt
         lda screen_rows_lo,x 
         sta text_row_zp_addr
@@ -81,7 +88,7 @@ event_setmargin:
         sta default_col_val
 
         jsr reset_cursor
-        
+
         :inc_addr_zp(command_sequence_pt, 3) //skip event byte and delay byte
         rts
 

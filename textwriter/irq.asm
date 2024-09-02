@@ -44,6 +44,40 @@ write_fn:
 
         lda #1
         sta skip_write+1
+
+
+        //handle cursor
+can_cursor:
+        lda #0
+        beq nocrsupdate
+        ldy col_pt 
+        //iny
+cursor_c:
+        lda #BLACK_PIXEL
+        sta (text_row_zp_addr),y
+
+        dec cursor_ct+1
+cursor_ct:
+        lda #CURSOR_BLINK_SPEED
+        bne nocrsupdate
+
+        lda #CURSOR_BLINK_SPEED
+        sta cursor_ct+1
+
+        lda cursor_sw
+        eor #$ff 
+        sta cursor_sw
+        bne !+
+        lda #WHITE_PIXEL
+        jmp stc
+!:
+        lda #BLACK_PIXEL
+stc:
+        sta cursor_c+1
+        jmp irqack
+
+nocrsupdate:
+      
 irqack:
         lda $e812
 

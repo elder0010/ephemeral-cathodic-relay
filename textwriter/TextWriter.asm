@@ -23,7 +23,8 @@ Code: Elder0010
         sta script_row_pt
         sta default_col_val
         sta default_row_val
-        
+        sta cursor_sw
+
         :set_addr(script, text_addr)
         
         :set_addr_zp(commands_sequence, command_sequence_pt)

@@ -16,9 +16,14 @@
 .var default_row_val = $1d 
 .var default_col_val = $1e
 
+.var cursor_sw = $1f
+
 //event defines
 .const EVENT_DELAY = 1
 .const EVENT_PAGE = 2
 .const EVENT_SETPOS = 3
 .const EVENT_IMAGE = 4
 .const EVENT_SETMARGIN = 5
+
+.const WHITE_PIXEL = $e0 
+.const BLACK_PIXEL = $20 

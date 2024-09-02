@@ -14,12 +14,18 @@ clear_screen:
         bne !-
         rts
 
-
 reset_cursor:
-        lda #0 
+        lda default_col_val
         sta col_pt
+
+        lda default_row_val
         sta row_pt
-        :set_addr_zp(screen, text_row_zp_addr)
+
+        ldx row_pt
+        lda screen_rows_lo,x 
+        sta text_row_zp_addr
+        lda screen_rows_hi,x
+        sta text_row_zp_addr+1
         rts
 
 write_next_char:
@@ -42,6 +48,7 @@ text_addr:
         ldy col_pt
         sta (text_row_zp_addr),y
 
+        inc script_col_pt
         inc col_pt
         lda col_pt
         cmp #COLS
@@ -58,6 +65,7 @@ text_addr:
         jmp move_text_pt
 newline:
     //.break 
+        inc script_row_pt
         inc row_pt
         ldx row_pt
         lda screen_rows_lo,x 
@@ -65,6 +73,9 @@ newline:
         lda screen_rows_hi,x
         sta text_row_zp_addr+1
         lda #0
+        sta script_col_pt
+
+        lda default_col_val
         sta col_pt
 !:
 
@@ -84,14 +95,13 @@ cur_com_page:
         bne noevent
 cur_com_line:
         lda commands_lines 
-        cmp row_pt
+        cmp script_row_pt
         bne noevent 
 cur_com_index:
         lda commands_indexes
-        cmp col_pt
+        cmp script_col_pt
         bne noevent 
 event:
-
         ldy #0
         lda (command_sequence_pt),y
 
@@ -111,13 +121,17 @@ event:
         jsr event_setpos
         jmp point_next_event
 !:
+        cmp #EVENT_SETMARGIN
+        bne !+
+        jsr event_setmargin
+        jmp point_next_event
+!:
         cmp #EVENT_IMAGE
         bne noevent
         jsr event_image
   //      jmp point_next_event
 
 point_next_event:
-
         :inc_addr(cur_com_index, 1)
         :inc_addr(cur_com_line, 1)
         :inc_addr(cur_com_page, 1)

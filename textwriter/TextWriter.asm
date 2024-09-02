@@ -19,6 +19,10 @@ Code: Elder0010
 
         lda #0
         sta page_pt
+        sta script_col_pt
+        sta script_row_pt
+        sta default_col_val
+        sta default_row_val
         
         :set_addr(script, text_addr)
         

@@ -27,6 +27,12 @@
     .byte col
 }
 
+.macro SetMargin(row, col){
+    .byte EVENT_SETMARGIN
+    .byte row
+    .byte col
+}
+
 .macro Delay(time){
     .byte EVENT_DELAY
     .byte time

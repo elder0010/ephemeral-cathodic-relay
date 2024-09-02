@@ -1,15 +1,16 @@
 //page 00
-H#DELAY=20# me pippo parippo
-puffo papuffo PAGE!#DELAY=20#
+#SETMARGIN=10,10#
+Prova testo bla bla scrivo di tutto e di piu!
+Prova prova prima di setpos#SETPOS=10,20#gino#SETPOS=15,30#pino#DELAY=50#
+Hey#DELAY=20# me pippo delay#DELAY=50# delay#DELAY=50#
+puffo papuffo (e ora skip e setpage)#DELAY=50#
 #PAGE#
-Hey #DELAY=20# me pippo parippo
-puffo papuffo (e ora skip)#DELAY=50#
-#PAGE#
-Hey #DELAY=20# me pippo parippo
+#SETMARGIN=0,10#
+Hey#DELAY=20# me pippo parippo
 puffo papuffo
-Hey #DELAY=20# me pippo parippo
+Hey#DELAY=20# me pippo parippo
 puffo papuffo
-Hey #DELAY=20# me pippo parippo
+Hey#DELAY=20# me pippo parippo
 puffo papuffo
-Hey #DELAY=20# me pippo parippo
+Hey#DELAY=20# me pippo parippo
 puffo papuffo

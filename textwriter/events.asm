@@ -42,6 +42,13 @@ event_page:
         jsr clear_screen
 
         dec row_pt
+       // dec script_row_pt
+
+        lda #0
+        sta script_col_pt
+
+        lda #$ff 
+        sta script_row_pt
         //lda #1 
         //sta force_skip_write_next+1
         rts
@@ -55,6 +62,26 @@ event_setpos:
         lda (command_sequence_pt),y 
         sta col_pt
 
+        ldx row_pt
+        lda screen_rows_lo,x 
+        sta text_row_zp_addr
+        lda screen_rows_hi,x
+        sta text_row_zp_addr+1
+
+        :inc_addr_zp(command_sequence_pt, 3) //skip event byte and delay byte
+        rts
+
+//SETMARGIN
+event_setmargin:
+        ldy #1
+        lda (command_sequence_pt),y 
+        sta default_row_val
+        iny 
+        lda (command_sequence_pt),y 
+        sta default_col_val
+
+        jsr reset_cursor
+        
         :inc_addr_zp(command_sequence_pt, 3) //skip event byte and delay byte
         rts
 

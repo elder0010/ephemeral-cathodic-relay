@@ -57,34 +57,7 @@ class ScriptParser:
             #print(f"Command indexes: {command_indexes}")
 
             #split_line will contain the line split (excluding the commands)
-            '''
-            if len(commands) > 0:
-                partial_string = ""
-                partial_string_started = True
-                for i in range(len(line)):
-                    char = line[i]
-                    if char != "#" and partial_string_started: #If we are in a partial string, command not started
-                        partial_string += char
-                        continue
-                    elif char == "#": #command started or ended
-                        if partial_string_started: #command started
-                            split_line.append(partial_string)
-                            partial_string = ""
-                            partial_string_started = False
-                        else: #command ended
-                            partial_string_started = True
-                            continue
-                
-            else:
-                split_line.append(line)
-            ''' 
-            '''
-            for i in range(len(split_line)):
-                text_asm += f'.text ("{split_line[i].rstrip()}")\n' 
-                text_asm += f'.byte 0\n'
-                #text_asm += f':NewLine()\n'
-                text_asm += f'\n'
-            '''
+          
             text_asm += f'.text ("{line_without_commands.rstrip()}")\n'
             text_asm += f'.byte 0\n\n'
             line_ct += 1
@@ -120,6 +93,10 @@ class ScriptParser:
             found = True
             command = f':Image({command_string.split("=")[1]})'
             #print (f"Command: {command}")
+
+        if ("SETMARGIN" in command_string):
+            found = True
+            command = f':SetMargin({command_string.split("=")[1]})'
 
         if not found:
             raise Exception("Invalid command in script: " + command_string)

@@ -18,10 +18,11 @@ Code: Elder0010
         jsr clear_screen
 
         lda #0
-        sta page_index_pt
+        sta page_pt
         
         :set_addr(script, text_addr)
-        :set_addr_zp(commands_sequence, event_address_zp)
+        
+        :set_addr_zp(commands_sequence, command_sequence_pt)
 
         jsr reset_cursor
 

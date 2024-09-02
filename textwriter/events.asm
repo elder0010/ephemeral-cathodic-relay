@@ -9,10 +9,10 @@ e0_init:
         sta delay_tk+1
 
         ldy #1
-        lda (event_address_zp),y //skip event byte
+        lda (command_sequence_pt),y //skip event byte
         sta delay_val+1
 
-        :inc_addr_zp(event_address_zp, 2) //skip event byte and delay byte
+        :inc_addr_zp(command_sequence_pt, 2) //skip event byte and delay byte
         
         :disable_function(write_fn)
         :set_addr(event_delay, event_fn)
@@ -35,22 +35,27 @@ delay_val:
 
 //PAGE
 event_page:
-        inc page_index_pt
-        :inc_addr_zp(event_address_zp, 1) //skip event byte and delay byte
+
+        inc page_pt
+        :inc_addr_zp(command_sequence_pt, 1) //skip event byte and delay byte
         jsr reset_cursor
         jsr clear_screen
+
+        dec row_pt
+        //lda #1 
+        //sta force_skip_write_next+1
         rts
 
 //SETPOS
 event_setpos:
         ldy #1
-        lda (event_address_zp),y 
+        lda (command_sequence_pt),y 
         sta row_pt
         iny 
-        lda (event_address_zp),y 
+        lda (command_sequence_pt),y 
         sta col_pt
 
-        :inc_addr_zp(event_address_zp, 3) //skip event byte and delay byte
+        :inc_addr_zp(command_sequence_pt, 3) //skip event byte and delay byte
         rts
 
 //IMAGE

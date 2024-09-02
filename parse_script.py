@@ -30,6 +30,7 @@ class ScriptParser:
             #Check if line contains commands
             commands = re.findall('(#[A-Z]+[=]?[0-9|,]*+[0-9]*#)',line)
             
+            line_without_commands = re.sub(r'(#[A-Z]+[=]?[0-9|,]*+[0-9]*#)', '', line)
             #print(f"Commands: {commands}")
             command_index_delta = 0
             if len(commands) != 0:
@@ -48,7 +49,7 @@ class ScriptParser:
 
                     if command == "#PAGE#":
                         current_page += 1
-                        line_ct = 0
+                        line_ct = -1
                         pages_commands_indexes[f"page_{current_page}"] = []
 
             split_line = []
@@ -56,6 +57,7 @@ class ScriptParser:
             #print(f"Command indexes: {command_indexes}")
 
             #split_line will contain the line split (excluding the commands)
+            '''
             if len(commands) > 0:
                 partial_string = ""
                 partial_string_started = True
@@ -72,15 +74,19 @@ class ScriptParser:
                         else: #command ended
                             partial_string_started = True
                             continue
+                
             else:
                 split_line.append(line)
-
+            ''' 
+            '''
             for i in range(len(split_line)):
                 text_asm += f'.text ("{split_line[i].rstrip()}")\n' 
                 text_asm += f'.byte 0\n'
                 #text_asm += f':NewLine()\n'
                 text_asm += f'\n'
-            
+            '''
+            text_asm += f'.text ("{line_without_commands.rstrip()}")\n'
+            text_asm += f'.byte 0\n\n'
             line_ct += 1
         f_in.close()
 
@@ -125,6 +131,7 @@ class ScriptParser:
         print("--------------------")
         sequence_commands = []
         sequence_pages = []
+        sequence_lines = []
         sequence_indexes = []
 
         for page in pages_commands_indexes:
@@ -135,10 +142,12 @@ class ScriptParser:
                # print (f"Command string: {command}")
                 sequence_commands.append(self.get_asm_command(command[0]))
                 sequence_pages.append(command[1])
-                sequence_indexes.append(command[2])
+                sequence_lines.append(command[2])
+                sequence_indexes.append(command[3])
         
         print (f"Sequence commands: {sequence_commands}")
         print (f"Sequence pages: {sequence_pages}")
+        print (f"Sequence lines: {sequence_lines}")
         print (f"Sequence indexes: {sequence_indexes}")
 
         commands_asm = f".const COMMANDS_NUMBER={len(sequence_commands)}\n"
@@ -153,6 +162,11 @@ class ScriptParser:
         commands_asm += f'commands_pages:\n'
         for i in range(len(sequence_pages)):
             commands_asm += f'.byte {sequence_pages[i]}\n'
+
+        commands_asm += "\n//lines sequence\n"
+        commands_asm += f'commands_lines:\n'
+        for i in range(len(sequence_lines)):
+            commands_asm += f'.byte {sequence_lines[i]}\n'
 
         commands_asm += "\n//indexes sequence\n"
         commands_asm += f'commands_indexes:\n'

@@ -32,12 +32,18 @@ timer_irq:
         ora #%01100000
         sta $fff0 
 
-write_fn:
-        jsr write_next_char
-
 event_fn:
         jsr handle_events
 
+skip_write:
+        lda #1
+        beq !+
+write_fn:
+        jsr write_next_char
+!:
+
+        lda #1
+        sta skip_write+1
 irqack:
         lda $e812
 

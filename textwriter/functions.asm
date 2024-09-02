@@ -19,12 +19,22 @@ reset_cursor:
         lda #0 
         sta col_pt
         sta row_pt
-
         :set_addr_zp(screen, text_row_zp_addr)
         rts
 
 write_next_char:
+/*
+//#PAGE# change this to skip write on page change
+force_skip_write_next:
+        lda #0 
+        beq !+
+        //.break
 
+        lda #0 
+        sta skip_write+1
+        jmp finished_write
+!: 
+*/
 text_addr:
         lda $ffff 
         beq newline //newline each 0 terminated string
@@ -60,15 +70,30 @@ newline:
 
 move_text_pt:
         :inc_addr(text_addr, 1)
+
+finished_write:
+        //lda #0
+        //sta force_skip_write_next+1
         rts 
 
 handle_events:
-
-command_address:
+//.break
+cur_com_page:
+        lda commands_pages
+        cmp page_pt
+        bne noevent
+cur_com_line:
+        lda commands_lines 
+        cmp row_pt
+        bne noevent 
+cur_com_index:
         lda commands_indexes
         cmp col_pt
         bne noevent 
 event:
+
+        ldy #0
+        lda (command_sequence_pt),y
 
         //handle event
         cmp #EVENT_DELAY
@@ -87,12 +112,15 @@ event:
         jmp point_next_event
 !:
         cmp #EVENT_IMAGE
-        bne !+
+        bne noevent
         jsr event_image
   //      jmp point_next_event
-!:
+
 point_next_event:
-        :inc_addr(command_address, 1)
+
+        :inc_addr(cur_com_index, 1)
+        :inc_addr(cur_com_line, 1)
+        :inc_addr(cur_com_page, 1)
 noevent:
         rts
 

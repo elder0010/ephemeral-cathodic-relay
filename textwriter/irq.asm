@@ -6,7 +6,6 @@ init_irq:
         ora #%01100000
         sta $fff0 
 
-
         lda #$0 
         sta $e811
         sta $e821
@@ -16,7 +15,6 @@ init_irq:
         lda #%10111101
         sta $e813
 
-  
         lda #<timer_irq 
         sta $90
         lda #>timer_irq 
@@ -26,11 +24,24 @@ init_irq:
         rts
 
 timer_irq:
-       // ldx $fff0 
         lda $fff0 
         and #%00010000 
         ora #%01100000
         sta $fff0 
+irq_fn:
+        jsr text_routine
+      
+irqack:
+        lda $e812
+
+        pla 
+        tay 
+        pla 
+        tax 
+        pla
+        rti 
+
+text_routine:
 
 event_fn:
         jsr handle_events
@@ -44,7 +55,6 @@ write_fn:
 
         lda #1
         sta skip_write+1
-
 
         //handle cursor
 can_cursor:
@@ -74,17 +84,28 @@ cursor_ct:
         lda #BLACK_PIXEL
 stc:
         sta cursor_c+1
-        jmp irqack
-
+        rts 
+        //jmp irqack
 nocrsupdate:
-      
-irqack:
-        lda $e812
+        rts 
 
-        pla 
-        tay 
-        pla 
-        tax 
-        pla
-        rti 
+image_routine:
+        lda draw_state
+        cmp #DRAWING
+        bne !+
+//drawing
+        jmp exit
+!:
+        cmp #WAIT_FOR_FADE
+        bne !+
+        dec delay 
+        bne exit
+        lda #COLOUR_DELAY
+        sta delay 
 
+        lda #FADING
+        sta draw_state 
+        jmp exit
+!:
+exit:
+        rts

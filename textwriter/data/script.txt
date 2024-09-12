@@ -8,12 +8,17 @@ puffo papuffo (e ora newpage, cambiando i margini di default)#DELAY=20#.#DELAY=2
 #PAGE#
 //page 01
 #SETMARGIN=0,0#
-Questa pagina invece parte da 0,0!#DELAY=50# Hey#DELAY=20# me pippo parippo
-puffo papuffo
+Questa pagina invece parte da 0,0!#DELAY=50# Hey#DELAY=20# ora vediamo una immagine!
+ready?#DELAY=96#
+#IMAGE=64#
+//page 02
 Hey#DELAY=20# me pippo parippo
 puffo papuffo
 Hey#DELAY=20# me pippo parippo
 puffo papuffo
 Hey#DELAY=20# me pippo parippo
-I delay sono parametrici! Ecco delay 10 #DELAY=10# 20#DELAY=20# 30#DELAY=30# 40#DELAY=40#
-puffo papuffo#DELAY=50# ultima prova.. ora parte garbage a cazzum perche' non ho messo il check su end
+I delay sono parametrici! Ecco delay 10#DELAY=10# 20#DELAY=20# 30#DELAY=30# 40#DELAY=40#
+puffo papuffo#DELAY=50# ultima prova.. ora vediamo altra immagine!#DELAY=96#
+#IMAGE=64#
+Ok adesso stiamo per finire. Chiamo l'evento end!#DELAY=150#
+#END#

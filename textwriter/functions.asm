@@ -51,7 +51,7 @@ text_addr:
         inc script_col_pt
         inc col_pt
 
-          lda #WHITE_PIXEL
+        lda #WHITE_PIXEL
         ldy col_pt
         sta (text_row_zp_addr),y
 
@@ -91,7 +91,6 @@ newline:
         sta col_pt
        // jmp nocursor
 !:
-
         
 //nocursor
 
@@ -143,8 +142,15 @@ event:
         jmp point_next_event
 !:
         cmp #EVENT_IMAGE
-        bne noevent
+        bne !+
         jsr event_image
+    
+        jmp point_next_event
+!:
+        cmp #EVENT_END
+        bne noevent
+        jsr event_end
+!:
   //      jmp point_next_event
 
 point_next_event:
@@ -155,4 +161,14 @@ noevent:
         rts
 
 
+enable_write_mode:
+        :set_addr(write_main, draw_next_jmp)
+        :set_addr(text_routine, irq_fn)
+      //  jsr event_page
+        rts 
 
+enable_draw_mode:
+        :set_addr(draw_main, write_next_jmp)
+        :set_addr(image_routine, irq_fn)
+        jsr init_displayer
+        rts

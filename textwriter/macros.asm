@@ -58,3 +58,13 @@
     lda #$20
     sta address
 }
+
+.macro inc_16bit_addr(address){
+        clc 
+        lda address+1
+        adc #1 
+        sta address+1
+        bcc !+
+        inc address+2
+!:
+}

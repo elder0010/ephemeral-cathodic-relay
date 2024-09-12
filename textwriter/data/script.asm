@@ -20,15 +20,20 @@
 .text ("")
 .byte 0
 
+//page 01
 .text ("")
 .byte 0
 
-.text ("Questa pagina invece parte da 0,0! Hey me pippo parippo")
+.text ("Questa pagina invece parte da 0,0! Hey ora vediamo una immagine!")
 .byte 0
 
-.text ("puffo papuffo")
+.text ("ready?")
 .byte 0
 
+.text ("")
+.byte 0
+
+//page 02
 .text ("Hey me pippo parippo")
 .byte 0
 
@@ -44,9 +49,18 @@
 .text ("Hey me pippo parippo")
 .byte 0
 
-.text ("I delay sono parametrici! Ecco delay 10  20 30 40")
+.text ("I delay sono parametrici! Ecco delay 10 20 30 40")
 .byte 0
 
-.text ("puffo papuffo ultima prova.. ora parte garbage a cazzum perche' non ho messo il check su end")
+.text ("puffo papuffo ultima prova.. ora vediamo altra immagine!")
+.byte 0
+
+.text ("")
+.byte 0
+
+.text ("Ok adesso stiamo per finire. Chiamo l'evento end!")
+.byte 0
+
+.text ("")
 .byte 0
 

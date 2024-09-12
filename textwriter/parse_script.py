@@ -1,8 +1,8 @@
 import re
 
-filename = "textwriter/data/script.txt"
-text_asm_file = "textwriter/data/script.asm"
-commands_asm_file = "textwriter/data/commands.asm"
+filename = "data/script.txt"
+text_asm_file = "data/script.asm"
+commands_asm_file = "data/commands.asm"
 
 class ScriptParser:
 
@@ -97,6 +97,10 @@ class ScriptParser:
         if ("SETMARGIN" in command_string):
             found = True
             command = f':SetMargin({command_string.split("=")[1]})'
+
+        if ("END" in command_string):
+            found = True
+            command = f':End()'
 
         if not found:
             raise Exception("Invalid command in script: " + command_string)

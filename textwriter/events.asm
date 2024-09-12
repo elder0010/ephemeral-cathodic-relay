@@ -94,4 +94,21 @@ event_setmargin:
 
 //IMAGE
 event_image:
+        ldy #1
+        lda (command_sequence_pt),y
+        sta hold_time_lo
+        iny
+        lda (command_sequence_pt),y
+        sta hold_time_hi
+        
+        :inc_addr_zp(command_sequence_pt, 3) //skip event byte and delay byte
+        
+        jsr clear_screen
+       
+        jsr enable_draw_mode
+        
         rts
+
+event_end:
+        jsr $fd16
+   

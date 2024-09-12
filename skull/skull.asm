@@ -68,6 +68,7 @@ waitloop:
         bne !+
 
 
+        
         jmp *
         
         jmp wait_for_draw

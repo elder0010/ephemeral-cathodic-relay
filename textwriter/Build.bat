@@ -1,6 +1,8 @@
 @echo off
 set KICKASS="..\bin\KickAss\KickAss.jar"
 
+python parse_script.py
+
 del TextWriter.prg /f
 java -jar %KICKASS% TextWriter.asm -o TextWriter.prg -vicesymbols
 

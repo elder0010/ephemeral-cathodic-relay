@@ -42,8 +42,12 @@
     .byte EVENT_PAGE
 }
 
-.macro Image(index, delay){
+.macro Image(delay){
     .byte EVENT_IMAGE
-    .byte index
-    .byte delay
+    .byte <delay
+    .byte >delay
+}
+
+.macro End(){
+    .byte EVENT_END
 }

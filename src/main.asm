@@ -10,7 +10,7 @@ Code: Elder0010
 .import source("variables.asm")
 .import source("scene_settings.asm")
 .import source("data/commands.asm")
-.import source "data/image_importer.asm"
+//.import source "data/image_importer.asm"
 .import source "data/filenames.asm"
 
 *= basic_upstart "Basic upstart"
@@ -38,6 +38,9 @@ Code: Elder0010
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD
 write_main:
+        //inc screen 
+can_load_file:
+        bit load_file
 
 write_next_jmp:
         jmp write_main
@@ -45,7 +48,8 @@ write_next_jmp:
 //------------------------------------------------------------------------------------
 //MAIN DRAW ROUTINE
 draw_main:
-wait_for_draw:
+   
+wait_for_draw:        
         lda #DRAWING
         sta draw_state  
         jsr draw_img
@@ -55,6 +59,11 @@ wait_for_draw:
 
 waitloop:
 !:
+        //inc screen+3
+draw_out_jmp:
+        jmp next_op 
+next_op:
+
         lda draw_state
         cmp #WAIT_FOR_FADE
         beq !-
@@ -68,6 +77,8 @@ waitloop:
 !:
         lda #WAIT_FOR_FADE
         sta draw_state
+
+wl0:
         jmp waitloop
 draw_next_jmp:
         jmp wait_for_draw 
@@ -94,3 +105,9 @@ script:
 
 .pc = * "Loader"
 .import source "loader.asm"
+
+.pc = $2000 "Image buffer area (unusable)"
+//.import source("src/data/image_importer.asm")
+//:process_image("src/data/images/img_00.png")
+.fill $1421,$00
+

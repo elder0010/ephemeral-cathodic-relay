@@ -1,6 +1,9 @@
-Adding 1 files to new image demo.d80
+Adding 4 files to new image demo.d80
 
 0 "e.c.r.          " 00 2a
-51   "main"             prg 
-613 blocks free.
+49   "main"             prg 
+21   "img00"            prg 
+21   "img01"            prg 
+21   "img02"            prg 
+552 blocks free.
 

@@ -1,4 +1,8 @@
 load_file:
+        //prevent multiple calls
+        lda #$2c
+        sta can_load_file
+
         lda #%10000000
         sta MEMMAP
 
@@ -94,6 +98,17 @@ ld70:
         ora #$e0 
         jsr secnd
         jsr unlsn 
+
+        //file  loaded - is image?
+must_init_image:
+        lda #0
+        beq !+
+        lda #0
+        sta must_init_image+1
+
+        lda total_colours       
+        sta total_colours_val+1
+!:
         rts
 
 //restore and write "file not found error"

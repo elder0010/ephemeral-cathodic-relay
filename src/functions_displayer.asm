@@ -36,7 +36,8 @@ mask_colours:
         
         inc px_cnt_pt 
         lda px_cnt_pt
-        cmp #total_colours+1
+total_colours_val:
+        cmp #total_colours+1 //RICORDATI DI SETTARMI!!
         bne mask_tb_lo
 //--------------------------------------
 //time to reset 

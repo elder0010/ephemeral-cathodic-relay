@@ -1,7 +1,7 @@
 .const basic_upstart = $401
 .var screen = $8000
 
-.var commands_data = $3000
+.var commands_data = $1800
 
 .var col_pt = $08
 .var text_row_zp_addr = $11 //word
@@ -25,6 +25,7 @@
 .const EVENT_IMAGE = 4
 .const EVENT_SETMARGIN = 5
 .const EVENT_END = 6
+.const EVENT_LOADNEXT = 7
 
 .const WHITE_PIXEL = $e0 
 .const BLACK_PIXEL = $20 
@@ -71,3 +72,12 @@
 .const ROPENI = $f4a5 //Get Next One Byte Parameter / send listen
 
 .var loaded_image = $7000
+
+//Images memory locations
+.const screen_addr_lo = $2000
+.const pixels_colour_amt = $3400
+.const px_number = $341e
+.const total_colours = $3420
+.const screen_addr_hi = $2800
+.const pixels_delay = $3000
+

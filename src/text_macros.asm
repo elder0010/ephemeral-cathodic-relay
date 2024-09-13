@@ -51,3 +51,7 @@
 .macro End(){
     .byte EVENT_END
 }
+
+.macro LoadNext(){
+    .byte EVENT_LOADNEXT
+}

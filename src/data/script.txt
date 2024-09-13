@@ -1,19 +1,22 @@
 //page 00
-#SETMARGIN=10,10#
+#SETMARGIN=07,04#
 Prova testo bla bla scrivo di tutto e di piu!#DELAY=50#
-Test comandy#DELAY=50#
-Prova prova prima di setpos#DELAY=50# #SETPOS=10,20#scrivo su#DELAY=50# #SETPOS=15,30#scrivo giu#DELAY=50#
-Hey#DELAY=20# me pippo delay#DELAY=50# delay#DELAY=50#
-puffo papuffo (e ora newpage, cambiando i margini di default)#DELAY=20#.#DELAY=20#.#DELAY=20#.#DELAY=150# 
+Aspettiamo che il drive si fermi cosi' ti faccio vedere il loader!#DELAY=80#
+Ora carichiamo l'immagine!#LOADNEXT# Come vedi rimane perfettamente async, 
+quindi mentre il drive macina il writer continua a writare!#DELAY=50#
+E' proprio una figata clamorosa! Te pensa che per fare sta cosa
+dell'async chrome si frega 16GB di ram.#DELAY=50# Per ogni tab.#DELAY=50#
+
+Prova prova prima di setpos#DELAY=50# #SETPOS=3,20#scrivo su#DELAY=50# #SETPOS=20,40#scrivo giu#DELAY=50#
+puffo papuffo (e ora newpage, cambiando i margini di default)#DELAY=16#.#DELAY=16#.#DELAY=16#.#DELAY=150# 
 #PAGE#
 //page 01
-#SETMARGIN=0,0#
-Questa pagina invece parte da 0,0!#DELAY=50# Hey#DELAY=20# ora vediamo una immagine!
+#SETMARGIN=0,0#Questa pagina invece parte da 0,0!#DELAY=50# Hey#DELAY=20# ora vediamo una immagine!
 ready?#DELAY=96#
 #IMAGE=64#
 //page 02
 Hey#DELAY=20# me pippo parippo
-puffo papuffo
+e ora ne carichiamo ancora una!#LOADNEXT#
 Hey#DELAY=20# me pippo parippo
 puffo papuffo
 Hey#DELAY=20# me pippo parippo

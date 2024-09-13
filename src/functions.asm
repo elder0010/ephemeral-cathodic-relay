@@ -144,9 +144,14 @@ event:
         cmp #EVENT_IMAGE
         bne !+
         jsr event_image
-    
         jmp point_next_event
 !:
+        cmp #EVENT_LOADNEXT
+        bne !+
+        jsr event_loadnext
+        jmp point_next_event
+!:
+
         cmp #EVENT_END
         bne noevent
         jsr event_end
@@ -164,10 +169,14 @@ noevent:
 enable_write_mode:
         :set_addr(write_main, draw_next_jmp)
         :set_addr(text_routine, irq_fn)
+        :set_addr(write_main, draw_out_jmp)
+        :set_addr(write_main, write_next_jmp)
+        
       //  jsr event_page
         rts 
 
 enable_draw_mode:
+        :set_addr(next_op, draw_out_jmp)
         :set_addr(draw_main, write_next_jmp)
         :set_addr(image_routine, irq_fn)
         jsr init_displayer

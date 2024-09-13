@@ -109,6 +109,18 @@ event_image:
         
         rts
 
+//LOADNEXT
+event_loadnext:
+     //   .break 
+
+        lda #1 
+        sta must_init_image+1
+
+        lda #$20 //jsr 
+        sta can_load_file
+
+        :inc_addr_zp(command_sequence_pt, 1) //skip event byte and delay byte
+        rts 
+
 event_end:
         jsr $fd16
-   

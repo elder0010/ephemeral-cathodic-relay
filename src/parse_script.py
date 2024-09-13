@@ -98,6 +98,10 @@ class ScriptParser:
             found = True
             command = f':SetMargin({command_string.split("=")[1]})'
 
+        if ("LOADNEXT" in command_string):
+            found = True
+            command = f':LoadNext()'
+
         if ("END" in command_string):
             found = True
             command = f':End()'

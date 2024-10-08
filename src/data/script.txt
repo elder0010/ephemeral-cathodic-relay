@@ -1,6 +1,6 @@
 //page 00
 #SETMARGIN=07,04#
-Prova testo bla bla scrivo di tutto e di piu!#DELAY=50#
+LRNZ testo bla bla scrivo di tutto e di piu!#DELAY=50#
 Aspettiamo che il drive si fermi cosi' ti faccio vedere il loader!#DELAY=80#
 Ora carichiamo l'immagine!#LOADNEXT# Come vedi rimane perfettamente async, 
 quindi mentre il drive macina il writer continua a writare!#DELAY=50#

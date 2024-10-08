@@ -2,7 +2,7 @@
 .text ("")
 .byte 0
 
-.text ("Prova testo bla bla scrivo di tutto e di piu!")
+.text ("LRNZ testo bla bla scrivo di tutto e di piu!")
 .byte 0
 
 .text ("Aspettiamo che il drive si fermi cosi' ti faccio vedere il loader!")

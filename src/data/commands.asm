@@ -119,7 +119,7 @@ commands_lines:
 //indexes sequence
 commands_indexes:
 .byte 0
-.byte 45
+.byte 44
 .byte 66
 .byte 26
 .byte 59

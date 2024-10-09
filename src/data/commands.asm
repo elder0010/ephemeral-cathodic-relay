@@ -1,4 +1,4 @@
-.const COMMANDS_NUMBER=35
+.const COMMANDS_NUMBER=36
 
 .pc=commands_data "Commands data"
 
@@ -11,6 +11,7 @@ commands_sequence:
 :Delay(50)
 :Delay(50)
 :Delay(50)
+:Image(64)
 :Delay(50)
 :SetPos(3,20)
 :Delay(50)
@@ -59,6 +60,7 @@ commands_pages:
 .byte 0
 .byte 0
 .byte 0
+.byte 0
 .byte 1
 .byte 1
 .byte 1
@@ -81,22 +83,23 @@ commands_pages:
 //lines sequence
 commands_lines:
 .byte 0
-.byte 1
 .byte 2
 .byte 3
 .byte 4
-.byte 6
-.byte 6
+.byte 5
+.byte 7
+.byte 7
 .byte 8
-.byte 8
-.byte 8
-.byte 8
-.byte 8
-.byte 9
-.byte 9
-.byte 9
-.byte 9
 .byte 10
+.byte 10
+.byte 10
+.byte 10
+.byte 10
+.byte 11
+.byte 11
+.byte 11
+.byte 11
+.byte 12
 .byte 0
 .byte 0
 .byte 0
@@ -125,6 +128,7 @@ commands_indexes:
 .byte 59
 .byte 39
 .byte 53
+.byte 0
 .byte 27
 .byte 28
 .byte 37

@@ -1,5 +1,7 @@
 clear_screen:
         lda #$20 
+
+        lda #WHITE_PIXEL
         ldx #$0 
 !:
         sta screen,x 
@@ -12,6 +14,40 @@ clear_screen:
         sta screen+$700,x 
         dex
         bne !-
+
+        lda #$e0
+
+        lda #55
+        ldx #$0 
+!:
+        sta screen_image,x 
+        sta screen_image+$100,x 
+        sta screen_image+$200,x
+        sta screen_image+$300,x 
+        sta screen_image+$400,x
+        sta screen_image+$500,x 
+        sta screen_image+$600,x
+        sta screen_image+$700,x 
+        dex
+        bne !-
+
+
+
+//:set_screen(1)
+
+
+        lda #9
+        sta $e880
+        lda #7
+        sta $e881               //; charline height to 8 rasterlines
+
+sei 
+
+
+jmp * 
+
+
+
         rts
 
 reset_cursor:

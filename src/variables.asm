@@ -1,5 +1,6 @@
 .const basic_upstart = $401
 .var screen = $8000
+.var screen_image = $8800
 
 .var commands_data = $1800
 
@@ -30,6 +31,8 @@
 .const WHITE_PIXEL = $e0 
 .const BLACK_PIXEL = $20 
 
+.const WHITE_PIXEL_IMAGE = $20
+
 
 //Displayer functions
 .var pixels_delay_table = $2000
@@ -46,7 +49,9 @@
 .var hold_tk_lo = $30
 .var hold_tk_hi = $31
 
-.var COLOUR_DELAY = 8
+.var unroll_start_zp = $32
+
+.var COLOUR_DELAY = 1
 .const DRAWING = 1 
 .const WAIT_FOR_FADE = 2
 .const FADING = 3
@@ -75,9 +80,9 @@
 
 //Images memory locations
 .const screen_addr_lo = $2000
-.const pixels_colour_amt = $3400
-.const px_number = $341e
-.const total_colours = $3420
+.const pixels_colour_amt = $3004
+.const px_number = $3000
+.const total_colours = $3002
 .const screen_addr_hi = $2800
 .const pixels_delay = $3000
 

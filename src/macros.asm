@@ -68,3 +68,21 @@
         inc address+2
 !:
 }
+
+.macro inc_16bit_addr_zp(address, amount){
+        clc 
+        lda address
+        adc #amount
+        sta address
+        bcc !+
+        inc address+1
+!:
+}
+
+.macro set_screen(screen_nr){
+    lda #12
+    sta $e880
+
+    lda #screen_nr*4
+    sta $e881
+}

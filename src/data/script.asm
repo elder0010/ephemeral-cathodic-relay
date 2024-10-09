@@ -2,6 +2,9 @@
 .text ("")
 .byte 0
 
+.text ("")
+.byte 0
+
 .text ("LRNZ testo bla bla scrivo di tutto e di piu!")
 .byte 0
 
@@ -18,6 +21,9 @@
 .byte 0
 
 .text ("dell'async chrome si frega 16GB di ram. Per ogni tab.")
+.byte 0
+
+.text ("")
 .byte 0
 
 .text ("")

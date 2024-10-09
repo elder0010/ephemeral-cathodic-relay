@@ -1,3 +1,5 @@
+/*
+.pc = * " Draw image"
 draw_img:
         :set_addr(screen_addr_lo, tb_lo)
         :set_addr(screen_addr_hi, tb_hi)
@@ -21,7 +23,10 @@ dst_addr:
         beq !+
         jmp tb_lo
 !:
+
+.break 
         rts 
+        */
 
 mask_colours:
        // :set_addr(screen_addr_lo, mask_tb_lo)
@@ -98,6 +103,9 @@ init_displayer:
         :set_addr(screen_addr_hi, mask_tb_hi)
 
         jsr draw_img
+
+  //      jmp *
+  
         rts 
 
 hold_image:

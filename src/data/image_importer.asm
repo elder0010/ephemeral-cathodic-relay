@@ -17,7 +17,7 @@
 .macro process_image(image_path){
         .var picture = LoadPicture(image_path)
 
-        .const VERBOSE_OUTPUT = false 
+        .const VERBOSE_OUTPUT = true 
 
         .print("Processing image: "+image)
 
@@ -49,6 +49,12 @@
             }
         }
 
+        .print("IMAGE PALETTE")
+        .for (var x=0;x<palette.keys().size();x++){
+            .var key = palette.keys().get(x)
+            .print(key+" : "+palette.get(key).size())
+        }
+
         .if(VERBOSE_OUTPUT){
             .print("---------------")
         }
@@ -57,9 +63,14 @@
         .var sorted_palette = generate_palette()
 
         .print ("Palette size: "+sorted_palette.size())
+
+        .print("Sorted palette")
+        .for (var x=0;x<sorted_palette.size();x++){
+            .print(sorted_palette.get(x))
+        }
         //calc decay for each colour: the brighter the slower to go away
         .var starting_delay = 0
-        .const decay = 8
+        .const decay = 0
 
         .var delays_list = List()
         .var amount_list = List()
@@ -125,23 +136,17 @@ screen_addr_hi:
 }
 .byte $ff 
 
-.pc = $3000 "Pixels delay"
-pixels_delay: 
-.for(var x=0;x<delays_list.size();x++){
-    .byte delays_list.get(x)
-}
-
-.pc = $3400 "Pixels amount per colour"
+.pc = $3004 "Pixels amount per colour"
 pixels_colour_amt: 
 .for(var x=0;x<amount_list.size();x++){
     .byte amount_list.get(x)
 }
 
-.pc = * "Total pixels"
+.pc = $3000 "Total pixels"
 px_number:
 .word px_nr
 
-.pc = * "Total colours"
+.pc = $3002 "Total colours"
 .byte total_colours+1
 }
 

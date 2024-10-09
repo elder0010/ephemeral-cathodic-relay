@@ -2,9 +2,9 @@ Adding 4 files to existing image demo.d64
 4 out of 4 files exist and will be overwritten
 
 0 "e.c.r.          " 00 2a
-49   "main"             prg 
-21   "img00"            prg 
+74   "main"             prg 
+17   "img00"            prg 
 21   "img01"            prg 
 21   "img02"            prg 
-552 blocks free.
+531 blocks free.
 

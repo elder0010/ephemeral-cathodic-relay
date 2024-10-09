@@ -17,6 +17,29 @@ Code: Elder0010
         :BasicUpstart2()
 
         sei
+
+
+
+/*
+        lax #0
+!: 
+        sta screen_image,x 
+        sta screen_image+$100,x 
+        sta screen_image+$200,x
+        sta screen_image+$300,x
+        sta screen_image+$400,x
+        sta screen_image+$500,x
+        sta screen_image+$600,x
+        sta screen_image+$700,x
+        dex 
+        bne !-
+        :set_screen(1)
+bk:
+
+        inc screen_image
+        jmp bk 
+*/
+
         jsr clear_screen
 
         lda #0
@@ -111,3 +134,5 @@ script:
 //:process_image("src/data/images/img_00.png")
 .fill $1421,$00
 
+.pc = * "Unrolled draw functions"
+.import source "draw_image_routine.asm"

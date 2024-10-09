@@ -10,6 +10,7 @@
         //.print("Color: "+hex_string)
         .eval palette.add(hex_string)
     }
+    .eval palette.reverse()
     .return palette
 }
 
@@ -24,8 +25,6 @@
             .print("Image width: "+picture.width)
             .print("Image height: "+picture.height)
         }
-
-    
         //Get image palette
         .var palette = Hashtable()
         .for (var y=0;y<picture.height;y++){
@@ -54,7 +53,8 @@
             .print("---------------")
         }
 
-        .var sorted_palette = List().add("#F6F6F6", "#EEEEEE", "#E6E6E6", "#DEDEDE", "#D5D5D5", "#CDCDCD", "#C5C5C5", "#BDBDBD", "#B4B4B4", "#ACACAC", "#A4A4A4", "#9C9C9C", "#949494", "#8B8B8B", "#838383", "#7B7B7B", "#737373", "#6A6A6A", "#626262", "#5A5A5A", "#525252", "#4A4A4A", "#414141", "#393939", "#313131", "#292929", "#181818", "#202020", "#101010","#80808")
+        //.var sorted_palette = List().add("#F6F6F6", "#EEEEEE", "#E6E6E6", "#DEDEDE", "#D5D5D5", "#CDCDCD", "#C5C5C5", "#BDBDBD", "#B4B4B4", "#ACACAC", "#A4A4A4", "#9C9C9C", "#949494", "#8B8B8B", "#838383", "#7B7B7B", "#737373", "#6A6A6A", "#626262", "#5A5A5A", "#525252", "#4A4A4A", "#414141", "#393939", "#313131", "#292929", "#181818", "#202020", "#101010","#80808")
+        .var sorted_palette = generate_palette()
 
         .print ("Palette size: "+sorted_palette.size())
         //calc decay for each colour: the brighter the slower to go away

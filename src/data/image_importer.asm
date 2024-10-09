@@ -2,6 +2,17 @@
     .return screen_address+y_cohord*$50+x_cohord
 }
 
+.function generate_palette(){
+    .var palette = List()
+    .for (var x=0;x<256;x++){
+        .var bb = toHexString(x,2).toUpperCase()
+        .var hex_string = "#"+bb+bb+bb
+        //.print("Color: "+hex_string)
+        .eval palette.add(hex_string)
+    }
+    .return palette
+}
+
 .macro process_image(image_path){
         .var picture = LoadPicture(image_path)
 
@@ -134,3 +145,4 @@ px_number:
 .byte total_colours+1
 }
 
+.eval generate_palette()

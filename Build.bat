@@ -6,6 +6,7 @@ del build\demo.d64
 del build\demo.d80
 del src\main.prg /f
 
+python src\image_converter.py
 python src\parse_script.py
 
 java -jar %KICKASS% src/data/img_00.asm -o src/data/img00.prg -vicesymbols

@@ -2,10 +2,10 @@
 .pc = * " Draw image"
 
 draw_img:
-sei 
+        jsr clear_image_screen
         :set_addr(screen_addr_lo, tb_lo)
         :set_addr(screen_addr_hi, tb_hi)
-        
+
 tb_lo:
         lda screen_addr_lo
         sta dst_addr+1
@@ -13,7 +13,7 @@ tb_hi:
         lda screen_addr_hi
         sta dst_addr+2
 
-        lda #WHITE_PIXEL
+        lda #WHITE_PIXEL_IMAGE
 dst_addr:
         sta $ffff 
 
@@ -25,15 +25,13 @@ dst_addr:
         beq !+
         jmp tb_lo
 !:
-
-cli
         rts 
         
 
 mask_colours:
        // :set_addr(screen_addr_lo, mask_tb_lo)
        // :set_addr(screen_addr_hi, mask_tb_hi)
-.break 
+
         lda #0 
         sta msk_ct+1
 
@@ -72,7 +70,7 @@ mask_tb_hi:
         lda screen_addr_hi
         sta mask_dst_addr+2
 
-        lda #BLACK_PIXEL
+        lda #BLACK_PIXEL_IMAGE
 mask_dst_addr:
         sta $ffff 
 
@@ -104,8 +102,6 @@ init_displayer:
         :set_addr(screen_addr_lo, mask_tb_lo)
         :set_addr(screen_addr_hi, mask_tb_hi)
 
-        :set_screen(1)
-        :set_char_height(7)
        // jsr draw_img
 
   //      jmp *

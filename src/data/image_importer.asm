@@ -10,7 +10,7 @@
         //.print("Color: "+hex_string)
         .eval palette.add(hex_string)
     }
-    .eval palette.reverse()
+    //.eval palette.reverse()
     .return palette
 }
 

@@ -18,28 +18,6 @@ Code: Elder0010
 
         sei
 
-
-
-/*
-        lax #0
-!: 
-        sta screen_image,x 
-        sta screen_image+$100,x 
-        sta screen_image+$200,x
-        sta screen_image+$300,x
-        sta screen_image+$400,x
-        sta screen_image+$500,x
-        sta screen_image+$600,x
-        sta screen_image+$700,x
-        dex 
-        bne !-
-        :set_screen(1)
-bk:
-
-        inc screen_image
-        jmp bk 
-*/
-
         jsr clear_screen
 
         lda #0
@@ -75,11 +53,12 @@ draw_main:
 wait_for_draw:        
         lda #DRAWING
         sta draw_state  
-        jsr draw_img
+        //jsr draw_img
 
         lda #WAIT_FOR_FADE
         sta draw_state
-
+        
+        
 waitloop:
 !:
         //inc screen+3

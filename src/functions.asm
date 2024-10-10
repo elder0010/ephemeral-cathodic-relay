@@ -4,8 +4,6 @@ clear_screen:
         lda #BLACK_PIXEL
         ldx #$0 
 !:
-txa
-        and #$f
         sta screen,x 
         sta screen+$100,x 
         sta screen+$200,x
@@ -17,14 +15,13 @@ txa
         dex
         bne !-
 
-        lda #$e0
+        //lda #$e0
 
-
-        lda #BLACK_PIXEL
+/*
+        lda #58//WHITE_PIXEL_IMAGE
         ldx #$0 
 !:
-        txa
-        and #$f
+
         sta screen_image,x 
         sta screen_image+$100,x 
         sta screen_image+$200,x
@@ -35,41 +32,25 @@ txa
         sta screen_image+$700,x 
         dex
         bne !-
+        */
+        rts
 
-bk:
-:set_screen(1)
-:set_char_height(7)
-ldy #$50
-!: 
-dey 
-bpl !-
-:set_screen(0)
-:set_screen(8)
-ldy #$50
-!: 
-dey 
-bpl !-
+clear_image_screen:
+        ldx #0
+        lda #BLACK_PIXEL_IMAGE
+        ldx #$0 
+!:
 
-jmp bk
-//:set_char_height(7)
- 
-jmp *
-
-//:set_screen(1)
-/*
-
-        lda #9
-        sta $e880
-        lda #7
-        sta $e881               //; charline height to 8 rasterlines
-
-sei 
-
-
-jmp * 
-*/
-
-
+        sta screen_image,x 
+        sta screen_image+$100,x 
+        sta screen_image+$200,x
+        sta screen_image+$300,x 
+        sta screen_image+$400,x
+        sta screen_image+$500,x 
+        sta screen_image+$600,x
+        sta screen_image+$700,x 
+        dex
+        bne !-
         rts
 
 reset_cursor:
@@ -129,12 +110,9 @@ text_addr:
 newline:
     //.break 
 
-       lda #BLACK_PIXEL
+        lda #BLACK_PIXEL
         ldy col_pt
-
         sta (text_row_zp_addr),y
-
-
         inc script_row_pt
         inc row_pt
         ldx row_pt
@@ -229,7 +207,9 @@ enable_write_mode:
         :set_addr(text_routine, irq_fn)
         :set_addr(write_main, draw_out_jmp)
         :set_addr(write_main, write_next_jmp)
-        
+
+        :set_screen(4)
+        :set_char_height(8)
       //  jsr event_page
         rts 
 
@@ -238,4 +218,6 @@ enable_draw_mode:
         :set_addr(draw_main, write_next_jmp)
         :set_addr(image_routine, irq_fn)
         jsr init_displayer
+        :set_screen(5)
+        :set_char_height(7)
         rts

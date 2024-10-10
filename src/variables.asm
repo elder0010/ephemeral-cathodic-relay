@@ -31,8 +31,9 @@
 .const WHITE_PIXEL = $e0 
 .const BLACK_PIXEL = $20 
 
-.const WHITE_PIXEL_IMAGE = $20
-
+.const WHITE_PIXEL_IMAGE = $a0
+.const BLACK_PIXEL_IMAGE = $20
+.const VIA_PORT_B = $e840
 
 //Displayer functions
 .var pixels_delay_table = $2000

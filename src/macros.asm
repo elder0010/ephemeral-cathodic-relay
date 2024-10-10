@@ -80,11 +80,10 @@
 }
 
 .macro set_screen(screen_nr){
-    lda #12
-    sta $e880
-
-    lda #screen_nr*4
-    sta $e881
+        lda #12
+        sta $e880
+        lda #screen_nr*4
+        sta $e881
 }
 
 .macro set_char_height(height){
@@ -92,4 +91,18 @@
         sta $e880
         lda #height
         sta $e881               
+}
+
+
+
+.macro wait_frame(){
+    !:
+        lda VIA_PORT_B
+        and #$20 
+        bne !-
+
+!:
+        lda VIA_PORT_B
+        and #$20 
+        beq !-
 }

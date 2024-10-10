@@ -100,7 +100,7 @@
                     .var cohordinate = palette.get(next_col).get(a)
                     .var x_int = cohordinate.substring(0,2).asNumber()
                     .var y_int = cohordinate.substring(3,5).asNumber()
-                    .var screen_loc = screen_addr(screen,x_int,y_int)
+                    .var screen_loc = screen_addr(screen_image,x_int,y_int)
                     .eval c_list.add(screen_loc)
                     .eval screen_cohord_lo.add(<screen_loc)
                     .eval screen_cohord_hi.add(>screen_loc)

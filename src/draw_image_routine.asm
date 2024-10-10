@@ -2,10 +2,6 @@
 draw_img:
         jsr clear_unrolled
 
-
-
-
-
         :set_addr_zp(unroll_start, unroll_start_zp)
 //generate unrolled code
         :set_addr(screen_addr_lo, tb_lo)

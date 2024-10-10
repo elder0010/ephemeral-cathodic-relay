@@ -86,3 +86,10 @@
     lda #screen_nr*4
     sta $e881
 }
+
+.macro set_char_height(height){
+        lda #9
+        sta $e880
+        lda #height
+        sta $e881               
+}

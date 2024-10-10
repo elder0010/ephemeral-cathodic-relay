@@ -10,7 +10,7 @@ commands_sequence:
 :LoadNext()
 :Delay(50)
 :Delay(50)
-:Delay(50)
+:Delay(250)
 :Image(64)
 :Delay(50)
 :SetPos(3,20)

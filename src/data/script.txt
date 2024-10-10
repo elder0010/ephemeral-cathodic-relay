@@ -6,7 +6,7 @@ Aspettiamo che il drive si fermi cosi' ti faccio vedere il loader!#DELAY=80#
 Ora carichiamo l'immagine!#LOADNEXT# Come vedi rimane perfettamente async, 
 quindi mentre il drive macina il writer continua a writare!#DELAY=50#
 E' proprio una figata clamorosa! Te pensa che per fare sta cosa
-dell'async chrome si frega 16GB di ram.#DELAY=50# Per ogni tab.#DELAY=50#
+dell'async chrome si frega 16GB di ram.#DELAY=50# Per ogni tab.#DELAY=250#
 #IMAGE=64#
 
 Prova prova prima di setpos#DELAY=50# #SETPOS=3,20#scrivo su#DELAY=50# #SETPOS=20,40#scrivo giu#DELAY=50#

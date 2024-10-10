@@ -1,6 +1,8 @@
-/*
+
 .pc = * " Draw image"
+
 draw_img:
+sei 
         :set_addr(screen_addr_lo, tb_lo)
         :set_addr(screen_addr_hi, tb_hi)
         
@@ -24,14 +26,14 @@ dst_addr:
         jmp tb_lo
 !:
 
-.break 
+cli
         rts 
-        */
+        
 
 mask_colours:
        // :set_addr(screen_addr_lo, mask_tb_lo)
        // :set_addr(screen_addr_hi, mask_tb_hi)
-
+.break 
         lda #0 
         sta msk_ct+1
 
@@ -102,7 +104,9 @@ init_displayer:
         :set_addr(screen_addr_lo, mask_tb_lo)
         :set_addr(screen_addr_hi, mask_tb_hi)
 
-        jsr draw_img
+        :set_screen(1)
+        :set_char_height(7)
+       // jsr draw_img
 
   //      jmp *
   

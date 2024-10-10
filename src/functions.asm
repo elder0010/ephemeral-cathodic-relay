@@ -1,9 +1,11 @@
 clear_screen:
         lda #$20 
 
-        lda #WHITE_PIXEL
+        lda #BLACK_PIXEL
         ldx #$0 
 !:
+txa
+        and #$f
         sta screen,x 
         sta screen+$100,x 
         sta screen+$200,x
@@ -17,9 +19,12 @@ clear_screen:
 
         lda #$e0
 
-        lda #55
+
+        lda #BLACK_PIXEL
         ldx #$0 
 !:
+        txa
+        and #$f
         sta screen_image,x 
         sta screen_image+$100,x 
         sta screen_image+$200,x
@@ -31,10 +36,27 @@ clear_screen:
         dex
         bne !-
 
+bk:
+:set_screen(1)
+:set_char_height(7)
+ldy #$50
+!: 
+dey 
+bpl !-
+:set_screen(0)
+:set_screen(8)
+ldy #$50
+!: 
+dey 
+bpl !-
 
+jmp bk
+//:set_char_height(7)
+ 
+jmp *
 
 //:set_screen(1)
-
+/*
 
         lda #9
         sta $e880
@@ -45,7 +67,7 @@ sei
 
 
 jmp * 
-
+*/
 
 
         rts

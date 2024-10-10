@@ -134,5 +134,7 @@ script:
 //:process_image("src/data/images/img_00.png")
 .fill $1421,$00
 
+/*
 .pc = * "Unrolled draw functions"
 .import source "draw_image_routine.asm"
+*/

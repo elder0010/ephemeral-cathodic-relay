@@ -219,5 +219,7 @@ enable_draw_mode:
         :set_addr(image_routine, irq_fn)
         jsr init_displayer
         :set_screen(5)
-        :set_char_height(7)
+        .if(CRUNCH_CHARS_ON_IMAGE){
+                :set_char_height(7)
+        }
         rts

@@ -1,17 +1,39 @@
-.const COMMANDS_NUMBER=36
+.const COMMANDS_NUMBER=58
 
 .pc=commands_data "Commands data"
 
 //commands sequence
 commands_sequence:
 :SetMargin(07,04)
-:Delay(50)
-:Delay(80)
 :LoadNext()
-:Delay(50)
-:Delay(50)
-:Delay(250)
+:Delay(128)
+:Delay(128)
 :Image(64)
+:LoadNext()
+:Delay(128)
+:Delay(128)
+:Image(64)
+:LoadNext()
+:Delay(128)
+:Delay(128)
+:Image(64)
+:LoadNext()
+:Delay(128)
+:Delay(128)
+:Image(64)
+:LoadNext()
+:Delay(128)
+:Delay(128)
+:Image(64)
+:LoadNext()
+:Delay(128)
+:Delay(128)
+:Image(64)
+:LoadNext()
+:Delay(128)
+:Delay(128)
+:Image(64)
+:End()
 :Delay(50)
 :SetPos(3,20)
 :Delay(50)
@@ -61,6 +83,28 @@ commands_pages:
 .byte 0
 .byte 0
 .byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
 .byte 1
 .byte 1
 .byte 1
@@ -84,22 +128,44 @@ commands_pages:
 commands_lines:
 .byte 0
 .byte 2
+.byte 2
+.byte 2
 .byte 3
 .byte 4
+.byte 4
+.byte 4
 .byte 5
-.byte 7
+.byte 6
+.byte 6
+.byte 6
 .byte 7
 .byte 8
+.byte 8
+.byte 8
+.byte 9
 .byte 10
 .byte 10
 .byte 10
-.byte 10
-.byte 10
-.byte 11
-.byte 11
-.byte 11
 .byte 11
 .byte 12
+.byte 12
+.byte 12
+.byte 13
+.byte 14
+.byte 14
+.byte 14
+.byte 15
+.byte 18
+.byte 20
+.byte 20
+.byte 20
+.byte 20
+.byte 20
+.byte 21
+.byte 21
+.byte 21
+.byte 21
+.byte 22
 .byte 0
 .byte 0
 .byte 0
@@ -122,12 +188,34 @@ commands_lines:
 //indexes sequence
 commands_indexes:
 .byte 0
-.byte 44
-.byte 66
-.byte 26
-.byte 59
-.byte 39
-.byte 53
+.byte 5
+.byte 14
+.byte 23
+.byte 0
+.byte 5
+.byte 14
+.byte 23
+.byte 0
+.byte 5
+.byte 14
+.byte 23
+.byte 0
+.byte 5
+.byte 14
+.byte 23
+.byte 0
+.byte 5
+.byte 14
+.byte 23
+.byte 0
+.byte 5
+.byte 14
+.byte 23
+.byte 0
+.byte 5
+.byte 14
+.byte 23
+.byte 0
 .byte 0
 .byte 27
 .byte 28

@@ -2,6 +2,7 @@
 .const COLS = 80
 
 .const CURSOR_BLINK_SPEED = 16
+.const CRUNCH_CHARS_ON_IMAGE = false 
 
 /*
 .const DEFAULT_HOLD_TIME = 64 

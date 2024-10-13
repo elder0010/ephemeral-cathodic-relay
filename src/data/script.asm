@@ -5,22 +5,52 @@
 .text ("")
 .byte 0
 
-.text ("LRNZ testo bla bla scrivo di tutto e di piu!")
+.text ("IMG00 carica.. carica..")
 .byte 0
 
-.text ("Aspettiamo che il drive si fermi cosi' ti faccio vedere il loader!")
+.text ("")
 .byte 0
 
-.text ("Ora carichiamo l'immagine! Come vedi rimane perfettamente async,")
+.text ("IMG01 carica.. carica..")
 .byte 0
 
-.text ("quindi mentre il drive macina il writer continua a writare!")
+.text ("")
 .byte 0
 
-.text ("E' proprio una figata clamorosa! Te pensa che per fare sta cosa")
+.text ("IMG02 carica.. carica..")
 .byte 0
 
-.text ("dell'async chrome si frega 16GB di ram. Per ogni tab.")
+.text ("")
+.byte 0
+
+.text ("IMG03 carica.. carica..")
+.byte 0
+
+.text ("")
+.byte 0
+
+.text ("IMG04 carica.. carica..")
+.byte 0
+
+.text ("")
+.byte 0
+
+.text ("IMG05 carica.. carica..")
+.byte 0
+
+.text ("")
+.byte 0
+
+.text ("IMG06 carica.. carica..")
+.byte 0
+
+.text ("")
+.byte 0
+
+.text ("")
+.byte 0
+
+.text ("FINITO!")
 .byte 0
 
 .text ("")

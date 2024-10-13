@@ -1,4 +1,4 @@
-.pc = * " Draw image"
+.pc = * "Draw image"
 draw_img:
         jsr clear_unrolled
 

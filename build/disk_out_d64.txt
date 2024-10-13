@@ -1,5 +1,4 @@
-Adding 8 files to existing image demo.d64
-8 out of 8 files exist and will be overwritten
+Adding 8 files to new image demo.d64
 
 0 "e.c.r.          " 00 2a
 49   "main"             prg 

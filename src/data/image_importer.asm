@@ -1,3 +1,4 @@
+.const VERBOSE_OUTPUT = false 
 .function screen_addr(screen_address, x_cohord,y_cohord) {
     .return screen_address+y_cohord*$50+x_cohord
 }
@@ -16,8 +17,6 @@
 
 .macro process_image(image_path){
         .var picture = LoadPicture(image_path)
-
-        .const VERBOSE_OUTPUT = true 
 
         .print("Processing image: "+image)
 
@@ -49,10 +48,12 @@
             }
         }
 
-        .print("IMAGE PALETTE")
-        .for (var x=0;x<palette.keys().size();x++){
-            .var key = palette.keys().get(x)
-            .print(key+" : "+palette.get(key).size())
+        .if(VERBOSE_OUTPUT){
+            .print("IMAGE PALETTE")
+            .for (var x=0;x<palette.keys().size();x++){
+                .var key = palette.keys().get(x)
+                .print(key+" : "+palette.get(key).size())
+            }
         }
 
         .if(VERBOSE_OUTPUT){
@@ -62,11 +63,12 @@
         //.var sorted_palette = List().add("#F6F6F6", "#EEEEEE", "#E6E6E6", "#DEDEDE", "#D5D5D5", "#CDCDCD", "#C5C5C5", "#BDBDBD", "#B4B4B4", "#ACACAC", "#A4A4A4", "#9C9C9C", "#949494", "#8B8B8B", "#838383", "#7B7B7B", "#737373", "#6A6A6A", "#626262", "#5A5A5A", "#525252", "#4A4A4A", "#414141", "#393939", "#313131", "#292929", "#181818", "#202020", "#101010","#80808")
         .var sorted_palette = generate_palette()
 
-        .print ("Palette size: "+sorted_palette.size())
-
-        .print("Sorted palette")
-        .for (var x=0;x<sorted_palette.size();x++){
-            .print(sorted_palette.get(x))
+        .if(VERBOSE_OUTPUT){
+            .print ("Palette size: "+sorted_palette.size())
+            .print("Sorted palette")
+            .for (var x=0;x<sorted_palette.size();x++){
+                .print(sorted_palette.get(x))
+            }
         }
         //calc decay for each colour: the brighter the slower to go away
         .var starting_delay = 0
@@ -117,7 +119,9 @@
                 .eval starting_delay = starting_delay+decay
 
             }else{
-                .print("Cohordinates for "+next_col+" are null")
+                .if(VERBOSE_OUTPUT){
+                    .print("Cohordinates for "+next_col+" are null")
+                }
             }
         }
 

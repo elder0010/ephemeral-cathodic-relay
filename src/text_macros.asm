@@ -39,11 +39,6 @@
     .byte EVENT_DELAY
     .byte time_lo
     .byte time_hi
-    .print("GOT DELAY")
-    .print(toHexString(*))
-    .print("Time: " + time)
-    .print("Time lo: " + time_lo)
-    .print("Time hi: " + time_hi)
 }
 
 .macro Page(){

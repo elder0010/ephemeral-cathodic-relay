@@ -8,9 +8,8 @@ Code: Elder0010
 .import source("macros.asm")
 .import source("text_macros.asm")
 .import source("variables.asm")
-.import source("scene_settings.asm")
+.import source("settings.asm")
 .import source("data/commands.asm")
-//.import source "data/image_importer.asm"
 .import source "data/filenames.asm"
 
 *= basic_upstart "Basic upstart"
@@ -25,7 +24,9 @@ Code: Elder0010
         sta default_col_val
         sta default_row_val
         sta cursor_sw
-
+.if(HALF_SPEED_TEXT){
+        sta half_speed_delayer
+}
         :set_addr(script, text_addr)
         
         :set_addr_zp(commands_sequence, command_sequence_pt)
@@ -110,7 +111,6 @@ draw_next_jmp:
 .pc = * "Unrolled draw functions"
 .import source "draw_image_routine.asm"
 */
-
 .pc = * "Text"
 script:
 .import source "data/script.asm"

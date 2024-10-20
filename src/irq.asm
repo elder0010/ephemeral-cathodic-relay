@@ -42,7 +42,6 @@ irqack:
         rti 
 
 text_routine:
-
 event_fn:
         jsr handle_events
 

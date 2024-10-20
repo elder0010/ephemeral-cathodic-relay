@@ -1,4 +1,6 @@
 .const VERBOSE_OUTPUT = false 
+.var image = "" 
+
 .function screen_addr(screen_address, x_cohord,y_cohord) {
     .return screen_address+y_cohord*$50+x_cohord
 }

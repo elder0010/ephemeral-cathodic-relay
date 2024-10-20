@@ -51,6 +51,7 @@
 .var hold_tk_hi = $31
 
 .var unroll_start_zp = $32
+.var half_speed_delayer = $34
 
 .var COLOUR_DELAY = 1
 .const DRAWING = 1 

@@ -68,18 +68,15 @@ reset_cursor:
         rts
 
 write_next_char:
-/*
-//#PAGE# change this to skip write on page change
-force_skip_write_next:
-        lda #0 
-        beq !+
-        //.break
+.if(HALF_SPEED_TEXT){
+        lda half_speed_delayer
+        eor #$ff 
+        sta half_speed_delayer
+        bne !+
+        rts 
+!:
+}
 
-        lda #0 
-        sta skip_write+1
-        jmp finished_write
-!: 
-*/
 text_addr:
         lda $ffff 
         beq newline //newline each 0 terminated string

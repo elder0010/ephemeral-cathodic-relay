@@ -1,5 +1,6 @@
 //page 00
 #SETMARGIN=07,04#
+Game Over!!
 Ecco una bella prova con delay#DELAY=50# delay#DELAY=50# 
 IMG00#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#

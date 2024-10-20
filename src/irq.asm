@@ -28,6 +28,11 @@ timer_irq:
         and #%00010000 
         ora #%01100000
         sta $fff0 
+
+    
+
+
+       // inc $E84A
 irq_fn:
         jsr text_routine
       

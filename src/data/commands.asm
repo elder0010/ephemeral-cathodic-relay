@@ -145,13 +145,13 @@ commands_pages:
 //lines sequence
 commands_lines:
 .byte 0
-.byte 1
-.byte 1
-.byte 2
 .byte 2
 .byte 2
 .byte 3
+.byte 3
+.byte 3
 .byte 4
+.byte 5
 .byte 0
 .byte 0
 .byte 0

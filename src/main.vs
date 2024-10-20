@@ -46,7 +46,7 @@ al C:5a7 .move_text_pt
 al C:5cb .event
 al C:79d .hold_image
 al C:491 .timer_irq
-al C:1916 .commands_indexes
+al C:192b .commands_indexes
 al C:6fc .total_colours_val
 al C:985 .ld70
 al C:63c .noevent
@@ -57,7 +57,7 @@ al C:51f .clear_image_screen
 al C:83c .end_delay_rt
 al C:1800 .commands_sequence
 al C:5c4 .cur_com_index
-al C:198e .files_lo
+al C:19aa .files_lo
 al C:5b5 .finished_write
 al C:91b .inputfile
 al C:9fc .msg
@@ -81,7 +81,7 @@ al C:44d .next_op
 al C:92e .nc
 al C:5bd .cur_com_line
 al C:74c .mask_dst_addr
-al C:1952 .files
+al C:196e .files
 al C:4b6 .can_cursor
 al C:466 .draw_next_jmp
 al C:612 .point_next_event
@@ -101,12 +101,12 @@ al C:6eb .mask_colours
 al C:808 .delay_hi_tk
 al C:6b9 .tb_hi
 al C:4bc .cursor_c
-al C:189e .commands_pages
+al C:18a5 .commands_pages
 al C:9d9 .clrch
 al C:76e .msk_ct
 al C:69c .draw_img
 al C:906 .load_file
 al C:463 .wl0
-al C:18da .commands_lines
+al C:18e8 .commands_lines
 al C:4a7 .text_routine
-al C:1998 .files_hi
+al C:19b4 .files_hi

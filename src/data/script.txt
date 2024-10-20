@@ -3,18 +3,25 @@
 Ecco una bella prova con delay#DELAY=50# delay#DELAY=50# 
 IMG00#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#
+#PAGE#
 IMG01#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#
+#PAGE#
 IMG02#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#
+#PAGE#
 IMG03#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#
+#PAGE#
 IMG04#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#
+#PAGE#
 IMG05#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#
+#PAGE#
 IMG06#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#
+#PAGE#
 FINITO!
 #END#
 

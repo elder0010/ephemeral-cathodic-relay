@@ -11,7 +11,13 @@
 .text ("")
 .byte 0
 
+.text ("")
+.byte 0
+
 .text ("IMG01 carica.. carica..")
+.byte 0
+
+.text ("")
 .byte 0
 
 .text ("")
@@ -23,7 +29,13 @@
 .text ("")
 .byte 0
 
+.text ("")
+.byte 0
+
 .text ("IMG03 carica.. carica..")
+.byte 0
+
+.text ("")
 .byte 0
 
 .text ("")
@@ -35,13 +47,22 @@
 .text ("")
 .byte 0
 
+.text ("")
+.byte 0
+
 .text ("IMG05 carica.. carica..")
 .byte 0
 
 .text ("")
 .byte 0
 
+.text ("")
+.byte 0
+
 .text ("IMG06 carica.. carica..")
+.byte 0
+
+.text ("")
 .byte 0
 
 .text ("")

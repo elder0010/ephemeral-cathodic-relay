@@ -1,4 +1,4 @@
-.const COMMANDS_NUMBER=60
+.const COMMANDS_NUMBER=67
 
 .pc=commands_data "Commands data"
 
@@ -11,30 +11,37 @@ commands_sequence:
 :Delay(128)
 :Delay(128)
 :Image(64)
+:Page()
 :LoadNext()
 :Delay(128)
 :Delay(128)
 :Image(64)
+:Page()
 :LoadNext()
 :Delay(128)
 :Delay(128)
 :Image(64)
+:Page()
 :LoadNext()
 :Delay(128)
 :Delay(128)
 :Image(64)
+:Page()
 :LoadNext()
 :Delay(128)
 :Delay(128)
 :Image(64)
+:Page()
 :LoadNext()
 :Delay(128)
 :Delay(128)
 :Image(64)
+:Page()
 :LoadNext()
 :Delay(128)
 :Delay(128)
 :Image(64)
+:Page()
 :End()
 :Delay(50)
 :SetPos(3,20)
@@ -75,58 +82,65 @@ commands_pages:
 .byte 0
 .byte 0
 .byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
-.byte 0
 .byte 1
 .byte 1
 .byte 1
 .byte 1
 .byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
+.byte 2
+.byte 2
+.byte 2
+.byte 2
+.byte 2
+.byte 3
+.byte 3
+.byte 3
+.byte 3
+.byte 3
+.byte 4
+.byte 4
+.byte 4
+.byte 4
+.byte 4
+.byte 5
+.byte 5
+.byte 5
+.byte 5
+.byte 5
+.byte 6
+.byte 6
+.byte 6
+.byte 6
+.byte 6
+.byte 7
+.byte 7
+.byte 7
+.byte 7
+.byte 7
+.byte 7
+.byte 7
+.byte 7
+.byte 7
+.byte 7
+.byte 7
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
+.byte 8
 
 //lines sequence
 commands_lines:
@@ -138,40 +152,47 @@ commands_lines:
 .byte 2
 .byte 3
 .byte 4
+.byte 0
+.byte 0
+.byte 0
+.byte 1
+.byte 2
+.byte 0
+.byte 0
+.byte 0
+.byte 1
+.byte 2
+.byte 0
+.byte 0
+.byte 0
+.byte 1
+.byte 2
+.byte 0
+.byte 0
+.byte 0
+.byte 1
+.byte 2
+.byte 0
+.byte 0
+.byte 0
+.byte 1
+.byte 2
+.byte 0
+.byte 0
+.byte 0
+.byte 1
+.byte 2
+.byte 1
+.byte 3
+.byte 3
+.byte 3
+.byte 3
+.byte 3
+.byte 4
+.byte 4
 .byte 4
 .byte 4
 .byte 5
-.byte 6
-.byte 6
-.byte 6
-.byte 7
-.byte 8
-.byte 8
-.byte 8
-.byte 9
-.byte 10
-.byte 10
-.byte 10
-.byte 11
-.byte 12
-.byte 12
-.byte 12
-.byte 13
-.byte 14
-.byte 14
-.byte 14
-.byte 15
-.byte 17
-.byte 19
-.byte 19
-.byte 19
-.byte 19
-.byte 19
-.byte 20
-.byte 20
-.byte 20
-.byte 20
-.byte 21
 .byte 0
 .byte 0
 .byte 0
@@ -200,29 +221,36 @@ commands_indexes:
 .byte 14
 .byte 23
 .byte 0
-.byte 5
-.byte 14
-.byte 23
 .byte 0
 .byte 5
 .byte 14
 .byte 23
 .byte 0
-.byte 5
-.byte 14
-.byte 23
 .byte 0
 .byte 5
 .byte 14
 .byte 23
 .byte 0
-.byte 5
-.byte 14
-.byte 23
 .byte 0
 .byte 5
 .byte 14
 .byte 23
+.byte 0
+.byte 0
+.byte 5
+.byte 14
+.byte 23
+.byte 0
+.byte 0
+.byte 5
+.byte 14
+.byte 23
+.byte 0
+.byte 0
+.byte 5
+.byte 14
+.byte 23
+.byte 0
 .byte 0
 .byte 0
 .byte 27

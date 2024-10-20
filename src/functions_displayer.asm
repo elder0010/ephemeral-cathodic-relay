@@ -31,7 +31,6 @@ dst_addr:
 mask_colours:
        // :set_addr(screen_addr_lo, mask_tb_lo)
        // :set_addr(screen_addr_hi, mask_tb_hi)
-
         lda #0 
         sta msk_ct+1
 
@@ -101,15 +100,9 @@ init_displayer:
 
         :set_addr(screen_addr_lo, mask_tb_lo)
         :set_addr(screen_addr_hi, mask_tb_hi)
-
-       // jsr draw_img
-
-  //      jmp *
-  
-        rts 
+        rts
 
 hold_image:
-
         clc 
         lda hold_tk_lo
         adc #1

@@ -15,9 +15,7 @@ Code: Elder0010
 
 *= basic_upstart "Basic upstart"
         :BasicUpstart2()
-
         sei
-
         jsr clear_screen
 
         lda #0
@@ -57,8 +55,7 @@ wait_for_draw:
 
         lda #WAIT_FOR_FADE
         sta draw_state
-        
-        
+             
 waitloop:
 !:
         //inc screen+3
@@ -98,10 +95,6 @@ draw_next_jmp:
 .pc = * "Event functions"
 .import source "events.asm"
 
-.pc = * "Text"
-script:
-.import source "data/script.asm"
-
 .pc = * "Screen address tables"
 .import source "data/screen_addresses.asm"
 
@@ -117,3 +110,7 @@ script:
 .pc = * "Unrolled draw functions"
 .import source "draw_image_routine.asm"
 */
+
+.pc = * "Text"
+script:
+.import source "data/script.asm"

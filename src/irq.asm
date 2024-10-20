@@ -109,3 +109,19 @@ image_routine:
 !:
 exit:
         rts
+
+
+//hides the crt shake in the frames after the crunch
+hide_crunch_glitch:
+.if(CRUNCH_CHARS_ON_IMAGE){
+        dec crtk+1
+crtk:
+        lda #CRUNCH_HIDE_TIME
+        bne !+
+        lda #CRUNCH_HIDE_TIME
+        sta crtk+1
+        :set_screen(5)
+        :set_addr(image_routine, irq_fn)
+!:
+        rts 
+}

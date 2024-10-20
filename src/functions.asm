@@ -209,16 +209,24 @@ enable_write_mode:
         :set_addr(write_main, write_next_jmp)
 
         :set_screen(4)
-        :set_char_height(8)
+        .if(CRUNCH_CHARS_ON_IMAGE){
+                :set_char_height(8)
+        }
       //  jsr event_page
         rts 
 
 enable_draw_mode:
         :set_addr(next_op, draw_out_jmp)
         :set_addr(draw_main, write_next_jmp)
-        :set_addr(image_routine, irq_fn)
+        .if(CRUNCH_CHARS_ON_IMAGE){
+                :set_addr(hide_crunch_glitch, irq_fn)
+        }else{
+                :set_addr(image_routine, irq_fn)
+                :set_screen(5)
+        }
+ 
         jsr init_displayer
-        :set_screen(5)
+  
         .if(CRUNCH_CHARS_ON_IMAGE){
                 :set_char_height(7)
         }

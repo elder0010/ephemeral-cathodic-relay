@@ -15,7 +15,6 @@ IMG05#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#
 IMG06#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=64#
-
 FINITO!
 #END#
 

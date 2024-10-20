@@ -71,7 +71,6 @@ end_delay_rt:
 
 //PAGE
 event_page:
-
         inc page_pt
         :inc_addr_zp(command_sequence_pt, 1) //skip event byte and delay byte
         jsr reset_cursor
@@ -91,7 +90,6 @@ event_page:
 
 //SETPOS
 event_setpos:
-
         lda #BLACK_PIXEL
         ldy col_pt
         sta (text_row_zp_addr),y
@@ -138,15 +136,11 @@ event_image:
         :inc_addr_zp(command_sequence_pt, 3) //skip event byte and delay byte
         
         jsr clear_screen
-       
         jsr enable_draw_mode
-        
         rts
 
 //LOADNEXT
 event_loadnext:
-     //   .break 
-
         lda #1 
         sta must_init_image+1
 

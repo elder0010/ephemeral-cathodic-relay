@@ -127,8 +127,8 @@
 
         .print("Total pixels: $"+toHexString(px_nr))
 
-.eval screen_cohord_lo.reverse()
-.eval screen_cohord_hi.reverse()
+//.eval screen_cohord_lo.reverse()
+//.eval screen_cohord_hi.reverse()
 
 .pc = $2000 "Screen address lo"
 screen_addr_lo:

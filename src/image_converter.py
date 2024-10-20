@@ -7,6 +7,7 @@ CONVERTED_WIDTH = 80
 CONVERTED_HEIGHT = 25
 
 from PIL import Image
+from PIL import ImageOps
 import glob
 print(glob.glob('src/data/images/source/*.png'))
 
@@ -24,7 +25,8 @@ class ImageConverter:
     
     def get_pixels_value(self, image_path, image_index):
         # creating a image object
-        source_image = Image.open(image_path)
+        source_image = Image.open(image_path).convert('RGB')
+        source_image = ImageOps.invert(source_image)
         source_pixels = source_image.load()
 
         destination_image = Image.new('RGBA', (CONVERTED_WIDTH, CONVERTED_HEIGHT), (0, 0, 0, 255))
@@ -39,6 +41,9 @@ class ImageConverter:
                 destination_pixels[x, y] = source_pixels[block_x, block_y]
 
         dest_path = f"src/data/images/converted/img_{image_index:02}.png"
+
+        
+
         destination_image.save(dest_path)
         print(f"Converted image saved to {dest_path}")
 

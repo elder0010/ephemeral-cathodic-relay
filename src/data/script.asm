@@ -2,12 +2,6 @@
 .text ("")
 .byte 0
 
-.text ("Game Over!!")
-.byte 0
-
-.text ("Ecco una bella prova con delay delay")
-.byte 0
-
 .text ("IMG00 carica.. carica..")
 .byte 0
 

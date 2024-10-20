@@ -209,10 +209,17 @@ enable_write_mode:
         .if(CRUNCH_CHARS_ON_IMAGE){
                 :set_char_height(8)
         }
+        :sound_off()
+
+        //disable sampling 
+        lda #BIT_ABS 
+        sta can_sample_draw
       //  jsr event_page
         rts 
 
 enable_draw_mode:
+        :rewind_sample()
+        :sound_on()
         :set_addr(next_op, draw_out_jmp)
         :set_addr(draw_main, write_next_jmp)
         .if(CRUNCH_CHARS_ON_IMAGE){

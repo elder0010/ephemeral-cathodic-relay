@@ -56,7 +56,6 @@ skip_write:
 write_fn:
         jsr write_next_char
 !:
-
         lda #1
         sta skip_write+1
 

@@ -4,28 +4,61 @@ event_delay:
 e0_init:
         lda #0
         bne !+
-
-        lda #0
-        sta delay_tk+1
-
         ldy #1
-        lda (command_sequence_pt),y //skip event byte
-        sta delay_val+1
+        sty delay_must_hi+1
+        lda (command_sequence_pt),y //load delay value (lo)
+        sta delay_lo_val+1
+        //if delay is 0, skip the delay lo counter
+        bne bit_lo
+        lda #BIT_ABS  
+        sta delay_must_lo+1
+        jmp no_bit_lo
+bit_lo:
+        lda #JMP_ABS 
+        sta delay_must_lo+1
+no_bit_lo:
+        sty can_cursor+1 
+        sty e0_init+1 //init done
 
-        sty can_cursor+1
-
-        :inc_addr_zp(command_sequence_pt, 2) //skip event byte and delay byte
-        
+        ldy #2
+        lda (command_sequence_pt),y //load delay value (hi)
+        sta delay_hi_val+1
+        bne allow_hidelay
+//disallow hi delay
+        dec delay_must_hi+1
+allow_hidelay:
+        :inc_addr_zp(command_sequence_pt, 3) //skip event byte and delay byte
         :disable_function(write_fn)
         :set_addr(event_delay, event_fn)
-        inc e0_init+1 //init done
 !:
-        inc delay_tk+1
-delay_tk:
+        //processing HI byte
+delay_must_hi:
         lda #0
-delay_val:
-        cmp #0
+        beq delay_must_lo
+
+delay_hi_count:
+        dec delay_hi_tk+1
+delay_hi_tk:    //count to 255
+        lda #0 
         bne !+
+        //check how many times we have to count to 255
+        dec delay_hi_val+1
+delay_hi_val:
+        lda #0
+        bne !+
+        //now start processing LO byte
+        lda #0
+        sta delay_must_hi+1
+!:
+        jmp end_delay_rt
+        //processing LO byte
+delay_must_lo:
+        bit delay_finished //will JMP if delay lo is 0
+        dec delay_lo_val+1
+delay_lo_val:
+        lda #0
+        bne !+
+delay_finished:
         //event delay finished
         lda #0
         sta e0_init+1
@@ -33,6 +66,7 @@ delay_val:
         :enable_function(write_fn)
         :set_addr(handle_events, event_fn)
 !:
+end_delay_rt:
         rts
 
 //PAGE

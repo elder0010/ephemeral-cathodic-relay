@@ -34,8 +34,16 @@
 }
 
 .macro Delay(time){
+    .var time_lo = <time 
+    .var time_hi = <floor(time/256)
     .byte EVENT_DELAY
-    .byte time
+    .byte time_lo
+    .byte time_hi
+    .print("GOT DELAY")
+    .print(toHexString(*))
+    .print("Time: " + time)
+    .print("Time lo: " + time_lo)
+    .print("Time hi: " + time_hi)
 }
 
 .macro Page(){

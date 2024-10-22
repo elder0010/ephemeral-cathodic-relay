@@ -27,11 +27,11 @@
 .label ld70=$9d1
 .label tb_lo=$6fa
 .label event_delay=$804
-.label sample=$3d88
+.label sample=$3d85
 .label commands_sequence=$1800 {
 }
 .label cur_com_index=$5ea
-.label files_lo=$1aec
+.label files_lo=$1b82
 .label sample_addr=$471
 .label finished_write=$5db
 .label no_bit_lo=$821
@@ -54,7 +54,7 @@
 .label tb_hi=$700
 .label clrch=$a25
 .label draw_img=$6e3
-.label commands_lines=$19ac
+.label commands_lines=$1a10
 .label text_routine=$4cd
 .label sample_loop=$471
 .label delay_must_lo=$867
@@ -84,7 +84,7 @@
 .label event=$5f1
 .label hold_image=$7e9
 .label timer_irq=$4b7
-.label commands_indexes=$1a2e
+.label commands_indexes=$1aab
 .label total_colours_val=$743
 .label noevent=$662
 .label draw_main=$447
@@ -105,7 +105,7 @@
 .label listn=$a33
 .label nc=$97a
 .label mask_dst_addr=$798
-.label files=$1ab0
+.label files=$1b46
 .label draw_next_jmp=$46e
 .label point_next_event=$638 {
 }
@@ -116,10 +116,10 @@
 .label text_addr=$585
 .label mask_colours=$732
 .label cursor_c=$4e2
-.label commands_pages=$192a
+.label commands_pages=$1975
 .label msk_ct=$7ba
 .label can_sample_draw=$44f
 .label sample_jmp=$48e
 .label load_file=$952
 .label wl0=$46b
-.label files_hi=$1af6
+.label files_hi=$1b8c

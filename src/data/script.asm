@@ -40,7 +40,7 @@
 .text ("")
 .byte 0
 
-.text ("How ironic, history’s first personal computer happens to beone of the last ones still working.")
+.text ("How ironic,  history’s first personal computer happens to beone of the last ones still working.")
 .byte 0
 
 //page 06
@@ -131,7 +131,7 @@
 .text ("")
 .byte 0
 
-.text ("EPHEMERALCATHODIC SETMARGIN=13,38#DELAY=128#")
+.text ("EPHEMERALCATHODIC SETMARGIN=13,38# RELAY")
 .byte 0
 
 //page 19

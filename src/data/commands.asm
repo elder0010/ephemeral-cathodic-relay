@@ -1,4 +1,4 @@
-.const COMMANDS_NUMBER=130
+.const COMMANDS_NUMBER=155
 
 .pc=commands_data "Commands data"
 
@@ -6,7 +6,7 @@
 commands_sequence:
 :Page()
 :SetMargin(12,04)
-:Delay(128)
+:Delay(64)
 :Page()
 :Delay(64)
 :Page()
@@ -20,6 +20,35 @@ commands_sequence:
 :SetMargin(12,04)
 :Delay(64)
 :Page()
+:Delay(64)
+:SetMargin(13,04)
+:Delay(64)
+:Page()
+:SetMargin(12,04)
+:Delay(64)
+:Page()
+:Delay(32)
+:Delay(64)
+:Page()
+:Delay(128)
+:Delay(64)
+:Page()
+:Delay(128)
+:Delay(64)
+:Page()
+:Delay(64)
+:Page()
+:Delay(64)
+:Delay(64)
+:Page()
+:SetMargin(13,04)
+:Delay(64)
+:Page()
+:SetMargin(12,04)
+:Delay(64)
+:Page()
+:Delay(128)
+:Delay(64)
 :SetMargin(13,04)
 :Delay(64)
 :Page()
@@ -28,40 +57,36 @@ commands_sequence:
 :Page()
 :Delay(64)
 :Page()
+:Delay(64)
+:Page()
+:SetMargin(13,6)
+:Delay(64)
+:SetMargin(13,21)
+:Delay(64)
+:Delay(64)
 :Delay(128)
-:Delay(64)
-:Page()
-:Delay(128)
-:Delay(64)
 :Page()
 :Delay(64)
 :Page()
-:Delay(64)
-:Page()
-:Delay(64)
-:Page()
-:Delay(64)
-:Page()
-:Delay(128)
+:SetMargin(13,04)
+:Delay(32)
 :Delay(64)
 :SetMargin(13,04)
-:Delay(64)
+:Delay(32)
 :Page()
 :SetMargin(12,04)
 :Delay(64)
 :Page()
+:Delay(64)
 :Page()
+:Delay(64)
 :Page()
+:Delay(64)
 :Page()
-:Page()
-:Page()
-:Page()
-:Page()
-:Page()
-:Page()
-:SetMargin(040,20)
+:SetMargin(012,40)
 :Delay(256)
 :SetMargin(07,04)
+:Delay(64)
 :SetMargin(040,20)
 :Delay(8)
 :Delay(8)
@@ -156,9 +181,11 @@ commands_pages:
 .byte 7
 .byte 7
 .byte 7
+.byte 7
 .byte 8
 .byte 8
 .byte 8
+.byte 9
 .byte 9
 .byte 9
 .byte 10
@@ -171,8 +198,11 @@ commands_pages:
 .byte 12
 .byte 13
 .byte 13
+.byte 13
 .byte 14
 .byte 14
+.byte 14
+.byte 15
 .byte 15
 .byte 15
 .byte 16
@@ -184,14 +214,34 @@ commands_pages:
 .byte 17
 .byte 17
 .byte 18
+.byte 18
+.byte 19
 .byte 19
 .byte 20
+.byte 20
+.byte 20
+.byte 20
+.byte 20
+.byte 20
+.byte 20
+.byte 21
 .byte 21
 .byte 22
+.byte 22
+.byte 22
+.byte 22
+.byte 22
+.byte 22
+.byte 23
+.byte 23
 .byte 23
 .byte 24
+.byte 24
+.byte 25
 .byte 25
 .byte 26
+.byte 26
+.byte 27
 .byte 27
 .byte 27
 .byte 27
@@ -288,10 +338,6 @@ commands_lines:
 .byte 1
 .byte 0
 .byte 0
-.byte 1
-.byte 0
-.byte 0
-.byte 1
 .byte 0
 .byte 1
 .byte 0
@@ -301,7 +347,50 @@ commands_lines:
 .byte 0
 .byte 1
 .byte 0
+.byte 0
 .byte 1
+.byte 0
+.byte 0
+.byte 1
+.byte 0
+.byte 1
+.byte 0
+.byte 0
+.byte 1
+.byte 0
+.byte 0
+.byte 1
+.byte 0
+.byte 0
+.byte 1
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 1
+.byte 0
+.byte 0
+.byte 1
+.byte 0
+.byte 1
+.byte 0
+.byte 1
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 1
+.byte 0
+.byte 1
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 1
+.byte 0
 .byte 0
 .byte 1
 .byte 0
@@ -309,24 +398,10 @@ commands_lines:
 .byte 0
 .byte 1
 .byte 0
-.byte 0
-.byte 0
-.byte 0
 .byte 1
 .byte 0
 .byte 0
 .byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 1
-.byte 0
-.byte 0
 .byte 1
 .byte 2
 .byte 2
@@ -419,11 +494,13 @@ commands_indexes:
 .byte 0
 .byte 56
 .byte 0
-.byte 61
-.byte 96
+.byte 12
+.byte 62
+.byte 97
 .byte 0
 .byte 0
 .byte 24
+.byte 0
 .byte 0
 .byte 17
 .byte 0
@@ -435,9 +512,12 @@ commands_indexes:
 .byte 0
 .byte 70
 .byte 0
+.byte 39
 .byte 67
 .byte 0
+.byte 61
 .byte 107
+.byte 0
 .byte 0
 .byte 11
 .byte 0
@@ -449,18 +529,38 @@ commands_indexes:
 .byte 0
 .byte 54
 .byte 0
+.byte 27
+.byte 0
+.byte 19
 .byte 0
 .byte 0
 .byte 0
+.byte 9
+.byte 9
+.byte 18
+.byte 41
+.byte 0
+.byte 24
+.byte 0
+.byte 70
+.byte 70
+.byte 101
+.byte 101
+.byte 154
 .byte 0
 .byte 0
+.byte 94
 .byte 0
+.byte 74
 .byte 0
+.byte 54
 .byte 0
+.byte 55
 .byte 0
 .byte 0
 .byte 1
 .byte 0
+.byte 68
 .byte 0
 .byte 1
 .byte 2

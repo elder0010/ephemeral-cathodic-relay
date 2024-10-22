@@ -1,5 +1,5 @@
 init_irq:
-        sei     
+       // sei     
 
         lda $fff0 
         and #%00010000 
@@ -17,33 +17,72 @@ init_irq:
 
         lda #<timer_irq 
         sta $90
+
+        lda #<timer_irq_hiram
+       // sta $fffa 
+        sta $fffe 
         lda #>timer_irq 
         sta $91 
+     //   sta $fffb
 
-        cli 
+        lda #>timer_irq_hiram
+        sta $ffff
+
+        lda #<boccio 
+        sta $fffa 
+        sta $94 
+
+        lda #>boccio
+        sta $fffb
+        sta $95
+      
         rts
 
-timer_irq:
-        lda $fff0 
-        and #%00010000 
-        ora #%01100000
-        sta $fff0 
+boccio:
+.break 
+        rti 
 
-    
+timer_irq_hiram:
+        sta r_zp_1
+        sty r_zp_2 
+        stx r_zp_3
+.break
+        :set_addr(hiram_exit, irq_exit_jmp)
+timer_irq:
+        lda #0
+        sta $fff0 
+.break
+     // lda MEMMAP
+       // sta $fff0 
+
 
 
        // inc $E84A
 irq_fn:
         jsr text_routine
       
-irqack:
+
+   
         lda $e812
 
+  //      lda MEMMAP
+//        sta $fff0 
+
+irq_exit_jmp:
+        jmp kernal_exit
+
+kernal_exit:
         pla 
         tay 
         pla 
         tax 
         pla
+        rti 
+hiram_exit:
+        :set_addr(kernal_exit, irq_exit_jmp)
+        lda r_zp_1
+        ldy r_zp_2
+        ldx r_zp_3
         rti 
 
 text_routine:

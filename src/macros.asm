@@ -86,8 +86,6 @@
         sta $e881               
 }
 
-
-
 .macro wait_frame(){
     !:
         lda VIA_PORT_B
@@ -198,13 +196,3 @@ When equal to 0, block 2 (16k-byte) is selected.
         sta $e84b 
 }
 
-.macro rewind_sample(){
-        lda #<sample
-        sta sample_addr+1
-        lda #>sample
-        sta sample_addr+2
-
-        lda #0 
-        sta $e84a
-        sta $e848
-}

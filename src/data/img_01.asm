@@ -1,7 +1,7 @@
 .import source("../macros.asm")
 .import source("../text_macros.asm")
 .import source("../variables.asm")
-.import source("../scene_settings.asm")
+.import source("../settings.asm")
 .import source("image_importer.asm")
 
 :process_image("src/data/images/converted/img_01.png")

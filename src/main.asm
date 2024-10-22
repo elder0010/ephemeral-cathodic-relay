@@ -13,11 +13,51 @@ Code: Elder0010
 .import source("data/commands.asm")
 .import source "data/filenames.asm"
 
+.macro rewind_sample(){
+        lda #<sample
+        sta sample_addr+1
+        lda #>sample
+        sta sample_addr+2
+
+        lda #0 
+        sta $e84a
+        sta $e848
+}
+
 *= basic_upstart "Basic upstart"
         :BasicUpstart2()
         sei
         jsr clear_screen
 
+//:disable_io_peek()
+        :select_block_2()
+        
+     //   :disable_write_protect()
+
+  
+/*
+
+        lax #0
+!: 
+lda #41 
+sta $a000  ,x 
+dex 
+bne !- 
+
+
+lda #0
+
+ldx #0
+!: 
+lda $a000, x
+sta screen,x 
+dex 
+bne !-
+//jmp *
+*/
+      lda #%11100000
+        sta MEMMAP 
+        sta $fff0 
         :sound_on()
         
         lda #0
@@ -37,6 +77,25 @@ Code: Elder0010
         jsr reset_cursor
 
         jsr init_irq
+
+ 
+
+        
+     //   lda #$32
+       // sta MEMMAP 
+
+           cli 
+
+     //   sta $fff0 
+
+//lda #32
+//sta $fff0 
+
+//.break 
+
+
+
+
 
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD
@@ -125,16 +184,16 @@ sample_jmp:
 .pc = * "Loader"
 .import source "loader.asm"
 
-.pc = $2000 "Image buffer area (unusable)"
-.fill $1421,$00
-//.import source("src/data/image_importer.asm")
-//:process_image("src/data/images/img_00.png")
-
 .pc = * "Text"
 script:
 .import source "data/script.asm"
 
-.pc = * "Sample data"
-sample:
-.import binary("data/sample_7khz.raw")
+
+
+//.pc = $2000 "Image buffer area (unusable)"
+//.fill $1421,$00
+//.import source("src/data/image_importer.asm")
+//:process_image("src/data/images/img_00.png")
+
+
 

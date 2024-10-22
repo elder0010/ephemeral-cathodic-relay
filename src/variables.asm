@@ -53,6 +53,11 @@
 .var unroll_start_zp = $32
 .var half_speed_delayer = $34
 
+.var r_zp_1 = $35
+.var r_zp_2 = $36
+.var r_zp_3 = $37
+
+
 .var COLOUR_DELAY = 1
 .const DRAWING = 1 
 .const WAIT_FOR_FADE = 2
@@ -81,10 +86,13 @@
 .var loaded_image = $7000
 
 //Images memory locations
-.const screen_addr_lo = $2000
-.const pixels_colour_amt = $3004
-.const px_number = $3000
-.const total_colours = $3002
-.const screen_addr_hi = $2800
-.const pixels_delay = $3000
+.const screen_addr_lo = $8000
+.const screen_addr_hi = $8800
 
+.const pixels_colour_amt = $9004
+.const px_number = $9000
+.const total_colours = $9002
+
+//.const pixels_delay = $3000
+
+.const sample = $2000 

@@ -1,4 +1,110 @@
 //page 00
+#PAGE#
+#SETMARGIN=12,04#Hey.#DELAY=64#
+//page 01
+#PAGE#
+It's me.#DELAY=64#
+#PAGE#
+//page 02
+#PAGE#
+I really really hope you still got that one I left you, down there.#DELAY=80#
+//page 03
+#PAGE#
+Well,#DELAY=16# if you’re reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that 8296.#DELAY=64#
+//page 04
+#PAGE#
+#SETMARGIN=12,04#When I said it was built like a tank I was dead serious.#DELAY=64#
+//page 05
+#PAGE#
+How ironic, #DELAY=64# history’s first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.#DELAY=64#
+//page 06
+#PAGE#
+#SETMARGIN=12,04#I have two news for you.#DELAY=64#
+//page 07
+#PAGE#
+#DELAY=32#First one is bad.#DELAY=64#
+//page 08
+#PAGE#
+#DELAY=128#Very bad.#DELAY=64#
+//page 09
+#PAGE#
+#DELAY=128#They are on us.#DELAY=64# 
+//page 10
+#PAGE#
+They managed to read every data, every image to predict our intentions#DELAY=64# 
+//page 11
+#PAGE#
+They still don’t have pictures of me,#DELAY=64# but they know that I exist.#DELAY=64# 
+//page 12
+#PAGE#
+The last photo you got from me was the last one you’ll ever#SETMARGIN=13,04# have until we manage to meet again in person.#DELAY=64#
+//page 13
+#PAGE#
+#SETMARGIN=12,04#Second one:#DELAY=64# 
+//page 14
+#PAGE#
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way to send you pictures of me anyway.#DELAY=64# 
+//page 15
+#PAGE#
+#SETMARGIN=12,04#Images that those machines can’t see nor understand.#DELAY=64#
+//page 16
+#PAGE#
+A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+I like to call them#DELAY=64# 
+//page 18
+#PAGE#
+#SETMARGIN=13,6##DELAY=64#EPHEMERAL#SETMARGIN=13,21##DELAY=64#CATHODIC #DELAY=64#SETMARGIN=13,38##RELAY#DELAY=128#
+//page 19
+#PAGE#
+It's E.C.R. for short :)#DELAY=64# 
+//page 20
+#PAGE#
+TLDR: This bulky, gorgeous display of yours is a very powerful device.#SETMARGIN=13,04##DELAY=32#It hides an incredible feature.#DELAY=64##SETMARGIN=13,04#A feature that was overlooked for more than 50 years.#DELAY=32# 
+//page 21
+#PAGE#
+#SETMARGIN=12,04#Even if a 8296 PET has no graphic modes and only displays characters with a 1 bit colour depth#DELAY=64#
+//page 22
+#PAGE#
+I found a way to take advantage of the cathodic falloff of its CRT display#DELAY=64#
+//page 23
+#PAGE#
+the 8296 tube is painted with unusually slow phosphors#DELAY=64#
+//page 24
+#PAGE#
+look how slow it is to make the cursor really disappear#DELAY=64#
+//page 25
+#PAGE#
+#SETMARGIN=012,40# #DELAY=256#
+//page 26
+#SETMARGIN=07,04#Can you count how many shades of green you see before it disappears?#DELAY=64#
+//page 25
+#SETMARGIN=040,20# #DELAY=8# #DELAY=8# #DELAY=8# #DELAY=8# 
+//page 26
+#DELAY=64# You can’t!
+//page 27
+They are endless, it’s a true, non linear analog fade out 
+//page 28
+That’s where my idea came in.
+//page 29
+I measured time and light of that fade out
+//page 30
+and I made a conversion routine that converts time in a grayscale value
+//page 31
+It’s called the Cathodic Exposure Chart, CEC.
+//page 32
+(Love high tech acronyms)
+#END#
+
+
+
+
+
+
+
+
+//page 99
 #SETMARGIN=07,04#
 IMG00#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
 #IMAGE=96#

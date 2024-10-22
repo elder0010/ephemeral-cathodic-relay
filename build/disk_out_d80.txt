@@ -1,13 +1,1 @@
 Adding 8 files to new image demo.d80
-
-0 "e.c.r.          " 00 2a
-137  "main"             prg 
-17   "img00"            prg 
-17   "img01"            prg 
-17   "img02"            prg 
-18   "img03"            prg 
-18   "img04"            prg 
-17   "img05"            prg 
-17   "img06"            prg 
-406 blocks free.
-

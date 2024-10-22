@@ -2,7 +2,7 @@
 .var screen = $8000
 .var screen_image = $8800
 
-.var commands_data = $1800
+.var commands_data = $b00
 
 .var col_pt = $08
 .var text_row_zp_addr = $11 //word

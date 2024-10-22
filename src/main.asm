@@ -125,7 +125,7 @@ sample_jmp:
 .pc = * "Loader"
 .import source "loader.asm"
 
-.pc = $2000 "Image buffer area (unusable)"
+.pc = $1400 "Image buffer area (unusable)"
 .fill $1421,$00
 //.import source("src/data/image_importer.asm")
 //:process_image("src/data/images/img_00.png")
@@ -134,7 +134,10 @@ sample_jmp:
 script:
 .import source "data/script.asm"
 
+/*
 .pc = * "Sample data"
 sample:
 .import binary("data/sample_7khz.raw")
+*/
 
+sample:

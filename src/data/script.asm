@@ -572,25 +572,25 @@
 .text ("I’ll leave you with the last trick: if you squint a little bit it works even better.")
 .byte 0
 
-//page 86
+//page 87
 .text ("")
 .byte 0
 
 .text ("Try that, now.")
 .byte 0
 
-//page 87 TREE
+//page 88 TIPA
 .text ("")
 .byte 0
 
-//page 88
+//page 89
 .text ("")
 .byte 0
 
 .text ("I love you.")
 .byte 0
 
-//page 89
+//page 90
 .text ("")
 .byte 0
 

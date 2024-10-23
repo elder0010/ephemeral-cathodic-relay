@@ -102,6 +102,10 @@ class ScriptParser:
             found = True
             command = f':LoadNext()'
 
+        if ("LOADSFX" in command_string):
+            found = True
+            command = f':LoadSfx()'
+
         if ("END" in command_string):
             found = True
             command = f':End()'

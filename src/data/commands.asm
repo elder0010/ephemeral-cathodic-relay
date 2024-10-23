@@ -11,7 +11,7 @@ commands_sequence:
 :Page()
 :Delay(16)
 :Delay(64)
-:LoadNext()
+:LoadSfx()
 :Page()
 :Page()
 :Delay(64)

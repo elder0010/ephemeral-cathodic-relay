@@ -58,3 +58,7 @@
 .macro LoadNext(){
     .byte EVENT_LOADNEXT
 }
+
+.macro LoadSfx(){
+    .byte EVENT_LOADSFX
+}

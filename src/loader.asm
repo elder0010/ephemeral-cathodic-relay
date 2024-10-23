@@ -122,7 +122,7 @@ must_init_image:
         lda total_colours       
         sta total_colours_val+1
 
-       // jsr draw_img
+        jsr draw_img
 !:
         rts
 

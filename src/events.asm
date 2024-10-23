@@ -147,8 +147,21 @@ event_loadnext:
         lda #$20 //jsr 
         sta can_load_file
 
-        :inc_addr_zp(command_sequence_pt, 1) //skip event byte and delay byte
+        :inc_addr_zp(command_sequence_pt, 1) //skip event byte
         rts 
+
+//LOADSFX
+event_loadsfx:
+        lda #0
+        sta must_init_image+1
+
+        inc screen+2
+
+        lda #$20 //jsr 
+        sta can_load_file
+
+        :inc_addr_zp(command_sequence_pt, 1) //skip event byte
+        rts
 
 event_end:
         jsr $fd16

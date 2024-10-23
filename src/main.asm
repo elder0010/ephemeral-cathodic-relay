@@ -27,39 +27,126 @@ Code: Elder0010
 *= basic_upstart "Basic upstart"
         :BasicUpstart2()
         sei
+
+        lda #%10000000
+
+        lda #$e8 
+        sta MEMMAP
+
         jsr clear_screen
+        jsr init_irq
 
-//:disable_io_peek()
-        :select_block_2()
+ 
+      //  cli 
+
+
+
         
-     //   :disable_write_protect()
 
-  
-/*
-
-        lax #0
-!: 
-lda #41 
-sta $a000  ,x 
-dex 
-bne !- 
-
-
-lda #0
-
-ldx #0
-!: 
-lda $a000, x
-sta screen,x 
-dex 
-bne !-
-//jmp *
-*/
-      lda #%11100000
-        sta MEMMAP 
-        sta $fff0 
         :sound_on()
+
+        /*
+//copy kernal rom 
+        ldy #0 
+
+copy0:
+        ldx #0
+!:
+
+
+src0:
+        lda $f000,x 
+dst0:
+        sta $2000,x 
+
         
+        dex 
+        bne !-
+        inc src0+2
+        inc dst0+2
+        iny 
+        cpy #$10 
+        bne copy0
+
+lda #%100100000
+
+//lda #%10000000
+sta $fff0 
+sta MEMMAP
+
+//now copy again 
+        ldy #0 
+
+copy1:
+        ldx #0
+!:
+src1:
+        lda $2000,x 
+dst1:
+        sta $f000,x 
+        dex 
+        bne !-
+        inc src1+2
+        inc dst1+2
+        iny 
+        cpy #$10 
+        bne copy1
+
+        lda #%011000000
+
+//lda #%10000000
+sta $fff0 
+sta MEMMAP
+*/
+
+
+
+//lda #%01100000
+//sta $fff0 
+
+.const ram_area = $a000
+.const ram_area_2 = $fb00 
+        lda #11100100
+        sta $fff0 
+
+        ldx #0
+!: 
+        lda #1 
+        sta ram_area  ,x
+
+        lda #2
+        sta ram_area_2,x
+        dex 
+        bne !- 
+
+
+        ldy #%11100100
+        sty $fff0 
+
+            lda #<timer_irq 
+        sta $fffe 
+
+        lda #>timer_irq 
+        sta $ffff 
+
+        ldx #0
+!: 
+        lda ram_area, x
+        sta screen,x 
+
+        lda ram_area_2, x
+        sta screen+$100,x 
+        dex 
+        bne !-
+
+       jmp *
+      // lda #$80 
+       sty $fff0 
+       sty MEMMAP
+
+
+
+
         lda #0
         sta page_pt
         sta script_col_pt
@@ -76,27 +163,26 @@ bne !-
 
         jsr reset_cursor
 
-        jsr init_irq
-
- 
-
-        
-     //   lda #$32
-       // sta MEMMAP 
-
            cli 
 
-     //   sta $fff0 
+/*
+mloop:
 
-//lda #32
-//sta $fff0 
+lda #$80 
+sta $fff0 
 
-//.break 
+lda $a000 
+sta screen+1
+
+lda #00 
+sta $fff0 
+lda $a000 
+sta screen+2
+inc $a000 
 
 
-
-
-
+jmp mloop
+*/
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD
 write_main:
@@ -104,6 +190,9 @@ write_main:
 can_load_file:
         bit load_file
 
+        lda #0 
+        sta MEMMAP
+        sta $fff0 
 write_next_jmp:
         jmp write_main
         
@@ -149,9 +238,21 @@ draw_next_jmp:
 
 //Sample routine
 sample_loop:
+//sei 
+       //lda #$e8
+     //  sta $fff0 
+       //sta MEMMAP
+     //  .break
+
+       ldy #%11100100
+        sty $fff0 
 sample_addr:
         lda sample
+
+       
         sta $e84a 
+
+        
         sta $e848
 
         .fill 6,NOP
@@ -162,7 +263,14 @@ sample_addr:
         bcc !+
         inc sample_addr+2
 !:
+
 sample_jmp:
+                 
+  
+
+       // lda MEMMAP
+     //   sta $fff0
+//cli 
         rts
        // jmp sample_loop
 
@@ -190,7 +298,7 @@ script:
 
 
 
-//.pc = $2000 "Image buffer area (unusable)"
+.pc = $2000 "Image buffer area (unusable)"
 //.fill $1421,$00
 //.import source("src/data/image_importer.asm")
 //:process_image("src/data/images/img_00.png")

@@ -86,13 +86,13 @@
 .var loaded_image = $7000
 
 //Images memory locations
-.const screen_addr_lo = $8000
-.const screen_addr_hi = $8800
+.const screen_addr_lo = $2000
+.const screen_addr_hi = $2800
 
-.const pixels_colour_amt = $9004
-.const px_number = $9000
-.const total_colours = $9002
+.const pixels_colour_amt = $3004
+.const px_number = $3000
+.const total_colours = $3002
 
 //.const pixels_delay = $3000
 
-.const sample = $2000 
+.const sample = $a000 

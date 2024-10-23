@@ -1,11 +1,8 @@
 init_irq:
        // sei     
 
-        lda $fff0 
-        and #%00010000 
-        ora #%01100000
-        sta $fff0 
 
+      
         lda #$0 
         sta $e811
         sta $e821
@@ -15,75 +12,109 @@ init_irq:
         lda #%10111101
         sta $e813
 
+
+ 
         lda #<timer_irq 
-        sta $90
-
-        lda #<timer_irq_hiram
-       // sta $fffa 
         sta $fffe 
+
         lda #>timer_irq 
-        sta $91 
-     //   sta $fffb
+        sta $ffff 
 
-        lda #>timer_irq_hiram
-        sta $ffff
+lda #0 
+sta $fff0 
+        lda #<timer_irq_body
+        sta $90 
 
-        lda #<boccio 
-        sta $fffa 
-        sta $94 
+        lda #>timer_irq_body
+        sta $91
+        
 
-        lda #>boccio
-        sta $fffb
-        sta $95
-      
+  
         rts
 
-boccio:
-.break 
-        rti 
+/*
+kernal_irq_handler:
 
-timer_irq_hiram:
-        sta r_zp_1
-        sty r_zp_2 
-        stx r_zp_3
-.break
-        :set_addr(hiram_exit, irq_exit_jmp)
+         pha 
+         txa 
+         tya 
+         pha 
+         
+         jmp timer_irq_body
+ PHA
+.C:e443  8A          TXA
+.C:e444  48          PHA
+.C:e445  98          TYA
+.C:e446  48          PHA
+.C:e447  BA          TSX
+.C:e448  BD 04 01    LDA $0104,X
+.C:e44b  29 10       AND #$10
+.C:e44d  F0 03       BEQ $E452
+.C:e44f  6C 92 00    JMP ($0092)
+*/
+.pc = * "IRQ handler"
 timer_irq:
-        lda #0
+ .break 
+        lda #0 
         sta $fff0 
-.break
+ .break       
+        jmp $e442 
+
+timer_irq_body:          
+       //     lda #%11100000
+//sta $fff0 
+
+//.break
+      //  lda #0
+       // sta $fff0 
+
+        lda $e812
+
      // lda MEMMAP
        // sta $fff0 
 
+      //  lda #$0 
+        //sta $fff0 
 
-
+inc screen 
        // inc $E84A
 irq_fn:
         jsr text_routine
       
 
-   
-        lda $e812
+    //   lda MEMMAP
+  // sta $fff0 
+//lda $e812
+//jmp $e600 
+    //    lda $e812
 
-  //      lda MEMMAP
-//        sta $fff0 
 
-irq_exit_jmp:
-        jmp kernal_exit
-
-kernal_exit:
+        lda MEMMAP
+        sta $fff0 
         pla 
         tay 
         pla 
         tax 
         pla
+        
+        
         rti 
-hiram_exit:
-        :set_addr(kernal_exit, irq_exit_jmp)
-        lda r_zp_1
-        ldy r_zp_2
-        ldx r_zp_3
+
+/*
+        lda MEMMAP
+        sta $fff0
+        lda store_a
+        ldx store_x
+        ldy store_y
         rti 
+        */
+
+store_a:
+.byte 0
+store_x:
+.byte 0
+store_y:
+.byte 0
 
 text_routine:
 event_fn:

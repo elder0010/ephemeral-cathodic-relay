@@ -1,4 +1,4 @@
-.const COMMANDS_NUMBER=38
+.const COMMANDS_NUMBER=42
 
 .pc=commands_data "Commands data"
 
@@ -8,6 +8,10 @@ commands_sequence:
 :LoadNext()
 :Delay(128)
 :LoadNext()
+:Delay(256)
+:Delay(256)
+:Delay(256)
+:Delay(256)
 :Delay(256)
 :Image(96)
 :Page()
@@ -45,6 +49,10 @@ commands_sequence:
 
 //pages sequence
 commands_pages:
+.byte 0
+.byte 0
+.byte 0
+.byte 0
 .byte 0
 .byte 0
 .byte 0
@@ -91,6 +99,10 @@ commands_lines:
 .byte 1
 .byte 1
 .byte 1
+.byte 1
+.byte 1
+.byte 1
+.byte 1
 .byte 2
 .byte 3
 .byte 0
@@ -132,6 +144,10 @@ commands_indexes:
 .byte 14
 .byte 36
 .byte 37
+.byte 39
+.byte 40
+.byte 41
+.byte 42
 .byte 0
 .byte 0
 .byte 5

@@ -1,6 +1,6 @@
 //page 99
 #SETMARGIN=07,04#
-IMG00#LOADNEXT# carica..#DELAY=128# loading sample start #LOADNEXT# #DELAY=256#.
+IMG00#LOADNEXT# carica..#DELAY=128# loading sample start #LOADNEXT# #DELAY=256#. #DELAY=256#.#DELAY=256#.#DELAY=256#.#DELAY=256#.
 #IMAGE=96#
 #PAGE#
 IMG01#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#

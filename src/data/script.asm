@@ -2,7 +2,7 @@
 .text ("")
 .byte 0
 
-.text ("IMG00 carica.. loading sample start  .")
+.text ("IMG00 carica.. loading sample start  . ....")
 .byte 0
 
 .text ("")

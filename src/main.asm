@@ -11,7 +11,7 @@ Code: Elder0010
 .import source("variables.asm")
 .import source("settings.asm")
 .import source("data/commands.asm")
-.import source "data/filenames.asm"
+
 
 .macro rewind_sample(){
         lda #<sample
@@ -28,15 +28,11 @@ Code: Elder0010
         :BasicUpstart2()
         sei
 
-        lda #%10000000
-
-        lda #$e8 
-        sta MEMMAP
+        //lda #$e8 
+        //sta MEMMAP
 
         jsr clear_screen
         jsr init_irq
-
- 
       //  cli 
         :sound_on()
 
@@ -113,6 +109,11 @@ srctxt:
 dsttxt:
         sta script,x
 
+srccmd:
+        lda commands_sequence,x 
+dstcmd:       
+        sta commands_sequence_relocated,x
+
         lda #2 
         sta text_src,x 
         dex 
@@ -120,8 +121,9 @@ dsttxt:
         inc srctxt+2
         inc dsttxt+2
         iny
-        cpy #40
+        cpy #16
         bne copytxt
+
 
 /*
 
@@ -145,7 +147,7 @@ dsttxt:
         sty $fff0 
 
 */
-            lda #<timer_irq 
+        lda #<timer_irq 
         sta $fffe 
 
         lda #>timer_irq 
@@ -183,15 +185,18 @@ dsttxt:
 }
         :set_addr(script, text_addr)
         
-        :set_addr_zp(commands_sequence, command_sequence_pt)
-
-        jsr reset_cursor
+        //:set_addr_zp(commands_sequence, command_sequence_pt)
+        :set_addr_zp(commands_sequence_relocated, command_sequence_pt)
 
         lda #RAMEXP_DISABLE
         sta $fff0 
+        
+        jsr reset_cursor
+
+        
        // sta MEMMAP 
 
-           cli 
+        cli 
 
 /*
 mloop:
@@ -314,9 +319,19 @@ sample_jmp:
 .pc = * "Loader"
 .import source "loader.asm"
 
-.pc = $2000 "Text (can be trashed)"
+.import source "data/filenames.asm"
+
+.pc = $2000 "Text"
 text_src:
 .import source "data/script.asm"
+text_end:
+
+.if(text_end-text_src > $fff){
+        .print("ERROR! Text is too long!")
+}else{
+        .print("Text is $"+ toHexString(text_end-text_src) +" bytes long, all good!")
+}
+       
 
 
 /*

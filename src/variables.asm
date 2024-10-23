@@ -2,7 +2,7 @@
 .var screen = $8000
 .var screen_image = $8800
 
-.var commands_data = $1000
+.var commands_data = $1000 //source
 
 .var col_pt = $08
 .var text_row_zp_addr = $11 //word
@@ -24,6 +24,7 @@
 .var RAMEXP_ENABLE = %11100100
 .var RAMEXP_DISABLE = %00000000
 
+.var commands_sequence_relocated = $b000
 
 //event defines
 .const EVENT_DELAY = 1
@@ -90,16 +91,15 @@
 .const RUNTLK = $f1ae //Send UNTALK
 .const ROPENI = $f4a5 //Get Next One Byte Parameter / send listen
 
-.var loaded_image = $7000
+//.var loaded_image = $7000
 
 //Images memory locations
-.const screen_addr_lo = $2000
-.const screen_addr_hi = $2800
-
-.const pixels_colour_amt = $3004
-.const px_number = $3000
-.const total_colours = $3002
+.const screen_addr_lo = $1800
+.const screen_addr_hi = screen_addr_lo+$800
+.const px_number = screen_addr_lo+$1000
+.const total_colours = screen_addr_lo+$1002
+.const pixels_colour_amt = screen_addr_lo+$1004
 
 //.const pixels_delay = $3000
-
-.const sample = $3500
+//.const sample = pixels_colour_amt+2
+.const sample = pixels_colour_amt+256

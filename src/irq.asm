@@ -1,8 +1,4 @@
-init_irq:
-       // sei     
-
-
-      
+init_irq:      
         lda #$0 
         sta $e811
         sta $e821
@@ -12,8 +8,6 @@ init_irq:
         lda #%10111101
         sta $e813
 
-
- 
         lda #<timer_irq 
         sta $fffe 
 
@@ -21,16 +15,12 @@ init_irq:
         sta $ffff 
         
 
-lda #0 
-sta $fff0 
+        lda #0 
+        sta $fff0 
         lda #<timer_irq_body
         sta $90 
-
         lda #>timer_irq_body
         sta $91
-        
-
-  
         rts
 
 /*
@@ -61,27 +51,12 @@ timer_irq:
  .break       
         jmp $e442 
 
-timer_irq_body:          
-       //     lda #%11100000
-//sta $fff0 
-
-//.break
-      //  lda #0
-       // sta $fff0 
-
+timer_irq_body:
         lda $e812
-
-     // lda MEMMAP
-       // sta $fff0 
-
-      //  lda #$0 
-        //sta $fff0 
-
-inc screen 
+        inc screen 
        // inc $E84A
-  ldy #RAMEXP_ENABLE
-        sty $fff0 
-
+        lda #RAMEXP_ENABLE
+        sta $fff0 
         /*
                ldx #0
 !: 
@@ -96,16 +71,6 @@ inc screen
 */
 irq_fn:
         jsr text_routine
-      
-
-    //   lda MEMMAP
-  // sta $fff0 
-//lda $e812
-//jmp $e600 
-    //    lda $e812
-
-
-       /// lda MEMMAP
 
         lda #RAMEXP_DISABLE
         sta $fff0 
@@ -114,25 +79,7 @@ irq_fn:
         pla 
         tax 
         pla
-        
-        
         rti 
-
-/*
-        lda MEMMAP
-        sta $fff0
-        lda store_a
-        ldx store_x
-        ldy store_y
-        rti 
-        */
-
-store_a:
-.byte 0
-store_x:
-.byte 0
-store_y:
-.byte 0
 
 text_routine:
 event_fn:
@@ -200,7 +147,6 @@ image_routine:
 !:
 exit:
         rts
-
 
 //hides the crt shake in the frames after the crunch
 hide_crunch_glitch:

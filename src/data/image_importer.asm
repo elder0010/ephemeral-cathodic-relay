@@ -132,7 +132,7 @@
 //.eval screen_cohord_lo.reverse()
 //.eval screen_cohord_hi.reverse()
 
-.pc = $2000 "Screen address lo"
+.pc = $1800 "Screen address lo"
 screen_addr_lo:
 .for (var x=0;x<screen_cohord_lo.size();x++){
     .byte screen_cohord_lo.get(x)
@@ -147,6 +147,7 @@ screen_addr_hi:
 
 .pc = screen_addr_lo+$1004 "Pixels amount per colour"
 pixels_colour_amt: 
+.print("Amount list size: "+amount_list.size())
 .for(var x=0;x<amount_list.size();x++){
     .byte amount_list.get(x)
 }

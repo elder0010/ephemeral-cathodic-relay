@@ -3,8 +3,21 @@ load_file:
         lda #$2c
         sta can_load_file
 
-        lda #%10000000
-        sta MEMMAP
+       // lda #%10000000
+      //  sta MEMMAP
+    //    sta $fff0 
+
+       // lda #0 
+
+      //  lda #%11100100
+        
+      //  lda #$80 
+        
+       // sta MEMMAP
+        //sta $fff0 
+
+        
+        
 
         lda #8 
         sta FA      //device #8 in device number 
@@ -117,7 +130,7 @@ must_init_image:
 ld90:
         jsr clrch
         lda #$0 
-        sta $fff0 
+   //     sta $fff0 
         ldy #MS1-MS1 
         
         jsr msg
@@ -126,6 +139,7 @@ ld90:
         jmp init10
 
 openi:
+//.break 
         jsr ROPENI
 
         rts 
@@ -151,10 +165,10 @@ untlk:
 
 clrch:
         lda #$0 
-        sta $fff0 
+   //     sta $fff0 
         jsr RCLRCH //restore default I/O
-        lda MEMMAP
-        sta $fff0 
+      //  lda MEMMAP
+      //  sta $fff0 
         rts 
 
 listn: 

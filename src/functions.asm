@@ -76,7 +76,6 @@ write_next_char:
         rts 
 !:
 }
-
 text_addr:
         lda $ffff 
         beq newline //newline each 0 terminated string
@@ -105,8 +104,6 @@ text_addr:
         jsr clear_screen
         jmp move_text_pt
 newline:
-    //.break 
-
         lda #BLACK_PIXEL
         ldy col_pt
         sta (text_row_zp_addr),y
@@ -136,19 +133,23 @@ finished_write:
         rts 
 
 handle_events:
-//.break
 cur_com_page:
         lda commands_pages
         cmp page_pt
-        bne noevent
+        beq !+
+        jmp noevent
+!:
 cur_com_line:
         lda commands_lines 
         cmp script_row_pt
-        bne noevent 
+        beq !+
+        jmp noevent
+!:
 cur_com_index:
         lda commands_indexes
         cmp script_col_pt
-        bne noevent 
+        beq event
+        jmp noevent 
 event:
         ldy #0
         lda (command_sequence_pt),y
@@ -180,6 +181,11 @@ event:
         jmp point_next_event
 !:
         cmp #EVENT_LOADNEXT
+        bne !+
+        jsr event_loadnext
+        jmp point_next_event
+!:
+        cmp #EVENT_LOADSFX
         bne !+
         jsr event_loadnext
         jmp point_next_event

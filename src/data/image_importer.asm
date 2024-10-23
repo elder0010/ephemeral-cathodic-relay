@@ -132,30 +132,31 @@
 //.eval screen_cohord_lo.reverse()
 //.eval screen_cohord_hi.reverse()
 
-.pc = $2000 "Screen address lo"
+.pc = $1800 "Screen address lo"
 screen_addr_lo:
 .for (var x=0;x<screen_cohord_lo.size();x++){
     .byte screen_cohord_lo.get(x)
 }
 
-.pc = $2800 "Screen address hi"
+.pc = screen_addr_lo+$800 "Screen address hi"
 screen_addr_hi:
 .for (var x=0;x<screen_cohord_hi.size();x++){
     .byte screen_cohord_hi.get(x)
 }
 .byte $ff 
 
-.pc = $3004 "Pixels amount per colour"
+.pc = screen_addr_lo+$1004 "Pixels amount per colour"
 pixels_colour_amt: 
+.print("Amount list size: "+amount_list.size())
 .for(var x=0;x<amount_list.size();x++){
     .byte amount_list.get(x)
 }
 
-.pc = $3000 "Total pixels"
+.pc = screen_addr_lo+$1000 "Total pixels"
 px_number:
 .word px_nr
 
-.pc = $3002 "Total colours"
+.pc = screen_addr_lo+$1002 "Total colours"
 .byte total_colours+1
 }
 

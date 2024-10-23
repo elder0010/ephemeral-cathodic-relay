@@ -1,0 +1,270 @@
+//page 00
+#PAGE#
+#SETMARGIN=12,04#Hey.#DELAY=64#
+//page 01
+#PAGE#
+#DELAY=16#It's me.#DELAY=64#
+#PAGE#
+//page 02
+#PAGE#
+#DELAY=64#I really#DELAY=32# REALLY#DELAY=16# hope you still got that one I left you, down there.#DELAY=80#
+//page 03
+#PAGE#
+#DELAY=16#Well,#DELAY=16# if you’re reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.#DELAY=64#
+//page 04
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#When I said it was built like a tank I was dead serious.#DELAY=64#
+//page 05
+#PAGE#
+#DELAY=16#How ironic,#DELAY=64# history’s first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.#DELAY=64#
+//page 06
+#PAGE#
+#SETMARGIN=12,04##DELAY=32#Now, let's get to work.#DELAY=32##SETMARGIN=13,04#I have two news for you.#DELAY=64#
+//page 07
+#PAGE#
+#SETMARGIN=12,04##DELAY=32#First one is bad.#DELAY=64#
+//page 08
+#PAGE#
+#DELAY=128#Very bad.#DELAY=64#
+//page 09
+#PAGE#
+#DELAY=128#They are on us.#DELAY=64# 
+//page 10
+#PAGE#
+#DELAY=16#They managed to read every data,#DELAY=16# every image to predict our intentions#DELAY=64# 
+//page 11
+#PAGE#
+#DELAY=16#They still don’t have pictures of me,#DELAY=64# but they know that I exist.#DELAY=64# 
+//page 12
+#PAGE#
+#DELAY=16#The last photo you got from me was the last one you’ll ever#SETMARGIN=13,04# have until we manage to meet again in person.#DELAY=64#
+//page 13
+#PAGE#
+#SETMARGIN=12,04#Second one:#DELAY=64# 
+//page 14
+#PAGE#
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
+//page 15
+#PAGE#
+#SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
+//page 16
+#PAGE#
+#DELAY=16#A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+#DELAY=16#I like to call it#DELAY=64# 
+//page 18
+#PAGE#
+#SETMARGIN=12,6##DELAY=64#EPHEMERAL#SETMARGIN=12,21##DELAY=64#CATHODIC#DELAY=64##SETMARGIN=12,38#RELAY#DELAY=128#
+//page 19
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#It's E.C.R.,#DELAY=16# for short #DELAY=16#:)#DELAY=64# 
+//page 20
+#PAGE#
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device.#SETMARGIN=13,04##DELAY=32#It hides an incredible feature.#DELAY=64##SETMARGIN=14,04#A feature that was overlooked for more than 50 years.#DELAY=32# 
+//page 21
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#Even if a 8296 PET has no graphic modes#DELAY=16##SETMARGIN=13,04#and only displays characters with a 1 bit colour depth#DELAY=64#
+//page 22
+//#PAGE#
+//#SETMARGIN=12,04##DELAY=16#I found a way to take advantage of the cathodic falloff of its CRT display.#DELAY=64#
+//page 23
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#The 8296 tube is painted with unusually slow phosphors.#DELAY=64#
+//page 24
+#PAGE#
+#DELAY=16#Look how slow it is to make the cursor really disappear.#DELAY=64#
+//page 25
+#PAGE#
+#SETMARGIN=012,40#.#DELAY=256#
+//page 26
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Can you count how many shades of green you see before it disappears?#DELAY=64#
+//page 25
+#PAGE#
+#SETMARGIN=012,40#.#DELAY=64#.#DELAY=64#.#DELAY=64#.#DELAY=64# 
+//page 26
+#PAGE#
+#SETMARGIN=012,04##DELAY=64#You can’t!#DELAY=64#
+//page 27
+#PAGE#
+#DELAY=16##SETMARGIN=12,04#They are endless, it’s a true, non linear, analog fade out.#DELAY=64# 
+//page 28
+#PAGE#
+That’s where my idea came in.#DELAY=64#
+//page 29
+#PAGE#
+#DELAY=16#I analyzed every aspect of that fade out...#DELAY=64#
+//page 30
+#PAGE#
+#DELAY=16#...and made a conversion routine that converts#DELAY=64#
+//page 31
+//#PAGE#
+//#SETMARGIN=012,38##DELAY=16#T I M E#DELAY=64#
+////page 32
+//#PAGE#
+//#SETMARGIN=011,38##DELAY=16#into#SETMARGIN=012,35##DELAY=16#L I G H T.#DELAY=128#
+////page 33
+//#PAGE#
+//#SETMARGIN=012,04##DELAY=16#It’s called the CATHODIC EXPOSURE CHART, C.E.C.#DELAY=64##SETMARGIN=013,04#(yeah, I really love high tech acronyms)#DELAY=64# 
+//page 34
+#PAGE#
+#SETMARGIN=012,12##DELAY=16#TEMP: SCALA TEMPO E GRIGI#DELAY=64#
+//page 35
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Let’s say that I want to represent 4 specific shades of gray.#DELAY=64#
+//page 36
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#I just have to delay the character tracing by a specific amount of time#SETMARGIN=013,04#to set the correct exposure.
+#DELAY=64#
+//page 37
+#PAGE#
+#SETMARGIN=012,20##DELAY=64#1#SETMARGIN=012,30##DELAY=64#2#SETMARGIN=012,40##DELAY=64#3#SETMARGIN=012,50##DELAY=32#4#DELAY=128#
+//page 38
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Now I can exploit the phosphor falloff,#DELAY=32##SETMARGIN=013,04#use it as an analog grayscale image generator#DELAY=64#
+//page 39
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Look at this example,#DELAY=16# it will be much easier to understand:#DELAY=64#
+//page 40 GRADIENT V
+#IMAGE=01#
+//page 41
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#See?#DELAY=64#
+//page 42
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#It’s just done by sweeping a single line#SETMARGIN=013,04#from the top to the bottom of the screen.#DELAY=64#
+//page 43
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#There are way more gray levels than we could achieve#SETMARGIN=013,04#back in 2024 with those shitty RTX cards#DELAY=64#
+//page 44
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#This one is a horizontal one,#DELAY=32#look at the 80 columns in all of their glory!#DELAY=64#
+//page 45 GRADIENT H
+#IMAGE=02#
+//page 46
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#You can achieve any kind of shading,#DELAY=32##SETMARGIN=013,04#just by delaying the brighter areas of the image#DELAY=64#
+//page 46 GRADIENT R
+#IMAGE=03#
+//page 47
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#The only limit is that images are, as the name implies,#DELAY=64#ephemeral.#DELAY=64#
+//page 48
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#I thought that could be a problem with more complex images#DELAY=32##SETMARGIN=013,04#so I started to test this on some simple renders.#DELAY=64#
+//page 49 SPHERE
+#IMAGE=04#
+//page 50
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#I was blown away:#DELAY=32#it worked!#DELAY=64#
+//page 51
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#The falloff time is just enough to appreciate the images#SETMARGIN=013,04#and that peculiar 8296 scanline surely helps fooling the eye!#DELAY=64#
+//page 52
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Now that I think about it#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=013,04#you can even export em with your analog camera#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=014,04#or using any other photographic process.#DELAY=64#
+//page 53
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#E.C.R. are the new daguerrotypes!#DELAY=64#
+//page 54 SKULL
+#IMAGE=05#
+//page 55
+//#PAGE#
+//#SETMARGIN=012,04##DELAY=16#That was scary,#DELAY=32# :)#DELAY=64#
+//page 56
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#When they are about to fade away they look like a ghost,#SETMARGIN=013,04##DELAY=32#trapped in the machine,#DELAY=32# do they?#DELAY=64#
+//page 57
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Try to snap a photo of the next picture.#DELAY=64#
+//page 58
+#PAGE#
+#SETMARGIN=012,37##DELAY=16#Ready?#DELAY=128#
+//page 59 PET
+#IMAGE=06#
+//page 60
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Hahaha, that was META AF, right?#DELAY=64#
+//page 61
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#When those cyber fucks will analyze this software I sent you#SETMARGIN=013,04#they will find nothing. No patterns to exploit.#DELAY=64#
+//page 62
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Just meaningless, random 1 bit character.#SETMARGIN=013,04#Scattered all over the place#DELAY=64#
+//page 63
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Even emulating this very machine#SETMARGIN=013,04#they will never understand what this is all about.#DELAY=64#
+//page 64
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#It’s a world first,#DELAY=64##SETMARGIN=013,04# now go try to find that in your datasets, statistical zombies.#DELAY=64#
+//page 65 GNGZOMBIE
+#IMAGE=07#
+//page 66
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Sorry,#DELAY=64# I got carried #DELAY=64#:)#DELAY=64# 
+//page 67
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Back to our mission:#DELAY=64# 
+//page 68
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#this is the code you need to open that server case.#DELAY=64# 
+//page 69
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#I will now display it in a noise generated E.C.R.#DELAY=64##SETMARGIN=013,04# take a note in a safe place:#DELAY=64# 
+//page 70 ELDER0010
+#IMAGE=07#
+//page 71
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#Ok, now that we discovered a safe way to communicate...#DELAY=64#
+//page 72
+#PAGE#
+#SETMARGIN=012,04##DELAY=16#...we’re done with the boring stuff.#DELAY=64#
+//page 73
+#PAGE#
+#SETMARGIN=012,04##DELAY=64#Today we have a pretty amazing sky, up here:#DELAY=64#
+//page 74 SKY
+#IMAGE=08#
+//page 75
+#PAGE#
+#SETMARGIN=012,04##DELAY=64#Sun is still a bright shining star.#DELAY=64#
+//page 76 HAND
+#IMAGE=09#
+//page 77
+#PAGE#
+#SETMARGIN=012,04##DELAY=64#The world outside is still worth your battle#SETMARGIN=013,04#for independent digital information.#DELAY=64#
+//page 78 FLOWER
+#IMAGE=10#
+//page 79 ROME
+#IMAGE=11#
+//page 80 ROME
+#IMAGE=12#
+//page 81 TREE
+#IMAGE=13#
+//page 82
+#PAGE#
+#SETMARGIN=012,04##DELAY=64#I know it’s hard to keep sane when everything around you#SETMARGIN=013,04#is an artificial mockery.#DELAY=64#
+//page 83
+#PAGE#
+#SETMARGIN=012,04##DELAY=64#But please,#DELAY=64# please#DELAY=64# don’t give up.#DELAY=64#
+//page 84
+#PAGE#
+#SETMARGIN=012,04##DELAY=64#You are our last resort.#DELAY=64#
+//page 85
+#PAGE#
+#SETMARGIN=012,04##DELAY=128#Drones are almost here,#DELAY=64# we gotta move.#DELAY=64#
+//page 86
+#PAGE#
+#SETMARGIN=012,04##DELAY=64#I’ll leave you with the last trick:#DELAY=64##SETMARGIN=013,04# if you squint a little bit it works even better.#DELAY=64#
+//page 87
+#PAGE#
+#SETMARGIN=012,04##DELAY=64#Try that,#DELAY=64# now.#DELAY=64#
+//page 88 TIPA
+#IMAGE=14#
+//page 89
+#PAGE#
+#SETMARGIN=012,04##DELAY=128#I love you.#DELAY=64#
+//page 90
+#PAGE#
+#SETMARGIN=012,38##DELAY=64#XXX#DELAY=64#
+#END#

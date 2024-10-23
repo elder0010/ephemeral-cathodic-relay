@@ -1,5 +1,5 @@
 
-.pc = * " Draw image"
+.pc = * "Draw image"
 
 draw_img:
         jsr clear_image_screen
@@ -15,7 +15,7 @@ tb_hi:
 
         lda #WHITE_PIXEL_IMAGE
 dst_addr:
-        sta $ffff 
+        sta $8000 
 
         :inc_16bit_addr(tb_lo)
         :inc_16bit_addr(tb_hi)

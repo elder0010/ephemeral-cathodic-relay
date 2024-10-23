@@ -1,11 +1,4 @@
-init_irq:
-        sei     
-
-        lda $fff0 
-        and #%00010000 
-        ora #%01100000
-        sta $fff0 
-
+init_irq:      
         lda #$0 
         sta $e811
         sta $e821
@@ -16,29 +9,71 @@ init_irq:
         sta $e813
 
         lda #<timer_irq 
-        sta $90
-        lda #>timer_irq 
-        sta $91 
+        sta $fffe 
 
-        cli 
+        lda #>timer_irq 
+        sta $ffff 
+        
+
+        lda #0 
+        sta $fff0 
+        lda #<timer_irq_body
+        sta $90 
+        lda #>timer_irq_body
+        sta $91
         rts
 
+/*
+kernal_irq_handler:
+
+         pha 
+         txa 
+         tya 
+         pha 
+         
+         jmp timer_irq_body
+ PHA
+.C:e443  8A          TXA
+.C:e444  48          PHA
+.C:e445  98          TYA
+.C:e446  48          PHA
+.C:e447  BA          TSX
+.C:e448  BD 04 01    LDA $0104,X
+.C:e44b  29 10       AND #$10
+.C:e44d  F0 03       BEQ $E452
+.C:e44f  6C 92 00    JMP ($0092)
+*/
+.pc = * "IRQ handler"
 timer_irq:
-        lda $fff0 
-        and #%00010000 
-        ora #%01100000
+.break  
+        lda #0 
         sta $fff0 
+   
+        jmp $e442 
 
-    
-
-
+timer_irq_body:
+        lda $e812
+      //  inc screen 
        // inc $E84A
+        lda #RAMEXP_ENABLE
+        sta $fff0 
+        /*
+               ldx #0
+!: 
+        lda ram_area, x
+        sta screen,x 
+
+        lda ram_area_2, x
+        sta screen+$100,x 
+        dex 
+        bne !-
+
+*/
 irq_fn:
         jsr text_routine
-      
-irqack:
-        lda $e812
 
+        lda #RAMEXP_DISABLE
+        sta $fff0 
         pla 
         tay 
         pla 
@@ -112,7 +147,6 @@ image_routine:
 !:
 exit:
         rts
-
 
 //hides the crt shake in the frames after the crunch
 hide_crunch_glitch:

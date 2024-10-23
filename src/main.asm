@@ -11,15 +11,177 @@ Code: Elder0010
 .import source("variables.asm")
 .import source("settings.asm")
 .import source("data/commands.asm")
-.import source "data/filenames.asm"
+
+
+.macro rewind_sample(){
+        lda #<sample
+        sta sample_addr+1
+        lda #>sample
+        sta sample_addr+2
+
+        lda #0 
+        sta $e84a
+        sta $e848
+}
 
 *= basic_upstart "Basic upstart"
         :BasicUpstart2()
         sei
-        jsr clear_screen
 
+        //lda #$e8 
+        //sta MEMMAP
+
+        jsr clear_screen
+        jsr init_irq
+      //  cli 
         :sound_on()
+
+        /*
+//copy kernal rom 
+        ldy #0 
+
+copy0:
+        ldx #0
+!:
+
+
+src0:
+        lda $f000,x 
+dst0:
+        sta $2000,x 
+
         
+        dex 
+        bne !-
+        inc src0+2
+        inc dst0+2
+        iny 
+        cpy #$10 
+        bne copy0
+
+lda #%100100000
+
+//lda #%10000000
+sta $fff0 
+sta MEMMAP
+
+//now copy again 
+        ldy #0 
+
+copy1:
+        ldx #0
+!:
+src1:
+        lda $2000,x 
+dst1:
+        sta $f000,x 
+        dex 
+        bne !-
+        inc src1+2
+        inc dst1+2
+        iny 
+        cpy #$10 
+        bne copy1
+
+        lda #%011000000
+
+//lda #%10000000
+sta $fff0 
+sta MEMMAP
+*/
+
+
+
+//lda #%01100000
+//sta $fff0 
+
+//relocate text
+        lda #RAMEXP_ENABLE
+        sta $fff0 
+
+        ldy #0 
+copytxt:
+        ldx #0 
+!:
+
+srctxt:
+        lda text_src,x 
+dsttxt:
+        sta script,x
+
+        dex 
+        bne !-
+        inc srctxt+2
+        inc dsttxt+2
+        iny
+        cpy #$13
+        bne copytxt
+
+
+        ldy #0 
+copycmd:
+        ldx #0 
+!:
+
+srccmd:
+        lda commands_sequence,x 
+dstcmd:       
+        sta commands_sequence_relocated,x
+        dex 
+        bne !-
+
+        inc srccmd+2
+        inc dstcmd+2
+
+        iny
+        cpy #$a
+        bne copycmd
+
+
+/*
+
+.const ram_area = $a000
+.const ram_area_2 = $fb00 
+        lda #11100100
+        sta $fff0 
+
+        ldx #0
+!: 
+        lda #1 
+        sta ram_area  ,x
+
+        lda #2
+        sta ram_area_2,x
+        dex 
+        bne !- 
+
+
+        ldy #%11100100
+        sty $fff0 
+
+*/
+        lda #<timer_irq 
+        sta $fffe 
+
+        lda #>timer_irq 
+        sta $ffff 
+
+/*
+        ldx #0
+!: 
+        lda ram_area, x
+        sta screen,x 
+
+        lda ram_area_2, x
+        sta screen+$100,x 
+        dex 
+        bne !-
+*/
+
+     //  jmp *
+      // lda #$80 
+       //sty $fff0 
+       //sty MEMMAP
         lda #0
         sta page_pt
         sta script_col_pt
@@ -32,12 +194,37 @@ Code: Elder0010
 }
         :set_addr(script, text_addr)
         
-        :set_addr_zp(commands_sequence, command_sequence_pt)
+        //:set_addr_zp(commands_sequence, command_sequence_pt)
+        :set_addr_zp(commands_sequence_relocated, command_sequence_pt)
+
+        lda #RAMEXP_DISABLE
+        sta $fff0 
 
         jsr reset_cursor
 
-        jsr init_irq
+        
+       // sta MEMMAP 
 
+        cli 
+
+/*
+mloop:
+
+lda #$80 
+sta $fff0 
+
+lda $a000 
+sta screen+1
+
+lda #00 
+sta $fff0 
+lda $a000 
+sta screen+2
+inc $a000 
+
+
+jmp mloop
+*/
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD
 write_main:
@@ -45,6 +232,9 @@ write_main:
 can_load_file:
         bit load_file
 
+        lda #0 
+        sta MEMMAP
+        sta $fff0 
 write_next_jmp:
         jmp write_main
         
@@ -64,7 +254,7 @@ waitloop:
 !:
 can_sample_draw:
         bit sample_loop
-       //.break
+
         //inc screen+3
 draw_out_jmp:
         jmp next_op 
@@ -95,15 +285,26 @@ sample_addr:
         sta $e84a 
         sta $e848
 
-        .fill 6,NOP
+//.fill 7,NOP
+        .fill 34,NOP
         clc 
         lda sample_addr+1
         adc #1
         sta sample_addr+1
         bcc !+
         inc sample_addr+2
+        lda sample_addr+2
+        cmp #$7e 
+        bne !+
+        :sound_off()
+        lda #BIT_ABS 
+        sta can_sample_draw
 !:
+
 sample_jmp:
+       // lda MEMMAP
+     //   sta $fff0
+//cli 
         rts
        // jmp sample_loop
 
@@ -125,16 +326,28 @@ sample_jmp:
 .pc = * "Loader"
 .import source "loader.asm"
 
+.import source "data/filenames.asm"
+
+.pc = $2000 "Text"
+text_src:
+.import source "data/script.asm"
+text_end:
+
+.if(text_end-text_src > $fff){
+        .print("ERROR! Text is too long!")
+}else{
+        .print("Text is $"+ toHexString(text_end-text_src) +" bytes long, all good!")
+}
+       
+
+
+/*
 .pc = $2000 "Image buffer area (unusable)"
-.fill $1421,$00
+.fill $1050,$00
+*/
+
 //.import source("src/data/image_importer.asm")
 //:process_image("src/data/images/img_00.png")
 
-.pc = * "Text"
-script:
-.import source "data/script.asm"
-
-.pc = * "Sample data"
-sample:
-.import binary("data/sample_7khz.raw")
-
+//.pc = sample "Sample"
+//.import binary("data/sample_7khz.raw")

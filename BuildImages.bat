@@ -11,3 +11,4 @@ java -jar %KICKASS% src/data/img_03.asm -o src/data/img03.prg
 java -jar %KICKASS% src/data/img_04.asm -o src/data/img04.prg
 java -jar %KICKASS% src/data/img_05.asm -o src/data/img05.prg
 java -jar %KICKASS% src/data/img_06.asm -o src/data/img06.prg
+

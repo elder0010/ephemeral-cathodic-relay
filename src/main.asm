@@ -96,7 +96,7 @@ sta MEMMAP
 //sta $fff0 
 
 //relocate text
-        lda #11100100
+        lda #RAMEXP_ENABLE
         sta $fff0 
 
         ldy #0 
@@ -109,20 +109,33 @@ srctxt:
 dsttxt:
         sta script,x
 
-srccmd:
-        lda commands_sequence,x 
-dstcmd:       
-        sta commands_sequence_relocated,x
-
-        lda #2 
-        sta text_src,x 
         dex 
         bne !-
         inc srctxt+2
         inc dsttxt+2
         iny
-        cpy #16
+        cpy #$13
         bne copytxt
+
+
+        ldy #0 
+copycmd:
+        ldx #0 
+!:
+
+srccmd:
+        lda commands_sequence,x 
+dstcmd:       
+        sta commands_sequence_relocated,x
+        dex 
+        bne !-
+
+        inc srccmd+2
+        inc dstcmd+2
+
+        iny
+        cpy #$a
+        bne copycmd
 
 
 /*
@@ -169,10 +182,6 @@ dstcmd:
       // lda #$80 
        //sty $fff0 
        //sty MEMMAP
-
-
-
-
         lda #0
         sta page_pt
         sta script_col_pt
@@ -190,7 +199,7 @@ dstcmd:
 
         lda #RAMEXP_DISABLE
         sta $fff0 
-        
+
         jsr reset_cursor
 
         
@@ -245,7 +254,7 @@ waitloop:
 !:
 can_sample_draw:
         bit sample_loop
-       //.break
+
         //inc screen+3
 draw_out_jmp:
         jmp next_op 
@@ -271,27 +280,25 @@ draw_next_jmp:
 
 //Sample routine
 sample_loop:
-//sei 
-       //lda #$e8
-     //  sta $fff0 
-       //sta MEMMAP
-     //  .break
-
-      
-     //  ldy #%11100100
-      //  sty $fff0 
 sample_addr:
         lda sample
         sta $e84a 
         sta $e848
 
-        .fill 6,NOP
+//.fill 7,NOP
+        .fill 34,NOP
         clc 
         lda sample_addr+1
         adc #1
         sta sample_addr+1
         bcc !+
         inc sample_addr+2
+        lda sample_addr+2
+        cmp #$7e 
+        bne !+
+        :sound_off()
+        lda #BIT_ABS 
+        sta can_sample_draw
 !:
 
 sample_jmp:

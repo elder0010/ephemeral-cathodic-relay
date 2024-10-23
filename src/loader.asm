@@ -139,7 +139,7 @@ ld90:
         jmp init10
 
 openi:
-.break 
+//.break 
         jsr ROPENI
 
         rts 

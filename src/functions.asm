@@ -104,8 +104,6 @@ text_addr:
         jsr clear_screen
         jmp move_text_pt
 newline:
-    //.break 
-
         lda #BLACK_PIXEL
         ldy col_pt
         sta (text_row_zp_addr),y
@@ -135,7 +133,6 @@ finished_write:
         rts 
 
 handle_events:
-//.break
 cur_com_page:
         lda commands_pages
         cmp page_pt

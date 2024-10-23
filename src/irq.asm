@@ -45,15 +45,15 @@ kernal_irq_handler:
 */
 .pc = * "IRQ handler"
 timer_irq:
- .break 
+.break  
         lda #0 
         sta $fff0 
- .break       
+   
         jmp $e442 
 
 timer_irq_body:
         lda $e812
-        inc screen 
+      //  inc screen 
        // inc $E84A
         lda #RAMEXP_ENABLE
         sta $fff0 

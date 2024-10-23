@@ -164,4 +164,6 @@ event_loadsfx:
         rts
 
 event_end:
+        lda #0 
+        sta $fff0 
         jsr $fd16

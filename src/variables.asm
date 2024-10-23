@@ -20,7 +20,7 @@
 .var cursor_sw = $4f
 
 //relocated text
-.var script = $9000 
+.var script = $a000 
 .var RAMEXP_ENABLE = %11100100
 .var RAMEXP_DISABLE = %00000000
 

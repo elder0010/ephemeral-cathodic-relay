@@ -38,11 +38,6 @@ Code: Elder0010
 
  
       //  cli 
-
-
-
-        
-
         :sound_on()
 
         /*
@@ -105,18 +100,28 @@ sta MEMMAP
 //sta $fff0 
 
 //relocate text
- lda #11100100
+        lda #11100100
         sta $fff0 
 
+        ldy #0 
+copytxt:
         ldx #0 
 !:
+
+srctxt:
         lda text_src,x 
+dsttxt:
         sta script,x
 
         lda #2 
         sta text_src,x 
         dex 
         bne !-
+        inc srctxt+2
+        inc dsttxt+2
+        iny
+        cpy #40
+        bne copytxt
 
 /*
 
@@ -309,13 +314,15 @@ sample_jmp:
 .pc = * "Loader"
 .import source "loader.asm"
 
-.pc = * "Text (can be trashed)"
+.pc = $2000 "Text (can be trashed)"
 text_src:
 .import source "data/script.asm"
 
 
+/*
 .pc = $2000 "Image buffer area (unusable)"
 .fill $1050,$00
+*/
 
 //.import source("src/data/image_importer.asm")
 //:process_image("src/data/images/img_00.png")

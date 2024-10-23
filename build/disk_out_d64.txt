@@ -1,8 +1,7 @@
-Adding 9 files to existing image demo.d64
-9 out of 9 files exist and will be overwritten
+Adding 9 files to new image demo.d64
 
 0 "e.c.r.          " 00 2a
-45   "main"             prg 
+58   "main"             prg 
 17   "img00"            prg 
 79   "sam00"            prg 
 17   "img01"            prg 
@@ -11,5 +10,5 @@ Adding 9 files to existing image demo.d64
 18   "img04"            prg 
 17   "img05"            prg 
 17   "img06"            prg 
-419 blocks free.
+406 blocks free.
 

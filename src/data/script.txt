@@ -1,9 +1,9 @@
 //page 00
 #PAGE#
-#SETMARGIN=12,04#Hey.#DELAY=64#
+#SETMARGIN=12,04#Hey.#DELAY=64##LOADNEXT#
 //page 01
 #PAGE#
-#DELAY=16#It's me.#DELAY=64#
+#DELAY=16#It's me.#DELAY=64##LOADNEXT#
 #PAGE#
 //page 02
 #PAGE#
@@ -11,6 +11,7 @@
 //page 03
 #PAGE#
 #DELAY=16#Well,#DELAY=16# if you’re reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.#DELAY=64#
+#IMAGE=96#
 //page 04
 #PAGE#
 #SETMARGIN=12,04##DELAY=16#When I said it was built like a tank I was dead serious.#DELAY=64#

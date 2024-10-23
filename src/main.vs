@@ -50,7 +50,7 @@ al C:61d .move_text_pt
 al C:641 .event
 al C:839 .hold_image
 al C:4f9 .timer_irq
-al C:1bf3 .commands_indexes
+al C:1bfe .commands_indexes
 al C:793 .total_colours_val
 al C:a1d .ld70
 al C:6b2 .noevent
@@ -61,7 +61,7 @@ al C:595 .clear_image_screen
 al C:8d8 .end_delay_rt
 al C:1000 .commands_sequence
 al C:63a .cur_com_index
-al C:1ed6 .files_lo
+al C:1ee4 .files_lo
 al C:4b0 .sample_addr
 al C:62b .finished_write
 al C:9b3 .inputfile
@@ -87,7 +87,7 @@ al C:494 .next_op
 al C:9c6 .nc
 al C:633 .cur_com_line
 al C:7e8 .mask_dst_addr
-al C:1e94 .files
+al C:1ea2 .files
 al C:52c .can_cursor
 al C:4ad .draw_next_jmp
 al C:688 .point_next_event
@@ -109,7 +109,7 @@ al C:8a4 .delay_hi_tk
 al C:2000 .text_src
 al C:750 .tb_hi
 al C:532 .cursor_c
-al C:16b1 .commands_pages
+al C:16b6 .commands_pages
 al C:a6b .clrch
 al C:80a .msk_ct
 al C:48e .can_sample_draw
@@ -117,9 +117,9 @@ al C:733 .draw_img
 al C:4cd .sample_jmp
 al C:9a2 .load_file
 al C:4aa .wl0
-al C:1952 .commands_lines
+al C:195a .commands_lines
 al C:51d .text_routine
-al C:1ee1 .files_hi
+al C:1eef .files_hi
 break 4f9 
 break 4fe 
 break a53 

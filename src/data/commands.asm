@@ -1,4 +1,4 @@
-.const COMMANDS_NUMBER=673
+.const COMMANDS_NUMBER=676
 
 .pc=commands_data "Commands data"
 
@@ -7,9 +7,11 @@ commands_sequence:
 :Page()
 :SetMargin(12,04)
 :Delay(64)
+:LoadNext()
 :Page()
 :Delay(16)
 :Delay(64)
+:LoadNext()
 :Page()
 :Page()
 :Delay(64)
@@ -25,6 +27,7 @@ commands_sequence:
 :Delay(16)
 :Delay(16)
 :Delay(64)
+:Image(96)
 :Page()
 :SetMargin(12,04)
 :Delay(16)
@@ -684,6 +687,8 @@ commands_pages:
 .byte 1
 .byte 1
 .byte 1
+.byte 1
+.byte 2
 .byte 2
 .byte 2
 .byte 2
@@ -693,6 +698,7 @@ commands_pages:
 .byte 4
 .byte 4
 .byte 4
+.byte 5
 .byte 5
 .byte 5
 .byte 5
@@ -1359,12 +1365,8 @@ commands_lines:
 .byte 0
 .byte 0
 .byte 0
-.byte 1
-.byte 0
 .byte 0
 .byte 1
-.byte 0
-.byte 0
 .byte 0
 .byte 0
 .byte 0
@@ -1374,10 +1376,17 @@ commands_lines:
 .byte 0
 .byte 0
 .byte 0
+.byte 1
+.byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
 .byte 0
 .byte 0
 .byte 0
 .byte 1
+.byte 2
 .byte 0
 .byte 0
 .byte 0
@@ -2035,8 +2044,10 @@ commands_indexes:
 .byte 0
 .byte 0
 .byte 4
+.byte 4
 .byte 0
 .byte 0
+.byte 8
 .byte 8
 .byte 0
 .byte 0
@@ -2053,6 +2064,7 @@ commands_indexes:
 .byte 101
 .byte 102
 .byte 104
+.byte 0
 .byte 0
 .byte 0
 .byte 0

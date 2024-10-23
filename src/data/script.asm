@@ -29,6 +29,9 @@
 .text ("Well, if you’re reading this it means you survived the drone strike and that you still have that 8296.")
 .byte 0
 
+.text ("")
+.byte 0
+
 //page 04
 .text ("")
 .byte 0

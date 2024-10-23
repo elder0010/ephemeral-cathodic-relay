@@ -45,7 +45,7 @@
 #SETMARGIN=12,04#Second one:#DELAY=64# 
 //page 14
 #PAGE#
-#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way to send you pictures of me anyway.#DELAY=64# 
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
 //page 15
 #PAGE#
 #SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
@@ -57,96 +57,239 @@
 #DELAY=16#I like to call it#DELAY=64# 
 //page 18
 #PAGE#
-#SETMARGIN=13,6##DELAY=64#EPHEMERAL#SETMARGIN=13,21##DELAY=64#CATHODIC #DELAY=64#SETMARGIN=13,38# RELAY #DELAY=128#
+#SETMARGIN=12,6##DELAY=64#EPHEMERAL
+#SETMARGIN=12,21#
+#DELAY=64#CATHODIC#DELAY=64##
+#SETMARGIN=12,38#RELAY#DELAY=128#
 //page 19
 #PAGE#
-It's E.C.R. for short :)#DELAY=64# 
+#SETMARGIN=12,04##DELAY=16#It's E.C.R.,#DELAY=16# for short UNO! #DELAY=16#:)#DELAY=64# 
 //page 20
 #PAGE#
-TLDR: This bulky, gorgeous display of yours is a very powerful device.#SETMARGIN=13,04##DELAY=32#It hides an incredible feature.#DELAY=64##SETMARGIN=13,04#A feature that was overlooked for more than 50 years.#DELAY=32# 
-//page 21
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device.
 #PAGE#
-#SETMARGIN=12,04#Even if a 8296 PET has no graphic modes and only displays characters with a 1 bit colour depth#DELAY=64#
+#DELAY=16#Even if a 8296 PET has no graphic modes#DELAY=16##SETMARGIN=13,04#and only displays characters with a 1 bit colour depth#DELAY=64#
 //page 22
-#PAGE#
-I found a way to take advantage of the cathodic falloff of its CRT display#DELAY=64#
+//#PAGE#
+//#SETMARGIN=12,04##DELAY=16#I found a way to take advantage of the cathodic falloff of its CRT display.#DELAY=64#
 //page 23
 #PAGE#
-the 8296 tube is painted with unusually slow phosphors#DELAY=64#
-//page 24
+#SETMARGIN=12,04##DELAY=16#The 8296 tube is painted with unusually slow phosphors.#DELAY=64#
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
+//page 15
 #PAGE#
-look how slow it is to make the cursor really disappear#DELAY=64#
-//page 25
+#SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
+//page 16
 #PAGE#
-#SETMARGIN=012,40# #DELAY=256#
-//page 26
-#SETMARGIN=07,04#Can you count how many shades of green you see before it disappears?#DELAY=64#
-//page 25
-#SETMARGIN=040,20# #DELAY=8# #DELAY=8# #DELAY=8# #DELAY=8# 
-//page 26
-#DELAY=64# You can’t!
-//page 27
-They are endless, it’s a true, non linear analog fade out 
-//page 28
-That’s where my idea came in.
-//page 29
-I measured time and light of that fade out
-//page 30
-and I made a conversion routine that converts time in a grayscale value
-//page 31
-It’s called the Cathodic Exposure Chart, CEC.
-//page 32
-(Love high tech acronyms)
-#END#
+#DELAY=16#A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+#DELAY=16#I like to call it#DELAY=64# 
+//page 18
+#PAGE#
+#SETMARGIN=12,6##DELAY=64#EPHEMERAL#SETMARGIN=12,21##DELAY=64#CATHODIC#DELAY=64##SETMARGIN=12,38#RELAY#DELAY=128#
+//page 19
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#It's E.C.R.,#DELAY=16# for short DUE! #DELAY=16#:)#DELAY=64# 
+//page 20
+#PAGE#
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device.
+#PAGE#
+#DELAY=16#Even if a 8296 PET has no graphic modes#DELAY=16##SETMARGIN=13,04#and only displays characters with a 1 bit colour depth#DELAY=64#
+//page 22
+//#PAGE#
+//#SETMARGIN=12,04##DELAY=16#I found a way to take advantage of the cathodic falloff of its CRT display.#DELAY=64#
+//page 23
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#The 8296 tube is painted with unusually slow phosphors.#DELAY=64#
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
+//page 15
+#PAGE#
+#SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
+//page 16
+#PAGE#
+#DELAY=16#A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+#DELAY=16#I like to call it#DELAY=64# 
+//page 18
+#PAGE#
+#SETMARGIN=12,6##DELAY=64#EPHEMERAL#SETMARGIN=12,21##DELAY=64#CATHODIC#DELAY=64##SETMARGIN=12,38#RELAY#DELAY=128#
+//page 19
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#It's E.C.R.,#DELAY=16# for short TRE! #DELAY=16#:)#DELAY=64# 
+//page 20
+#PAGE#
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device.
+#PAGE#
+#DELAY=16#Even if a 8296 PET has no graphic modes#DELAY=16##SETMARGIN=13,04#and only displays characters with a 1 bit colour depth#DELAY=64#
+//page 22
+//#PAGE#
+//#SETMARGIN=12,04##DELAY=16#I found a way to take advantage of the cathodic falloff of its CRT display.#DELAY=64#
+//page 23
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#The 8296 tube is painted with unusually slow phosphors.#DELAY=64#
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
+//page 15
+#PAGE#
+#SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
+//page 16
+#PAGE#
+#DELAY=16#A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+#DELAY=16#I like to call it#DELAY=64# 
+//page 18
+#PAGE#
+#SETMARGIN=12,6##DELAY=64#EPHEMERAL#SETMARGIN=12,21##DELAY=64#CATHODIC#DELAY=64##SETMARGIN=12,38#RELAY#DELAY=128#
+//page 19
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#It's E.C.R.,#DELAY=16# for short CINQUE! #DELAY=16#:)#DELAY=64# 
+//page 20
+#PAGE#
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device.
+#PAGE#
+#DELAY=16#Even if a 8296 PET has no graphic modes#DELAY=16##SETMARGIN=13,04#and only displays characters with a 1 bit colour depth#DELAY=64#
+//page 22
+//#PAGE#
+//#SETMARGIN=12,04##DELAY=16#I found a way to take advantage of the cathodic falloff of its CRT display.#DELAY=64#
+//page 23
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#The 8296 tube is painted with unusually slow phosphors.#DELAY=64#
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
+//page 15
+#PAGE#
+#SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
+//page 16
+#PAGE#
+#DELAY=16#A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+#DELAY=16#I like to call it#DELAY=64# 
+//page 18
+//page 19
+#PAGE#
+CASSATO PROVA SEI!
+#SETMARGIN=0,0#
+//page 20
+#PAGE#
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device. 
+#PAGE#
+#DELAY=16#Even if a 8296 PET has no graphic modes#DELAY=16##SETMARGIN=13,04#and only displays characters with a 1 bit colour depth#DELAY=64#
+//page 22
+//#PAGE#
+//#SETMARGIN=12,04##DELAY=16#I found a way to take advantage of the cathodic falloff of its CRT display.#DELAY=64#
+//page 23
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#The 8296 tube is painted with unusually slow phosphors.#DELAY=64#
+#DELAY=128#I like to think out of the box#DELAY=64#
+#SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
+//page 15
+#PAGE#
+#SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
+//page 16
+#PAGE#
+#DELAY=16#A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+#DELAY=16#I like to call it#DELAY=64# 
+//page 18
+#PAGE#
+#SETMARGIN=12,6##DELAY=64#EPHEMERAL#SETMARGIN=12,21##DELAY=64#CATHODIC#DELAY=64##SETMARGIN=12,38#RELAY#DELAY=128# XX
+//page 19
+#PAGE#
+CASSATO PROVA FINO A QUA!
+#SETMARGIN=0,0#
+//page 20
+#PAGE#
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device. 
+#PAGE#
+#DELAY=16#Even if a 8296 PET has no graphic modes#DELAY=16##SETMARGIN=13,04#and only displays characters with a 1 bit colour depth#DELAY=64#
+//page 22
+//#PAGE#
+//#SETMARGIN=12,04##DELAY=16#I found a way to take advantage of the cathodic falloff of its CRT display.#DELAY=64#
+//page 23
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#The 8296 tube is painted with unusually slow phosphors.#DELAY=64#
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
+//page 15
+#PAGE#
+#SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
+//page 16
+#PAGE#
+#DELAY=16#A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+#DELAY=16#I like to call it#DELAY=64# 
+//page 18
+#PAGE#
+#SETMARGIN=12,6##DELAY=64#EPHEMERAL
+#SETMARGIN=12,21##DELAY=64#CATHODIC#DELAY=64#
+#SETMARGIN=12,38#RELAY#DELAY=128# XX
+//page 19
+#PAGE#
+CASSATO PROVA SETTEEEEEEEEEEEEEEE!
+#SETMARGIN=0,0#
+//page 20
+#PAGE#
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device. 
+#PAGE#
+#DELAY=16#Even if a 8296 PET has no graphic modes#DELAY=16##SETMARGIN=13,04#and only displays characters with a 1 bit colour depth#DELAY=64#
+//page 22
+//#PAGE#
+//#SETMARGIN=12,04##DELAY=16#I found a way to take advantage of the cathodic falloff of its CRT display.#DELAY=64#
+//page 23
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#The 8296 tube is painted with unusually slow phosphors.#DELAY=64#
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
+//page 15
+#PAGE#
+#SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
+//page 16
+#PAGE#
+#DELAY=16#A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+#DELAY=16#I like to call it#DELAY=64# 
+//page 18
+#PAGE#
+#SETMARGIN=12,6##DELAY=64#EPHEMERAL#SETMARGIN=12,21##DELAY=64#CATHODIC#DELAY=64##SETMARGIN=12,38#RELAY#DELAY=128# XX
+//page 19
+#PAGE#
+CASSATO PROVA SEI!
+#SETMARGIN=0,0#
+//page 20
+#PAGE#
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device. 
+#PAGE#
+#DELAY=16#Even if a 8296 PET has no graphic modes#DELAY=16##SETMARGIN=13,04#and only displays characters with a 1 bit colour depth#DELAY=64#
+//page 22
+//#PAGE#
+//#SETMARGIN=12,04##DELAY=16#I found a way to take advantage of the cathodic falloff of its CRT display.#DELAY=64#
+//page 23
+#PAGE#
+#SETMARGIN=12,04##DELAY=16#The 8296 tube is painted with unusually slow phosphors.#DELAY=64#
+#DELAY=128#I like to think out of the box#DELAY=64##SETMARGIN=13,04#I found a way we can send each other pictures anyway.#DELAY=64# 
+//page 15
+#PAGE#
+#SETMARGIN=12,04#Images that those stupid machines can’t see nor recognize.#DELAY=64#
+//page 16
+#PAGE#
+#DELAY=16#A little invention of mine.#DELAY=64#
+//page 17
+#PAGE#
+#DELAY=16#I like to call it#DELAY=64# 
+//page 18
+#PAGE#
+#SETMARGIN=12,6##DELAY=64#EPHEMERAL
+#SETMARGIN=12,21##DELAY=64#CATHODIC#DELAY=64#
+#SETMARGIN=12,38#RELAY#DELAY=128# XX
+//page 19
+#PAGE#
+CASSATO PROVA SEI!
+#SETMARGIN=0,0#
+//page 20
+#PAGE#
+#DELAY=16#TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device. 
 
-
-
-
-
-
-
-
-//page 99
-#SETMARGIN=07,04#
-IMG00#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
-#IMAGE=96#
-#PAGE#
-IMG01#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
-#IMAGE=96#
-#PAGE#
-IMG02#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
-#IMAGE=96#
-#PAGE#
-IMG03#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
-#IMAGE=96#
-#PAGE#
-IMG04#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
-#IMAGE=96#
-#PAGE#
-IMG05#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
-#IMAGE=96#
-#PAGE#
-IMG06#LOADNEXT# carica..#DELAY=128# carica..#DELAY=128#
-#IMAGE=96#
-#PAGE#
-FINITO!
-#END#
-
-Prova prova prima di setpos#DELAY=50# #SETPOS=3,20#scrivo su#DELAY=50# #SETPOS=20,40#scrivo giu#DELAY=50#
-puffo papuffo (e ora newpage, cambiando i margini di default)#DELAY=16#.#DELAY=16#.#DELAY=16#.#DELAY=150# 
-#PAGE#
-//page 01
-#SETMARGIN=0,0#Questa pagina invece parte da 0,0!#DELAY=50# Hey#DELAY=20# ora vediamo una immagine!
-ready?#DELAY=96#
-#IMAGE=96#
-//page 02
-Hey#DELAY=20# me pippo parippo
-e ora ne carichiamo ancora una!#LOADNEXT#
-Hey#DELAY=20# me pippo parippo
-puffo papuffo
-Hey#DELAY=20# me pippo parippo
-I delay sono parametrici! Ecco delay 10#DELAY=10# 20#DELAY=20# 30#DELAY=30# 40#DELAY=40#
-puffo papuffo#DELAY=50# ultima prova.. ora vediamo altra immagine!#DELAY=96#
-#IMAGE=96#
-Ok adesso stiamo per finire. Chiamo l'evento end!#DELAY=150#
 #END#

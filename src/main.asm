@@ -104,6 +104,22 @@ sta MEMMAP
 //lda #%01100000
 //sta $fff0 
 
+//relocate text
+ lda #11100100
+        sta $fff0 
+
+        ldx #0 
+!:
+        lda text_src,x 
+        sta script,x
+
+        lda #2 
+        sta text_src,x 
+        dex 
+        bne !-
+
+/*
+
 .const ram_area = $a000
 .const ram_area_2 = $fb00 
         lda #11100100
@@ -123,12 +139,14 @@ sta MEMMAP
         ldy #%11100100
         sty $fff0 
 
+*/
             lda #<timer_irq 
         sta $fffe 
 
         lda #>timer_irq 
         sta $ffff 
 
+/*
         ldx #0
 !: 
         lda ram_area, x
@@ -138,11 +156,12 @@ sta MEMMAP
         sta screen+$100,x 
         dex 
         bne !-
+*/
 
-       jmp *
+     //  jmp *
       // lda #$80 
-       sty $fff0 
-       sty MEMMAP
+       //sty $fff0 
+       //sty MEMMAP
 
 
 
@@ -162,6 +181,10 @@ sta MEMMAP
         :set_addr_zp(commands_sequence, command_sequence_pt)
 
         jsr reset_cursor
+
+        lda #RAMEXP_DISABLE
+        sta $fff0 
+       // sta MEMMAP 
 
            cli 
 
@@ -244,15 +267,12 @@ sample_loop:
        //sta MEMMAP
      //  .break
 
-       ldy #%11100100
-        sty $fff0 
+      
+     //  ldy #%11100100
+      //  sty $fff0 
 sample_addr:
         lda sample
-
-       
         sta $e84a 
-
-        
         sta $e848
 
         .fill 6,NOP
@@ -265,9 +285,6 @@ sample_addr:
 !:
 
 sample_jmp:
-                 
-  
-
        // lda MEMMAP
      //   sta $fff0
 //cli 
@@ -292,16 +309,16 @@ sample_jmp:
 .pc = * "Loader"
 .import source "loader.asm"
 
-.pc = * "Text"
-script:
+.pc = * "Text (can be trashed)"
+text_src:
 .import source "data/script.asm"
 
 
-
 .pc = $2000 "Image buffer area (unusable)"
-//.fill $1421,$00
+.fill $1050,$00
+
 //.import source("src/data/image_importer.asm")
 //:process_image("src/data/images/img_00.png")
 
-
-
+//.pc = sample "Sample"
+//.import binary("data/sample_7khz.raw")

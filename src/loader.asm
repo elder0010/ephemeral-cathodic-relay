@@ -9,12 +9,12 @@ load_file:
 
        // lda #0 
 
-        lda #%11100100
+      //  lda #%11100100
         
       //  lda #$80 
         
-        sta MEMMAP
-        sta $fff0 
+       // sta MEMMAP
+        //sta $fff0 
 
         
         

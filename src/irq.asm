@@ -19,6 +19,7 @@ init_irq:
 
         lda #>timer_irq 
         sta $ffff 
+        
 
 lda #0 
 sta $fff0 
@@ -78,6 +79,21 @@ timer_irq_body:
 
 inc screen 
        // inc $E84A
+  ldy #RAMEXP_ENABLE
+        sty $fff0 
+
+        /*
+               ldx #0
+!: 
+        lda ram_area, x
+        sta screen,x 
+
+        lda ram_area_2, x
+        sta screen+$100,x 
+        dex 
+        bne !-
+
+*/
 irq_fn:
         jsr text_routine
       
@@ -89,7 +105,9 @@ irq_fn:
     //    lda $e812
 
 
-        lda MEMMAP
+       /// lda MEMMAP
+
+        lda #RAMEXP_DISABLE
         sta $fff0 
         pla 
         tay 

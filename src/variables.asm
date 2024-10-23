@@ -2,7 +2,7 @@
 .var screen = $8000
 .var screen_image = $8800
 
-.var commands_data = $1800
+.var commands_data = $1000
 
 .var col_pt = $08
 .var text_row_zp_addr = $11 //word
@@ -18,6 +18,12 @@
 .var default_col_val = $4e
 
 .var cursor_sw = $4f
+
+//relocated text
+.var script = $9000 
+.var RAMEXP_ENABLE = %11100100
+.var RAMEXP_DISABLE = %00000000
+
 
 //event defines
 .const EVENT_DELAY = 1
@@ -95,4 +101,4 @@
 
 //.const pixels_delay = $3000
 
-.const sample = $a000 
+.const sample = $3500

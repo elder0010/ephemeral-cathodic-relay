@@ -1,4 +1,4 @@
-.var filenames = List().add("SAM00","IMG00","IMG01","IMG02","IMG03","IMG04","IMG05","IMG06","IMG07","IMG08","IMG09")
+.var filenames = List().add("IMG00","SAM00","IMG01","IMG02","IMG03","IMG04","IMG05","IMG06","IMG07","IMG08","IMG09")
 files:
 .for(var x=0;x<filenames.size();x++){
     .text filenames.get(x)

@@ -76,7 +76,6 @@ write_next_char:
         rts 
 !:
 }
-
 text_addr:
         lda $ffff 
         beq newline //newline each 0 terminated string

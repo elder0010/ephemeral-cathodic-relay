@@ -196,3 +196,7 @@ When equal to 0, block 2 (16k-byte) is selected.
         sta $e84b 
 }
 
+.function get_octave(octave){
+     .var octave_list = List().add(15,51,85)
+     .return octave_list.get(octave)
+}

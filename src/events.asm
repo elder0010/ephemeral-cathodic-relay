@@ -6,6 +6,9 @@ e0_init:
         bne !+
         ldy #1
         sty delay_must_hi+1
+
+       // sty can_cursor_beep
+
         lda (command_sequence_pt),y //load delay value (lo)
         sta delay_lo_val+1
         //if delay is 0, skip the delay lo counter
@@ -84,9 +87,13 @@ event_page:
         jsr reset_cursor
         jsr clear_screen
 
-          .if(ENABLE_NEWPAGE_BEEP){
+        .if(ENABLE_NEWPAGE_BEEP){
                 lda #NEWPAGE_BEEP_NOTE
                 sta beep_note+1
+
+                lda #get_octave(NEWPAGE_BEEP_OCTAVE)
+                sta beep_0_tbl
+
                 :set_addr(beep_0, beep_fn)
         }
 

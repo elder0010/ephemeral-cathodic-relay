@@ -59,6 +59,7 @@ timer_irq_body:
         sta $fff0 
 
         :set_addr(stop_beep, beep_fn)
+
         /*
                ldx #0
 !: 
@@ -79,6 +80,7 @@ irq_fn:
 
 beep_fn:
         jsr stop_beep
+
 
         pla 
         tay 
@@ -110,16 +112,6 @@ cursor_c:
         lda #BLACK_PIXEL
         sta (text_row_zp_addr),y
 
-        .if(ENABLE_CURSOR_BEEP){
-                cmp #WHITE_PIXEL
-                bne !+
-                lda #CURSOR_BLINK_NOTE
-                sta beep_note+1
-                :set_addr(beep_0, beep_fn)
-
-        !:
-        }
-
         dec cursor_ct+1
 cursor_ct:
         lda #CURSOR_BLINK_SPEED
@@ -133,6 +125,28 @@ cursor_ct:
         sta cursor_sw
         bne !+
         lda #WHITE_PIXEL
+
+        
+        .if(ENABLE_CURSOR_BEEP){
+                cmp #WHITE_PIXEL
+                bne noblink
+                
+                        pha 
+
+                        lda can_cursor_beep
+                        beq beeper_busy
+                        lda #CURSOR_BEEP_NOTE
+                        sta beep_note+1
+
+                        lda #get_octave(CURSOR_BEEP_OCTAVE)
+                        sta beep_0_tbl
+
+                        :set_addr(beep_0, beep_fn)
+                        beeper_busy:
+                        pla 
+                noblink:
+        }
+        
         jmp stc
 !:
         lda #BLACK_PIXEL

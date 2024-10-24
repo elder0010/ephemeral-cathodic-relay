@@ -189,6 +189,10 @@ dstcmd:
         sta default_col_val
         sta default_row_val
         sta cursor_sw
+        .if(ENABLE_CURSOR_BEEP){
+                lda #0
+                sta can_cursor_beep
+        }
 .if(HALF_SPEED_TEXT){
         sta half_speed_delayer
 }

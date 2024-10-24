@@ -37,15 +37,15 @@ beep_note:
 
         inc beep0pt+1 
         lda beep_0_tbl+1,x
-        cmp #2
+        cmp #1
         bne !+
 
         lda #0 
         sta beep0pt+1
         sta $e848 
         sta $e84a
-        :set_addr(stop_beep, beep_fn)
-
+       // :set_addr(stop_beep, beep_fn)
+     //   jsr stop_beep
        // lda #CHARACTER_BEEP_NOTE
        // sta beep_note+1
        // :sound_off()

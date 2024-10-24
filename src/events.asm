@@ -140,6 +140,11 @@ event_setmargin:
         lda (command_sequence_pt),y 
         sta default_col_val
 
+        lda #BLACK_PIXEL
+        ldy col_pt
+        //dey
+        sta (text_row_zp_addr),y    
+
         jsr reset_cursor
 
         :inc_addr_zp(command_sequence_pt, 3) //skip event byte and delay byte

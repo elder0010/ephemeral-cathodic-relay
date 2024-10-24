@@ -128,8 +128,6 @@ text_addr:
         jmp move_text_pt
         //:set_addr(stop_beep, beep_fn)
 newline:
-
-        
         lda #1
         .if(ENABLE_CURSOR_BEEP){
                 sta can_cursor_beep
@@ -143,7 +141,7 @@ newline:
         }else{
                 jsr clear_line
         }
-
+        
         
         //:set_addr(stop_beep, beep_fn)
        // jmp nocursor
@@ -173,7 +171,7 @@ clear_line:
         lda #BLACK_PIXEL
         ldy col_pt
         //dey
-        sta (text_row_zp_addr),y
+        sta (text_row_zp_addr),y       
         inc script_row_pt
         inc row_pt
         ldx row_pt
@@ -183,9 +181,10 @@ clear_line:
         sta text_row_zp_addr+1
         lda #0
         sta script_col_pt
-
         lda default_col_val
         sta col_pt
+        lda #0 
+        sta can_cursor+1
         rts 
 
 handle_events:

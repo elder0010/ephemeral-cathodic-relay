@@ -380,8 +380,12 @@
 .byte 0
 
 //page 55
-//#PAGE#
-//That was scary,#DELAY=32# :)
+.text ("")
+.byte 0
+
+.text ("That was scary, :)")
+.byte 0
+
 //page 56
 .text ("")
 .byte 0

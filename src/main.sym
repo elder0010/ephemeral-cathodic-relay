@@ -59,9 +59,9 @@
 .label clear_line=$66b
 .label clrch=$b05
 .label draw_img=$7a4
-.label text_end=$2fc2 {
+.label text_end=$2fc5 {
 }
-.label commands_lines=$11ea
+.label commands_lines=$11f4
 .label text_routine=$551
 .label sample_loop=$4bd
 .label delay_must_lo=$928
@@ -90,7 +90,7 @@
 .label event=$6a8
 .label hold_image=$8aa
 .label timer_irq=$533
-.label commands_indexes=$128a
+.label commands_indexes=$1298
 .label total_colours_val=$804
 .label noevent=$723
 .label draw_main=$493
@@ -128,7 +128,7 @@
 .label mask_colours=$7f3
 .label text_src=$2000
 .label cursor_c=$566
-.label commands_pages=$114a
+.label commands_pages=$1150
 .label msk_ct=$87b
 .label can_sample_draw=$49b
 .label sample_jmp=$507

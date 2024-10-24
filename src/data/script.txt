@@ -1,12 +1,12 @@
 //page 00
 #PAGE#
-Hey.
+Hey.#LOADNEXT#
 //page 01
 #PAGE#
 It's me.
 //page 02
 #PAGE#
-I really#DELAY=32# REALLY hope you still got that one I left you, down there.
+I really#DELAY=32# REALLY #LOADSFX# hope you still got that one I left you, down there.
 //page 03
 #PAGE#
 Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that 8296.
@@ -16,6 +16,8 @@ When I said it was built like a tank I was dead serious.
 //page 05
 #PAGE#
 How ironic, history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.
+#PAGE# 
+#IMAGE=64#
 //page 06
 #PAGE#
 #DELAY=32#Now, let's get to work.#DELAY=32##SETMARGIN=13,04#I have two news for you.

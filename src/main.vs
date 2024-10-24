@@ -49,7 +49,7 @@ al C:642 .move_text_pt
 al C:6a8 .event
 al C:8aa .hold_image
 al C:533 .timer_irq
-al C:128a .commands_indexes
+al C:1298 .commands_indexes
 al C:804 .total_colours_val
 al C:ab4 .ld70
 al C:43d .srccmd
@@ -112,7 +112,7 @@ al C:915 .delay_hi_tk
 al C:2000 .text_src
 al C:7c1 .tb_hi
 al C:566 .cursor_c
-al C:114a .commands_pages
+al C:1150 .commands_pages
 al C:66b .clear_line
 al C:b05 .clrch
 al C:87b .msk_ct
@@ -121,8 +121,8 @@ al C:7a4 .draw_img
 al C:507 .sample_jmp
 al C:a39 .load_file
 al C:4b7 .wl0
-al C:2fc2 .text_end
-al C:11ea .commands_lines
+al C:2fc5 .text_end
+al C:11f4 .commands_lines
 al C:551 .text_routine
 al C:b82 .files_hi
 break 533 

@@ -1,18 +1,22 @@
-.const COMMANDS_NUMBER=160
+.const COMMANDS_NUMBER=164
 
 .pc=commands_data "Commands data"
 
 //commands sequence
 commands_sequence:
 :Page()
+:LoadNext()
 :Page()
 :Page()
 :Delay(32)
+:LoadSfx()
 :Page()
 :SetMargin(13,04)
 :Page()
 :Page()
 :SetMargin(13,04)
+:Page()
+:Image(64)
 :Page()
 :Delay(32)
 :Delay(32)
@@ -169,7 +173,9 @@ commands_sequence:
 commands_pages:
 .byte 0
 .byte 1
+.byte 1
 .byte 2
+.byte 3
 .byte 3
 .byte 3
 .byte 4
@@ -179,8 +185,8 @@ commands_pages:
 .byte 6
 .byte 7
 .byte 7
-.byte 7
-.byte 7
+.byte 8
+.byte 8
 .byte 8
 .byte 8
 .byte 9
@@ -188,105 +194,105 @@ commands_pages:
 .byte 10
 .byte 10
 .byte 11
+.byte 11
 .byte 12
 .byte 13
-.byte 13
+.byte 14
 .byte 14
 .byte 15
-.byte 15
-.byte 15
+.byte 16
+.byte 16
 .byte 16
 .byte 17
 .byte 18
 .byte 19
-.byte 19
-.byte 19
-.byte 19
-.byte 19
+.byte 20
+.byte 20
+.byte 20
+.byte 20
 .byte 20
 .byte 21
-.byte 21
-.byte 21
-.byte 21
-.byte 21
-.byte 21
+.byte 22
+.byte 22
+.byte 22
+.byte 22
 .byte 22
 .byte 22
 .byte 23
+.byte 23
 .byte 24
 .byte 25
-.byte 25
-.byte 25
+.byte 26
+.byte 26
 .byte 26
 .byte 27
-.byte 27
+.byte 28
 .byte 28
 .byte 29
 .byte 30
 .byte 31
 .byte 32
 .byte 33
-.byte 33
+.byte 34
 .byte 34
 .byte 35
-.byte 35
-.byte 36
-.byte 36
-.byte 36
-.byte 36
-.byte 36
 .byte 36
 .byte 36
 .byte 37
 .byte 37
 .byte 37
+.byte 37
+.byte 37
+.byte 37
+.byte 37
+.byte 38
 .byte 38
 .byte 38
 .byte 39
-.byte 40
+.byte 39
 .byte 40
 .byte 41
 .byte 41
 .byte 42
 .byte 42
-.byte 42
-.byte 43
 .byte 43
 .byte 43
 .byte 43
 .byte 44
+.byte 44
+.byte 44
+.byte 44
 .byte 45
-.byte 45
-.byte 45
-.byte 45
+.byte 46
+.byte 46
 .byte 46
 .byte 46
 .byte 47
 .byte 47
 .byte 48
 .byte 48
-.byte 48
-.byte 48
-.byte 48
-.byte 48
-.byte 48
-.byte 48
-.byte 48
-.byte 48
-.byte 48
 .byte 49
 .byte 49
-.byte 50
-.byte 50
+.byte 49
+.byte 49
+.byte 49
+.byte 49
+.byte 49
+.byte 49
+.byte 49
+.byte 49
+.byte 49
 .byte 50
 .byte 50
 .byte 51
-.byte 52
-.byte 52
-.byte 52
+.byte 51
+.byte 51
+.byte 51
 .byte 52
 .byte 53
-.byte 54
+.byte 53
+.byte 53
+.byte 53
 .byte 54
 .byte 55
 .byte 55
@@ -294,31 +300,31 @@ commands_pages:
 .byte 56
 .byte 57
 .byte 57
-.byte 57
+.byte 58
+.byte 58
 .byte 58
 .byte 59
 .byte 60
 .byte 61
-.byte 61
-.byte 61
+.byte 62
+.byte 62
 .byte 62
 .byte 63
 .byte 64
-.byte 64
 .byte 65
 .byte 65
 .byte 66
 .byte 66
-.byte 66
-.byte 66
-.byte 66
-.byte 66
+.byte 67
+.byte 67
+.byte 67
+.byte 67
 .byte 67
 .byte 67
 .byte 68
+.byte 68
 .byte 69
 .byte 70
-.byte 70
 .byte 71
 .byte 71
 .byte 72
@@ -327,16 +333,22 @@ commands_pages:
 .byte 73
 .byte 74
 .byte 74
+.byte 75
+.byte 75
 
 //lines sequence
 commands_lines:
 .byte 0
+.byte 0
 .byte 1
 .byte 1
+.byte 0
 .byte 0
 .byte 1
 .byte 0
 .byte 1
+.byte 1
+.byte 0
 .byte 1
 .byte 0
 .byte 1
@@ -494,14 +506,18 @@ commands_lines:
 //indexes sequence
 commands_indexes:
 .byte 0
+.byte 4
 .byte 0
 .byte 0
 .byte 8
+.byte 16
 .byte 0
 .byte 51
 .byte 0
 .byte 0
 .byte 59
+.byte 0
+.byte 0
 .byte 0
 .byte 0
 .byte 23

@@ -6,10 +6,10 @@ Hey.#LOADNEXT#
 It's me.
 //page 02
 #PAGE#
-I really#DELAY=32# REALLY #LOADSFX# hope you still got that one I left you, down there.
+I really#DELAY=32# REALLY#LOADSFX# hope you still got that one I left you, down there.
 //page 03
 #PAGE#
-Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that 8296.
+Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.
 //page 04
 #PAGE#
 When I said it was built like a tank I was dead serious.
@@ -17,7 +17,6 @@ When I said it was built like a tank I was dead serious.
 #PAGE#
 How ironic, history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.
 #PAGE# 
-#IMAGE=64#
 //page 06
 #PAGE#
 #DELAY=32#Now, let's get to work.#DELAY=32##SETMARGIN=13,04#I have two news for you.
@@ -171,8 +170,8 @@ E.C.R. are the new daguerrotypes!
 //page 54 SKULL
 #IMAGE=05#
 //page 55
-//#PAGE#
-//That was scary,#DELAY=32# :)
+#PAGE#
+That was scary,#DELAY=32# :)
 //page 56
 #PAGE#
 When they are about to fade away they look like a ghost,#SETMARGIN=13,04##DELAY=32#trapped in the machine,#DELAY=32# do they?

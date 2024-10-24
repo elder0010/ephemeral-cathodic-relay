@@ -16,7 +16,7 @@
 .text ("")
 .byte 0
 
-.text ("I really REALLY  hope you still got that one I left you, down there.")
+.text ("I really REALLY hope you still got that one I left you, down there.")
 .byte 0
 
 //page 03
@@ -38,9 +38,6 @@
 .byte 0
 
 .text ("How ironic, history's first personal computer happens to beone of the last ones still working.")
-.byte 0
-
-.text ("")
 .byte 0
 
 .text ("")

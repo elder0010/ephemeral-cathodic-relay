@@ -1,4 +1,4 @@
-.const COMMANDS_NUMBER=164
+.const COMMANDS_NUMBER=167
 
 .pc=commands_data "Commands data"
 
@@ -12,11 +12,14 @@ commands_sequence:
 :LoadSfx()
 :Page()
 :SetMargin(13,04)
+:Delay(16)
+:Delay(16)
+:Delay(16)
+:Delay(16)
 :Page()
 :Page()
 :SetMargin(13,04)
 :Page()
-:Image(64)
 :Page()
 :Delay(32)
 :Delay(32)
@@ -180,10 +183,13 @@ commands_pages:
 .byte 3
 .byte 4
 .byte 4
+.byte 4
+.byte 4
+.byte 4
+.byte 4
 .byte 5
 .byte 6
 .byte 6
-.byte 7
 .byte 7
 .byte 8
 .byte 8
@@ -346,12 +352,15 @@ commands_lines:
 .byte 0
 .byte 1
 .byte 0
+.byte 0
+.byte 0
+.byte 0
+.byte 0
 .byte 1
 .byte 1
 .byte 0
 .byte 1
 .byte 0
-.byte 1
 .byte 0
 .byte 0
 .byte 0
@@ -510,13 +519,16 @@ commands_indexes:
 .byte 0
 .byte 0
 .byte 8
-.byte 16
+.byte 15
 .byte 0
 .byte 51
+.byte 97
+.byte 98
+.byte 99
+.byte 100
 .byte 0
 .byte 0
 .byte 59
-.byte 0
 .byte 0
 .byte 0
 .byte 0

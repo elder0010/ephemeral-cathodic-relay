@@ -253,6 +253,9 @@ enable_write_mode:
         //disable sampling 
         lda #BIT_ABS 
         sta can_sample_draw
+
+        lda #JSR_ABS
+        sta beep_fn
       //  jsr event_page
         rts 
 

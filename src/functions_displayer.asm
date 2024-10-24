@@ -63,6 +63,9 @@ total_colours_val:
         //trigger sample 
         lda #JSR_ABS
         sta can_sample_draw
+
+        lda #BIT_ABS
+        sta beep_fn
         //jsr enable_write_mode
         rts
         

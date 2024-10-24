@@ -13,7 +13,7 @@
 
 .const DEFAULT_DELAY_ON_LINEBREAK = 64 //how many frames to wait after a linebreak
 
-.const ENABLE_CHARACTER_BEEP = false
+.const ENABLE_CHARACTER_BEEP = true
 .const ENABLE_NEWPAGE_BEEP = false
 .const ENABLE_CURSOR_BEEP = false
 

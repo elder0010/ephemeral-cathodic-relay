@@ -64,7 +64,7 @@
 .var r_zp_1 = $35
 .var r_zp_2 = $36
 .var r_zp_3 = $37
-
+.var can_cursor_beep = $38
 
 .var COLOUR_DELAY = 1
 .const DRAWING = 1 

@@ -65,6 +65,11 @@ reset_cursor:
         sta text_row_zp_addr
         lda screen_rows_hi,x
         sta text_row_zp_addr+1
+
+        .if(ENABLE_CURSOR_BEEP){
+                lda #1 
+                sta can_cursor_beep
+        }
         rts
 
 write_next_char:
@@ -83,11 +88,21 @@ text_addr:
         ldy col_pt
         sta (text_row_zp_addr),y
 
+        lda #0 
+.if(ENABLE_CURSOR_BEEP){
+        sta can_cursor_beep
+}
+        sta can_cursor+1
+
 .if(ENABLE_CHARACTER_BEEP){
         lda #CHARACTER_BEEP_NOTE
         sta beep_note+1
 
+        lda #get_octave(CHARACTER_BEEP_OCTAVE)
+        sta beep_0_tbl
+
         :set_addr(beep_0, beep_fn)
+        :sound_on()
 }
         inc script_col_pt
         inc col_pt
@@ -113,6 +128,13 @@ text_addr:
         jmp move_text_pt
         //:set_addr(stop_beep, beep_fn)
 newline:
+
+        
+        lda #1
+        .if(ENABLE_CURSOR_BEEP){
+                sta can_cursor_beep
+        }
+        sta can_cursor+1
         .if(DEFAULT_DELAY_ON_LINEBREAK>0){
                 :set_addr(linebreak_delay, write_fn)
                 :set_addr(stop_beep, beep_fn)

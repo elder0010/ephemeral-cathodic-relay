@@ -17,6 +17,11 @@
 .const ENABLE_NEWPAGE_BEEP = true
 .const ENABLE_CURSOR_BEEP = true
 
-.const CHARACTER_BEEP_NOTE = $03 
+.const CHARACTER_BEEP_NOTE = $03
+.const CHARACTER_BEEP_OCTAVE = 1 //can be 0/1/2
+
 .const NEWPAGE_BEEP_NOTE = $04
-.const CURSOR_BLINK_NOTE = $01 
+.const NEWPAGE_BEEP_OCTAVE = 1 //can be 0/1/2
+
+.const CURSOR_BEEP_NOTE = $01
+.const CURSOR_BEEP_OCTAVE = 1 //can be 0/1/2

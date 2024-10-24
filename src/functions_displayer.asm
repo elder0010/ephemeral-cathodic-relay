@@ -59,9 +59,13 @@ total_colours_val:
         //trigger hold function
         :set_addr(hold_image, irq_fn)
 
+        :sound_on()
         //trigger sample 
         lda #JSR_ABS
         sta can_sample_draw
+
+        lda #BIT_ABS
+        sta beep_fn
         //jsr enable_write_mode
         rts
         

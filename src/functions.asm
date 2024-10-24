@@ -83,6 +83,12 @@ text_addr:
         ldy col_pt
         sta (text_row_zp_addr),y
 
+.if(ENABLE_CHARACTER_BEEP){
+        lda #CHARACTER_BEEP_NOTE
+        sta beep_note+1
+
+        :set_addr(beep_0, beep_fn)
+}
         inc script_col_pt
         inc col_pt
 
@@ -93,6 +99,8 @@ text_addr:
         lda col_pt
         cmp #COLS
         bne !+
+
+        //:set_addr(stop_beep, beep_fn)
         //next row
         
         lda row_pt
@@ -103,14 +111,19 @@ text_addr:
         jsr reset_cursor
         jsr clear_screen
         jmp move_text_pt
+        //:set_addr(stop_beep, beep_fn)
 newline:
         .if(DEFAULT_DELAY_ON_LINEBREAK>0){
                 :set_addr(linebreak_delay, write_fn)
+                :set_addr(stop_beep, beep_fn)
                 lda #1
                 sta can_cursor+1
         }else{
                 jsr clear_line
         }
+
+        
+        //:set_addr(stop_beep, beep_fn)
        // jmp nocursor
 !:
 //nocursor
@@ -240,6 +253,9 @@ enable_write_mode:
         //disable sampling 
         lda #BIT_ABS 
         sta can_sample_draw
+
+        lda #JSR_ABS
+        sta beep_fn
       //  jsr event_page
         rts 
 

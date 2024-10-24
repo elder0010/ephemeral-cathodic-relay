@@ -323,6 +323,9 @@ sample_jmp:
 
 .import source "data/filenames.asm"
 
+.pc = * "Beep functions"
+.import source "beep_functions.asm"
+
 .pc = $2000 "Text"
 text_src:
 .import source "data/script.asm"
@@ -333,6 +336,8 @@ text_end:
 }else{
         .print("Text is $"+ toHexString(text_end-text_src) +" bytes long, all good!")
 }
+
+
 
 /*
 .pc = $2000 "Image buffer area (unusable)"

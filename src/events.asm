@@ -80,8 +80,15 @@ event_page:
                 lda #DEFAULT_CURSOR_Y
                 sta default_row_val
         }
+        :set_addr(stop_beep, beep_fn)
         jsr reset_cursor
         jsr clear_screen
+
+          .if(ENABLE_NEWPAGE_BEEP){
+                lda #NEWPAGE_BEEP_NOTE
+                sta beep_note+1
+                :set_addr(beep_0, beep_fn)
+        }
 
         dec row_pt
        // dec script_row_pt

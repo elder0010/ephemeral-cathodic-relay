@@ -57,6 +57,8 @@ timer_irq_body:
        // inc $E84A
         lda #RAMEXP_ENABLE
         sta $fff0 
+
+        :set_addr(stop_beep, beep_fn)
         /*
                ldx #0
 !: 
@@ -74,6 +76,10 @@ irq_fn:
 
         lda #RAMEXP_DISABLE
         sta $fff0 
+
+beep_fn:
+        jsr stop_beep
+
         pla 
         tay 
         pla 
@@ -103,6 +109,16 @@ can_cursor:
 cursor_c:
         lda #BLACK_PIXEL
         sta (text_row_zp_addr),y
+
+        .if(ENABLE_CURSOR_BEEP){
+                cmp #WHITE_PIXEL
+                bne !+
+                lda #CURSOR_BLINK_NOTE
+                sta beep_note+1
+                :set_addr(beep_0, beep_fn)
+
+        !:
+        }
 
         dec cursor_ct+1
 cursor_ct:

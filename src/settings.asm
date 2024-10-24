@@ -12,3 +12,11 @@
 .const DEFAULT_CURSOR_X = 4
 
 .const DEFAULT_DELAY_ON_LINEBREAK = 64 //how many frames to wait after a linebreak
+
+.const ENABLE_CHARACTER_BEEP = false
+.const ENABLE_NEWPAGE_BEEP = false
+.const ENABLE_CURSOR_BEEP = false
+
+.const CHARACTER_BEEP_NOTE = $ff 
+.const NEWPAGE_BEEP_NOTE = $70
+.const CURSOR_BLINK_NOTE = $ff 

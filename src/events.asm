@@ -73,6 +73,13 @@ end_delay_rt:
 event_page:
         inc page_pt
         :inc_addr_zp(command_sequence_pt, 1) //skip event byte and delay byte
+
+        .if(RESET_CURSOR_TO_DEFAULT_ON_PAGEBREAK){
+                lda #DEFAULT_CURSOR_X
+                sta default_col_val
+                lda #DEFAULT_CURSOR_Y
+                sta default_row_val
+        }
         jsr reset_cursor
         jsr clear_screen
 

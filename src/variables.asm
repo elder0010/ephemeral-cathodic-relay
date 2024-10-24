@@ -26,7 +26,6 @@
 .var RAMEXP_DISABLE = %00000000
 
 
-
 //event defines
 .const EVENT_DELAY = 1
 .const EVENT_PAGE = 2

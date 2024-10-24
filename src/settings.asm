@@ -7,3 +7,6 @@
 
 .const HALF_SPEED_TEXT = true
 
+.const RESET_CURSOR_TO_DEFAULT_ON_PAGEBREAK = true 
+.const DEFAULT_CURSOR_X = 10
+.const DEFAULT_CURSOR_Y = 4

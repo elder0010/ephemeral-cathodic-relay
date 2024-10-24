@@ -277,7 +277,6 @@ wl0:
 draw_next_jmp:
         jmp wait_for_draw 
 
-
 //Sample routine
 sample_loop:
 sample_addr:
@@ -300,11 +299,7 @@ sample_addr:
         lda #BIT_ABS 
         sta can_sample_draw
 !:
-
 sample_jmp:
-       // lda MEMMAP
-     //   sta $fff0
-//cli 
         rts
        // jmp sample_loop
 
@@ -338,8 +333,6 @@ text_end:
 }else{
         .print("Text is $"+ toHexString(text_end-text_src) +" bytes long, all good!")
 }
-       
-
 
 /*
 .pc = $2000 "Image buffer area (unusable)"

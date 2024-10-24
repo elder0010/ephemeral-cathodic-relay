@@ -104,8 +104,40 @@ text_addr:
         jsr clear_screen
         jmp move_text_pt
 newline:
+        .if(DEFAULT_DELAY_ON_LINEBREAK>0){
+                :set_addr(linebreak_delay, write_fn)
+                lda #1
+                sta can_cursor+1
+        }else{
+                jsr clear_line
+        }
+       // jmp nocursor
+!:
+//nocursor
+move_text_pt:
+        :inc_addr(text_addr, 1)
+
+finished_write:
+        //lda #0
+        //sta force_skip_write_next+1
+        rts 
+
+linebreak_delay:
+        dec line_dl+1
+line_dl:
+        lda #1
+        bne !+
+        :set_addr(write_next_char, write_fn)
+        lda #DEFAULT_DELAY_ON_LINEBREAK
+        sta line_dl+1
+        jsr clear_line
+!:
+        rts 
+
+clear_line:
         lda #BLACK_PIXEL
         ldy col_pt
+        //dey
         sta (text_row_zp_addr),y
         inc script_row_pt
         inc row_pt
@@ -119,17 +151,6 @@ newline:
 
         lda default_col_val
         sta col_pt
-       // jmp nocursor
-!:
-        
-//nocursor
-
-move_text_pt:
-        :inc_addr(text_addr, 1)
-
-finished_write:
-        //lda #0
-        //sta force_skip_write_next+1
         rts 
 
 handle_events:
@@ -153,7 +174,6 @@ cur_com_index:
 event:
         ldy #0
         lda (command_sequence_pt),y
-
         //handle event
         cmp #EVENT_DELAY
         bne !+

@@ -8,5 +8,7 @@
 .const HALF_SPEED_TEXT = true
 
 .const RESET_CURSOR_TO_DEFAULT_ON_PAGEBREAK = true 
-.const DEFAULT_CURSOR_X = 10
-.const DEFAULT_CURSOR_Y = 4
+.const DEFAULT_CURSOR_Y = 12
+.const DEFAULT_CURSOR_X = 4
+
+.const DEFAULT_DELAY_ON_LINEBREAK = 64 //how many frames to wait after a linebreak

@@ -244,6 +244,11 @@ event:
         jsr event_loadnext
         jmp point_next_event
 !:
+        cmp #EVENT_STRING
+        bne !+
+        jsr event_string
+        jmp point_next_event
+!:
 
         cmp #EVENT_END
         bne noevent

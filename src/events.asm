@@ -189,6 +189,44 @@ event_loadsfx:
         :inc_addr_zp(command_sequence_pt, 1) //skip event byte
         rts
 
+//STRING
+event_string:
+        ldy #1
+        lda (command_sequence_pt),y //load string length
+        sta string_len+1
+                
+        lda text_addr+1 
+        sta string_addr+1
+        lda text_addr+2
+        sta string_addr+2
+ 
+        ldy col_pt
+        ldx #0
+string_addr:
+        lda $ffff,x 
+        sta (text_row_zp_addr),y
+        inc script_col_pt
+        inc col_pt
+        iny 
+        inx 
+string_len:
+        cpx #$ff
+        bne string_addr
+        sty col_pt 
+        stx textofs+1
+
+        clc 
+        lda text_addr+1
+textofs:
+        adc #0
+        sta text_addr+1
+        bcc !+
+        inc text_addr+2
+!:
+        :inc_addr_zp(command_sequence_pt, 2) //skip event byte
+        rts
+
+//END
 event_end:
         lda #0 
         sta $fff0 

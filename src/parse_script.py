@@ -106,6 +106,10 @@ class ScriptParser:
             found = True
             command = f':LoadSfx()'
 
+        if ("STRING" in command_string):
+            found = True
+            command = f':String({command_string.split("=")[1]})'   
+
         if ("END" in command_string):
             found = True
             command = f':End()'

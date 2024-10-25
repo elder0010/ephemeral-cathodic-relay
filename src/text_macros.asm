@@ -62,3 +62,8 @@
 .macro LoadSfx(){
     .byte EVENT_LOADSFX
 }
+
+.macro String(length){
+    .byte EVENT_STRING
+    .byte length
+}

@@ -11,7 +11,7 @@ class ImageProcessor:
 
     def get_images(self):
         print("Source images list:")
-        self.images = glob.glob('src/data/images/original/linear/*.png')
+        self.images = glob.glob('src/data/images/original/petcrt_fast/*.png')
         print(self.images)
         return True
     

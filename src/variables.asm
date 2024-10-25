@@ -21,8 +21,8 @@
 
 //relocated text
 .var commands_sequence_relocated = $9000 //$1600 should be enough
-.var script = $a600 //$1600 should be enough
-.var relocated_functions = $bc00 
+.var script = $a600 //$3400 should be enough
+.var relocated_functions = $da00 
 
 .var RAMEXP_ENABLE = %11100100
 .var RAMEXP_DISABLE = %00000000

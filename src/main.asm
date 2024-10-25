@@ -136,7 +136,7 @@ text_end:
 .pc = * "Init routine"
 .import source("init_routine.asm")
 
-.pc = $3200 "Event functions"
+.pc = $4000 "Event functions"
 event_functions_src:
 .pseudopc relocated_functions{
         .import source "events.asm"

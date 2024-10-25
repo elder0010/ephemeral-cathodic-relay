@@ -23,7 +23,7 @@ dsttxt:
         inc srctxt+2
         inc dsttxt+2
         iny
-        cpy #$13
+        cpy #34
         bne copytxt
 
 //relocate commands
@@ -42,7 +42,7 @@ dstcmd:
         inc dstcmd+2
 
         iny
-        cpy #16
+        cpy #18
         bne copycmd
 
 //relocate functions

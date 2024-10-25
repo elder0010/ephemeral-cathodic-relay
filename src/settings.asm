@@ -25,3 +25,7 @@
 
 .const CURSOR_BEEP_NOTE = $01
 .const CURSOR_BEEP_OCTAVE = 1 //can be 0/1/2
+
+.const INVERT_IMAGES = false
+
+.var source_images_path = "src/data/images/converted/"

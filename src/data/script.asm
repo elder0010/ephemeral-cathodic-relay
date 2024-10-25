@@ -89,7 +89,7 @@
 .text ("")
 .byte 0
 
-.text ("The last photo you got from me was the last one you'll ever have until we manage to meet again in person.")
+.text ("The last photo you got from me was the last one you'll everhave until we manage to meet again in person.")
 .byte 0
 
 //page 13
@@ -156,8 +156,12 @@
 .byte 0
 
 //page 22
-//#PAGE#
-//I found a way to take advantage of the cathodic falloff of its CRT display.
+.text ("")
+.byte 0
+
+.text ("I found a way to take advantage of the cathodic falloff of its CRT display.")
+.byte 0
+
 //page 23
 .text ("")
 .byte 0
@@ -229,14 +233,26 @@
 .byte 0
 
 //page 31
-//#PAGE#
-//#SETMARGIN=012,38#T I M E
-////page 32
-//#PAGE#
-//#SETMARGIN=011,38#into#SETMARGIN=012,35#L I G H T.#DELAY=128#
-////page 33
-//#PAGE#
-//It's called the CATHODIC EXPOSURE CHART, C.E.C.#SETMARGIN=13,04#(yeah, I really love high tech acronyms) 
+.text ("")
+.byte 0
+
+.text ("T I M E")
+.byte 0
+
+//page 32
+.text ("")
+.byte 0
+
+.text ("intoL I G H T.")
+.byte 0
+
+//page 33
+.text ("")
+.byte 0
+
+.text ("It's called the CATHODIC EXPOSURE CHART, C.E.C.(yeah, I really love high tech acronyms)")
+.byte 0
+
 //page 34
 .text ("")
 .byte 0
@@ -256,9 +272,6 @@
 .byte 0
 
 .text ("I just have to delay the character tracing by a specific amount of timeto set the correct exposure.")
-.byte 0
-
-.text ("")
 .byte 0
 
 //page 37

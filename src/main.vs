@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-al C:b3d .ld60
-al C:afa .init30
-al C:a2a .event_setmargin
-al C:6ee .cur_com_page
-=======
 al C:b48 .ld60
 al C:b05 .init30
 al C:a2f .event_setmargin
 al C:6f3 .cur_com_page
->>>>>>> 332c5bac59f630161bdfd5381c1f4bbf1bb24bc9
 al C:4c1 .sample_loop
 al C:bbc .endms2
 al C:9a0 .delay_must_lo
@@ -59,14 +52,9 @@ al C:6a6 .move_text_pt
 al C:711 .event
 al C:922 .hold_image
 al C:537 .timer_irq
-al C:12af .commands_indexes
-<<<<<<< HEAD
-al C:86d .total_colours_val
-al C:b45 .ld70
-=======
+al C:12d9 .commands_indexes
 al C:872 .total_colours_val
 al C:b50 .ld70
->>>>>>> 332c5bac59f630161bdfd5381c1f4bbf1bb24bc9
 al C:43d .srccmd
 al C:78c .noevent
 al C:829 .tb_lo
@@ -132,7 +120,7 @@ al C:98d .delay_hi_tk
 al C:2000 .text_src
 al C:82f .tb_hi
 al C:577 .cursor_c
-al C:115d .commands_pages
+al C:1173 .commands_pages
 al C:6cf .clear_line
 al C:ba1 .clrch
 al C:8f3 .msk_ct
@@ -141,8 +129,8 @@ al C:812 .draw_img
 al C:50b .sample_jmp
 al C:ad5 .load_file
 al C:4bb .wl0
-al C:2fd7 .text_end
-al C:1206 .commands_lines
+al C:3094 .text_end
+al C:1226 .commands_lines
 al C:562 .text_routine
 al C:c1e .files_hi
 break 537 

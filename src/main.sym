@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-.label ld60=$b3d
-.label init30=$afa
-.label event_setmargin=$a2a
-.label cur_com_page=$6ee
-.label endms2=$bb1
-.label beep_note=$c2c
-.label acptr=$b8e
-=======
 .label ld60=$b48
 .label init30=$b05
 .label event_setmargin=$a2f
@@ -14,7 +5,6 @@
 .label endms2=$bbc
 .label beep_note=$c37
 .label acptr=$b99
->>>>>>> 332c5bac59f630161bdfd5381c1f4bbf1bb24bc9
 .label write_main=$48a
 .label copytxt=$423
 .label screen_rows_hi=$abc
@@ -71,16 +61,11 @@
 .label delay_hi_tk=$98d
 .label tb_hi=$82f
 .label clear_line=$6cf
-<<<<<<< HEAD
-.label clrch=$b96
-.label draw_img=$80d
-=======
 .label clrch=$ba1
 .label draw_img=$812
->>>>>>> 332c5bac59f630161bdfd5381c1f4bbf1bb24bc9
-.label text_end=$2fd7 {
+.label text_end=$3094 {
 }
-.label commands_lines=$1206
+.label commands_lines=$1226
 .label text_routine=$562
 .label sample_loop=$4c1
 .label delay_must_lo=$9a0
@@ -110,14 +95,9 @@
 .label event=$711
 .label hold_image=$922
 .label timer_irq=$537
-.label commands_indexes=$12af
-<<<<<<< HEAD
-.label total_colours_val=$86d
-.label noevent=$787
-=======
+.label commands_indexes=$12d9
 .label total_colours_val=$872
 .label noevent=$78c
->>>>>>> 332c5bac59f630161bdfd5381c1f4bbf1bb24bc9
 .label draw_main=$497
 .label stop_beep=$c52
 .label clear_image_screen=$5f8
@@ -154,18 +134,10 @@
 .label mask_colours=$861
 .label text_src=$2000
 .label cursor_c=$577
-.label commands_pages=$115d
-<<<<<<< HEAD
-.label msk_ct=$8ee
-=======
+.label commands_pages=$1173
 .label msk_ct=$8f3
->>>>>>> 332c5bac59f630161bdfd5381c1f4bbf1bb24bc9
 .label can_sample_draw=$49f
 .label sample_jmp=$50b
 .label load_file=$ad5
 .label wl0=$4bb
-<<<<<<< HEAD
-.label files_hi=$c13
-=======
 .label files_hi=$c1e
->>>>>>> 332c5bac59f630161bdfd5381c1f4bbf1bb24bc9

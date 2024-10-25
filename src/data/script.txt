@@ -15,7 +15,7 @@ Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone st
 When I said it was built like a tank I was dead serious.
 //page 05
 #PAGE#
-How ironic, history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.
+How ironic,#DELAY=16# history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.
 #PAGE# 
 //page 06
 #PAGE#
@@ -25,28 +25,28 @@ How ironic, history's first personal computer happens to be#SETMARGIN=13,04#one 
 #DELAY=32#First one is bad.
 //page 08
 #PAGE#
-#DELAY=128#Very bad.
+#DELAY=32#Very bad.
 //page 09
 #PAGE#
-#DELAY=128#They are on us. 
+#DELAY=32#They are on us. 
 //page 10
 #PAGE#
-They managed to read every data, every image to predict our intentions 
+They managed to read every data, every image to predict our intentions. 
 //page 11
 #PAGE#
-They still don't have pictures of me, but they know that I exist. 
+They still don't have pictures of me,#DELAY=32# but they know that I exist. 
 //page 12
 #PAGE#
-The last photo you got from me was the last one you'll ever#SETMARGIN=13,04# have until we manage to meet again in person.
+So we need a safe way to exchange images#SETMARGIN=13,04# until we manage to meet again in person.
 //page 13
 #PAGE#
-Second one: 
+Second one is a good one: 
 //page 14
 #PAGE#
-#DELAY=128#I like to think out of the box#SETMARGIN=13,04#I found a way we can send each other pictures anyway. 
+#DELAY=128#I like to think out of the box.#SETMARGIN=13,04#I found a way to do it. 
 //page 15
 #PAGE#
-Images that those stupid machines can't see nor recognize.
+To send you images that those stupid machines#SETMARGIN=13,04#can't see nor recognize.
 //page 16
 #PAGE#
 A little invention of mine.
@@ -55,7 +55,7 @@ A little invention of mine.
 I like to call it 
 //page 18
 #PAGE#
-#SETMARGIN=12,6#EPHEMERAL#SETMARGIN=12,21#CATHODIC#SETMARGIN=12,38#RELAY#DELAY=128#
+#SETMARGIN=12,25#EPHEMERAL#SETMARGIN=12,50#CATHODIC#SETMARGIN=12,75#RELAY#DELAY=128#
 //page 19
 #PAGE#
 It's E.C.R., for short :) 
@@ -64,10 +64,10 @@ It's E.C.R., for short :)
 TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device.#SETMARGIN=13,04##DELAY=32#It hides an incredible feature.#SETMARGIN=14,04#A feature that was overlooked for more than 50 years.#DELAY=32# 
 //page 21
 #PAGE#
-Even if a 8296 PET has no graphic modes#SETMARGIN=13,04#and only displays characters with a 1 bit colour depth
+Even if a 8296 PET has no graphic modes#SETMARGIN=13,04#and only displays characters with a mere 1 bit colour depth.
 //page 22
-//#PAGE#
-//I found a way to take advantage of the cathodic falloff of its CRT display.
+#PAGE#
+I found a way to take advantage of the cathodic falloff of its CRT display.
 //page 23
 #PAGE#
 The 8296 tube is painted with unusually slow phosphors.
@@ -82,7 +82,7 @@ Look how slow it is to make the cursor really disappear.
 Can you count how many shades of green you see before it disappears?
 //page 25
 #PAGE#
-#SETMARGIN=012,40#.... 
+SETMARGIN=012,40#.... 
 //page 26
 #PAGE#
 You can't!
@@ -99,14 +99,14 @@ I analyzed every aspect of that fade out...
 #PAGE#
 ...and made a conversion routine that converts
 //page 31
-//#PAGE#
-//#SETMARGIN=012,38#T I M E
-////page 32
-//#PAGE#
-//#SETMARGIN=011,38#into#SETMARGIN=012,35#L I G H T.#DELAY=128#
-////page 33
-//#PAGE#
-//It's called the CATHODIC EXPOSURE CHART, C.E.C.#SETMARGIN=13,04#(yeah, I really love high tech acronyms) 
+#PAGE#
+#SETMARGIN=012,38#T I M E
+//page 32
+#PAGE#
+#SETMARGIN=011,38#into#SETMARGIN=012,35#L I G H T.#DELAY=128#
+//page 33
+#PAGE#
+I called it the CATHODIC EXPOSURE CHART, C.E.C.#SETMARGIN=13,04#(yeah, I really love high tech acronyms) 
 //page 34
 #PAGE#
 #SETMARGIN=012,12#TEMP: SCALA TEMPO E GRIGI
@@ -115,8 +115,7 @@ I analyzed every aspect of that fade out...
 Let's say that I want to represent 4 specific shades of gray.
 //page 36
 #PAGE#
-I just have to delay the character tracing by a specific amount of time#SETMARGIN=13,04#to set the correct exposure.
-
+I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04# tracing by a specific amount of time to set#SETMARGIN=14,04# the correct exposure.
 //page 37
 #PAGE#
 #SETMARGIN=012,20#1#SETMARGIN=012,30#2#SETMARGIN=012,40#3#SETMARGIN=012,50##DELAY=32#4#DELAY=128#
@@ -133,10 +132,10 @@ Look at this example, it will be much easier to understand:
 See?
 //page 42
 #PAGE#
-It's just done by sweeping a single line#SETMARGIN=13,04#from the top to the bottom of the screen.
+It's just done by sweeping a single line#SETMARGIN=13,04#from the top to the bottom of the screen with a specific timing.
 //page 43
 #PAGE#
-There are way more gray levels than we could achieve#SETMARGIN=13,04#back in 2024 with those shitty RTX cards
+There are way more gray levels inside this box#SETMARGIN=13,04#from the 80's than we could achieve#SETMARGIN=14,04#back in 2024 with those shitty RTX cards
 //page 44
 #PAGE#
 This one is a horizontal one,#DELAY=32#look at the 80 columns in all of their glory!

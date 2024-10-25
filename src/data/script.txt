@@ -50,12 +50,12 @@ To send you images that those stupid machines#SETMARGIN=13,04#can't see nor reco
 //page 16
 #PAGE#
 A little invention of mine.
-page 17
+//page 17
 #PAGE#
 I like to call it 
 //page 18
 #PAGE#
-#SETMARGIN=12,6# #STRING=9#EPHEMERAL#SETMARGIN=12,21# #DELAY=50# #STRING=8#CATHODIC #SETMARGIN=12,38# #DELAY=50# #STRING=5#RELAY#DELAY=128#
+#SETMARGIN=12,13# #STRING=9#EPHEMERAL#SETMARGIN=12,33# #DELAY=50# #STRING=8#CATHODIC #SETMARGIN=12,53# #DELAY=50# #STRING=5#RELAY#DELAY=128#
 //page 19
 #PAGE#
 It's E.C.R., for short :) 
@@ -126,12 +126,12 @@ Like this.
 #IMAGE=96#
 //page 39
 #PAGE#
-Look at this example,#SETMARGIN=13,04#it will be easier to understand:
+#LOADNEXT#Look at this example,#SETMARGIN=13,04#it will be easier to understand:
 //page 40 GRADIENT V
 #IMAGE=96#
 //page 41
 #PAGE#
-See?
+See?#LOADNEXT#
 //page 42
 #PAGE#
 It's just done by sweeping a single line#SETMARGIN=13,04#from the top to the bottom of the screen with a specific timing.
@@ -145,12 +145,12 @@ This one is a horizontal one,#DELAY=32#look at the 80 columns in all of their gl
 #IMAGE=96#
 //page 46
 #PAGE#
-You can achieve any kind of shading,#DELAY=32##SETMARGIN=13,04#just by delaying the brighter areas of the image
+#LOADNEXT#You can achieve any kind of shading,#DELAY=32##SETMARGIN=13,04#just by delaying the brighter areas of the image
 //page 46 GRADIENT R
 #IMAGE=96#
 //page 47
 #PAGE#
-The only limit is that images are, as the name implies,ephemeral.
+The only limit is that images are, as the name implies,#LOADNEXT##DELAY=32#ephemeral.
 //page 48
 #PAGE#
 I thought that could be a problem with more complex images#DELAY=32##SETMARGIN=13,04#so I started to test this on some simple renders.
@@ -158,7 +158,7 @@ I thought that could be a problem with more complex images#DELAY=32##SETMARGIN=1
 #IMAGE=96#
 //page 50
 #PAGE#
-I was blown away:#DELAY=32#it worked!
+I was blown away:#LOADNEXT##DELAY=32#it worked!
 //page 51
 #PAGE#
 The falloff time is just enough to appreciate the images#SETMARGIN=13,04#and that peculiar 8296 scanline surely helps fooling the eye!
@@ -172,7 +172,7 @@ E.C.R. are the new daguerrotypes!
 #IMAGE=96#
 //page 55
 #PAGE#
-That was scary,#DELAY=32# :)
+That was scary,#DELAY=32# #LOADNEXT#:)
 //page 56
 #PAGE#
 When they are about to fade away they look like a ghost,#SETMARGIN=13,04##DELAY=32#trapped in the machine,#DELAY=32# do they?
@@ -186,7 +186,7 @@ Try to snap a photo of the next picture.
 #IMAGE=96#
 //page 60
 #PAGE#
-Hahaha, that was META AF, right?
+#LOADNEXT#Hahaha,#DELAY=32# META AF.#DELAY=32#
 //page 61
 #PAGE#
 When those cyber fucks will analyze this software I sent you#SETMARGIN=13,04#they will find nothing. No patterns to exploit.
@@ -203,7 +203,7 @@ It's a world first,#SETMARGIN=13,04# now go try to find that in your datasets, s
 #IMAGE=96#
 //page 66
 #PAGE#
-Sorry, I got carried :) 
+Sorry, I got carried #LOADNEXT#:) 
 //page 67
 #PAGE#
 Back to our mission: 
@@ -214,12 +214,12 @@ This is a satellite shot of the building where you have to go.
 #IMAGE=96#
 //page 68C
 #PAGE#
-And this is the door where you'll find the server#SETMARGIN=13,04#we need to hack, passcode included. 
+#LOADNEXT#And this is the door where you'll find the server#SETMARGIN=13,04#we need to hack, passcode included. 
 //page 68D PETSCII DOOR
 #IMAGE=96#
 //page 68E
 #PAGE#
-Now I'll send you the code you need to open that server case. 
+Now I'll send you the code you need to open that server case.#LOADNEXT# 
 //page 69
 #PAGE#
 I will now display it in a noise generated E.C.R.#SETMARGIN=13,04#Just extra care.#SETMARGIN=14,04#Take a note in a safe place: 
@@ -227,13 +227,12 @@ I will now display it in a noise generated E.C.R.#SETMARGIN=13,04#Just extra car
 #IMAGE=96#
 //page 70A
 #PAGE#
-Cut the traces to the security chip and we'll do the rest. 
+#LOADNEXT#Cut the traces to the security chip and we'll do the rest. 
 //page 70B PETSCII TESLA
 #IMAGE=96#
-Cut the traces to the security chip and we'll do the rest. 
 //page 71
 #PAGE#
-Ok, now that we discovered a safe way to communicate...
+#LOADNEXT#Ok, #DELAY=32# now that we discovered a safe way to communicate...
 //page 72
 #PAGE#
 ...we're done with the boring stuff.
@@ -244,14 +243,15 @@ Today we have a pretty amazing sky, up here:
 #IMAGE=96#
 //page 75
 #PAGE#
-Sun is still a bright shining star.
+#LOADNEXT#Sun is still a bright shining star.
 //page 76 HAND
 #IMAGE=96#
 //page 77
 #PAGE#
-The world outside is still worth your battle#SETMARGIN=13,04#for independent digital information.
+#LOADNEXT#The world outside is still worth your battle#SETMARGIN=13,04#for independent digital information.
 //page 78 FLOWER
 #IMAGE=96#
+#LOADNEXT#
 //page 79 TREE
 #IMAGE=96#
 //page 80
@@ -262,7 +262,7 @@ I know it's hard to keep sane when everything around you#SETMARGIN=13,04#is an a
 But please, please don't give up.
 //page 82
 #PAGE#
-You are our last resort.
+You are our #LOADNEXT#last resort.
 //page 83
 #PAGE#
 #DELAY=128#Drones are almost here, we gotta move.

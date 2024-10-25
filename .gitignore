@@ -10,3 +10,5 @@ build/demo.d80
 build/disk_out_d64.txt
 build/disk_out_d80.txt
 src/main.prg
+src/data/commands.asm
+src/data/script.asm

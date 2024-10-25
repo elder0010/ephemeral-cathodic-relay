@@ -8,6 +8,10 @@ e0_init:
         sty delay_must_hi+1
 
        // sty can_cursor_beep
+        .if(ENABLE_CURSOR_BEEP){
+                lda #1 
+                sta can_cursor_beep
+        }
 
         lda (command_sequence_pt),y //load delay value (lo)
         sta delay_lo_val+1
@@ -194,7 +198,8 @@ event_string:
         ldy #1
         lda (command_sequence_pt),y //load string length
         sta string_len+1
-                
+        :inc_addr_zp(command_sequence_pt, 2) //skip event byte
+        
         lda text_addr+1 
         sta string_addr+1
         lda text_addr+2
@@ -223,7 +228,17 @@ textofs:
         bcc !+
         inc text_addr+2
 !:
-        :inc_addr_zp(command_sequence_pt, 2) //skip event byte
+
+        .if(ENABLE_CHARACTER_BEEP){
+        lda #CHARACTER_BEEP_NOTE
+        sta beep_note+1
+
+        lda #get_octave(CHARACTER_BEEP_OCTAVE)
+        sta beep_0_tbl
+
+        :set_addr(beep_0, beep_fn)
+        :sound_on()
+}
         rts
 
 //END

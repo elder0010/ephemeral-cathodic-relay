@@ -20,11 +20,12 @@
 .var cursor_sw = $4f
 
 //relocated text
-.var script = $c000 
-.var commands_sequence_relocated = $9000
+.var commands_sequence_relocated = $9000 //$1600 should be enough
+.var script = $a600 //$1600 should be enough
+.var relocated_functions = $bc00 
+
 .var RAMEXP_ENABLE = %11100100
 .var RAMEXP_DISABLE = %00000000
-
 
 //event defines
 .const EVENT_DELAY = 1

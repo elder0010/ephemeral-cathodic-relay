@@ -243,6 +243,4 @@ textofs:
 
 //END
 event_end:
-        lda #0 
-        sta $fff0 
-        jsr $fd16
+        jmp do_reset

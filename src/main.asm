@@ -4,14 +4,11 @@ TextWriter
 2024 G*P / Distant Future
 Code: Elder0010
 */
-
-
 .import source("macros.asm")
 .import source("text_macros.asm")
 .import source("variables.asm")
 .import source("settings.asm")
 .import source("data/commands.asm")
-
 
 .macro rewind_sample(){
         lda #<sample
@@ -27,208 +24,8 @@ Code: Elder0010
 *= basic_upstart "Basic upstart"
         :BasicUpstart2()
         sei
-
-        //lda #$e8 
-        //sta MEMMAP
-
-        jsr clear_screen
-        jsr init_irq
-      //  cli 
-        :sound_on()
-
-        /*
-//copy kernal rom 
-        ldy #0 
-
-copy0:
-        ldx #0
-!:
-
-
-src0:
-        lda $f000,x 
-dst0:
-        sta $2000,x 
-
-        
-        dex 
-        bne !-
-        inc src0+2
-        inc dst0+2
-        iny 
-        cpy #$10 
-        bne copy0
-
-lda #%100100000
-
-//lda #%10000000
-sta $fff0 
-sta MEMMAP
-
-//now copy again 
-        ldy #0 
-
-copy1:
-        ldx #0
-!:
-src1:
-        lda $2000,x 
-dst1:
-        sta $f000,x 
-        dex 
-        bne !-
-        inc src1+2
-        inc dst1+2
-        iny 
-        cpy #$10 
-        bne copy1
-
-        lda #%011000000
-
-//lda #%10000000
-sta $fff0 
-sta MEMMAP
-*/
-
-
-
-//lda #%01100000
-//sta $fff0 
-
-//relocate text
-        lda #RAMEXP_ENABLE
-        sta $fff0 
-
-        ldy #0 
-copytxt:
-        ldx #0 
-!:
-
-srctxt:
-        lda text_src,x 
-dsttxt:
-        sta script,x
-
-        dex 
-        bne !-
-        inc srctxt+2
-        inc dsttxt+2
-        iny
-        cpy #$13
-        bne copytxt
-
-
-        ldy #0 
-copycmd:
-        ldx #0 
-!:
-
-srccmd:
-        lda commands_sequence,x 
-dstcmd:       
-        sta commands_sequence_relocated,x
-        dex 
-        bne !-
-
-        inc srccmd+2
-        inc dstcmd+2
-
-        iny
-        cpy #$a
-        bne copycmd
-
-
-/*
-
-.const ram_area = $a000
-.const ram_area_2 = $fb00 
-        lda #11100100
-        sta $fff0 
-
-        ldx #0
-!: 
-        lda #1 
-        sta ram_area  ,x
-
-        lda #2
-        sta ram_area_2,x
-        dex 
-        bne !- 
-
-
-        ldy #%11100100
-        sty $fff0 
-
-*/
-        lda #<timer_irq 
-        sta $fffe 
-
-        lda #>timer_irq 
-        sta $ffff 
-
-/*
-        ldx #0
-!: 
-        lda ram_area, x
-        sta screen,x 
-
-        lda ram_area_2, x
-        sta screen+$100,x 
-        dex 
-        bne !-
-*/
-
-     //  jmp *
-      // lda #$80 
-       //sty $fff0 
-       //sty MEMMAP
-        lda #0
-        sta page_pt
-        sta script_col_pt
-        sta script_row_pt
-        sta default_col_val
-        sta default_row_val
-        sta cursor_sw
-        .if(ENABLE_CURSOR_BEEP){
-                lda #0
-                sta can_cursor_beep
-        }
-.if(HALF_SPEED_TEXT){
-        sta half_speed_delayer
-}
-        :set_addr(script, text_addr)
-        
-        //:set_addr_zp(commands_sequence, command_sequence_pt)
-        :set_addr_zp(commands_sequence_relocated, command_sequence_pt)
-
-        lda #RAMEXP_DISABLE
-        sta $fff0 
-
-        jsr reset_cursor
-
-        
-       // sta MEMMAP 
-
+        jsr init_routine
         cli 
-
-/*
-mloop:
-
-lda #$80 
-sta $fff0 
-
-lda $a000 
-sta screen+1
-
-lda #00 
-sta $fff0 
-lda $a000 
-sta screen+2
-inc $a000 
-
-
-jmp mloop
-*/
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD
 write_main:
@@ -245,9 +42,7 @@ write_next_jmp:
 //------------------------------------------------------------------------------------
 //MAIN DRAW ROUTINE
 draw_main:
-       
 wait_for_draw:  
-      
         lda #DRAWING
         sta draw_state  
         //jsr draw_img
@@ -258,8 +53,6 @@ waitloop:
 !:
 can_sample_draw:
         bit sample_loop
-
-        //inc screen+3
 draw_out_jmp:
         jmp next_op 
 next_op:
@@ -306,25 +99,25 @@ sample_addr:
 sample_jmp:
         rts
        // jmp sample_loop
+do_reset:
+        lda #0 
+        sta $fff0 
+        jsr $fd16
 
 .pc = * "IRQ"
 .import source "irq.asm"
 
-.pc = * "Functions - Text Writer"
+.pc = * "Functions - General"
 .import source "functions.asm"
 
 .pc = * "Functions - Displayer"
 .import source "functions_displayer.asm"
-
-.pc = * "Event functions"
-.import source "events.asm"
 
 .pc = * "Screen address tables"
 .import source "data/screen_addresses.asm"
 
 .pc = * "Loader"
 .import source "loader.asm"
-
 .import source "data/filenames.asm"
 
 .pc = * "Beep functions"
@@ -334,15 +127,21 @@ sample_jmp:
 text_src:
 .import source "data/script.asm"
 text_end:
-
-.if(text_end-text_src > $fff){
+.if(text_end-text_src > $1600){
         .print("ERROR! Text is too long!")
 }else{
         .print("Text is $"+ toHexString(text_end-text_src) +" bytes long, all good!")
 }
 
+.pc = * "Init routine"
+.import source("init_routine.asm")
 
-
+.pc = $3200 "Event functions"
+event_functions_src:
+.pseudopc relocated_functions{
+        .import source "events.asm"
+        .import source "functions_text.asm"	
+}
 /*
 .pc = $2000 "Image buffer area (unusable)"
 .fill $1050,$00

@@ -1,77 +1,14 @@
-init_irq:      
-        lda #$0 
-        sta $e811
-        sta $e821
-        sta $e823
-        sta $e84e
 
-        lda #%10111101
-        sta $e813
-
-        lda #<timer_irq 
-        sta $fffe 
-
-        lda #>timer_irq 
-        sta $ffff 
-        
-
-        lda #0 
-        sta $fff0 
-        lda #<timer_irq_body
-        sta $90 
-        lda #>timer_irq_body
-        sta $91
-        rts
-
-/*
-kernal_irq_handler:
-
-         pha 
-         txa 
-         tya 
-         pha 
-         
-         jmp timer_irq_body
- PHA
-.C:e443  8A          TXA
-.C:e444  48          PHA
-.C:e445  98          TYA
-.C:e446  48          PHA
-.C:e447  BA          TSX
-.C:e448  BD 04 01    LDA $0104,X
-.C:e44b  29 10       AND #$10
-.C:e44d  F0 03       BEQ $E452
-.C:e44f  6C 92 00    JMP ($0092)
-*/
 .pc = * "IRQ handler"
-timer_irq:
-.break  
-        lda #0 
-        sta $fff0 
-   
-        jmp $e442 
-
 timer_irq_body:
         lda $e812
       //  inc screen 
-       // inc $E84A
+
         lda #RAMEXP_ENABLE
         sta $fff0 
 
         :set_addr(stop_beep, beep_fn)
 
-        /*
-               ldx #0
-!: 
-        lda ram_area, x
-        sta screen,x 
-
-        lda ram_area_2, x
-        sta screen+$100,x 
-        dex 
-        bne !-
-
-*/
 irq_fn:
         jsr text_routine
 
@@ -80,7 +17,6 @@ irq_fn:
 
 beep_fn:
         jsr stop_beep
-
 
         pla 
         tay 
@@ -125,8 +61,6 @@ cursor_ct:
         sta cursor_sw
         bne !+
         lda #WHITE_PIXEL
-
-        
         .if(ENABLE_CURSOR_BEEP){
                 cmp #WHITE_PIXEL
                 bne noblink

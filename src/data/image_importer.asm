@@ -137,8 +137,8 @@
 //.eval screen_cohord_lo.reverse()
 //.eval screen_cohord_hi.reverse()
 
-.pc = $1800 "Screen address lo"
-screen_addr_lo:
+.pc = screen_addr_lo "Screen address lo"
+//screen_addr_lo:
 .for (var x=0;x<screen_cohord_lo.size();x++){
     .byte screen_cohord_lo.get(x)
 }

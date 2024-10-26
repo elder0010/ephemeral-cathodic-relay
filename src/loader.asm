@@ -122,6 +122,7 @@ must_init_image:
         //init decay time
         ldx forced_decay_pt
         lda force_decay_list,x 
+      //  .break 
         sta slow_mask_enabled+1
         sta forced_decay_amt
         sta forced_decay_v0+1

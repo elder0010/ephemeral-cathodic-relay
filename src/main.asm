@@ -25,6 +25,8 @@ Code: Elder0010
         :BasicUpstart2()
         sei
         jsr init_routine
+
+
         cli 
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD

@@ -77,7 +77,7 @@ end_delay_rt:
         rts
 
 //PAGE
-event_page:
+event_page: 
         inc page_pt
         :inc_addr_zp(command_sequence_pt, 1) //skip event byte and delay byte
 

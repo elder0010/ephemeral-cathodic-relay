@@ -83,6 +83,8 @@ dstfnc:
         :set_addr(script, text_addr)
         
         //:set_addr_zp(commands_sequence, command_sequence_pt)
+
+   //     .break
         :set_addr_zp(commands_sequence_relocated, command_sequence_pt)
 
         lda #RAMEXP_DISABLE

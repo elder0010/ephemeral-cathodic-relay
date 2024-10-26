@@ -8,7 +8,7 @@
 .var text_row_zp_addr = $11 //word
 .var page_pt = $13
 .var row_pt = $16
-.var command_sequence_pt = $18 //word
+.var command_sequence_pt = $d8 //word
 
 //absolute pointers for triggering events
 .var script_row_pt = $4a 
@@ -99,17 +99,18 @@
 
 //.var loaded_image = $7000
 
-//Images memory locations
-.const screen_addr_lo = $1800
+//Images memory locations (image + optional PETSCII payload)
+.const screen_addr_lo = $1500 //image start
 .const screen_addr_hi = screen_addr_lo+$800
 .const px_number = screen_addr_lo+$1000
 .const total_colours = screen_addr_lo+$1002
 .const pixels_colour_amt = screen_addr_lo+$1004
 
-.const petscii_start = pixels_colour_amt+256
+.const petscii_start = pixels_colour_amt+$100
 .const petscii_size = petscii_start
 .const petscii_addr_lo = petscii_size+1
 
 //.const pixels_delay = $3000
 //.const sample = pixels_colour_amt+2
-.const sample = pixels_colour_amt+512
+//sample must be loaded after the image
+.const sample = pixels_colour_amt+$200

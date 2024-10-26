@@ -115,7 +115,7 @@ clear_line:
 
 handle_events:
 cur_com_page:
-        lda commands_pages
+        lda commands_pages //should be changed accordingly to the relocation
         cmp page_pt
         beq !+
         jmp noevent

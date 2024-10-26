@@ -32,7 +32,7 @@ mask_colours:
        // :set_addr(screen_addr_lo, mask_tb_lo)
        // :set_addr(screen_addr_hi, mask_tb_hi)
 
-.break 
+//.break 
         //check if we need to delay
 slow_mask_enabled:
         lda forced_decay_amt

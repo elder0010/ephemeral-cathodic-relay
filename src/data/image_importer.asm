@@ -1,4 +1,4 @@
-.const VERBOSE_OUTPUT = false 
+.const VERBOSE_OUTPUT = true 
 .var image = "" 
 
 .function screen_addr(screen_address, x_cohord,y_cohord) {
@@ -74,7 +74,7 @@
         }
         //calc decay for each colour: the brighter the slower to go away
         .var starting_delay = 0
-        .const decay = 0
+        .const decay = 40
 
         .var delays_list = List()
         .var amount_list = List()
@@ -88,12 +88,14 @@
 
         .for(var x=0;x<sorted_palette.size();x++){
             .var next_col = sorted_palette.get(x)
-        
+
+            /*
             .if(VERBOSE_OUTPUT){
                 .print("--------------")
                 .print("Color: "+next_col)
                 .print("Delay: $"+toHexString(starting_delay))
             }
+            */
             .var cohordinates =  palette.get(next_col)
 
             .eval delays_list.add(starting_delay)
@@ -111,6 +113,9 @@
                 }
 
                 .if(VERBOSE_OUTPUT){
+                     .print("--------------")
+                    .print("Color: "+next_col)
+                    .print("Delay: $"+toHexString(starting_delay))
                     .print ("Pixels nr: $"+toHexString(c_list.size()))
                 }
 
@@ -122,7 +127,7 @@
 
             }else{
                 .if(VERBOSE_OUTPUT){
-                    .print("Cohordinates for "+next_col+" are null")
+                   // .print("Cohordinates for "+next_col+" are null")
                 }
             }
         }
@@ -160,4 +165,3 @@ px_number:
 .byte total_colours+1
 }
 
-.eval generate_palette()

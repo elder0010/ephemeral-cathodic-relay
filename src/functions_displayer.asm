@@ -31,6 +31,21 @@ dst_addr:
 mask_colours:
        // :set_addr(screen_addr_lo, mask_tb_lo)
        // :set_addr(screen_addr_hi, mask_tb_hi)
+
+        //check if we need to delay
+slow_mask_enabled:
+        lda forced_decay_amt
+        beq !+
+//slow mask mode
+        dec forced_decay_amt
+        beq !+
+        rts 
+!:
+
+forced_decay_v0:
+        lda #0
+        sta forced_decay_amt
+
         lda #0 
         sta msk_ct+1
 

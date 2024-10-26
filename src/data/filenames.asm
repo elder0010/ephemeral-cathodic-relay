@@ -31,3 +31,8 @@ files_hi:
     .byte >filenames_addr.get(x)
 }
 
+.pc = * "Force decay offset list"
+force_decay_list:
+.for(var x=0;x<forced_decay_offset_list.size();x++){
+    .byte forced_decay_offset_list.get(x)
+}

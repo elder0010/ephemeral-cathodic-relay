@@ -16,9 +16,6 @@ load_file:
        // sta MEMMAP
         //sta $fff0 
 
-        
-        
-
         lda #8 
         sta FA      //device #8 in device number 
 
@@ -121,6 +118,14 @@ must_init_image:
 
         lda total_colours       
         sta total_colours_val+1
+
+        //init decay time
+        ldx forced_decay_pt
+        lda force_decay_list,x 
+        sta slow_mask_enabled+1
+        sta forced_decay_amt
+        sta forced_decay_v0+1
+        inc forced_decay_pt
 
         jsr draw_img
 !:

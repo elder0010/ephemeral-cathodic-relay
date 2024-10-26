@@ -67,6 +67,8 @@
 .var r_zp_2 = $36
 .var r_zp_3 = $37
 .var can_cursor_beep = $38
+.var forced_decay_pt = $39
+.var forced_decay_amt = $3a
 
 .var COLOUR_DELAY = 1
 .const DRAWING = 1 

@@ -113,21 +113,22 @@ clear_line:
         sta can_cursor+1
         rts 
 
+.const RELOCATION_OFFSET = commands_sequence_relocated - commands_sequence
 handle_events:
 cur_com_page:
-        lda commands_pages //should be changed accordingly to the relocation
+        lda commands_pages+RELOCATION_OFFSET //should be changed accordingly to the relocation
         cmp page_pt
         beq !+
         jmp noevent
 !:
 cur_com_line:
-        lda commands_lines 
+        lda commands_lines+RELOCATION_OFFSET
         cmp script_row_pt
         beq !+
         jmp noevent
 !:
 cur_com_index:
-        lda commands_indexes
+        lda commands_indexes+RELOCATION_OFFSET
         cmp script_col_pt
         beq event
         jmp noevent 

@@ -1,14 +1,13 @@
 debug.log
 src/main.sym
 src/main.vs
-build/demo.d64
-build/demo.d80
 *.sym
 *.vs
 build/demo.d64
 build/demo.d80
 build/disk_out_d64.txt
 build/disk_out_d80.txt
+build/disk_out_d82.txt
 src/main.prg
 src/data/commands.asm
 src/data/script.asm
@@ -34,4 +33,6 @@ src/data/img06.prg
 src/data/img07.prg
 src/data/img08.prg
 src/data/img09.prg
+src/data/images/*.prg
+src/data/images/converted/
 build/demo.d82

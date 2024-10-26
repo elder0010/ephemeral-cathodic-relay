@@ -1,6 +1,8 @@
 init_routine:
         jsr clear_screen
         jsr init_irq
+
+        :lowercase()
     
         :sound_on()
 

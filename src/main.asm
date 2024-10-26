@@ -25,6 +25,18 @@ Code: Elder0010
         :BasicUpstart2()
         sei
         jsr init_routine
+
+        :uppercase()
+
+        ldx #0 
+!:
+.for(var x=0;x<8;x++){
+        lda test+$100*x,x 
+        sta screen+$100*x,x 
+}
+        dex 
+        bne !-
+        jmp * 
         cli 
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD
@@ -48,7 +60,7 @@ wait_for_draw:
         //jsr draw_img
         lda #WAIT_FOR_FADE
         sta draw_state
-             
+
 waitloop:
 !:
 can_sample_draw:
@@ -142,6 +154,12 @@ event_functions_src:
         .import source "events.asm"
         .import source "functions_text.asm"	
 }
+
+
+.pc = * "teest"
+test:
+.import source("data/petscii/test.asm")
+
 /*
 .pc = $2000 "Image buffer area (unusable)"
 .fill $1050,$00

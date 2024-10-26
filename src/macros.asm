@@ -200,3 +200,13 @@ When equal to 0, block 2 (16k-byte) is selected.
      .var octave_list = List().add(15,51,85)
      .return octave_list.get(octave)
 }
+
+.macro uppercase(){
+        lda #12
+        sta $e84c
+}
+
+.macro lowercase(){
+        lda #14 
+        sta $e84c
+}

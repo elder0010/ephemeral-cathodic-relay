@@ -1,4 +1,4 @@
-.const VERBOSE_OUTPUT = true 
+.const VERBOSE_OUTPUT = false 
 .var image = "" 
 
 .function screen_addr(screen_address, x_cohord,y_cohord) {

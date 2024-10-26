@@ -3,18 +3,19 @@ set KICKASS="bin\KickAss\KickAss.jar"
 set CC1541_PATH = "bin\cc1541.exe"
 
 del build\demo.d64
-del build\demo.d80
+del build\demo.d82
+@echo del build\SD\*.* /f
 del src\main.prg /f
 
 python src\parse_script.py
 
 call BuildSamples.bat
-
+call BuildImages.bat
 java -jar %KICKASS% src/main.asm -o src/main.prg -vicesymbols
+c1541.exe -format e.c.r,23 d82 build\demo.d82 -attach build\demo.d82 -write src\main.prg main -write src\data\images\img00.prg img00 -write src\data\sfx\sfx00.prg sfx00 -write src\data\images\img01.prg img01 -write src\data\sfx\sfx01.prg sfx01 -write src\data\images\img02.prg img02 -write src\data\sfx\sfx02.prg sfx02 -write src\data\images\img03.prg img03 -write src\data\sfx\sfx03.prg sfx03 -write src\data\images\img04.prg img04 -write src\data\sfx\sfx04.prg sfx04 -write src\data\images\img05.prg img05 -write src\data\sfx\sfx05.prg sfx05 -write src\data\images\img06.prg img06 -write src\data\sfx\sfx06.prg sfx06 -write src\data\images\img07.prg img07 -write src\data\sfx\sfx07.prg sfx07 -write src\data\images\img08.prg img08 -write src\data\sfx\sfx08.prg sfx08 -write src\data\images\img09.prg img09 -write src\data\sfx\sfx09.prg sfx09 -write src\data\images\img10.prg img10 -write src\data\sfx\sfx10.prg sfx10 -write src\data\images\img11.prg img11 -write src\data\sfx\sfx11.prg sfx11 -write src\data\images\img12.prg img12 -write src\data\sfx\sfx12.prg sfx12 -write src\data\images\img13.prg img13 -write src\data\sfx\sfx13.prg sfx13 -write src\data\images\img14.prg img14 -write src\data\sfx\sfx14.prg sfx14 -write src\data\images\img15.prg img15 -write src\data\sfx\sfx15.prg sfx15 -write src\data\images\img16.prg img16 -write src\data\sfx\sfx16.prg sfx16 > build\disk_out_d82.txt 
 
-call bin\cc1541\cc1541.exe -n "e.c.r."  -f main -w src\main.prg -f img00 -w src\data\img00.prg -f sfx00 -w src\data\sfx_00.prg -f img01 -w src\data\img01.prg -f sfx01 -w src\data\sfx_01.prg -f img02 -w src\data\img02.prg -f img03 -w src\data\img03.prg -f img04 -w src\data\img04.prg -f img05 -w src\data\img05.prg -f img06 -w src\data\img06.prg build\demo.d64 > build\disk_out_d64.txt
-call bin\cc1541\cc1541.exe -n "e.c.r."  -f main -w src\main.prg -f img00 -w src\data\img00.prg -f sfx00 -w src\data\sfx_00.prg -f img01 -w src\data\img01.prg -f sfx01 -w src\data\sfx_01.prg -f img02 -w src\data\img02.prg -f img03 -w src\data\img03.prg -f img04 -w src\data\img04.prg -f img05 -w src\data\img05.prg -f img06 -w src\data\img06.prg build\demo.d80 > build\disk_out_d80.txt
+@echo call BuildSD.bat 
 
 Taskkill /IM xpet.exe /F
-start xpet.exe -moncommands src\main.vs build\demo.d64
+start xpet.exe -moncommands src\main.vs build\demo.d82
 

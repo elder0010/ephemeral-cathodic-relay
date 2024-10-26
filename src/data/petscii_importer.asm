@@ -1,7 +1,7 @@
 //.import source("../variables.asm")
 
 .macro process_petscii(address_list, values_list){
-    .pc = * "PETSCII Size"
+    .pc = petscii_start "PETSCII size"
     petscii_size:
     .byte address_list.size()
 

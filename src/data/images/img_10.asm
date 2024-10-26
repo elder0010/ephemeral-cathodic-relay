@@ -4,5 +4,8 @@
 .import source("../../settings.asm")
 .import source("../image_importer.asm")
 
-
 :process_image(source_images_path+"img_10.png")
+
+.if(petscii_callback_delay_list.get(10) > 0){
+    .import source("../petscii/pet_10.asm")
+}

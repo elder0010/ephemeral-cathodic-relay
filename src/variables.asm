@@ -68,9 +68,9 @@
 .var r_zp_3 = $37
 .var can_cursor_beep = $38
 .var forced_decay_pt = $39
-.var forced_decay_amt = $3a
-.var petscii_pointer = $3b
-.var current_petscii_size = $3c
+.var forced_decay_amt = $40
+.var petscii_pointer = $41
+.var current_petscii_size = $42
 
 .var COLOUR_DELAY = 1
 .const DRAWING = 1 
@@ -106,10 +106,10 @@
 .const total_colours = screen_addr_lo+$1002
 .const pixels_colour_amt = screen_addr_lo+$1004
 
-.const petscii_start = screen_addr_lo+$1006
+.const petscii_start = pixels_colour_amt+256
 .const petscii_size = petscii_start
 .const petscii_addr_lo = petscii_size+1
 
 //.const pixels_delay = $3000
 //.const sample = pixels_colour_amt+2
-.const sample = pixels_colour_amt+256
+.const sample = pixels_colour_amt+512

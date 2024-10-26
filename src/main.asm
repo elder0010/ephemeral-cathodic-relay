@@ -25,10 +25,6 @@ Code: Elder0010
         :BasicUpstart2()
         sei
         jsr init_routine
-
-     //   jsr draw_petscii
-
-        
         cli 
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD

@@ -30,8 +30,30 @@
 
 .var source_images_path = "src/data/images/converted/"
 
+//Delay between colour ramps (frames)
 .var forced_decay_offset_list = List().add(
     64,  //img00
+    0,  //img01
+    0,  //img02
+    0,  //img03
+    0,  //img04
+    0,  //img05
+    0,  //img06
+    0,  //img07
+    0,  //img08
+    0,  //img09
+    0,  //img10
+    0,  //img11
+    0,  //img12
+    0,  //img13
+    0,  //img14
+    0,  //img15
+    0   //img16
+)
+
+//PETSCII Callback hold time (0 = no callback)
+.var petscii_callback_delay_list = List().add(
+    0,  //img00
     0,  //img01
     0,  //img02
     0,  //img03

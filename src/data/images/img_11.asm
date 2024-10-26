@@ -5,3 +5,7 @@
 .import source("../image_importer.asm")
 
 :process_image(source_images_path+"img_11.png")
+
+.if(petscii_callback_delay_list.get(11) > 0){
+    .import source("../petscii/pet_11.asm")
+}

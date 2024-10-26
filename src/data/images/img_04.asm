@@ -6,5 +6,6 @@
 
 :process_image(source_images_path+"img_04.png")
 
-//:process_image("src/data/images/img_02.png")
-
+.if(petscii_callback_delay_list.get(4) > 0){
+    .import source("../petscii/pet_04.asm")
+}

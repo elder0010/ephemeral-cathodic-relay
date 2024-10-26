@@ -26,17 +26,9 @@ Code: Elder0010
         sei
         jsr init_routine
 
-        :uppercase()
+     //   jsr draw_petscii
 
-        ldx #0 
-!:
-.for(var x=0;x<8;x++){
-        lda test+$100*x,x 
-        sta screen+$100*x,x 
-}
-        dex 
-        bne !-
-        jmp * 
+        
         cli 
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD
@@ -148,6 +140,14 @@ text_end:
 .pc = * "Init routine"
 .import source("init_routine.asm")
 
+/*
+
+.pc = petscii_start "PETSCII test"
+.import source("data/petscii_importer.asm")
+.import source("data/petscii/converted/petscii_00.asm")
+:process_petscii(petscii_address_list, petscii_values_list)
+*/
+
 .pc = $4000 "Event functions"
 event_functions_src:
 .pseudopc relocated_functions{
@@ -156,9 +156,8 @@ event_functions_src:
 }
 
 
-.pc = * "teest"
-test:
-.import source("data/petscii/test.asm")
+
+
 
 /*
 .pc = $2000 "Image buffer area (unusable)"

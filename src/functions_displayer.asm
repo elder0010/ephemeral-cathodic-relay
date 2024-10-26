@@ -142,3 +142,95 @@ hold_image:
         jsr enable_write_mode
 !:
         rts 
+
+.pc = * "PETSCII displayer"
+draw_petscii:
+        :uppercase()
+
+        lda #0 
+        sta petscii_pointer 
+
+        lda petscii_start 
+        sta current_petscii_size
+
+        //calculate the petscii addresses (depends on the size)
+        :set_addr(petscii_addr_lo, pet_src_hi)
+        clc 
+        lda #<petscii_addr_lo
+        adc current_petscii_size 
+        sta pet_src_hi+1
+        bcc !+
+        inc pet_src_hi+2
+!:
+        //calculate the petscii values start address (depends on the size)
+        clc 
+        lda pet_src_hi+1 
+        adc current_petscii_size
+        sta pet_val_src+1
+        lda pet_src_hi+2
+        sta pet_val_src+2
+        bcc !+
+        inc pet_val_src+2
+!:
+        ldx petscii_pointer
+p_loop:
+pet_src_lo:
+        lda petscii_addr_lo,x   //always start+1
+        sta p_target+1
+
+pet_src_hi:
+        lda $ffff,x     //must change accordingly to size
+        sta p_target+2
+
+pet_val_src:
+        lda $ffff,x 
+p_target:
+        sta $ffff 
+
+        inx 
+        cpx petscii_size 
+        bne p_loop
+        rts
+
+delay_petscii:
+
+        rts 
+
+clear_petscii:
+        lda #0 
+        sta petscii_pointer
+
+        lda petscii_start 
+        sta current_petscii_size
+
+        //calculate the petscii addresses (depends on the size)
+        :set_addr(petscii_addr_lo, pet_src_hi_clear)
+        clc 
+        lda #<petscii_addr_lo
+        adc current_petscii_size 
+        sta pet_src_hi_clear+1
+        bcc !+
+        inc pet_src_hi_clear+2
+!:
+      
+        ldx petscii_pointer
+p_loop_clear:
+pet_src_lo_clear:
+        lda petscii_addr_lo,x   //always start+1
+        sta p_target_clear+1
+
+pet_src_hi_clear:
+        lda $ffff,x     //must change accordingly to size
+        sta p_target_clear+2
+
+
+        lda #BLACK_PIXEL
+p_target_clear:
+        sta $ffff 
+
+        inx 
+        cpx petscii_size 
+        bne p_loop_clear
+
+        :lowercase()
+        rts

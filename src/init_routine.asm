@@ -20,6 +20,7 @@ init_routine:
         sty default_row_val
         sty cursor_sw
         sty forced_decay_pt
+        sty petscii_pointer
 copytxt:
         ldx #0 
 !:

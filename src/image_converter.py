@@ -11,7 +11,6 @@ from PIL import ImageOps
 import glob
 print(glob.glob('src/data/images/source/*.png'))
 
-
 class ImageConverter:
     images = []
     def __init__(self):

@@ -31,7 +31,7 @@
 .var source_images_path = "src/data/images/converted/"
 
 .var forced_decay_offset_list = List().add(
-    8,  //img00
+    64,  //img00
     0,  //img01
     0,  //img02
     0,  //img03

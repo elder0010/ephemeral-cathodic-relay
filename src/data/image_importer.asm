@@ -11,31 +11,34 @@
         .var bb = toHexString(x,2).toUpperCase()
         .var hex_string = "#"+bb+bb+bb
         //.print("Color: "+hex_string)
-        .eval palette.add(hex_string)
+        .if(hex_string!="#000000"){
+            .eval palette.add(hex_string)
+        }
+        //.eval palette.add(hex_string)
     }
-    //.eval palette.reverse()
     .return palette
 }
 
 .macro process_image(image_path){
         .var picture = LoadPicture(image_path)
 
-        .print("Processing image: "+image)
+        .print("Processing image: "+image_path)
 
         .if(VERBOSE_OUTPUT){
             .print("Image width: "+picture.width)
             .print("Image height: "+picture.height)
         }
+      
         //Get image palette
         .var palette = Hashtable()
         .for (var y=0;y<picture.height;y++){
             .for (var x=0;x<picture.width;x++){
                 .var colour = picture.getPixel(x,y) 
-                .var c_key = "#"+toHexString(colour).toUpperCase()
+                .var c_key = "#"+toHexString(colour,6).toUpperCase()
         
                 .if(!palette.containsKey(c_key)){
                     .eval palette.put(c_key,List())
-                        //  .print(c_key)
+                    //.print(c_key)
                 }
                 .var x_pad = ""
                 .var y_pad = ""
@@ -73,10 +76,6 @@
             }
         }
         //calc decay for each colour: the brighter the slower to go away
-        //.var starting_delay = 0
-        //.const decay = 40
-
-        //.var delays_list = List()
         .var amount_list = List()
         .var total_colours = 0
 
@@ -85,21 +84,20 @@
 
         .var screen_cohord_lo = List()
         .var screen_cohord_hi = List()
-    
+        .var colours_overflow = false
+
         .for(var x=0;x<sorted_palette.size();x++){
             .var next_col = sorted_palette.get(x)
 
-            /*
-            .if(VERBOSE_OUTPUT){
-                .print("--------------")
-                .print("Color: "+next_col)
-                .print("Delay: $"+toHexString(starting_delay))
-            }
-            */
-            .var cohordinates =  palette.get(next_col)
+            .var cohordinates = palette.get(next_col)
 
             //.eval delays_list.add(starting_delay)
             .if(cohordinates!=null){
+
+                .if(cohordinates.size()>255){
+                    .print("Error: Too many pixels for colour: "+next_col+ " ("+cohordinates.size()+")")
+                    .eval colours_overflow = true
+                }
                 //prepare the cohordinates list (screen addresses) for the current delay
                 .var c_list = List()
                 .for(var a=0; a<palette.get(next_col).size(); a++){
@@ -113,7 +111,7 @@
                 }
 
                 .if(VERBOSE_OUTPUT){
-                     .print("--------------")
+                    .print("--------------")
                     .print("Color: "+next_col)
                     //.print("Delay: $"+toHexString(starting_delay))
                     .print ("Pixels nr: $"+toHexString(c_list.size()))
@@ -122,20 +120,13 @@
                 .eval amount_list.add(c_list.size())
                 .eval px_nr = px_nr+c_list.size()
                 .eval total_colours = total_colours+1
-            // .eval pixels_by_delay.put(next_col,c_list)
-              //  .eval starting_delay = starting_delay+decay
-
-            }else{
-                .if(VERBOSE_OUTPUT){
-                   // .print("Cohordinates for "+next_col+" are null")
-                }
             }
         }
 
-        .print("Total pixels: $"+toHexString(px_nr))
-
-//.eval screen_cohord_lo.reverse()
-//.eval screen_cohord_hi.reverse()
+.print("Total pixels: $"+toHexString(px_nr))
+.if(!colours_overflow){
+    .print("Colour quantity check passed.")
+}
 
 .pc = screen_addr_lo "Screen address lo"
 //screen_addr_lo:
@@ -152,7 +143,7 @@ screen_addr_hi:
 
 .pc = screen_addr_lo+$1004 "Pixels amount per colour"
 pixels_colour_amt: 
-.print("Amount list size: "+amount_list.size())
+//.print("Amount list size: "+amount_list.size())
 .for(var x=0;x<amount_list.size();x++){
     .byte amount_list.get(x)
 }

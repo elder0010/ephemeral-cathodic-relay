@@ -27,14 +27,13 @@ dst_addr:
         rts 
         
 mask_colours:
-//.break
         //check if we need to delay
 slow_mask_enabled:
         lda forced_decay_amt
         beq !+
 //slow mask mode
         dec forced_decay_amt
-       // rts 
+        rts 
 !:
 forced_decay_v0:
         lda #0
@@ -73,7 +72,7 @@ msk_amount:
         inc px_cnt_pt 
         lda px_cnt_pt
 total_colours_val:
-        cmp #$ff //RICORDATI DI SETTARMI!!
+        cmp #$ff
         bne skipreset
 //--------------------------------------
 //time to reset 
@@ -94,10 +93,11 @@ total_colours_val:
         :set_addr(hold_image, irq_fn)
         ldx petscii_callback_pt
         inc petscii_callback_pt
-        lda petscii_callback_delay,x 
+        ldy petscii_callback_delay,x 
         beq no_callback 
-callback:
-        sta pet_tk+1
+callback: 
+        iny
+        sty pet_tk+1
         :set_addr(delay_petscii, petscii_fn)
         jsr draw_petscii
         lda #JSR_ABS 
@@ -107,52 +107,7 @@ callback:
 skipreset:
 no_callback:
         rts
-/*
-        lda #0 
-        sta msk_ct+1
 
-        ldx px_cnt_pt
-        lda pixels_colour_amt,x 
-        sta msk_amount+1
-        
-        inc px_cnt_pt 
-        lda px_cnt_pt
-total_colours_val:
-        cmp #total_colours //RICORDATI DI SETTARMI!!
-        bne mask_tb_lo
-//--------------------------------------
-//time to reset 
-        lda #FINISHED 
-        sta draw_state
-
-        lda #0 
-        sta px_cnt_pt
-        sta msk_ct+1
-        :set_addr(screen_addr_lo, mask_tb_lo)
-        :set_addr(screen_addr_hi, mask_tb_hi)
-        :set_addr(screen_addr_lo, tb_lo)
-        :set_addr(screen_addr_hi, tb_hi)
-
-        jsr trigger_sample
-        
-        //trigger hold function
-        :set_addr(hold_image, irq_fn)
-        ldx petscii_callback_pt
-        inc petscii_callback_pt
-        lda petscii_callback_delay,x 
-        beq no_callback 
-callback:
-        sta pet_tk+1
-        :set_addr(delay_petscii, petscii_fn)
-        jsr draw_petscii
-        lda #JSR_ABS 
-        sta petscii_fn 
-        rts
-
-no_callback:
-*/
-  //      rts
-        
 trigger_sample:
         :sound_on()
         lda #JSR_ABS

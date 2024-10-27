@@ -15,8 +15,6 @@ files:
 .for(var x=0;x<filenames.size();x++){
     .eval filenames_addr.add(f_addr)
     .eval f_addr = f_addr + filenames.get(x).size()+1
-
-    //.print(toHexString(f_addr))
 }
 
 .pc = * "files addresses lo"

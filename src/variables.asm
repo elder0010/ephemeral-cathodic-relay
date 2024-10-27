@@ -8,7 +8,7 @@
 .var text_row_zp_addr = $11 //word
 .var page_pt = $13
 .var row_pt = $16
-.var command_sequence_pt = $d8 //word
+.var command_sequence_pt = $18 //word
 
 //absolute pointers for triggering events
 .var script_row_pt = $4a 
@@ -71,6 +71,7 @@
 .var forced_decay_amt = $40
 .var petscii_pointer = $41
 .var current_petscii_size = $42
+.var petscii_callback_pt = $43
 
 .var COLOUR_DELAY = 1
 .const DRAWING = 1 

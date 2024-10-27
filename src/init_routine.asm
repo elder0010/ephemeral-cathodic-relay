@@ -21,6 +21,7 @@ init_routine:
         sty cursor_sw
         sty forced_decay_pt
         sty petscii_pointer
+        sty petscii_callback_pt
 copytxt:
         ldx #0 
 !:

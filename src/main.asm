@@ -47,7 +47,7 @@ draw_main:
 wait_for_draw:  
         lda #DRAWING
         sta draw_state  
-        //jsr draw_img
+ 
         lda #WAIT_FOR_FADE
         sta draw_state
 
@@ -152,10 +152,6 @@ event_functions_src:
         .import source "events.asm"
         .import source "functions_text.asm"	
 }
-
-
-
-
 
 /*
 .pc = $2000 "Image buffer area (unusable)"

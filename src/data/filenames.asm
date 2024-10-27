@@ -36,3 +36,9 @@ force_decay_list:
 .for(var x=0;x<forced_decay_offset_list.size();x++){
     .byte forced_decay_offset_list.get(x)
 }
+
+.pc = * "PETSCII callback frame delay"
+petscii_callback_delay:
+.for(var x=0;x<petscii_callback_delay_list.size();x++){
+    .byte petscii_callback_delay_list.get(x)
+}

@@ -7,7 +7,7 @@
 
 .function generate_palette(){
     .var palette = List()
-    .for (var x=0;x<256;x++){
+    .for (var x=1;x<=256;x++){
         .var bb = toHexString(x,2).toUpperCase()
         .var hex_string = "#"+bb+bb+bb
         //.print("Color: "+hex_string)
@@ -73,10 +73,10 @@
             }
         }
         //calc decay for each colour: the brighter the slower to go away
-        .var starting_delay = 0
-        .const decay = 40
+        //.var starting_delay = 0
+        //.const decay = 40
 
-        .var delays_list = List()
+        //.var delays_list = List()
         .var amount_list = List()
         .var total_colours = 0
 
@@ -85,7 +85,7 @@
 
         .var screen_cohord_lo = List()
         .var screen_cohord_hi = List()
-
+    
         .for(var x=0;x<sorted_palette.size();x++){
             .var next_col = sorted_palette.get(x)
 
@@ -98,7 +98,7 @@
             */
             .var cohordinates =  palette.get(next_col)
 
-            .eval delays_list.add(starting_delay)
+            //.eval delays_list.add(starting_delay)
             .if(cohordinates!=null){
                 //prepare the cohordinates list (screen addresses) for the current delay
                 .var c_list = List()
@@ -115,7 +115,7 @@
                 .if(VERBOSE_OUTPUT){
                      .print("--------------")
                     .print("Color: "+next_col)
-                    .print("Delay: $"+toHexString(starting_delay))
+                    //.print("Delay: $"+toHexString(starting_delay))
                     .print ("Pixels nr: $"+toHexString(c_list.size()))
                 }
 
@@ -123,7 +123,7 @@
                 .eval px_nr = px_nr+c_list.size()
                 .eval total_colours = total_colours+1
             // .eval pixels_by_delay.put(next_col,c_list)
-                .eval starting_delay = starting_delay+decay
+              //  .eval starting_delay = starting_delay+decay
 
             }else{
                 .if(VERBOSE_OUTPUT){

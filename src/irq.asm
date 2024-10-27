@@ -18,6 +18,9 @@ irq_fn:
 beep_fn:
         jsr stop_beep
 
+petscii_fn:
+        bit draw_petscii
+
         pla 
         tay 
         pla 

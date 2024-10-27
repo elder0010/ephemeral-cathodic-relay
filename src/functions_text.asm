@@ -41,9 +41,6 @@ text_addr:
         cmp #COLS
         bne !+
 
-        //:set_addr(stop_beep, beep_fn)
-        //next row
-        
         lda row_pt
         cmp #ROWS
         bne newline
@@ -189,7 +186,6 @@ point_next_event:
         :inc_addr(cur_com_page, 1)
 noevent:
         rts
-
 
 enable_write_mode:
         :set_addr(write_main, draw_next_jmp)

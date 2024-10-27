@@ -4,7 +4,7 @@ class PetsciiProcessor:
     images = []
     BLANK_CHAR = "32" 
    # PETSCII_SCREEN = 34816 #0x8800
-    PETSCII_SCREEN = 0x8000
+    PETSCII_SCREEN = 0x8800
 
     def __init__(self):
         self.get_images()

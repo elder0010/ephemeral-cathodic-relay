@@ -7,7 +7,7 @@
 
 .function generate_palette(){
     .var palette = List()
-    .for (var x=1;x<=256;x++){
+    .for (var x=0;x<=256;x++){
         .var bb = toHexString(x,2).toUpperCase()
         .var hex_string = "#"+bb+bb+bb
         //.print("Color: "+hex_string)
@@ -162,6 +162,6 @@ px_number:
 .word px_nr
 
 .pc = screen_addr_lo+$1002 "Total colours"
-.byte total_colours+1
+.byte total_colours
 }
 

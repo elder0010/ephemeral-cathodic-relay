@@ -101,12 +101,13 @@ must_init_image:
         lda #0
         sta must_init_image+1
 
+.break 
         lda total_colours       
         sta total_colours_val+1
 
         ldx forced_decay_pt
         lda force_decay_list,x 
-        sta slow_mask_enabled+1
+      //  sta slow_mask_enabled+1
         sta forced_decay_amt
         sta forced_decay_v0+1
         inc forced_decay_pt

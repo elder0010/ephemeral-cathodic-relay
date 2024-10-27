@@ -32,7 +32,7 @@
 
 //Delay between colour ramps (frames)
 .var forced_decay_offset_list = List().add(
-    32,  //img00
+    0,  //img00
     0,  //img01
     0,  //img02
     0,  //img03

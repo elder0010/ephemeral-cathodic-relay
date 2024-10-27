@@ -5,7 +5,6 @@ load_file:
 
         lda #8 
         sta FA      //device #8 in device number 
-
 init10:
         lda #<BUF 
         sta FNADR
@@ -13,7 +12,7 @@ init10:
         sta FNADR+1 //file name
 inputfile:
 
-//input file name
+//read file name
 file_ptr:
         ldx #0 
         lda files_lo,x 
@@ -30,14 +29,13 @@ nc:
         beq !+
         inx 
         jmp nc
-!:
-  
+!:  
 init30:
-        stx FNLEN   //store length of filename
+        stx FNLEN  //store length of filename
 
         lda FNLEN
         cmp #1
-        bne load //filename empty?
+        bne load   //filename empty?
         rts
 load:
         lda #0 
@@ -106,10 +104,8 @@ must_init_image:
         lda total_colours       
         sta total_colours_val+1
 
-        //init decay time
         ldx forced_decay_pt
         lda force_decay_list,x 
-      //  .break 
         sta slow_mask_enabled+1
         sta forced_decay_amt
         sta forced_decay_v0+1
@@ -181,7 +177,6 @@ MS1:
 MS2:    
 .text "01" //file not found
 endms2:
-
 msg: 
         ldy #0 
 !:

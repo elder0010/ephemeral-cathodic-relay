@@ -138,14 +138,6 @@ text_end:
 .pc = * "Init routine"
 .import source("init_routine.asm")
 
-/*
-
-.pc = petscii_start "PETSCII test"
-.import source("data/petscii_importer.asm")
-.import source("data/petscii/converted/petscii_00.asm")
-:process_petscii(petscii_address_list, petscii_values_list)
-*/
-
 .pc = $4000 "Event functions"
 event_functions_src:
 .pseudopc relocated_functions{
@@ -153,13 +145,3 @@ event_functions_src:
         .import source "functions_text.asm"	
 }
 
-/*
-.pc = $2000 "Image buffer area (unusable)"
-.fill $1050,$00
-*/
-
-//.import source("src/data/image_importer.asm")
-//:process_image("src/data/images/img_00.png")
-
-//.pc = sample "Sample"
-//.import binary("data/sample_7khz.raw")

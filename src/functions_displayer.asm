@@ -26,12 +26,7 @@ dst_addr:
 !:
         rts 
         
-
 mask_colours:
-       // :set_addr(screen_addr_lo, mask_tb_lo)
-       // :set_addr(screen_addr_hi, mask_tb_hi)
-
-//.break 
         //check if we need to delay
 slow_mask_enabled:
         lda forced_decay_amt
@@ -41,7 +36,6 @@ slow_mask_enabled:
         beq !+
         rts 
 !:
-
 forced_decay_v0:
         lda #0
         sta forced_decay_amt
@@ -71,14 +65,10 @@ total_colours_val:
         :set_addr(screen_addr_lo, tb_lo)
         :set_addr(screen_addr_hi, tb_hi)
 
-      
-      //  sta px_cnt_pt
-
         jsr trigger_sample
         
         //trigger hold function
         :set_addr(hold_image, irq_fn)
-//.break
         ldx petscii_callback_pt
         inc petscii_callback_pt
         lda petscii_callback_delay,x 
@@ -92,10 +82,6 @@ callback:
         rts
 
 no_callback:
-        //trigger sample immediately
-        
-     
-        //jsr enable_write_mode
         rts
         
 trigger_sample:
@@ -170,8 +156,6 @@ hold_image:
 draw_petscii:
         :uppercase()
 
-       // .break 
-
         lda #0 
         sta petscii_pointer 
 
@@ -220,17 +204,13 @@ p_target:
         rts
 
 delay_petscii:
-
         dec pet_tk+1
 pet_tk:
         lda #0
         bne !+
-        jsr clear_petscii
         lda #BIT_ABS
         sta petscii_fn
-
-        //trigger sample at the next frame
-      //  jsr trigger_sample
+        jsr clear_petscii
 !:
         rts 
 
@@ -250,7 +230,6 @@ clear_petscii:
         bcc !+
         inc pet_src_hi_clear+2
 !:
-      
         ldx petscii_pointer
 p_loop_clear:
 pet_src_lo_clear:
@@ -260,7 +239,6 @@ pet_src_lo_clear:
 pet_src_hi_clear:
         lda $ffff,x     //must change accordingly to size
         sta p_target_clear+2
-
 
         lda #BLACK_PIXEL
 p_target_clear:

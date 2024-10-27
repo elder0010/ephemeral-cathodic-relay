@@ -101,7 +101,6 @@ must_init_image:
         lda #0
         sta must_init_image+1
 
-.break 
         lda total_colours       
         sta total_colours_val+1
 

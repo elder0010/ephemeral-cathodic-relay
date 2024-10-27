@@ -42,7 +42,7 @@ beep_note:
 
         lda #0 
         sta beep0pt+1
-        sta $e848 
+     //   sta $e848 
         sta $e84a
        // :set_addr(stop_beep, beep_fn)
      //   jsr stop_beep
@@ -54,12 +54,12 @@ beep_note:
 
 stop_beep:
         lda #0 
-        sta $e848
+      //  sta $e848
         sta $e84a
         sta beep0pt+1
-        :sound_off()
+       // :sound_off()
 
         rts
 
 beep_0_tbl:
-.byte 15,0,0
+.byte 15,15,15,15

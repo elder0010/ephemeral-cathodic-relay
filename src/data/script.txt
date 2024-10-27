@@ -1,54 +1,283 @@
 //page 00
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+Hey.#LOADNEXT#
+//page 01
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+It's me.
+//page 02
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+I really#DELAY=32# #STRING=5#REALLY#LOADSFX##DELAY=32# hope you still got that one I left you, down there.
+//page 03
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.
+//page 04
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+When I said it was built like a tank I was dead serious.
+//page 05
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+How ironic,#DELAY=16# history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.
+#PAGE# 
+//page 06
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+#DELAY=32#Now, let's get to work.#DELAY=32##SETMARGIN=13,04#I have two news for you.
+//page 07
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+#DELAY=32#First one is bad.
+//page 08
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+#DELAY=32#Very bad.
+//page 09
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+#DELAY=32#They are on us. 
+//page 10
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+They managed to read every data, every image to predict our intentions. 
+//page 11
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+They still don't have pictures of me,#DELAY=32# but they know that I exist. 
+//page 12
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+So we need a safe way to exchange images#SETMARGIN=13,04#until we manage to meet again in person.
+//page 13
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+Second one is a good one: 
+//page 14
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+#DELAY=128#I like to think out of the box.#DELAY=32##SETMARGIN=13,04#I found a way to do it. 
+//page 15
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+To send you images that those stupid machines#SETMARGIN=13,04#can't see nor recognize.
+//page 16
 #PAGE#
-IMG00 #LOADNEXT# #LOADNEXT# #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#. #DELAY=120#.
-#IMAGE=254#
+A little invention of mine.
+//page 17
 #PAGE#
+I like to call it 
+//page 18
+#PAGE#
+#SETMARGIN=12,13# #STRING=9#EPHEMERAL#SETMARGIN=12,33# #DELAY=50# #STRING=8#CATHODIC #SETMARGIN=12,53# #DELAY=50# #STRING=5#RELAY#DELAY=128#
+//page 19
+#PAGE#
+It's E.C.R., for short :) 
+//page 20
+#PAGE#
+TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device.#SETMARGIN=13,04##DELAY=32#It hides an incredible feature.#DELAY=32##SETMARGIN=14,04#A feature that was overlooked for more than 50 years.#DELAY=32# 
+//page 21
+#PAGE#
+Even if a 8296 PET has no graphic modes#SETMARGIN=13,04#and only displays characters with a mere 1 bit colour depth.
+//page 22
+#PAGE#
+I found a way to take advantage of the cathodic falloff#SETMARGIN=13,04#of its CRT display.
+//page 23
+#PAGE#
+The 8296 tube is painted with unusually slow phosphors.
+//page 24
+#PAGE#
+Look how slow it is to make the cursor really disappear.
+//page 25
+#PAGE#
+#SETMARGIN=012,40#.#DELAY=256#
+//page 26
+#PAGE#
+Can you count how many shades of green you see before it disappears?
+//page 25
+#PAGE#
+#SETMARGIN=012,40#.#DELAY=50#.#DELAY=50#.#DELAY=50#.#DELAY=128# 
+//page 26
+#PAGE#
+You can't!
+//page 27
+#PAGE#
+They are endless, it's a true, non linear, analog fade out. 
+//page 28
+#PAGE#
+That's where my idea came in.
+//page 29
+#PAGE#
+I analyzed every aspect of that fade out...
+//page 30
+#PAGE#
+...and made a conversion routine that converts
+//page 31
+#PAGE#
+#SETMARGIN=012,38##STRING=7#T I M E#DELAY=64#
+//page 32
+#PAGE#
+#SETMARGIN=011,38#into#SETMARGIN=012,35##STRING=10#L I G H T.#DELAY=128#
+//page 33
+#PAGE#
+I called it the#DELAY=32# #STRING=8#CATHODIC#DELAY=32# #STRING=8#EXPOSURE#DELAY=32# #STRING=5#CHART#DELAY=32#, C.E.C.#DELAY=64##SETMARGIN=13,04#(yeah, I really love high tech acronyms) 
+//page 34
+#PAGE#
+Let's say that I want to represent 4 specific shades of gray.
+//page 35
+#PAGE#
+I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04# tracing by a specific amount of time to set#SETMARGIN=14,04# the correct exposure.
+//page 36
+#PAGE#
+#SETMARGIN=012,20#1#SETMARGIN=012,30#2#SETMARGIN=012,40#3#SETMARGIN=012,50##DELAY=32#4#DELAY=128#
+//page 37
+#PAGE#
+Now I can exploit the phosphor falloff,#DELAY=32##SETMARGIN=13,04#use it as an analog grayscale image generator
+//page 38
+#PAGE#
+Like this.
+//page 38b PETSCI 1234
+#IMAGE=96#
+//page 39
+#PAGE#
+#LOADNEXT#Look at this example,#SETMARGIN=13,04#it will be easier to understand:
+//page 40 GRADIENT V
+#IMAGE=96#
+//page 41
+#PAGE#
+See?#LOADNEXT#
+//page 42
+#PAGE#
+It's just done by sweeping a single line#SETMARGIN=13,04#from the top to the bottom of the screen with a specific timing.
+//page 43
+#PAGE#
+There are way more gray levels inside this box#SETMARGIN=13,04#from the 80's than we could achieve#SETMARGIN=14,04#back in 2024 with those shitty RTX cards
+//page 44
+#PAGE#
+This one is a horizontal one,#DELAY=32#look at the 80 columns in all of their glory!
+//page 45 GRADIENT H
+#IMAGE=96#
+//page 46
+#PAGE#
+#LOADNEXT#You can achieve any kind of shading,#DELAY=32##SETMARGIN=13,04#just by delaying the brighter areas of the image
+//page 46 GRADIENT R
+#IMAGE=96#
+//page 47
+#PAGE#
+The only limit is that images are, as the name implies,#LOADNEXT##DELAY=32#ephemeral.
+//page 48
+#PAGE#
+I thought that could be a problem with more complex images#DELAY=32##SETMARGIN=13,04#so I started to test this on some simple renders.
+//page 49 SPHERE
+#IMAGE=96#
+//page 50
+#PAGE#
+I was blown away:#LOADNEXT##DELAY=32#it worked!
+//page 51
+#PAGE#
+The falloff time is just enough to appreciate the images#SETMARGIN=13,04#and that peculiar 8296 scanline surely helps fooling the eye!
+//page 52
+#PAGE#
+Now that I think about it#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=13,04#you can even export em with your analog camera#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=014,04#or using any other photographic process.
+//page 53
+#PAGE#
+E.C.R. are the new daguerrotypes!
+//page 54 SKULL
+#IMAGE=96#
+//page 55
+#PAGE#
+That was scary,#DELAY=32# #LOADNEXT#:)
+//page 56
+#PAGE#
+When they are about to fade away they look like a ghost,#SETMARGIN=13,04##DELAY=32#trapped in the machine,#DELAY=32# do they?
+//page 57
+#PAGE#
+Try to snap a photo of the next picture.
+//page 58
+#PAGE#
+#SETMARGIN=012,37#Ready?#DELAY=128#
+//page 59 PET
+#IMAGE=96#
+//page 60
+#PAGE#
+#LOADNEXT#Hahaha,#DELAY=32# META AF.#DELAY=32#
+//page 61
+#PAGE#
+When those cyber fucks will analyze this software I sent you#SETMARGIN=13,04#they will find nothing. No patterns to exploit.
+//page 62
+#PAGE#
+Just meaningless, random 1 bit character.#SETMARGIN=13,04#Scattered all over the place
+//page 63
+#PAGE#
+Even emulating this very machine#SETMARGIN=13,04#they will never understand what this is all about.
+//page 64
+#PAGE#
+It's a world first,#SETMARGIN=13,04# now go try to find that in your datasets, statistical zombies.
+//page 65 GNGZOMBIE
+#IMAGE=96#
+//page 66
+#PAGE#
+Sorry, I got carried #LOADNEXT#:) 
+//page 67
+#PAGE#
+Back to our mission: 
+//page 68A
+#PAGE#
+This is a satellite shot of the building where you have to go.
+//page 68B PETSCII MAP
+#IMAGE=96#
+//page 68C
+#PAGE#
+#LOADNEXT#And this is the door where you'll find the server#SETMARGIN=13,04#we need to hack, passcode included. 
+//page 68D PETSCII DOOR
+#IMAGE=96#
+//page 68E
+#PAGE#
+Now I'll send you the code you need to open that server case.#LOADNEXT# 
+//page 69
+#PAGE#
+I will now display it in a noise generated E.C.R.#SETMARGIN=13,04#Just extra care.#SETMARGIN=14,04#Take a note in a safe place: 
+//page 70 ELDER0010
+#IMAGE=96#
+//page 70A
+#PAGE#
+#LOADNEXT#Cut the traces to the security chip and we'll do the rest. 
+//page 70B PETSCII TESLA
+#IMAGE=96#
+//page 71
+#PAGE#
+#LOADNEXT#Ok, #DELAY=32# now that we discovered a safe way to communicate...
+//page 72
+#PAGE#
+...we're done with the boring stuff.
+//page 73
+#PAGE#
+Today we have a pretty amazing sky, up here:
+//page 74 SKY
+#IMAGE=96#
+//page 75
+#PAGE#
+#LOADNEXT#Sun is still a bright shining star.
+//page 76 HAND
+#IMAGE=96#
+//page 77
+#PAGE#
+#LOADNEXT#The world outside is still worth your battle#SETMARGIN=13,04#for independent digital information.
+//page 78 FLOWER
+#IMAGE=96#
+#LOADNEXT#
+//page 79 TREE
+#IMAGE=96#
+//page 80
+#PAGE#
+I know it's hard to keep sane when everything around you#SETMARGIN=13,04#is an artificial mockery.
+//page 81
+#PAGE#
+But please, please don't give up.
+//page 82
+#PAGE#
+You are our #LOADNEXT#last resort.
+//page 83
+#PAGE#
+#DELAY=128#Drones are almost here, we gotta move.
+//page 84
+#PAGE#
+I'll leave you with the last trick:#SETMARGIN=13,04# if you squint a little bit it works even better.
+//page 85
+#PAGE#
+Try that, now.
+//page 86 TIPA
+#IMAGE=96#
+//page 89
+#PAGE#
+#DELAY=128#I love you.
+//page 90
+#PAGE#
+#SETMARGIN=012,38#XXX
 #END#

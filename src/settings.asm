@@ -13,18 +13,18 @@
 
 .const DEFAULT_DELAY_ON_LINEBREAK = 64 //how many frames to wait after a linebreak
 
-.const ENABLE_CHARACTER_BEEP = false
+.const ENABLE_CHARACTER_BEEP = true
 .const ENABLE_NEWPAGE_BEEP = true
 .const ENABLE_CURSOR_BEEP = true
 
 .const CHARACTER_BEEP_NOTE = $03
 .const CHARACTER_BEEP_OCTAVE = 1 //can be 0/1/2
 
-.const NEWPAGE_BEEP_NOTE = $04
-.const NEWPAGE_BEEP_OCTAVE = 1 //can be 0/1/2
+.const NEWPAGE_BEEP_NOTE = $34
+.const NEWPAGE_BEEP_OCTAVE = 0 //can be 0/1/2
 
-.const CURSOR_BEEP_NOTE = $01
-.const CURSOR_BEEP_OCTAVE = 1 //can be 0/1/2
+.const CURSOR_BEEP_NOTE = $18 //$01
+.const CURSOR_BEEP_OCTAVE = 0//1 //can be 0/1/2
 
 .const INVERT_IMAGES = false
 

@@ -53,7 +53,7 @@ beep_note:
         sta beep0pt+1
         sta $e84b
        
-       // :set_addr(stop_beep, beep_fn)
+        :set_addr(stop_beep, beep_fn)
      //   jsr stop_beep
        // lda #CHARACTER_BEEP_NOTE
        // sta beep_note+1

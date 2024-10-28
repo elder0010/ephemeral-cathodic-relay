@@ -16,15 +16,17 @@
 .const ENABLE_CHARACTER_BEEP = true
 .const ENABLE_NEWPAGE_BEEP = true
 .const ENABLE_CURSOR_BEEP = true
-
+.const DEBUG_AUDIO = false //print the sound values to the screen
 .const CHARACTER_BEEP_NOTE = $03
 .const CHARACTER_BEEP_OCTAVE = 1 //can be 0/1/2
 
 .const NEWPAGE_BEEP_NOTE = $34
 .const NEWPAGE_BEEP_OCTAVE = 0 //can be 0/1/2
 
-.const CURSOR_BEEP_NOTE = $18 //$01
-.const CURSOR_BEEP_OCTAVE = 0//1 //can be 0/1/2
+//$18 / 0 -> ok
+//$10 / 2 -> quieter
+.const CURSOR_BEEP_NOTE = $18 
+.const CURSOR_BEEP_OCTAVE = $0 //1 //can be 0/1/2
 
 .const INVERT_IMAGES = false
 

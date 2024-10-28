@@ -21,6 +21,17 @@ beep_fn:
 petscii_fn:
         bit draw_petscii
 
+.if(DEBUG_AUDIO){
+        lda $e848
+        and #16
+        sta screen
+
+        lda $e84a
+        sta screen+1
+
+        lda $e84b
+        sta screen+2
+}
         pla 
         tay 
         pla 
@@ -54,8 +65,14 @@ cursor_c:
         dec cursor_ct+1
 cursor_ct:
         lda #CURSOR_BLINK_SPEED
-        bne nocrsupdate
-
+        beq !+
+        lda #RAMEXP_DISABLE
+        sta $fff0 
+        :sound_off()
+        lda #RAMEXP_ENABLE
+        sta $fff0  
+        jmp nocrsupdate     
+!: 
 cursor_res:
         lda #CURSOR_BLINK_SPEED
         sta cursor_ct+1
@@ -80,7 +97,12 @@ cursor_res:
                         sta beep_0_tbl
 
                         :set_addr(beep_0, beep_fn)
+
+                        lda #RAMEXP_DISABLE
+                        sta $fff0 
                         :sound_on()
+                        lda #RAMEXP_ENABLE
+                        sta $fff0 
                         beeper_busy:
                         pla 
                 noblink:

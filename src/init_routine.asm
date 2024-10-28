@@ -4,7 +4,7 @@ init_routine:
 
         :lowercase()
     
-        :sound_on()
+        :sound_off()
 
 //relocate text
         lda #RAMEXP_ENABLE

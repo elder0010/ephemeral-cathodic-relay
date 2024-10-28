@@ -241,6 +241,15 @@ textofs:
 }
         rts
 
+//IMAGE
+event_setcursorspeed:
+        ldy #1
+        lda (command_sequence_pt),y
+        sta cursor_ct+1
+        sta cursor_res+1
+        :inc_addr_zp(command_sequence_pt, 2) //skip event byte and delay byte
+        rts
+
 //END
 event_end:
         jmp do_reset

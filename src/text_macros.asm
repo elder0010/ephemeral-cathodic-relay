@@ -67,3 +67,8 @@
     .byte EVENT_STRING
     .byte length
 }
+
+.macro SetCursorSpeed(speed){
+    .byte EVENT_SETCURSORSPEED
+    .byte speed
+}

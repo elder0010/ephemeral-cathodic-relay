@@ -173,7 +173,11 @@ event:
         jsr event_string
         jmp point_next_event
 !:
-
+        cmp #EVENT_SETCURSORSPEED
+        bne !+
+        jsr event_setcursorspeed
+        jmp point_next_event
+!:
         cmp #EVENT_END
         bne noevent
         jsr event_end

@@ -37,6 +37,7 @@
 .const EVENT_LOADNEXT = 7
 .const EVENT_LOADSFX = 8
 .const EVENT_STRING = 9
+.const EVENT_SETCURSORSPEED = 10
 
 .const WHITE_PIXEL = $e0 
 .const BLACK_PIXEL = $20 

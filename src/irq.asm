@@ -56,6 +56,7 @@ cursor_ct:
         lda #CURSOR_BLINK_SPEED
         bne nocrsupdate
 
+cursor_res:
         lda #CURSOR_BLINK_SPEED
         sta cursor_ct+1
 

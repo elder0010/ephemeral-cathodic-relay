@@ -57,7 +57,9 @@ class ScriptParser:
             #print(f"Command indexes: {command_indexes}")
 
             #split_line will contain the line split (excluding the commands)
-          
+
+            out = line_without_commands.rstrip()
+
             text_asm += f'.text ("{line_without_commands.rstrip()}")\n'
             text_asm += f'.byte 0\n\n'
             line_ct += 1
@@ -108,7 +110,11 @@ class ScriptParser:
 
         if ("STRING" in command_string):
             found = True
-            command = f':String({command_string.split("=")[1]})'   
+            command = f':String({command_string.split("=")[1]})'
+
+        if ("SETCURSORSPEED" in command_string):
+            found = True
+            command = f':SetCursorSpeed({command_string.split("=")[1]})'
 
         if ("END" in command_string):
             found = True

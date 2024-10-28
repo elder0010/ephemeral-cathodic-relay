@@ -17,7 +17,6 @@ clear_screen:
         rts
 
 clear_image_screen:
-        ldx #0
         lda #BLACK_PIXEL_IMAGE
         ldx #$0 
 !:

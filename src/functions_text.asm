@@ -66,10 +66,6 @@ newline:
         }else{
                 jsr clear_line
         }
-        
-        
-        //:set_addr(stop_beep, beep_fn)
-       // jmp nocursor
 !:
 //nocursor
 move_text_pt:
@@ -175,6 +171,13 @@ event:
         jsr event_string
         jmp point_next_event
 !:
+.if(ENABLE_BREAKPOINTS){
+        cmp #EVENT_BREAKPOINT
+        bne !+
+        jsr event_breakpoint
+        jmp point_next_event
+!:
+}
         cmp #EVENT_SETCURSORSPEED
         bne !+
         jsr event_setcursorspeed
@@ -184,7 +187,6 @@ event:
         bne noevent
         jsr event_end
 !:
-  //      jmp point_next_event
 
 point_next_event:
         :inc_addr(cur_com_index, 1)
@@ -198,7 +200,6 @@ enable_write_mode:
         :set_addr(text_routine, irq_fn)
         :set_addr(write_main, draw_out_jmp)
         :set_addr(write_main, write_next_jmp)
-
         :set_screen(4)
         .if(CRUNCH_CHARS_ON_IMAGE){
                 :set_char_height(8)
@@ -211,7 +212,6 @@ enable_write_mode:
 
         lda #JSR_ABS
         sta beep_fn
-      //  jsr event_page
         rts 
 
 enable_draw_mode:

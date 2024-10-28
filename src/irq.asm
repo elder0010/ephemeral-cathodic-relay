@@ -2,13 +2,11 @@
 .pc = * "IRQ handler"
 timer_irq_body:
         lda $e812
-      //  inc screen 
 
         lda #RAMEXP_ENABLE
         sta $fff0 
 
         :set_addr(stop_beep, beep_fn)
-
 irq_fn:
         jsr text_routine
 
@@ -60,7 +58,6 @@ can_cursor:
         lda #0
         beq nocrsupdate
         ldy col_pt 
-        //iny
 cursor_c:
         lda #BLACK_PIXEL
         sta (text_row_zp_addr),y
@@ -88,9 +85,7 @@ cursor_res:
         .if(ENABLE_CURSOR_BEEP){
                 cmp #WHITE_PIXEL
                 bne noblink
-                
                         pha 
-
                         lda can_cursor_beep
                         beq beeper_busy
                         lda #CURSOR_BEEP_NOTE
@@ -116,8 +111,6 @@ cursor_res:
         lda #BLACK_PIXEL
 stc:
         sta cursor_c+1
-        rts 
-        //jmp irqack
 nocrsupdate:
         rts 
 

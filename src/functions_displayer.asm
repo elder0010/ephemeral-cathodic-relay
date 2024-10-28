@@ -132,7 +132,6 @@ trigger_sample:
         rts 
 
 //--------------------------------------
-
 init_displayer:
         lda #COLOUR_DELAY
         sta delay
@@ -144,7 +143,6 @@ init_displayer:
         //sta msk_ct+1
         lda #WAIT_FOR_FADE
         sta draw_state 
-
         :set_addr(screen_addr_lo, mask_tb_lo)
         :set_addr(screen_addr_hi, mask_tb_hi)
         rts

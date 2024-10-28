@@ -119,6 +119,10 @@ class ScriptParser:
         if ("END" in command_string):
             found = True
             command = f':End()'
+        
+        if ("BREAKPOINT" in command_string):
+            found = True
+            command = f':BreakPoint()'
 
         if not found:
             raise Exception("Invalid command in script: " + command_string)

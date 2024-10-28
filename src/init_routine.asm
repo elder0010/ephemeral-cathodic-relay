@@ -3,7 +3,6 @@ init_routine:
         jsr init_irq
 
         :lowercase()
-    
         :sound_off()
 
 //relocate text
@@ -25,7 +24,6 @@ init_routine:
 copytxt:
         ldx #0 
 !:
-
 srctxt:
         lda text_src,x 
 dsttxt:
@@ -82,10 +80,6 @@ dstfnc:
         sta half_speed_delayer
 }
         :set_addr(script, text_addr)
-        
-        //:set_addr_zp(commands_sequence, command_sequence_pt)
-
-   //     .break
         :set_addr_zp(commands_sequence_relocated, command_sequence_pt)
 
         lda #RAMEXP_DISABLE
@@ -104,12 +98,6 @@ init_irq:
         lda #%10111101
         sta $e813
 
-        //lda #<timer_irq 
-        //sta $fffe 
-
-        //lda #>timer_irq 
-        //sta $ffff 
-        
         lda #0 
         sta $fff0 
         lda #<timer_irq_body

@@ -16,5 +16,5 @@ c1541.exe -format e.c.r,23 d82 build\demo.d82 -attach build\demo.d82 -write src\
 @echo call BuildSD.bat 
 
 Taskkill /IM xpet.exe /F
-start xpet.exe -moncommands src\main.vs build\demo.d82
+start xpet.exe -moncommands src\main.vs build\demo.d82 
 

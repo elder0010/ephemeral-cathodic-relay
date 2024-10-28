@@ -16,7 +16,6 @@
 
 .var default_row_val = $4d 
 .var default_col_val = $4e
-
 .var cursor_sw = $4f
 
 //relocated text
@@ -38,6 +37,7 @@
 .const EVENT_LOADSFX = 8
 .const EVENT_STRING = 9
 .const EVENT_SETCURSORSPEED = 10
+.const EVENT_BREAKPOINT = 11
 
 .const WHITE_PIXEL = $e0 
 .const BLACK_PIXEL = $20 
@@ -74,6 +74,7 @@
 .var current_petscii_size = $42
 .var petscii_callback_pt = $43
 .var procedural_beep_step_amt = $44
+.var breakpoint_val = $a5ff
 
 .var COLOUR_DELAY = 1
 .const DRAWING = 1 
@@ -100,8 +101,6 @@
 .const RUNTLK = $f1ae //Send UNTALK
 .const ROPENI = $f4a5 //Get Next One Byte Parameter / send listen
 
-//.var loaded_image = $7000
-
 //Images memory locations (image + optional PETSCII payload)
 .const screen_addr_lo = $1500 //image start
 .const screen_addr_hi = screen_addr_lo+$800
@@ -114,7 +113,5 @@
 .const petscii_size = petscii_start
 .const petscii_addr_lo = petscii_size+1
 
-//.const pixels_delay = $3000
-//.const sample = pixels_colour_amt+2
 //sample must be loaded after the image
 .const sample = pixels_colour_amt+$200

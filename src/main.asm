@@ -10,6 +10,10 @@ Code: Elder0010
 .import source("settings.asm")
 .import source("data/commands.asm")
 
+.if(ENABLE_BREAKPOINTS){
+        .watch breakpoint_val,breakpoint_val+1,"store"
+}
+
 .macro rewind_sample(){
         lda #<sample
         sta sample_addr+1
@@ -25,8 +29,6 @@ Code: Elder0010
         :BasicUpstart2()
         sei
         jsr init_routine
-
-
         cli 
 //------------------------------------------------------------------------------------
 //WRITE MAIN THREAD

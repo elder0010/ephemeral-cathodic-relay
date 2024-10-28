@@ -255,3 +255,11 @@ event_setcursorspeed:
 //END
 event_end:
         jmp do_reset
+
+//BREAKPOINT
+event_breakpoint:
+.if(ENABLE_BREAKPOINTS){
+        asl breakpoint_val
+        :inc_addr_zp(command_sequence_pt, 1)
+        rts
+}

@@ -96,10 +96,9 @@ event_page:
         .if(ENABLE_NEWPAGE_BEEP){
                 lda #NEWPAGE_BEEP_NOTE
                 sta beep_note+1
-
                 lda #get_octave(NEWPAGE_BEEP_OCTAVE)
                 sta beep_0_tbl
-
+                :sound_on()
                 :set_addr(beep_0, beep_fn)
         }
 

@@ -212,6 +212,7 @@ enable_write_mode:
 
         lda #JSR_ABS
         sta beep_fn
+                
         rts 
 
 enable_draw_mode:

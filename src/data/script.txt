@@ -92,7 +92,7 @@ I called it the#DELAY=32# #STRING=8#CATHODIC#DELAY=32# #STRING=8#EXPOSURE#DELAY=
 Let's say that I want to represent 4 specific shades of gray.
 //page 35
 #PAGE#
-I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04#tracing by a specific amount of time to set#SETMARGIN=13,04# the correct exposure.
+I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04#tracing by a specific amount of time to set#SETMARGIN=14,04#the correct exposure.
 //page 36
 #PAGE#
 Now I can exploit the phosphor falloff,#DELAY=32##SETMARGIN=13,04#use it as an analog grayscale image generator, like this.
@@ -100,7 +100,7 @@ Now I can exploit the phosphor falloff,#DELAY=32##SETMARGIN=13,04#use it as an a
 #IMAGE=96#
 //page 39
 #PAGE#
-#LOADNEXT#Look at this example,#SETMARGIN=13,04#it will be easier to understand:
+#LOADNEXT#Look at this example,#SETMARGIN=13,04#it will be easier to understand:#SETMARGIN=12,04#
 //page 40 GRADIENT V
 #IMAGE=96#
 //page 41

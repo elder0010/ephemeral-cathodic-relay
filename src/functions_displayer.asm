@@ -38,6 +38,13 @@ slow_mask_enabled:
 forced_decay_v0:
         lda #0
         sta forced_decay_amt
+
+.if(PROCEDURAL_BEEP_ACTIVE){
+        clc 
+        lda procedural_beep_sin_pt+1
+        adc procedural_beep_step_amt 
+        sta procedural_beep_sin_pt+1
+}
 //----------------------------------------   
         lda #0 
         sta msk_ct+1
@@ -86,6 +93,13 @@ total_colours_val:
         :set_addr(screen_addr_hi, mask_tb_hi)
         :set_addr(screen_addr_lo, tb_lo)
         :set_addr(screen_addr_hi, tb_hi)
+
+        .if(PROCEDURAL_BEEP_ACTIVE){
+                //lda #0 
+               // sta procedural_beep_sin_pt+1
+                lda #BIT_ABS
+                sta procedural_beep_fn
+        }
 
         jsr trigger_sample
         

@@ -21,6 +21,9 @@ beep_fn:
 petscii_fn:
         bit draw_petscii
 
+procedural_beep_fn:
+        bit procedural_beep
+
 .if(DEBUG_AUDIO){
         lda $e848
         and #16

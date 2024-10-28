@@ -28,6 +28,8 @@
 .const CURSOR_BEEP_NOTE = $18 
 .const CURSOR_BEEP_OCTAVE = $0 //1 //can be 0/1/2
 
+.const PROCEDURAL_BEEP_ACTIVE = true
+
 .const INVERT_IMAGES = false
 
 .var source_images_path = "src/data/images/converted/"

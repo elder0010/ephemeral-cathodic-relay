@@ -111,6 +111,9 @@ must_init_image:
         sta forced_decay_v0+1
         inc forced_decay_pt
 
+        lda procedural_beep_step
+        sta procedural_beep_step_amt
+
         jsr draw_img
 !:
         rts

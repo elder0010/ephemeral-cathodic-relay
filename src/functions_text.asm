@@ -217,6 +217,15 @@ enable_write_mode:
 enable_draw_mode:
         :rewind_sample()
         :sound_on()
+
+        //Reset procedural beep fx
+        .if(PROCEDURAL_BEEP_ACTIVE){
+                lda #0 
+                sta procedural_beep_sin_pt+1
+                lda #JSR_ABS
+                sta procedural_beep_fn
+        }
+
         :set_addr(next_op, draw_out_jmp)
         :set_addr(draw_main, write_next_jmp)
         .if(CRUNCH_CHARS_ON_IMAGE){

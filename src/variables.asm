@@ -73,6 +73,7 @@
 .var petscii_pointer = $41
 .var current_petscii_size = $42
 .var petscii_callback_pt = $43
+.var procedural_beep_step_amt = $44
 
 .var COLOUR_DELAY = 1
 .const DRAWING = 1 
@@ -106,6 +107,7 @@
 .const screen_addr_hi = screen_addr_lo+$800
 .const px_number = screen_addr_lo+$1000
 .const total_colours = screen_addr_lo+$1002
+.const procedural_beep_step = screen_addr_lo+$1003
 .const pixels_colour_amt = screen_addr_lo+$1004
 
 .const petscii_start = pixels_colour_amt+$100

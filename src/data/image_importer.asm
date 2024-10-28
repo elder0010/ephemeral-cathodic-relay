@@ -128,6 +128,10 @@
     .print("Colour quantity check passed.")
 }
 
+.var procedural_beep_step = floor(255/total_colours)
+.print("Procedural beep step: $"+toHexString(procedural_beep_step))
+.print("Total colours: "+total_colours)
+
 .pc = screen_addr_lo "Screen address lo"
 //screen_addr_lo:
 .for (var x=0;x<screen_cohord_lo.size();x++){
@@ -154,5 +158,8 @@ px_number:
 
 .pc = screen_addr_lo+$1002 "Total colours"
 .byte total_colours
+
+.pc = screen_addr_lo+$1003 "Procedural beep step" 
+.byte procedural_beep_step
 }
 

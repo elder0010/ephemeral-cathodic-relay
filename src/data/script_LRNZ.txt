@@ -1,12 +1,11 @@
 //page 00
 #PAGE#
 Hey.#LOADNEXT#
-//page 01
 #PAGE#
-It's me.
+It's me.#LOADSFX#
 //page 02
 #PAGE#
-I really#DELAY=32# #STRING=5#REALLY#LOADSFX##DELAY=32# hope you still got that one I left you, down there.
+I really#DELAY=32# #STRING=5#REALLY#DELAY=32# hope you still got that one I left you, down there.
 //page 03
 #PAGE#
 Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.
@@ -15,20 +14,19 @@ Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone st
 When I said it was built like a tank I was dead serious.
 //page 05
 #PAGE#
-How ironic,#DELAY=16# history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.
+How ironic,#DELAY=16# history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.#DELAY=32#
 #PAGE# 
 //page 06
-#PAGE#
-#DELAY=32#Now, let's get to work.#DELAY=32##SETMARGIN=13,04#I have two news for you.
+Now, let's get to work.#DELAY=32##SETMARGIN=13,04#I have two news for you.#DELAY=32#
 //page 07
 #PAGE#
-#DELAY=32#First one is bad.
+First one is bad.#DELAY=32#
 //page 08
 #PAGE#
-#DELAY=32#Very bad.
+Very bad.#DELAY=32#
 //page 09
 #PAGE#
-#DELAY=32#They are on us. 
+They are on us. 
 //page 10
 #PAGE#
 They managed to read every data, every image to predict our intentions. 
@@ -40,10 +38,10 @@ They still don't have pictures of me,#DELAY=32# but they know that I exist.
 So we need a safe way to exchange images#SETMARGIN=13,04#until we manage to meet again in person.
 //page 13
 #PAGE#
-Second one is a good one: 
+Second one is a good one:#DELAY=128#
 //page 14
 #PAGE#
-#DELAY=128#I like to think out of the box.#DELAY=32##SETMARGIN=13,04#I found a way to do it. 
+I like to think out of the box.#DELAY=32##SETMARGIN=13,04#I found a way to do it. 
 //page 15
 #PAGE#
 To send you images that those stupid machines#SETMARGIN=13,04#can't see nor recognize.
@@ -76,13 +74,13 @@ The 8296 tube is painted with unusually slow phosphors.
 Look how slow it is to make the cursor really disappear.
 //page 25
 #PAGE#
-#SETMARGIN=012,40#.#DELAY=256#
+#SETMARGIN=011,40#.#DELAY=256#
 //page 26
 #PAGE#
 Can you count how many shades of green you see before it disappears?
 //page 25
 #PAGE#
-#SETMARGIN=012,40#.#DELAY=50#.#DELAY=50#.#DELAY=50#.#DELAY=128# 
+#SETMARGIN=011,40#.#DELAY=50#.#DELAY=50#.#DELAY=50#.#DELAY=128# 
 //page 26
 #PAGE#
 You can't!
@@ -112,7 +110,7 @@ I called it the#DELAY=32# #STRING=8#CATHODIC#DELAY=32# #STRING=8#EXPOSURE#DELAY=
 Let's say that I want to represent 4 specific shades of gray.
 //page 35
 #PAGE#
-I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04# tracing by a specific amount of time to set#SETMARGIN=14,04# the correct exposure.
+I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04#tracing by a specific amount of time to set#SETMARGIN=14,04# the correct exposure.
 //page 36
 #PAGE#
 #SETMARGIN=012,20#1#SETMARGIN=012,30#2#SETMARGIN=012,40#3#SETMARGIN=012,50##DELAY=32#4#DELAY=128#
@@ -164,7 +162,7 @@ I was blown away:#LOADNEXT##DELAY=32#it worked!
 The falloff time is just enough to appreciate the images#SETMARGIN=13,04#and that peculiar 8296 scanline surely helps fooling the eye!
 //page 52
 #PAGE#
-Now that I think about it#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=13,04#you can even export em with your analog camera#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=014,04#or using any other photographic process.
+Now that I think about it#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=13,04#you can even export 'em with your analog camera#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=014,04#or using any other photographic process.
 //page 53
 #PAGE#
 E.C.R. are the new daguerrotypes!
@@ -195,10 +193,10 @@ When those cyber fucks will analyze this software I sent you#SETMARGIN=13,04#the
 Just meaningless, random 1 bit character.#SETMARGIN=13,04#Scattered all over the place
 //page 63
 #PAGE#
-Even emulating this very machine#SETMARGIN=13,04#they will never understand what this is all about.
+Even if they will try to emulate this machine#SETMARGIN=13,04#they will never understand what this is all about.
 //page 64
 #PAGE#
-It's a world first,#SETMARGIN=13,04# now go try to find that in your datasets, statistical zombies.
+It's a world first,#SETMARGIN=13,04#now go try to find that in your datasets, statistical zombies.
 //page 65 GNGZOMBIE
 #IMAGE=96#
 //page 66
@@ -232,7 +230,7 @@ I will now display it in a noise generated E.C.R.#SETMARGIN=13,04#Just extra car
 #IMAGE=96#
 //page 71
 #PAGE#
-#LOADNEXT#Ok, #DELAY=32# now that we discovered a safe way to communicate...
+#LOADNEXT#Ok, #DELAY=32#now that we discovered a safe way to communicate...
 //page 72
 #PAGE#
 ...we're done with the boring stuff.
@@ -265,10 +263,10 @@ But please, please don't give up.
 You are our #LOADNEXT#last resort.
 //page 83
 #PAGE#
-#DELAY=128#Drones are almost here, we gotta move.
+#DELAY=128#Drones are almost here, we gotta#SETCURSORSPEED=8# move.
 //page 84
 #PAGE#
-I'll leave you with the last trick:#SETMARGIN=13,04# if you squint a little bit it works even better.
+I'll leave you with the last trick:#SETMARGIN=13,04#if you squint a little bit it works even better.
 //page 85
 #PAGE#
 Try that, now.

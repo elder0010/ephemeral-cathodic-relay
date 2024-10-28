@@ -7,6 +7,8 @@ e0_init:
         ldy #1
         sty delay_must_hi+1
 
+        :sound_off()
+        :set_addr(stop_beep, beep_fn)
        // sty can_cursor_beep
         .if(ENABLE_CURSOR_BEEP){
                 lda #1 

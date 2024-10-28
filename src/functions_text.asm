@@ -51,6 +51,8 @@ text_addr:
         jmp move_text_pt
         //:set_addr(stop_beep, beep_fn)
 newline:
+        :set_addr(stop_beep, beep_fn)
+        :sound_off()
         lda #1
         .if(ENABLE_CURSOR_BEEP){
                 sta can_cursor_beep

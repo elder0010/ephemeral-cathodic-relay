@@ -24,7 +24,7 @@ POKE 59467,16 (turn on port for sound output use 0 to turn it off*)
 
 beep_0: 
 
-        :sound_on()
+        //:sound_on()
 
 beep0pt:
         ldx #0 
@@ -36,14 +36,23 @@ beep_note:
         sta $e848 
 
         inc beep0pt+1 
-        lda beep_0_tbl+1,x
-        cmp #1
+        lda beep0pt+1,x
+        //cmp #1
         bne !+
 
-        lda #0 
-        sta beep0pt+1
-     //   sta $e848 
+      
+        //sta $e84a
+
+        lda #get_octave(2)
         sta $e84a
+
+        lda #$0
+        sta $e848 
+
+          //lda #0 
+        sta beep0pt+1
+        sta $e84b
+       
        // :set_addr(stop_beep, beep_fn)
      //   jsr stop_beep
        // lda #CHARACTER_BEEP_NOTE
@@ -62,4 +71,4 @@ stop_beep:
         rts
 
 beep_0_tbl:
-.byte 15,15,15,15
+.byte 15,15,0,0

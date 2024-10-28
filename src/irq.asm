@@ -80,6 +80,7 @@ cursor_res:
                         sta beep_0_tbl
 
                         :set_addr(beep_0, beep_fn)
+                        :sound_on()
                         beeper_busy:
                         pla 
                 noblink:

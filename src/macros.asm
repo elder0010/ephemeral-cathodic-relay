@@ -1,4 +1,4 @@
-.macro BasicUpstart2(){
+.macro BasicUpstartPET(){
         .byte $0e,$04,$0a,$00,$9e,$20,$28,$31,$30,$34,$30,$29,$00,$00,$00
 }
 

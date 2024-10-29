@@ -26,8 +26,27 @@ Code: Elder0010
 }
 
 *= basic_upstart "Basic upstart"
-        :BasicUpstart2()
+        :BasicUpstartPET()
         sei
+
+        cld 
+        
+
+
+        lda #<test_data
+        sta _byte_lo
+        lda #>test_data
+        sta _byte_hi
+        jsr exod_decrunch
+
+
+inc screen
+        jmp * 
+
+
+
+inc screen 
+        jmp * 
         jsr init_routine
         cli 
 //------------------------------------------------------------------------------------
@@ -127,9 +146,8 @@ do_reset:
 .pc = * "Beep functions"
 .import source "beep_functions.asm"
 
-.pc = * "Exomizer"
+.pc = $c00 "Exomizer"
 .import source("exomizer/exodecrunch.asm")
-
 
 .pc = $2000 "Text"
 text_src:
@@ -144,6 +162,11 @@ text_end:
 .pc = * "Init routine"
 .import source("init_routine.asm")
 
+
+.pc = $5000 "test data"
+.import binary("test.exo")
+test_data:
+
 .pc = $4000 "Event functions"
 event_functions_src:
 .pseudopc relocated_functions{
@@ -151,3 +174,22 @@ event_functions_src:
         .import source "functions_text.asm"	
 }
 
+
+
+.pc = $6000 "exod table"
+exod_decrunch_table:
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#if EXTRA_TABLE_ENTRY_FOR_LENGTH_THREE
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#endif
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+        .byte 0,0,0,0,0,0,0,0,0,0,0,0

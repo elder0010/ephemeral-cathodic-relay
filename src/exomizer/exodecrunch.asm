@@ -95,7 +95,7 @@
 .label exod_zp_ro_state = $a8
 #endif
 
-.label exod_zp_bitbuf  = $fd
+.label exod_zp_bitbuf  = $1d
 .label exod_zp_dest_lo = exod_zp_bitbuf + 1      // dest addr lo
 .label exod_zp_dest_hi = exod_zp_bitbuf + 2      // dest addr hi
 
@@ -519,6 +519,14 @@ _split_init_zp:
 // -------------------------------------------------------------------
 // end of decruncher
 // -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+// this 156 (204) byte table area may be relocated. It may also be
+// clobbered by other data between decrunches.
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+// end of decruncher
 // -------------------------------------------------------------------
 exod_get_crunched_byte:
 #if !DECRUNCH_FORWARDS
@@ -537,30 +545,4 @@ _byte_skip_hi:
         inc _byte_hi
 _byte_skip_hi:
 #endif
-        rts                     // decrunch_file is called.
-// end_of_data needs to point to the address just after the address
-// of the last byte of crunched data.
-// -------------------------------------------------------------------
-// -------------------------------------------------------------------
-// this 156 (204) byte table area may be relocated. It may also be
-// clobbered by other data between decrunches.
-// -------------------------------------------------------------------
-exod_decrunch_table:
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-#if EXTRA_TABLE_ENTRY_FOR_LENGTH_THREE
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-#endif
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0
-// -------------------------------------------------------------------
-// end of decruncher
-// -------------------------------------------------------------------
+        rts  

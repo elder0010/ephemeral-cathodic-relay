@@ -20,21 +20,37 @@ java -jar %KICKASS% src/data/sfx/sfx_13.asm -o src/data/sfx/sfx13.prg
 java -jar %KICKASS% src/data/sfx/sfx_14.asm -o src/data/sfx/sfx14.prg
 java -jar %KICKASS% src/data/sfx/sfx_15.asm -o src/data/sfx/sfx15.prg
 java -jar %KICKASS% src/data/sfx/sfx_16.asm -o src/data/sfx/sfx16.prg
-
-bin\exomizer.exe mem -B src\data\sfx\sfx00.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx00.prg  
-bin\exomizer.exe mem -B src\data\sfx\sfx01.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx01.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx02.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx02.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx03.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx03.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx04.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx04.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx05.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx05.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx06.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx06.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx07.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx07.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx08.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx08.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx09.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx09.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx10.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx10.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx11.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx11.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx12.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx12.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx13.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx13.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx14.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx14.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx15.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx15.prg
-bin\exomizer.exe mem -B src\data\sfx\sfx16.prg,%SAMPLE_ADDRESS% -o src\data\sfx\exo\sfx16.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx00.prg src\data\sfx\tsx\sfx00.prg  
+echo ""
+bin\tscrunch -i src\data\sfx\sfx01.prg src\data\sfx\tsx\sfx01.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx02.prg src\data\sfx\tsx\sfx02.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx03.prg src\data\sfx\tsx\sfx03.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx04.prg src\data\sfx\tsx\sfx04.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx05.prg src\data\sfx\tsx\sfx05.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx06.prg src\data\sfx\tsx\sfx06.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx07.prg src\data\sfx\tsx\sfx07.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx08.prg src\data\sfx\tsx\sfx08.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx09.prg src\data\sfx\tsx\sfx09.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx10.prg src\data\sfx\tsx\sfx10.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx11.prg src\data\sfx\tsx\sfx11.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx12.prg src\data\sfx\tsx\sfx12.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx13.prg src\data\sfx\tsx\sfx13.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx14.prg src\data\sfx\tsx\sfx14.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx15.prg src\data\sfx\tsx\sfx15.prg
+echo ""
+bin\tscrunch -i src\data\sfx\sfx16.prg src\data\sfx\tsx\sfx16.prg

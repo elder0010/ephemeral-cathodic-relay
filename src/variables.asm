@@ -74,6 +74,8 @@
 .var current_petscii_size = $42
 .var petscii_callback_pt = $43
 .var procedural_beep_step_amt = $44
+
+.var sample_pt = $60
 .var breakpoint_val = $a5ff
 
 .var COLOUR_DELAY = 1

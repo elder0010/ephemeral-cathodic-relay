@@ -13,10 +13,10 @@ Copyright Antonio Savona 2022.
 
 //#define INPLACE 		//Enables inplace decrunching. Use -i switch when crunching. 
 
-.label tsget 	= $f8	//2 bytes
-.label tstemp	= $fa
-.label tsput 	= $fb	//2 bytes
-.label lzput 	= $fd	//2 bytes
+.label tsget 	= $e8	//2 bytes
+.label tstemp	= $ea
+.label tsput 	= $eb	//2 bytes
+.label lzput 	= $ed	//2 bytes
 
 
 #if INPLACE

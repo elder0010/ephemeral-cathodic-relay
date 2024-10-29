@@ -34,6 +34,8 @@
 
 .const INVERT_IMAGES = false
 
+.const ENABLE_SAMPLE_DECRUNCHING = true
+
 .var source_images_path = "src/data/images/converted/"
 
 //Delay between colour ramps (frames)

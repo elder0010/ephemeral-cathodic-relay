@@ -175,6 +175,9 @@ event_loadnext:
         lda #1 
         sta must_init_image+1
 
+        lda #0 
+        sta must_decrunch_sample+1
+
         lda #$20 //jsr 
         sta can_load_file
 
@@ -186,7 +189,8 @@ event_loadsfx:
         lda #0
         sta must_init_image+1
 
-        inc screen+2
+        lda #1
+        sta must_decrunch_sample+1
 
         lda #$20 //jsr 
         sta can_load_file

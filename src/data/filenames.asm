@@ -1,8 +1,28 @@
 //LRNZ 
-.var filenames = List().add("IMG00","SFX00","IMG01","IMG02","IMG03","IMG04","IMG05","IMG06","IMG07","IMG08","IMG09","IMG10","IMG11","IMG12","IMG13","IMG14","IMG15","IMG16")
+//.var filenames = List().add("IMG00","SFX00","IMG01","IMG02","IMG03","IMG04","IMG05","IMG06","IMG07","IMG08","IMG09","IMG10","IMG11","IMG12","IMG13","IMG14","IMG15","IMG16")
 
 //ELDER 
-//.var filenames = List().add("IMG00","SFX00","IMG01","SFX01","IMG02","SFX02","IMG03","SFX03","IMG04","SFX04","IMG05","SFX05","IMG06","SFX06","IMG07","SFX07","IMG08","SFX08","IMG09","SFX09","IMG10","SFX10","IMG11","SFX11","IMG12","SFX12","IMG13","SFX13","IMG14","SFX14","IMG15","SFX15","IMG16","SFX16")
+.var filenames = List().add("IMG00","SFX00","IMG01","SFX01","IMG02","SFX02","IMG03","SFX03","IMG04","SFX04","IMG05","SFX05","IMG06","SFX06","IMG07","SFX07","IMG08","SFX08","IMG09","SFX09","IMG10","SFX10","IMG11","SFX11","IMG12","SFX12","IMG13","SFX13","IMG14","SFX14","IMG15","SFX15","IMG16","SFX16")
+
+.var samples_load_address_list = List().add(
+$6f5f,  //sfx00
+$6ec9,  //sfx01
+$6f6a,  //sfx02
+$6d46,  //sfx03
+$655a,  //sfx04
+$37cb,  //sfx05
+$37cb,  //sfx06
+$37cb,  //sfx07
+$37cb,  //sfx08
+$37cb,  //sfx09
+$37cb,  //sfx10
+$37cb,  //sfx11
+$37cb,  //sfx12
+$37cb,  //sfx13
+$37cb,  //sfx14
+$37cb,  //sfx15
+$37cb   //sfx16
+)
 
 files:
 .for(var x=0;x<filenames.size();x++){
@@ -39,4 +59,15 @@ force_decay_list:
 petscii_callback_delay:
 .for(var x=0;x<petscii_callback_delay_list.size();x++){
     .byte petscii_callback_delay_list.get(x)
+}
+
+.pc = * "Samples load addresses"
+samples_load_addresses_lo:
+.for(var x=0;x<samples_load_address_list.size();x++){
+    .byte <samples_load_address_list.get(x)
+}
+
+samples_load_addresses_hi:
+.for(var x=0;x<samples_load_address_list.size();x++){
+    .byte >samples_load_address_list.get(x)
 }

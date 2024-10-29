@@ -163,7 +163,7 @@ event:
 !:
         cmp #EVENT_LOADSFX
         bne !+
-        jsr event_loadnext
+        jsr event_loadsfx
         jmp point_next_event
 !:
         cmp #EVENT_STRING

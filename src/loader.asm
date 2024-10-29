@@ -115,6 +115,21 @@ must_init_image:
         sta procedural_beep_step_amt
 
         jsr draw_img
+       
+!:
+        //is sample?
+must_decrunch_sample:
+        lda #0
+        beq !+
+        .if(ENABLE_SAMPLE_DECRUNCHING){
+                ldx sample_pt
+                lda samples_load_addresses_lo,x
+		sta.zp tsget
+		lda samples_load_addresses_hi,x
+		sta.zp tsget + 1
+		jsr tsdecrunch
+                inc sample_pt
+        }
 !:
         rts
 

@@ -29,20 +29,6 @@ Code: Elder0010
 *= basic_upstart "Basic upstart"
         :BasicUpstartPET()
         sei
-
-        
-        :TS_DECRUNCH(test_data) 
-
-   
-
-
-inc screen
-        jmp * 
-
-
-
-inc screen 
-        jmp * 
         jsr init_routine
         cli 
 //------------------------------------------------------------------------------------
@@ -142,7 +128,7 @@ do_reset:
 .pc = * "Beep functions"
 .import source "beep_functions.asm"
 
-.pc = $c00 "TSCrunch"
+.pc = $f00 "TSCrunch"
 .import source("tscrunch/decrunch.asm")
 
 .pc = $2000 "Text"
@@ -159,9 +145,11 @@ text_end:
 .import source("init_routine.asm")
 
 
+/*
 .pc = $5260 "test data"
 test_data:
 .import c64("test.tsx")
+*/
 
 
 .pc = $4000 "Event functions"

@@ -69,30 +69,12 @@ I found a way to take advantage of the cathodic falloff#SETMARGIN=13,04#of its C
 //page 23
 #PAGE#
 The 8296 tube is painted with unusually slow phosphors.
-//page 24
-#PAGE#
-Look how slow it is to make the cursor really disappear.
-//page 25
-#PAGE#
-#SETMARGIN=011,40#.#DELAY=256#
-//page 26
-#PAGE#
-Can you count how many shades of green you see before it disappears?
-//page 25
-#PAGE#
-#SETMARGIN=011,40#.#DELAY=50#.#DELAY=50#.#DELAY=50#.#DELAY=128# 
-//page 26
-#PAGE#
-You can't!
-//page 27
-#PAGE#
-They are endless, it's a true, non linear, analog fade out. 
 //page 28
 #PAGE#
 That's where my idea came in.
 //page 29
 #PAGE#
-I analyzed every aspect of that fade out...
+I analyzed every shade of green left by the characters disappearing...
 //page 30
 #PAGE#
 ...and made a conversion routine that converts
@@ -110,21 +92,15 @@ I called it the#DELAY=32# #STRING=8#CATHODIC#DELAY=32# #STRING=8#EXPOSURE#DELAY=
 Let's say that I want to represent 4 specific shades of gray.
 //page 35
 #PAGE#
-I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04#tracing by a specific amount of time to set#SETMARGIN=14,04# the correct exposure.
+I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04#tracing by a specific amount of time to set#SETMARGIN=14,04#the correct exposure.
 //page 36
 #PAGE#
-#SETMARGIN=012,20#1#SETMARGIN=012,30#2#SETMARGIN=012,40#3#SETMARGIN=012,50##DELAY=32#4#DELAY=128#
-//page 37
-#PAGE#
-Now I can exploit the phosphor falloff,#DELAY=32##SETMARGIN=13,04#use it as an analog grayscale image generator
-//page 38
-#PAGE#
-Like this.
-//page 38b PETSCI 1234
+Now I can exploit the phosphor falloff,#DELAY=32##SETMARGIN=13,04#use it as an analog grayscale image generator, like this.
+//page 38b PETSCI QUADRATY
 #IMAGE=96#
 //page 39
 #PAGE#
-#LOADNEXT#Look at this example,#SETMARGIN=13,04#it will be easier to understand:
+#LOADNEXT#Look at this example,#SETMARGIN=13,04#it will be easier to understand:#SETMARGIN=12,04#
 //page 40 GRADIENT V
 #IMAGE=96#
 //page 41
@@ -148,7 +124,7 @@ This one is a horizontal one,#DELAY=32#look at the 80 columns in all of their gl
 #IMAGE=96#
 //page 47
 #PAGE#
-The only limit is that images are, as the name implies,#LOADNEXT##DELAY=32#ephemeral.
+The only limit is that images are, as the name implies,#LOADNEXT##DELAY=32# ephemeral.
 //page 48
 #PAGE#
 I thought that could be a problem with more complex images#DELAY=32##SETMARGIN=13,04#so I started to test this on some simple renders.
@@ -156,7 +132,7 @@ I thought that could be a problem with more complex images#DELAY=32##SETMARGIN=1
 #IMAGE=96#
 //page 50
 #PAGE#
-I was blown away:#LOADNEXT##DELAY=32#it worked!
+I was blown away:#LOADNEXT##DELAY=32# it worked!
 //page 51
 #PAGE#
 The falloff time is just enough to appreciate the images#SETMARGIN=13,04#and that peculiar 8296 scanline surely helps fooling the eye!
@@ -190,7 +166,7 @@ Try to snap a photo of the next picture.
 When those cyber fucks will analyze this software I sent you#SETMARGIN=13,04#they will find nothing. No patterns to exploit.
 //page 62
 #PAGE#
-Just meaningless, random 1 bit character.#SETMARGIN=13,04#Scattered all over the place
+Just meaningless, random 1 bit character.#SETMARGIN=13,04#Scattered all over the place.
 //page 63
 #PAGE#
 Even if they will try to emulate this machine#SETMARGIN=13,04#they will never understand what this is all about.

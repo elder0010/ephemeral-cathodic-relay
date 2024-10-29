@@ -127,6 +127,10 @@ do_reset:
 .pc = * "Beep functions"
 .import source "beep_functions.asm"
 
+.pc = * "Exomizer"
+.import source("exomizer/exodecrunch.asm")
+
+
 .pc = $2000 "Text"
 text_src:
 .import source "data/script.asm"

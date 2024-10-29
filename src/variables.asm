@@ -114,4 +114,6 @@
 .const petscii_addr_lo = petscii_size+1
 
 //sample must be loaded after the image
-.const sample = pixels_colour_amt+$200
+.const sample = pixels_colour_amt+$200 //must be the same of SAMPLE_ADDRESS in BuildSamples.bat
+
+.print("Sample start: $"+toHexString(sample))

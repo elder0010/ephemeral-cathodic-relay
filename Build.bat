@@ -12,7 +12,6 @@ python src\parse_script.py
 @echo call BuildSamples.bat
 @echo call BuildImages.bat
 
-bin/exomizer.exe mem -B -l$5000 src/test.prg,$5400 -o src/test.exo  
 java -jar %KICKASS% src/test.asm -o src/test.prg 
 
 
@@ -24,5 +23,3 @@ c1541.exe -format e.c.r,23 d82 build\demo.d82 -attach build\demo.d82 -write src\
 
 Taskkill /IM xpet.exe /F
 start xpet.exe -moncommands src\main.vs build\demo.d82 
-
-call bin\exomizer.exe mem -B -l$5000 src/test.prg,$5400 -o src/test.exo  

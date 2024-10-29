@@ -4,6 +4,7 @@ TextWriter
 2024 G*P / Distant Future
 Code: Elder0010
 */
+#define INPLACE 		//Enables inplace decrunching. Use -i switch when crunching.
 .import source("macros.asm")
 .import source("text_macros.asm")
 .import source("variables.asm")
@@ -29,15 +30,10 @@ Code: Elder0010
         :BasicUpstartPET()
         sei
 
-        cld 
         
+        :TS_DECRUNCH(test_data) 
 
-
-        lda #<test_data
-        sta _byte_lo
-        lda #>test_data
-        sta _byte_hi
-        jsr exod_decrunch
+   
 
 
 inc screen
@@ -146,8 +142,8 @@ do_reset:
 .pc = * "Beep functions"
 .import source "beep_functions.asm"
 
-.pc = $c00 "Exomizer"
-.import source("exomizer/exodecrunch.asm")
+.pc = $c00 "TSCrunch"
+.import source("tscrunch/decrunch.asm")
 
 .pc = $2000 "Text"
 text_src:
@@ -163,9 +159,10 @@ text_end:
 .import source("init_routine.asm")
 
 
-.pc = $5000 "test data"
-.import binary("test.exo")
+.pc = $5260 "test data"
 test_data:
+.import c64("test.tsx")
+
 
 .pc = $4000 "Event functions"
 event_functions_src:
@@ -175,21 +172,3 @@ event_functions_src:
 }
 
 
-
-.pc = $6000 "exod table"
-exod_decrunch_table:
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-#if EXTRA_TABLE_ENTRY_FOR_LENGTH_THREE
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-#endif
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-        .byte 0,0,0,0,0,0,0,0,0,0,0,0

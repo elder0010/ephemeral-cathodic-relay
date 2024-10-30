@@ -1,0 +1,119 @@
+Populating LZ layer ... 14.0467ms
+Closing Gaps ... 35.7519ms
+Populating Graph ... 11.7726ms
+Computing shortest path ... 7.6391ms
+Input file  PRG: src\data\img\img00.prg, $1500 - $2507 : 4106 bytes
+Output file prg: src\data\img\tsx\img00.prg, $235e - $2507 : 426 bytes
+Crunched to 10.38% of original size
+Populating LZ layer ... 38.0395ms
+Closing Gaps ... 45.7691ms
+Populating Graph ... 16.3602ms
+Computing shortest path ... 6.6272ms
+Input file  PRG: src\data\img\img01.prg, $1500 - $251c : 4127 bytes
+Output file prg: src\data\img\tsx\img01.prg, $236e - $251c : 431 bytes
+Crunched to 10.44% of original size
+Populating LZ layer ... 37.657ms
+Closing Gaps ... 47.2158ms
+Populating Graph ... 16.7563ms
+Computing shortest path ... 3.6217ms
+Input file  PRG: src\data\img\img02.prg, $1500 - $2553 : 4182 bytes
+Output file prg: src\data\img\tsx\img02.prg, $2239 - $2553 : 795 bytes
+Crunched to 19.01% of original size
+Populating LZ layer ... 8.7281ms
+Closing Gaps ... 33.1769ms
+Populating Graph ... 11.0796ms
+Computing shortest path ... 6.5045ms
+Input file  PRG: src\data\img\img03.prg, $1500 - $25f7 : 4346 bytes
+Output file prg: src\data\img\tsx\img03.prg, $1aac - $25f7 : 2892 bytes
+Crunched to 66.54% of original size
+Populating LZ layer ... 7.2984ms
+Closing Gaps ... 29.8236ms
+Populating Graph ... 11.6239ms
+Computing shortest path ... 6.0004ms
+Input file  PRG: src\data\img\img04.prg, $1500 - $25f5 : 4344 bytes
+Output file prg: src\data\img\tsx\img04.prg, $1a31 - $25f5 : 3013 bytes
+Crunched to 69.36% of original size
+Populating LZ layer ... 12.8942ms
+Closing Gaps ... 43.0113ms
+Populating Graph ... 12.1172ms
+Computing shortest path ... 11.7614ms
+Input file  PRG: src\data\img\img05.prg, $1500 - $25e2 : 4325 bytes
+Output file prg: src\data\img\tsx\img05.prg, $20fb - $25e2 : 1256 bytes
+Crunched to 29.04% of original size
+Populating LZ layer ... 8.4353ms
+Closing Gaps ... 33.5576ms
+Populating Graph ... 11.6521ms
+Computing shortest path ... 9.508ms
+Input file  PRG: src\data\img\img06.prg, $1500 - $25ab : 4270 bytes
+Output file prg: src\data\img\tsx\img06.prg, $1e11 - $25ab : 1947 bytes
+Crunched to 45.60% of original size
+Populating LZ layer ... 7.8397ms
+Closing Gaps ... 34.2268ms
+Populating Graph ... 11.6613ms
+Computing shortest path ... 11.505ms
+Input file  PRG: src\data\img\img07.prg, $1500 - $252f : 4146 bytes
+Output file prg: src\data\img\tsx\img07.prg, $2324 - $252f : 524 bytes
+Crunched to 12.64% of original size
+Populating LZ layer ... 6.9688ms
+Closing Gaps ... 35.1918ms
+Populating Graph ... 12.7413ms
+Computing shortest path ... 7.0752ms
+Input file  PRG: src\data\img\img08.prg, $1500 - $25fd : 4352 bytes
+Output file prg: src\data\img\tsx\img08.prg, $1a16 - $25fd : 3048 bytes
+Crunched to 70.04% of original size
+Populating LZ layer ... 8.1887ms
+Closing Gaps ... 32.2367ms
+Populating Graph ... 11.3628ms
+Computing shortest path ... 6.0661ms
+Input file  PRG: src\data\img\img09.prg, $1500 - $25a5 : 4264 bytes
+Output file prg: src\data\img\tsx\img09.prg, $1a79 - $25a5 : 2861 bytes
+Crunched to 67.10% of original size
+Populating LZ layer ... 13.7415ms
+Closing Gaps ... 40.7798ms
+Populating Graph ... 10.1152ms
+Computing shortest path ... 6.0187ms
+Input file  PRG: src\data\img\img10.prg, $1500 - $25a5 : 4264 bytes
+Output file prg: src\data\img\tsx\img10.prg, $1a93 - $25a5 : 2835 bytes
+Crunched to 66.49% of original size
+Populating LZ layer ... 7.7395ms
+Closing Gaps ... 36.619ms
+Populating Graph ... 12.4922ms
+Computing shortest path ... 7.6071ms
+Input file  PRG: src\data\img\img11.prg, $1500 - $25fc : 4351 bytes
+Output file prg: src\data\img\tsx\img11.prg, $1a65 - $25fc : 2968 bytes
+Crunched to 68.21% of original size
+Populating LZ layer ... 8.8473ms
+Closing Gaps ... 33.4085ms
+Populating Graph ... 11.5224ms
+Computing shortest path ... 4.5321ms
+Input file  PRG: src\data\img\img12.prg, $1500 - $259c : 4255 bytes
+Output file prg: src\data\img\tsx\img12.prg, $1b9a - $259c : 2563 bytes
+Crunched to 60.24% of original size
+Populating LZ layer ... 8.1905ms
+Closing Gaps ... 37.0812ms
+Populating Graph ... 11.4413ms
+Computing shortest path ... 6.5206ms
+Input file  PRG: src\data\img\img13.prg, $1500 - $25e7 : 4330 bytes
+Output file prg: src\data\img\tsx\img13.prg, $1a73 - $25e7 : 2933 bytes
+Crunched to 67.74% of original size
+Populating LZ layer ... 7.8039ms
+Closing Gaps ... 35.1287ms
+Populating Graph ... 11.4748ms
+Computing shortest path ... 6.0066ms
+Input file  PRG: src\data\img\img14.prg, $1500 - $25f4 : 4343 bytes
+Output file prg: src\data\img\tsx\img14.prg, $1a56 - $25f4 : 2975 bytes
+Crunched to 68.50% of original size
+Populating LZ layer ... 8.0618ms
+Closing Gaps ... 33.8388ms
+Populating Graph ... 11.0463ms
+Computing shortest path ... 5.9979ms
+Input file  PRG: src\data\img\img15.prg, $1500 - $25f9 : 4348 bytes
+Output file prg: src\data\img\tsx\img15.prg, $1a83 - $25f9 : 2935 bytes
+Crunched to 67.50% of original size
+Populating LZ layer ... 6.8732ms
+Closing Gaps ... 36.6337ms
+Populating Graph ... 10.5849ms
+Computing shortest path ... 6.1899ms
+Input file  PRG: src\data\img\img16.prg, $1500 - $25cd : 4304 bytes
+Output file prg: src\data\img\tsx\img16.prg, $19f1 - $25cd : 3037 bytes
+Crunched to 70.56% of original size

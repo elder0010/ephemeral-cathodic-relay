@@ -22,6 +22,7 @@ init_routine:
         sty petscii_pointer
         sty petscii_callback_pt
         sty sample_pt
+        sty image_pt
 copytxt:
         ldx #0 
 !:

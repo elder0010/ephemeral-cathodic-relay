@@ -35,8 +35,9 @@
 .const INVERT_IMAGES = false
 
 .const ENABLE_SAMPLE_DECRUNCHING = true
+.const ENABLE_IMAGES_DECRUNCHING = true
 
-.var source_images_path = "src/data/images/converted/"
+.var source_images_path = "src/data/img/converted/"
 
 //Delay between colour ramps (frames)
 .var forced_decay_offset_list = List().add(

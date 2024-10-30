@@ -30,3 +30,6 @@ tscrunch = TsCrunchAddressProcessor()
 lines = tscrunch.get_output_lines("src/data/sfx/tsx/tscrunch_out.txt")
 addresses = tscrunch.write_addresses(lines, "samples_load_address_list", "src/data/sfx/tsx/samples_load_address_list.asm")
 
+#Generate the list of addresses for the samples
+lines = tscrunch.get_output_lines("src/data/img/tsx/tscrunch_out.txt")
+addresses = tscrunch.write_addresses(lines, "images_load_address_list", "src/data/img/tsx/images_load_address_list.asm")

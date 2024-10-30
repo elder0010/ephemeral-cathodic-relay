@@ -76,6 +76,8 @@
 .var procedural_beep_step_amt = $44
 
 .var sample_pt = $60
+.var image_pt = $61 
+
 .var breakpoint_val = $a5ff
 
 .var COLOUR_DELAY = 1

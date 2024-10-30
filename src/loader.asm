@@ -98,42 +98,18 @@ ld70:
 must_init_image:
         lda #0
         beq !+
-        lda #0
-        sta must_init_image+1
-
-        lda total_colours       
-        sta total_colours_val+1
-
-        ldx forced_decay_pt
-        lda force_decay_list,x 
-      //  sta slow_mask_enabled+1
-        sta forced_decay_amt
-        sta forced_decay_v0+1
-        inc forced_decay_pt
-
-        lda procedural_beep_step
-        sta procedural_beep_step_amt
-
-        jsr draw_img
+        jsr load_callback_image
        
 !:
         //is sample?
 must_decrunch_sample:
         lda #0
         beq !+
-        .if(ENABLE_SAMPLE_DECRUNCHING){
-                ldx sample_pt
-                lda samples_load_addresses_lo,x
-		sta.zp tsget
-		lda samples_load_addresses_hi,x
-		sta.zp tsget + 1
-		jsr tsdecrunch
-                inc sample_pt
-        }
+        jsr load_callback_sample
 !:
         rts
 
-//restore and write "file not found error"
+ //restore and write "file not found error"
 ld90:
         jsr clrch
         lda #$0 
@@ -204,3 +180,47 @@ msg:
         cpy #endms2-MS2
         bne !- 
         rts 
+
+//decrunch and draw image
+load_callback_image:
+        .if(ENABLE_IMAGES_DECRUNCHING){
+                ldx image_pt
+                lda images_load_addresses_lo,x
+		sta.zp tsget
+		lda images_load_addresses_hi,x
+		sta.zp tsget + 1
+		jsr tsdecrunch
+                inc image_pt
+        }
+
+        lda #0
+        sta must_init_image+1
+
+        lda total_colours       
+        sta total_colours_val+1
+
+        ldx forced_decay_pt
+        lda force_decay_list,x 
+      //  sta slow_mask_enabled+1
+        sta forced_decay_amt
+        sta forced_decay_v0+1
+        inc forced_decay_pt
+
+        lda procedural_beep_step
+        sta procedural_beep_step_amt
+
+        jsr draw_img
+        rts 
+
+//decrunch sample
+load_callback_sample:
+        .if(ENABLE_SAMPLE_DECRUNCHING){
+                ldx sample_pt
+                lda samples_load_addresses_lo,x
+		sta.zp tsget
+		lda samples_load_addresses_hi,x
+		sta.zp tsget + 1
+		jsr tsdecrunch
+                inc sample_pt
+        }
+        rts

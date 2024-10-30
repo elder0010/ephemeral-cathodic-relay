@@ -1,119 +1,119 @@
-Populating LZ layer ... 98.0971ms
-Closing Gaps ... 218.6443ms
-Populating Graph ... 138.4514ms
-Computing shortest path ... 31.6433ms
+Populating LZ layer ... 110.4081ms
+Closing Gaps ... 233.7887ms
+Populating Graph ... 80.5408ms
+Computing shortest path ... 23.5182ms
 Input file  PRG: src\data\sfx\sfx00.prg, $2704 - $7944 : 21059 bytes
 Output file prg: src\data\sfx\tsx\sfx00.prg, $6f5f - $7944 : 2534 bytes
 Crunched to 12.03% of original size
-Populating LZ layer ... 172.0088ms
-Closing Gaps ... 260.5519ms
-Populating Graph ... 174.8653ms
-Computing shortest path ... 29.8336ms
+Populating LZ layer ... 164.499ms
+Closing Gaps ... 265.7982ms
+Populating Graph ... 97.759ms
+Computing shortest path ... 23.6368ms
 Input file  PRG: src\data\sfx\sfx01.prg, $2704 - $7944 : 21059 bytes
 Output file prg: src\data\sfx\tsx\sfx01.prg, $6ec9 - $7944 : 2684 bytes
 Crunched to 12.75% of original size
-Populating LZ layer ... 170.0198ms
-Closing Gaps ... 254.6614ms
-Populating Graph ... 166.7994ms
-Computing shortest path ... 29.6186ms
+Populating LZ layer ... 174.8222ms
+Closing Gaps ... 282.3729ms
+Populating Graph ... 115.1266ms
+Computing shortest path ... 24.2865ms
 Input file  PRG: src\data\sfx\sfx02.prg, $2704 - $7944 : 21059 bytes
 Output file prg: src\data\sfx\tsx\sfx02.prg, $6f6a - $7944 : 2523 bytes
 Crunched to 11.98% of original size
-Populating LZ layer ... 201.927ms
-Closing Gaps ... 286.8523ms
-Populating Graph ... 183.7444ms
-Computing shortest path ... 31.8407ms
+Populating LZ layer ... 180.1929ms
+Closing Gaps ... 281.7098ms
+Populating Graph ... 125.0117ms
+Computing shortest path ... 23.468ms
 Input file  PRG: src\data\sfx\sfx03.prg, $2704 - $7944 : 21059 bytes
 Output file prg: src\data\sfx\tsx\sfx03.prg, $6d46 - $7944 : 3071 bytes
 Crunched to 14.58% of original size
-Populating LZ layer ... 71.144ms
-Closing Gaps ... 228.0238ms
-Populating Graph ... 138.5113ms
-Computing shortest path ... 37.6803ms
+Populating LZ layer ... 62.5371ms
+Closing Gaps ... 215.3497ms
+Populating Graph ... 104.2492ms
+Computing shortest path ... 31.0732ms
 Input file  PRG: src\data\sfx\sfx04.prg, $2704 - $7944 : 21059 bytes
 Output file prg: src\data\sfx\tsx\sfx04.prg, $655a - $7944 : 5099 bytes
 Crunched to 24.21% of original size
-Populating LZ layer ... 24.6632ms
-Closing Gaps ... 196.3379ms
-Populating Graph ... 160.6999ms
-Computing shortest path ... 36.3424ms
+Populating LZ layer ... 26.7549ms
+Closing Gaps ... 194.5248ms
+Populating Graph ... 108.8775ms
+Computing shortest path ... 30.0807ms
 Input file  PRG: src\data\sfx\sfx05.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx05.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 23.3458ms
-Closing Gaps ... 195.705ms
-Populating Graph ... 151.5639ms
-Computing shortest path ... 36.7467ms
+Populating LZ layer ... 21.6197ms
+Closing Gaps ... 184.3255ms
+Populating Graph ... 99.508ms
+Computing shortest path ... 30.3145ms
 Input file  PRG: src\data\sfx\sfx06.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx06.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 22.2149ms
-Closing Gaps ... 189.7396ms
-Populating Graph ... 159.6283ms
-Computing shortest path ... 36.6359ms
+Populating LZ layer ... 21.1112ms
+Closing Gaps ... 169.7459ms
+Populating Graph ... 82.1957ms
+Computing shortest path ... 28.1647ms
 Input file  PRG: src\data\sfx\sfx07.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx07.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 28.2477ms
-Closing Gaps ... 206.3484ms
-Populating Graph ... 148.2463ms
-Computing shortest path ... 36.3292ms
+Populating LZ layer ... 24.3277ms
+Closing Gaps ... 180.8901ms
+Populating Graph ... 95.1611ms
+Computing shortest path ... 29.4702ms
 Input file  PRG: src\data\sfx\sfx08.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx08.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 20.5458ms
-Closing Gaps ... 189.2624ms
-Populating Graph ... 151.0915ms
-Computing shortest path ... 37.7609ms
+Populating LZ layer ... 25.8574ms
+Closing Gaps ... 183.471ms
+Populating Graph ... 104.6286ms
+Computing shortest path ... 29.0778ms
 Input file  PRG: src\data\sfx\sfx09.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx09.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 25.8047ms
-Closing Gaps ... 239.9922ms
-Populating Graph ... 151.021ms
-Computing shortest path ... 38.3232ms
+Populating LZ layer ... 21.0391ms
+Closing Gaps ... 182.3895ms
+Populating Graph ... 89.1109ms
+Computing shortest path ... 29.0426ms
 Input file  PRG: src\data\sfx\sfx10.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx10.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 23.2301ms
-Closing Gaps ... 190.3263ms
-Populating Graph ... 144.3491ms
-Computing shortest path ... 37.4107ms
+Populating LZ layer ... 21.2814ms
+Closing Gaps ... 180.8422ms
+Populating Graph ... 91.0646ms
+Computing shortest path ... 28.9796ms
 Input file  PRG: src\data\sfx\sfx11.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx11.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 22.4375ms
-Closing Gaps ... 208.1068ms
-Populating Graph ... 251.4445ms
-Computing shortest path ... 38.045ms
+Populating LZ layer ... 20.9107ms
+Closing Gaps ... 167.3067ms
+Populating Graph ... 84.1794ms
+Computing shortest path ... 29.9309ms
 Input file  PRG: src\data\sfx\sfx12.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx12.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 29.7803ms
-Closing Gaps ... 211.2267ms
-Populating Graph ... 162.6379ms
-Computing shortest path ... 37.8074ms
+Populating LZ layer ... 21.4515ms
+Closing Gaps ... 170.3836ms
+Populating Graph ... 83.93ms
+Computing shortest path ... 31.3794ms
 Input file  PRG: src\data\sfx\sfx13.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx13.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 27.6461ms
-Closing Gaps ... 199.4817ms
-Populating Graph ... 160.9101ms
-Computing shortest path ... 37.03ms
+Populating LZ layer ... 21.8897ms
+Closing Gaps ... 183.1096ms
+Populating Graph ... 88.7425ms
+Computing shortest path ... 30.1788ms
 Input file  PRG: src\data\sfx\sfx14.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx14.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 26.1002ms
-Closing Gaps ... 205.549ms
-Populating Graph ... 175.0433ms
-Computing shortest path ... 40.6606ms
+Populating LZ layer ... 21.7877ms
+Closing Gaps ... 179.1527ms
+Populating Graph ... 109.9584ms
+Computing shortest path ... 28.6772ms
 Input file  PRG: src\data\sfx\sfx15.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx15.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size
-Populating LZ layer ... 23.4895ms
-Closing Gaps ... 203.6819ms
-Populating Graph ... 175.3204ms
-Computing shortest path ... 41.785ms
+Populating LZ layer ... 25.3252ms
+Closing Gaps ... 186.8951ms
+Populating Graph ... 97.6156ms
+Computing shortest path ... 29.6443ms
 Input file  PRG: src\data\sfx\sfx16.prg, $2704 - $7b9a : 21657 bytes
 Output file prg: src\data\sfx\tsx\sfx16.prg, $37cb - $7b9a : 17360 bytes
 Crunched to 80.16% of original size

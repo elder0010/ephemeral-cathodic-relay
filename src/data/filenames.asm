@@ -4,6 +4,9 @@
 //ELDER 
 .var filenames = List().add("IMG00","SFX00","IMG01","SFX01","IMG02","SFX02","IMG03","SFX03","IMG04","SFX04","IMG05","SFX05","IMG06","SFX06","IMG07","SFX07","IMG08","SFX08","IMG09","SFX09","IMG10","SFX10","IMG11","SFX11","IMG12","SFX12","IMG13","SFX13","IMG14","SFX14","IMG15","SFX15","IMG16","SFX16")
 
+.pc = * "Images load address list"
+.import source("src/data/img/tsx/images_load_address_list.asm") 
+
 .pc = * "Samples load address list"
 .import source("src/data/sfx/tsx/samples_load_address_list.asm") 
 
@@ -53,4 +56,15 @@ samples_load_addresses_lo:
 samples_load_addresses_hi:
 .for(var x=0;x<samples_load_address_list.size();x++){
     .byte >samples_load_address_list.get(x)
+}
+
+.pc = * "Images load addresses"
+images_load_addresses_lo:
+.for(var x=0;x<images_load_address_list.size();x++){
+    .byte <images_load_address_list.get(x)
+}
+
+images_load_addresses_hi:
+.for(var x=0;x<images_load_address_list.size();x++){
+    .byte >images_load_address_list.get(x)
 }

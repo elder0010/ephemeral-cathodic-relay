@@ -11,7 +11,7 @@ class ImageProcessor:
 
     def get_images(self):
         print("Source images list:")
-        self.images = glob.glob('src/data/images/original/linear/*.png')
+        self.images = glob.glob('src/data/img/original/linear/*.png')
         print(self.images)
         return True
     
@@ -23,7 +23,7 @@ class ImageProcessor:
         else:
             dest_image = source_image
 
-        dest_path = f"src/data/images/converted/img_{image_index:02}.png"
+        dest_path = f"src/data/img/converted/img_{image_index:02}.png"
         dest_image.save( dest_path )
         print(f"Converted image saved to: {dest_path}")
         print(" ")

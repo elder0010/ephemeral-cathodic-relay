@@ -1,0 +1,1 @@
+.var samples_load_address_list = List().add($6f5f,$6ec9,$6f6a,$6d46,$655a,$37cb,$37cb,$37cb,$37cb,$37cb,$37cb,$37cb,$37cb,$37cb,$37cb,$37cb,$37cb)

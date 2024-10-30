@@ -5,9 +5,9 @@
 .import source("../image_importer.asm")
 .import source("../graph_importer.asm")
 
+.var beep_step = 0
 :process_image(source_images_path+"img_00.png")
-
-:process_graph(source_graph_path+"graph_00.png")
+:process_graph(source_graph_path+"graph_00.png", beep_step)
 
 .if(petscii_callback_delay_list.get(0) > 0){
     .import source("../petscii/pet_00.asm")

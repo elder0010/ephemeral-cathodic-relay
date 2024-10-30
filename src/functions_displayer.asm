@@ -40,10 +40,11 @@ forced_decay_v0:
         sta forced_decay_amt
 
 .if(PROCEDURAL_BEEP_ACTIVE){
-        clc 
-        lda procedural_beep_sin_pt+1
-        adc procedural_beep_step_amt 
-        sta procedural_beep_sin_pt+1
+        inc note_octave_pt
+        //clc 
+        //lda procedural_beep_sin_pt+1
+        //adc procedural_beep_step_amt 
+        //sta procedural_beep_sin_pt+1
 }
 //----------------------------------------   
         lda #0 
@@ -127,8 +128,8 @@ trigger_sample:
         lda #JSR_ABS
         sta can_sample_draw
 
-        lda #BIT_ABS
-        sta beep_fn
+        //lda #BIT_ABS
+        //sta beep_fn
         rts 
 
 //--------------------------------------

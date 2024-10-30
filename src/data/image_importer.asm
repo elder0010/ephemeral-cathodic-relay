@@ -130,6 +130,7 @@
 
 .var procedural_beep_step = floor(255/total_colours)
 .print("Procedural beep step: $"+toHexString(procedural_beep_step))
+.eval beep_step = procedural_beep_step
 .print("Total colours: "+total_colours)
 
 .pc = screen_addr_lo "Screen address lo"

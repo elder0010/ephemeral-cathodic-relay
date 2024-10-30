@@ -209,6 +209,7 @@ load_callback_image:
         lda procedural_beep_step
         sta procedural_beep_step_amt
 
+
         jsr draw_img
         rts 
 

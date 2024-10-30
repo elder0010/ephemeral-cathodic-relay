@@ -38,6 +38,7 @@
 .const ENABLE_IMAGES_DECRUNCHING = true
 
 .var source_images_path = "src/data/img/converted/"
+.var source_graph_path = "src/data/graph/"
 
 //Delay between colour ramps (frames)
 .var forced_decay_offset_list = List().add(

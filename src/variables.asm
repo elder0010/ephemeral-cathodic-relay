@@ -117,6 +117,8 @@
 .const petscii_size = petscii_start
 .const petscii_addr_lo = petscii_size+1
 
+.const graph_note = screen_addr_lo - $200
+.const graph_octave = graph_note + $100 
 //sample must be loaded after the image
 .const sample = pixels_colour_amt+$200 //must be the same of SAMPLE_ADDRESS in BuildSamples.bat
 

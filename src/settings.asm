@@ -2,6 +2,8 @@
 .const COLS = 80
 
 .const ENABLE_BREAKPOINTS = false 
+.const DEBUG_LOAD_IMAGE_CALLBACK = false 
+.const DEBUG_LOAD_SFX_CALLBACK = false
 
 .const CURSOR_BLINK_SPEED = 16
 .const CRUNCH_CHARS_ON_IMAGE = false 

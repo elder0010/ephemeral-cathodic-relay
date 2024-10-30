@@ -144,14 +144,6 @@ text_end:
 .pc = * "Init routine"
 .import source("init_routine.asm")
 
-
-/*
-.pc = $5260 "test data"
-test_data:
-.import c64("test.tsx")
-*/
-
-
 .pc = $4000 "Event functions"
 event_functions_src:
 .pseudopc relocated_functions{

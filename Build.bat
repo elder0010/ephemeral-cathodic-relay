@@ -1,7 +1,7 @@
 @echo off
 set KICKASS="bin\KickAss\KickAss.jar"
 set CC1541_PATH = "bin\cc1541.exe"
-set EXOMIZER = "bin\exomizer\exomizer.exe"
+
 
 del build\demo.d82
 @echo del build\SD\*.* /f

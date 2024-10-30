@@ -9,8 +9,6 @@ init_routine:
         lda #RAMEXP_ENABLE
         sta $fff0 
 
-        //lda #forced_decay_offset_list.get(0)
-        //sta forced_decay_amt
         ldy #0 
         sty page_pt
         sty script_col_pt
@@ -30,7 +28,6 @@ srctxt:
         lda text_src,x 
 dsttxt:
         sta script,x
-
         dex 
         bne !-
         inc srctxt+2
@@ -53,7 +50,6 @@ dstcmd:
 
         inc srccmd+2
         inc dstcmd+2
-
         iny
         cpy #18
         bne copycmd
@@ -73,7 +69,6 @@ dstfnc:
         iny
         cpy #8
         bne copyfnc
-
         .if(ENABLE_CURSOR_BEEP){
                 lda #0
                 sta can_cursor_beep

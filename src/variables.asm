@@ -73,7 +73,6 @@
 .var petscii_pointer = $41
 .var current_petscii_size = $42
 .var petscii_callback_pt = $43
-.var procedural_beep_step_amt = $44
 .var gate_pt = $45
 .var note_octave_pt = $46
 

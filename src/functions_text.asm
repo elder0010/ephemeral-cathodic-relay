@@ -49,7 +49,6 @@ text_addr:
         jsr reset_cursor
         jsr clear_screen
         jmp move_text_pt
-        //:set_addr(stop_beep, beep_fn)
 newline:
         :set_addr(stop_beep, beep_fn)
         :sound_off()
@@ -72,8 +71,6 @@ move_text_pt:
         :inc_addr(text_addr, 1)
 
 finished_write:
-        //lda #0
-        //sta force_skip_write_next+1
         rts 
 
 linebreak_delay:
@@ -212,7 +209,14 @@ enable_write_mode:
 
         lda #JSR_ABS
         sta beep_fn
-                
+
+        .if(RESET_CURSOR_TO_DEFAULT_ON_PAGEBREAK){
+                lda #DEFAULT_CURSOR_X
+                sta default_col_val
+                lda #DEFAULT_CURSOR_Y
+                sta default_row_val
+        }
+        jsr reset_cursor
         rts 
 
 enable_draw_mode:
@@ -242,7 +246,7 @@ enable_draw_mode:
                 :set_addr(image_routine, irq_fn)
                 :set_screen(5)
         }
- 
+
         jsr init_displayer
   
         .if(CRUNCH_CHARS_ON_IMAGE){

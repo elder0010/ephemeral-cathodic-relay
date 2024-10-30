@@ -11,7 +11,6 @@ init10:
         lda #>BUF 
         sta FNADR+1 //file name
 inputfile:
-
 //read file name
 file_ptr:
         ldx #0 
@@ -121,7 +120,7 @@ openi:
 //.break 
         jsr ROPENI
         rts 
-
+        
 talk:
         sta FA 
         jsr RTALK
@@ -201,16 +200,15 @@ load_callback_image:
 
         ldx forced_decay_pt
         lda force_decay_list,x 
-      //  sta slow_mask_enabled+1
         sta forced_decay_amt
         sta forced_decay_v0+1
         inc forced_decay_pt
 
-        lda procedural_beep_step
-        sta procedural_beep_step_amt
-
-
         jsr draw_img
+
+        .if(DEBUG_LOAD_IMAGE_CALLBACK){
+                inc screen
+        }
         rts 
 
 //decrunch sample
@@ -223,5 +221,9 @@ load_callback_sample:
 		sta.zp tsget + 1
 		jsr tsdecrunch
                 inc sample_pt
+        }
+
+        .if(DEBUG_LOAD_SFX_CALLBACK){
+                inc screen+1
         }
         rts

@@ -35,5 +35,8 @@ src/data/img08.prg
 src/data/img09.prg
 src/data/images/*.prg
 src/data/sfx/tsx/*.prg
+src/data/img/tsx/*.prg
 src/data/images/converted/*.png
 build/demo.d82
+src/data/sfx/tsx/tscrunch_out.txt
+src/data/img/tsx/tscrunch_out.txt

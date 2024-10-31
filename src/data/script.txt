@@ -5,7 +5,7 @@ Hey.#LOADNEXT#
 It's me.#LOADSFX#
 //page 02
 #PAGE#
-I really#DELAY=32# #STRING=5#REALLY#DELAY=32# hope you still got that one I left you, down there.
+I really#DELAY=34# #STRING=5#REALLY#DELAY=34# hope you still got that one I left you, down there.
 //page 03
 #PAGE#
 Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.
@@ -14,16 +14,16 @@ Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone st
 When I said it was built like a tank I was dead serious.
 //page 05
 #PAGE#
-How ironic,#DELAY=16# history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.#DELAY=32#
+How ironic,#DELAY=16# history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.#DELAY=34#
 #PAGE# 
 //page 06
-Now, let's get to work.#DELAY=32##SETMARGIN=13,04#I have two news for you.#DELAY=32#
+Now, let's get to work.#DELAY=34##SETMARGIN=13,04#I have two news for you.#DELAY=34#
 //page 07
 #PAGE#
-First one is bad.#DELAY=32#
+First one is bad.#DELAY=34#
 //page 08
 #PAGE#
-Very bad.#DELAY=32#
+Very bad.#DELAY=34#
 //page 09
 #PAGE#
 They are on us. 
@@ -32,16 +32,16 @@ They are on us.
 They managed to read every data, every image to predict our intentions. 
 //page 11
 #PAGE#
-They still don't have pictures of me,#DELAY=32# but they know that I exist. 
+They still don't have pictures of me,#DELAY=34# but they know that I exist. 
 //page 12
 #PAGE#
 So we need a safe way to exchange images#SETMARGIN=13,04#until we manage to meet again in person.
 //page 13
 #PAGE#
-Second one is a good one:#DELAY=128#
+Second one is a good one:#DELAY=130#
 //page 14
 #PAGE#
-I like to think out of the box.#DELAY=32##SETMARGIN=13,04#I found a way to do it. 
+I like to think out of the box.#DELAY=34##SETMARGIN=13,04#I found a way to do it. 
 //page 15
 #PAGE#
 To send you images that those stupid machines#SETMARGIN=13,04#can't see nor recognize.
@@ -53,13 +53,13 @@ A little invention of mine.
 I like to call it 
 //page 18
 #PAGE#
-#SETMARGIN=12,13# #STRING=9#EPHEMERAL#SETMARGIN=12,33# #DELAY=50# #STRING=8#CATHODIC #SETMARGIN=12,53# #DELAY=50# #STRING=5#RELAY#DELAY=128#
+#SETMARGIN=12,13# #STRING=9#EPHEMERAL#SETMARGIN=12,33# #DELAY=50# #STRING=8#CATHODIC #SETMARGIN=12,53# #DELAY=50# #STRING=5#RELAY#DELAY=132#
 //page 19
 #PAGE#
 It's E.C.R., for short :) 
 //page 20
 #PAGE#
-TLDR:#DELAY=32# This bulky, gorgeous display of yours is a very powerful device.#SETMARGIN=13,04##DELAY=32#It hides an incredible feature.#DELAY=32##SETMARGIN=14,04#A feature that was overlooked for more than 50 years.#DELAY=32# 
+TLDR:#DELAY=34# This bulky, gorgeous display of yours is a very powerful device.#SETMARGIN=13,04##DELAY=34#It hides an incredible feature.#DELAY=34##SETMARGIN=14,04#A feature that was overlooked for more than 50 years.#DELAY=34# 
 //page 21
 #PAGE#
 Even if a 8296 PET has no graphic modes#SETMARGIN=13,04#and only displays characters with a mere 1 bit colour depth.
@@ -86,7 +86,7 @@ I analyzed every shade of green left by the characters disappearing...
 #SETMARGIN=011,38#into#SETMARGIN=012,35##STRING=10#L I G H T.#DELAY=128#
 //page 33
 #PAGE#
-I called it the#DELAY=32# #STRING=8#CATHODIC#DELAY=32# #STRING=8#EXPOSURE#DELAY=32# #STRING=5#CHART#DELAY=32#, C.E.C.#DELAY=64##SETMARGIN=13,04#(yeah, I really love high tech acronyms) 
+I called it the#DELAY=34# #STRING=8#CATHODIC#DELAY=34# #STRING=8#EXPOSURE#DELAY=34# #STRING=5#CHART#DELAY=34#, C.E.C.#DELAY=64##SETMARGIN=13,04#(yeah, I really love high tech acronyms) 
 //page 34
 #PAGE#
 Let's say that I want to represent 4 specific shades of gray.
@@ -95,7 +95,7 @@ Let's say that I want to represent 4 specific shades of gray.
 I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04#tracing by a specific amount of time to set#SETMARGIN=14,04#the correct exposure.
 //page 36
 #PAGE#
-Now I can exploit the phosphor falloff,#DELAY=32##SETMARGIN=13,04#use it as an analog grayscale image generator, like this.
+Now I can exploit the phosphor falloff,#DELAY=34##SETMARGIN=13,04#use it as an analog grayscale image generator, like this.
 //page 38b PETSCI QUADRATY
 #IMAGE=96#
 //page 39
@@ -112,38 +112,38 @@ It's just done by sweeping a single line#SETMARGIN=13,04#from the top to the bot
 There are way more gray levels inside this box#SETMARGIN=13,04#from the 80's than we could achieve#SETMARGIN=14,04#back in 2024 with those shitty RTX cards
 //page 44
 #PAGE#
-This one is a horizontal one,#DELAY=32#look at the 80 columns in all of their glory!
+This one is a horizontal one,#DELAY=34#look at the 80 columns in all of their glory!
 //page 45 GRADIENT H
 #IMAGE=96#
 //page 46
-#LOADNEXT##SETMARGIN=12,04#You can achieve any kind of shading,#DELAY=32##SETMARGIN=13,04#just by delaying the brighter areas of the image
+#LOADNEXT##SETMARGIN=12,04#You can achieve any kind of shading,#DELAY=34##SETMARGIN=13,04#just by delaying the brighter areas of the image
 //page 46 GRADIENT R
 #IMAGE=96#
 //page 47
-#SETMARGIN=12,04#The only limit is that images are, as the name implies,#LOADNEXT##DELAY=32# ephemeral.
+#SETMARGIN=12,04#The only limit is that images are, as the name implies,#LOADNEXT##DELAY=34# ephemeral.
 //page 48
 #PAGE#
-I thought that could be a problem with more complex images#DELAY=32##SETMARGIN=13,04#so I started to test this on some simple renders.
+I thought that could be a problem with more complex images#DELAY=34##SETMARGIN=13,04#so I started to test this on some simple renders.
 //page 49 SPHERE
 #IMAGE=96#
 //page 50
-I was blown away:#LOADNEXT##DELAY=32# it worked!
+I was blown away:#LOADNEXT##DELAY=34# it worked!
 //page 51
 #PAGE#
 The falloff time is just enough to appreciate the images#SETMARGIN=13,04#and that peculiar 8296 scanline surely helps fooling the eye!
 //page 52
 #PAGE#
-Now that I think about it#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=13,04#you can even export 'em with your analog camera#DELAY=32#.#DELAY=32#.#DELAY=32#.#DELAY=32##SETMARGIN=014,04#or using any other photographic process.
+Now that I think about it#DELAY=34#.#DELAY=34#.#DELAY=34#.#DELAY=34##SETMARGIN=13,04#you can even export 'em with your analog camera#DELAY=34#.#DELAY=34#.#DELAY=34#.#DELAY=34##SETMARGIN=014,04#or using any other photographic process.
 //page 53
 #PAGE#
 E.C.R. are the new daguerrotypes!
 //page 54 SKULL
 #IMAGE=96#
 //page 55
-That was scary,#DELAY=32# #LOADNEXT#:)
+That was scary,#DELAY=34# #LOADNEXT#:)
 //page 56
 #PAGE#
-When they are about to fade away they look like a ghost,#SETMARGIN=13,04##DELAY=32#trapped in the machine,#DELAY=32# do they?
+When they are about to fade away they look like a ghost,#SETMARGIN=13,04##DELAY=34#trapped in the machine,#DELAY=34# do they?
 //page 57
 #PAGE#
 Try to snap a photo of the next picture.
@@ -153,7 +153,7 @@ Try to snap a photo of the next picture.
 //page 59 PET
 #IMAGE=96#
 //page 60
-#LOADNEXT#Hahaha,#DELAY=32# META AF.#DELAY=32#
+#LOADNEXT#Hahaha,#DELAY=34# META AF.#DELAY=34#
 //page 61
 #PAGE#
 When those cyber fucks will analyze this software I sent you#SETMARGIN=13,04#they will find nothing. No patterns to exploit.
@@ -194,7 +194,7 @@ I will now display it in a noise generated E.C.R.#SETMARGIN=13,04#Just extra car
 //page 70B PETSCII TESLA
 #IMAGE=96#
 //page 71
-#LOADNEXT#Ok, #DELAY=32#now that we discovered a safe way to communicate...
+#LOADNEXT#Ok, #DELAY=34#now that we discovered a safe way to communicate...
 //page 72
 ...we're done with the boring stuff.
 //page 73

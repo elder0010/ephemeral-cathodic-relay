@@ -69,8 +69,8 @@ dstfnc:
         iny
         cpy #8
         bne copyfnc
+        lda #0
         .if(ENABLE_CURSOR_BEEP){
-                lda #0
                 sta can_cursor_beep
         }
 .if(HALF_SPEED_TEXT){

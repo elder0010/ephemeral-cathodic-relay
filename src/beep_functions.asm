@@ -10,7 +10,7 @@ beep_note:
 
         inc beep0pt+1 
         lda beep0pt+1,x
-        //cmp #1
+        cmp #4
         bne !+
         lda #get_octave(2)
         sta $e84a
@@ -19,21 +19,17 @@ beep_note:
         sta $e848 
         sta beep0pt+1
         sta $e84b
-
         :set_addr(stop_beep, beep_fn)
 !:
         rts 
 
-stop_beep:
-        lda #0 
-      //  sta $e848
-        sta $e84a
+stop_beep: 
+        :sound_off()
         sta beep0pt+1
-       // :sound_off()
         rts
 
 beep_0_tbl:
-.byte 15,15,0,0
+.byte 15,15,15,15
 
 .pc = * "Procedural sound"
 procedural_beep:
@@ -49,6 +45,10 @@ procedural_beep:
         sta $e84b
 
         inc gate_pt
-
+        bne !+
+        :sound_off()
+        lda #BIT_ABS
+        sta procedural_beep_fn
+!:
         rts 
 

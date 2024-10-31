@@ -89,29 +89,32 @@ event_page:
                 lda #DEFAULT_CURSOR_Y
                 sta default_row_val
         }
-        :set_addr(stop_beep, beep_fn)
+       // :set_addr(stop_beep, beep_fn)
         jsr reset_cursor
         jsr clear_screen
+
+        lda #CURSOR_BLINK_SPEED
+        sta cursor_ct+1
 
         .if(ENABLE_NEWPAGE_BEEP){
                 lda #NEWPAGE_BEEP_NOTE
                 sta beep_note+1
                 lda #get_octave(NEWPAGE_BEEP_OCTAVE)
                 sta beep_0_tbl
-                :sound_on()
+
+                lda #0
+                sta beep0pt+1
                 :set_addr(beep_0, beep_fn)
+                :sound_on()
         }
 
         dec row_pt
-       // dec script_row_pt
 
         lda #0
         sta script_col_pt
 
         lda #$ff 
         sta script_row_pt
-        //lda #1 
-        //sta force_skip_write_next+1
         rts
 
 //SETPOS

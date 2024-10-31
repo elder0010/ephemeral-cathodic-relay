@@ -14,6 +14,9 @@ text_addr:
         ldy col_pt
         sta (text_row_zp_addr),y
 
+        ldy #CURSOR_BLINK_SPEED
+        sty cursor_ct+1
+
         lda #0 
 .if(ENABLE_CURSOR_BEEP){
         sta can_cursor_beep
@@ -141,12 +144,18 @@ event:
         cmp #EVENT_SETPOS
         bne !+
         jsr event_setpos
-        jmp point_next_event
+        :inc_addr(cur_com_index, 1)
+        :inc_addr(cur_com_line, 1)
+        :inc_addr(cur_com_page, 1)
+        jmp handle_events       //prevent frame skip by returning to handle_events function
 !:
         cmp #EVENT_SETMARGIN
         bne !+
         jsr event_setmargin
-        jmp point_next_event
+        :inc_addr(cur_com_index, 1)
+        :inc_addr(cur_com_line, 1)
+        :inc_addr(cur_com_page, 1)
+        jmp handle_events       //prevent frame skip by returning to handle_events function
 !:
         cmp #EVENT_IMAGE
         bne !+
@@ -156,12 +165,18 @@ event:
         cmp #EVENT_LOADNEXT
         bne !+
         jsr event_loadnext
-        jmp point_next_event
+        :inc_addr(cur_com_index, 1)
+        :inc_addr(cur_com_line, 1)
+        :inc_addr(cur_com_page, 1)
+        jmp handle_events       //prevent frame skip by returning to handle_events function
 !:
         cmp #EVENT_LOADSFX
         bne !+
         jsr event_loadsfx
-        jmp point_next_event
+        :inc_addr(cur_com_index, 1)
+        :inc_addr(cur_com_line, 1)
+        :inc_addr(cur_com_page, 1)
+        jmp handle_events       //prevent frame skip by returning to handle_events function
 !:
         cmp #EVENT_STRING
         bne !+
@@ -217,6 +232,7 @@ enable_write_mode:
                 sta default_row_val
         }
         jsr reset_cursor
+        
         rts 
 
 enable_draw_mode:

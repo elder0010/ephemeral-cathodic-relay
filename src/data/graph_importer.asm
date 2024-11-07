@@ -7,16 +7,34 @@
     .var bottom_y = picture.height
 
     .var gate_values = List()
-
+    
+    
     .for(var x=0;x<=255;x++){
         .var colour = toHexString(picture.getPixel(x,bottom_y-1),6).toUpperCase()
       //  .print(toHexString(colour,6).toUpperCase())
 
-        .if(colour == "FF0000"){
+        .var found = false
+        .for(var y=0;y<picture.height;y++){
+            .if(!found){
+                .var colour = toHexString(picture.getPixel(x,y),6).toUpperCase()
+                .if(colour == "000000"){
+                    .eval found = true
+                }
+            }
+        }
+
+        .if(found){
             .eval gate_values.add(16)
         }else{
             .eval gate_values.add(0)
         }
+
+        /*
+        .if(colour == "FF0000"){
+            .eval gate_values.add(16)
+        }else{
+            .eval gate_values.add(0)
+        }*/
     }
 
     .var notes_mapping = List()
@@ -42,7 +60,7 @@
         .var found = false
         .for(var y=0;y<picture.height;y++){
             .if(!found){
-            .var colour = toHexString(picture.getPixel(base,y),6).toUpperCase()
+                .var colour = toHexString(picture.getPixel(base,y),6).toUpperCase()
                 .if(colour == "000000"){
                     .eval notes.add(notes_mapping.get(y))
                     .eval octaves.add(get_octave(octaves_mapping.get(y)))

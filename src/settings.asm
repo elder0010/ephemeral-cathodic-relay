@@ -1,7 +1,7 @@
 .const ROWS = 25
 .const COLS = 80
 
-.const ENABLE_BREAKPOINTS = false 
+.const ENABLE_BREAKPOINTS = true 
 .const DEBUG_LOAD_IMAGE_CALLBACK = false 
 .const DEBUG_LOAD_SFX_CALLBACK = false
 
@@ -44,7 +44,7 @@
 
 //Delay between colour ramps (frames)
 .var forced_decay_offset_list = List().add(
-    32,  //img00
+    0,  //img00
     2,  //img01
     0,  //img02
     0,  //img03

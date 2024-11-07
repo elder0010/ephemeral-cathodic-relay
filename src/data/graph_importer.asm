@@ -56,8 +56,8 @@
     .var octaves = List()
     .var base = 0
     .eval step = 1
-    
-    .while(base < 255-step){
+
+    .while(base <= 256-step){
         //Get the note
         .var found = false
         .for(var y=0;y<picture.height;y++){
@@ -70,8 +70,15 @@
                 }
             }
         }
+
+        .if(!found){
+            .eval notes.add(0)
+            .eval octaves.add(0)
+        }
         .eval base = base + step
     }
+
+ 
 
     .print("Gate values: "+gate_values)
     .print("Notes: "+notes)

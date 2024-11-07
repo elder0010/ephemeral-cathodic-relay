@@ -34,13 +34,13 @@ beep_0_tbl:
 .pc = * "Procedural sound"
 procedural_beep:
         //:sound_on()
-        ldx note_octave_pt
+        //ldx note_octave_pt
+        ldx gate_pt
         lda graph_octave,x 
         sta $e84a
         lda graph_note,x
         sta $e848
 
-        ldx gate_pt
         lda graph_gate,x
         sta $e84b
 

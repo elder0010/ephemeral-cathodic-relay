@@ -55,6 +55,8 @@
     .var notes = List()
     .var octaves = List()
     .var base = 0
+    .eval step = 1
+    
     .while(base < 255-step){
         //Get the note
         .var found = false

@@ -9,7 +9,7 @@ del src\main.prg /f
 
 python src\parse_script.py
 
-@echo call BuildSamples.bat
+call BuildSamples.bat
 call BuildImages.bat
 
 python .\src\tscrunch_address_processor.py

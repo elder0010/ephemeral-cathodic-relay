@@ -11,7 +11,7 @@ class PetsciiProcessor:
 
     def get_images(self):
         print("Source PETSCII list:")
-        self.images = glob.glob('src/data/petscii/original/*.c')
+        self.images = glob.glob('src/data/petscii/source/*.c')
         print(self.images)
         return True
     

@@ -39,7 +39,7 @@
 .const ENABLE_SAMPLE_DECRUNCHING = true
 .const ENABLE_IMAGES_DECRUNCHING = true
 
-.var source_images_path = "src/data/img/converted/"
+.var source_images_path = "src/data/img/source/"
 .var source_graph_path = "src/data/graph/"
 
 //Delay between colour ramps (frames)

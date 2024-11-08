@@ -68,7 +68,7 @@
 
 //PETSCII Callback hold time (0 = no callback)
 .var petscii_callback_delay_list = List().add(
-    1,  //img00
+    30,  //img00
     0,  //img01
     0,  //img02
     0,  //img03
@@ -76,16 +76,16 @@
     0,  //img05
     0,  //img06
     0,  //img07
-    1,  //img08
-    1,  //img09
-    1,  //img10
+    30,  //img08
+    30,  //img09
+    30,  //img10
     0,  //img11
-    1,  //img12
+    30,  //img12
     0,  //img13
     0,  //img14
     0,  //img15
     0,  //img16
     0,  //img17
-    1,  //img18
-    1  //img19
+    30,  //img18
+    30  //img19
 )

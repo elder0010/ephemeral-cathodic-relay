@@ -117,7 +117,6 @@ ld90:
         cli 
         jmp init10
 openi:
-//.break 
         jsr ROPENI
         rts 
         

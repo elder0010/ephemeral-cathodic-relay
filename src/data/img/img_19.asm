@@ -9,6 +9,6 @@
 :process_image(source_images_path+"img_19.png")
 :process_graph(source_graph_path+"graph_19.png", beep_step)
 
-.if(petscii_callback_delay_list.get(16) > 0){
+.if(petscii_callback_delay_list.get(19) > 0){
     .import source("../petscii/pet_19.asm")
 }

@@ -58,6 +58,7 @@ class PetsciiProcessor:
         #print(" ")
         return data
     def generate_asm(self, data, image_index):
+
         header = f"//PETSCII image {image_index}\n"
         address_list = ".var petscii_address_list = List()\n"
         values_list = ".var petscii_values_list = List()\n"
@@ -71,12 +72,15 @@ class PetsciiProcessor:
         
         #print (address_list)
         #print (values_list)
-        with open(f"src/data/petscii/converted/petscii_{image_index:02}.asm", "w") as file:
+        path = f"src/data/petscii/converted/petscii_{image_index:02}.asm"
+
+        with open(path, "w") as file:
             file.write(header)
             file.write(address_list)
             file.write("\n")
             file.write(values_list)
             file.close()
+            print(f"ASM file saved to: {path}")
 
         
         pass

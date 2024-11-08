@@ -110,6 +110,7 @@ callback:
         iny
         sty pet_tk+1
         :set_addr(delay_petscii, petscii_fn)
+        .break 
         jsr draw_petscii
         lda #JSR_ABS 
         sta petscii_fn 

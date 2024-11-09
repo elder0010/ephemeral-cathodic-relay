@@ -46,8 +46,8 @@
 .var forced_decay_offset_list = List().add(
     32,  //img00
     2,  //img01
-    2,  //img02
-    2,  //img03
+    0,  //img02
+    0,  //img03
     0,  //img04
     0,  //img05
     0,  //img06

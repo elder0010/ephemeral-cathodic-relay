@@ -1,7 +1,5 @@
 @echo off
 set KICKASS="bin\KickAss\KickAss.jar"
-set EXOMIZER_PATH = "bin\exomizer\exomizer.exe"
-set SAMPLE_ADDRESS = $2704
 
 java -jar %KICKASS% src/data/sfx/sfx_00.asm -o src/data/sfx/sfx00.prg
 java -jar %KICKASS% src/data/sfx/sfx_01.asm -o src/data/sfx/sfx01.prg

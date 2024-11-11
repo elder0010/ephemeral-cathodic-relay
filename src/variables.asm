@@ -75,7 +75,6 @@
 .var petscii_callback_pt = $43
 .var gate_pt = $45
 .var note_octave_pt = $46
-
 .var sample_pt = $60
 .var image_pt = $61 
 
@@ -107,7 +106,7 @@
 .const ROPENI = $f4a5 //Get Next One Byte Parameter / send listen
 
 //Images memory locations (image + optional PETSCII payload)
-.const screen_addr_lo = $1500 //image start
+.const screen_addr_lo = $1000 //image start
 .const screen_addr_hi = screen_addr_lo+$800
 .const px_number = screen_addr_lo+$1000
 .const total_colours = screen_addr_lo+$1002
@@ -118,10 +117,8 @@
 .const petscii_size = petscii_start
 .const petscii_addr_lo = petscii_size+1
 
-.const graph_note = screen_addr_lo - $300
+.const graph_note = screen_addr_lo - $200
 .const graph_octave = graph_note + $100
-.const graph_gate = graph_note + $200 
-//sample must be loaded after the image
-.const sample = pixels_colour_amt+$200 //must be the same of SAMPLE_ADDRESS in BuildSamples.bat
+.const sample = pixels_colour_amt+$200-$4 //must be the same of SAMPLE_ADDRESS in BuildSamples.bat
 
 .print("Sample start: $"+toHexString(sample))

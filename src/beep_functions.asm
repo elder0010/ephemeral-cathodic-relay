@@ -33,22 +33,27 @@ beep_0_tbl:
 
 .pc = * "Procedural sound"
 procedural_beep:
-        //:sound_on()
-        //ldx note_octave_pt
         ldx gate_pt
         lda graph_octave,x 
         sta $e84a
-        lda graph_note,x
-        sta $e848
+        beq !+
+        
 
-        lda graph_gate,x
-        sta $e84b
+        lda graph_note,x 
+        sta $e848
+!:
 
         inc gate_pt
-        bne !+
+        bne skipmute
+
         :sound_off()
+        
+        sta $e84a 
+        sta $e848 
+
         lda #BIT_ABS
         sta procedural_beep_fn
-!:
+skipmute:
+
         rts 
 

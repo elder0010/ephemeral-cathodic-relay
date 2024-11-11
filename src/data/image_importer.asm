@@ -160,7 +160,7 @@ px_number:
 .pc = screen_addr_lo+$1002 "Total colours"
 .byte total_colours
 
-.pc = screen_addr_lo+$1003 "Procedural beep step" 
-.byte procedural_beep_step
+//.pc = screen_addr_lo+$1003 "Procedural beep step" 
+//.byte procedural_beep_step
 }
 

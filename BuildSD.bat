@@ -39,4 +39,3 @@ copy src\data\img\tsx\img15.prg build\SD\IMG15
 copy src\data\img\tsx\img16.prg build\SD\IMG16
 copy src\data\img\tsx\img17.prg build\SD\IMG17
 copy src\data\img\tsx\img18.prg build\SD\IMG18
-copy src\data\img\tsx\img19.prg build\SD\IMG19

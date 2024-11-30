@@ -1,158 +1,149 @@
 //page 00
 #PAGE#
 //IMG00
-Hey.#LOADNEXT#
+Hey.#LOADNEXT##DELAY=96#
 #PAGE#
-It's me.
+It's me.#DELAY=64#
 //page 02
 #PAGE#
 //SFX00
-I really#DELAY=34# #STRING=5#REALLY#DELAY=34# hope you still got that one I left you, down there.#LOADSFX#
+I really#DELAY=32# #STRING=5#REALLY#DELAY=32# hope you still got that one I left you, down there.#LOADSFX##DELAY=96#
 //page 03
 #PAGE#
-Well, if you're reading this it means you survived #SETMARGIN=13,04#the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.
+Well, if you're reading this it means you survived#DELAY=32#
+the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.#DELAY=96#
 //page 04
 #PAGE#
-When I said it was built like a tank I was dead serious.
-//page 05
-#PAGE#
-How ironic,#DELAY=16# history's first personal computer happens to be#SETMARGIN=13,04#one of the last ones still working.#DELAY=34#
+How ironic,#DELAY=16# one of the first personal computer in history
+happens to be one of the last ones still working.#DELAY=96#
 #PAGE# 
 //page 06
-Now, let's get to work.#DELAY=34##SETMARGIN=13,04#I have two news for you.#DELAY=34#
+Now, let's get to work.#DELAY=32#
+I have two news for you.#DELAY=96#
 //page 07
 #PAGE#
-First one is bad.#DELAY=34#
+First one is bad.#DELAY=96#
 //page 08
 #PAGE#
-Very bad.#DELAY=34#
+Very bad.#DELAY=96#
 //page 09
 #PAGE#
-They are on us. 
-//page 10
-#PAGE#
-They managed to read every data, every image to predict our intentions. 
-//page 11
-#PAGE#
-They still don't have pictures of me,#DELAY=34# but they know that I exist. 
+They are on us.#DELAY=64#
+They managed to read every data, every image to predict our intentions.#DELAY=32#
+They still don't have pictures of me,#DELAY=32# but they know that I exist.#DELAY=96#
 //page 12
 #PAGE#
-So we need a safe way to exchange images#SETMARGIN=13,04#until we manage to meet again in person.
+#BREAKPOINT#We need a safe way to exchange images until we meet again in person.#DELAY=96#
 //page 13
 #PAGE#
-Second one is a good one:#DELAY=130#
-//page 14
-#PAGE#
-I like to think out of the box.#DELAY=34##SETMARGIN=13,04#I found a way to do it. 
+Second one is a good one:#DELAY=128#
 //page 15
 #PAGE#
-To send you images that those stupid machines#SETMARGIN=13,04#can't see nor recognize.
+I found a way to send you images anyway.#DELAY=32#
+Images that those stupid machines can't parse.#DELAY=96#
 //page 16
 #PAGE#
-A little invention of mine.
-//page 17
-#PAGE#
-I like to call it 
+It's a little invention of mine.#DELAY=32#
+I like to call it#DELAY=96#
 //page 18
 #PAGE#
 #SETMARGIN=12,13# #STRING=9#EPHEMERAL#SETMARGIN=12,33# #DELAY=50# #STRING=8#CATHODIC #SETMARGIN=12,53# #DELAY=50# #STRING=5#RELAY#DELAY=132#
 //page 19
 #PAGE#
-It's E.C.R., for short :) 
+It's E.C.R., for short :)#DELAY=96#
 //page 20
-#PAGE#
-TLDR:#DELAY=34# This bulky, gorgeous display of yours is a very powerful device.#SETMARGIN=13,04##DELAY=34#It hides an incredible feature.#DELAY=34##SETMARGIN=14,04#A feature that was overlooked for more than 50 years.#DELAY=34# 
+//#PAGE#
+//This bulky, gorgeous display of yours is a very powerful device.#DELAY=32#
+//It hides an incredible feature.#DELAY=32#
+//A feature that was overlooked for more than 50 years.#DELAY=96# 
 //page 21
 #PAGE#
-Even if a 8296 PET has no graphic modes#SETMARGIN=13,04#and only displays characters with a mere 1 bit colour depth.
+Even if a 8296 PET has no graphic modes
+and only displays characters with a mere 1 bit colour depth.#DELAY=96#
 //page 22
 #PAGE#
-I found a way to take advantage of the cathodic falloff#SETMARGIN=13,04#of its CRT display.
-//page 23
-#PAGE#
-The 8296 tube is painted with unusually slow phosphors.
-//page 28
-#PAGE#
-That's where my idea came in.
+I found a way to take advantage of the cathodic falloff
+of 8296's unusually slow display phosphors.#DELAY=96#
 //page 29
 #PAGE#
-I analyzed every shade of green left by the characters disappearing...
-//page 30
-#PAGE#
-...and made a conversion routine that converts
+I analyzed every shade of green left by the disappearing characters
+and made a conversion routine that converts#DELAY=96#
 //page 31
 #PAGE#
-#SETMARGIN=012,38##STRING=7#T I M E#DELAY=64#
+#SETMARGIN=012,38##STRING=7#T I M E#DELAY=96#
 //page 32
 #PAGE#
 #SETMARGIN=011,38#into#SETMARGIN=012,35##STRING=10#L I G H T.#DELAY=128#
 //page 33
 #PAGE#
-I called it the#DELAY=34# #STRING=8#CATHODIC#DELAY=34# #STRING=8#EXPOSURE#DELAY=34# #STRING=5#CHART#DELAY=34#, C.E.C.#DELAY=64##SETMARGIN=13,04#(yeah, I really love high tech acronyms) 
+I called it the#DELAY=34# #STRING=8#CATHODIC#DELAY=34# #STRING=8#EXPOSURE#DELAY=34# #STRING=5#CHART#DELAY=34#, C.E.C.#DELAY=64#
+(yeah, I really love high tech acronyms)#DELAY=96#
 //page 34
 #PAGE#
-Let's say that I want to represent 4 specific shades of gray.
+Now...#DELAY=32#
+Let's say that I want to represent 4 specific shades of gray#DELAY=96#
 //page 35
 #PAGE#
-I just have to linearize the CRT falloff by delaying the character#SETMARGIN=13,04#tracing by a specific amount of time to set#SETMARGIN=14,04#the correct exposure.
+I just have to linearize the CRT falloff by delaying the character
+tracing by a specific amount of time to set the correct exposure.#DELAY=96#
 //page 36
 #PAGE#
-Now I can exploit the phosphor falloff,#DELAY=34##SETMARGIN=13,04#use it as an analog grayscale image generator, like this.
+I can then exploit the phosphor falloff
+and use it as an analog grayscale image generator, like this.#DELAY=96#
 //page 38b PETSCI QUADRATY
 #IMAGE=96#
-//page 39 RIMUOVERE - IMG01 / SFX01
-#SETMARGIN=12,04##LOADNEXT#Look at this example,#SETMARGIN=13,04##LOADSFX#it will be easier to understand:
+//page 39 //IMG01 - SFX01
+#LOADNEXT#Look at this example.#DELAY=96##LOADSFX#
+It will be easier to understand:#DELAY=96#
 //page 40 GRADIENT V
 #IMAGE=96#
 //page 41 - IMG02 
-#SETMARGIN=12,04#See?#LOADNEXT#
+#LOADNEXT#See?#DELAY=96#
 //page 42
 #PAGE#
-//SFX02
-It's just done by sweeping a single line#SETMARGIN=13,04#from the top to the bottom of the screen with a specific timing.#LOADSFX#
+It's just done by sweeping a single column
+from left to right with a specific timing.#DELAY=96#
 //page 43
-#PAGE#
-There are way more gray levels inside this box#SETMARGIN=13,04#from the 80's than we could achieve#SETMARGIN=14,04#back in 2024 with those shitty RTX cards
+#PAGE# 
+//SFX02
+#LOADSFX#There are way more gray levels inside this box
+from the 80's than we could achieve back then
+with those shitty GPUs.#DELAY=96#
 //page 44
 #PAGE#
-This one is a horizontal one,#DELAY=34#look at the 80 columns in all of their glory!
-//page 45 GRADIENT H
-#IMAGE=96#
-//page 46 - IMG03 SFX03
-#LOADNEXT##SETMARGIN=12,04#You can achieve any kind of shading,#DELAY=34##SETMARGIN=13,04#just#LOADSFX# by delaying the brighter areas of the image
-//page 46 GRADIENT R
-#IMAGE=96#
-//page 47 - IMG04
-#SETMARGIN=12,04##LOADNEXT#The only limit is that images are, as the name implies,#DELAY=34# ephemeral.
-//page 48
+The only limit is that images are, as the name implies,#DELAY=34# ephemeral.#DELAY=96#
 #PAGE#
-//SFX04
-I thought that could#LOADSFX# be a problem with more complex images#DELAY=34##SETMARGIN=13,04#so I started to test this on some simple renders.
+I thought that could be a problem with more complex images.#DELAY=64#
+That's why I started to test this on some simple renders.#DELAY=96#
 //page 49 SPHERE
 #IMAGE=96#
 //page 50 - IMG05
-I was blown away:#LOADNEXT##DELAY=34# it worked!
+#BREAKPOINT#I was blown away:#LOADNEXT##DELAY=32# it worked!#DELAY=96#
 //page 51
 #PAGE#
 //SFX05
-The falloff time is just enough to appreciate the images#SETMARGIN=13,04#and that peculiar 8296#LOADSFX# scanline surely helps fooling the eye!
+The falloff time is just enough to appreciate the images,#DELAY=32#
+That peculiar 8296#LOADSFX# scanline surely helps fooling the eye!#DELAY=96#
 //page 52
 #PAGE#
-Now that I think about it#DELAY=34#.#DELAY=34#.#DELAY=34#.#DELAY=34##SETMARGIN=13,04#you can even export 'em with your analog camera#DELAY=34#.#DELAY=34#.#DELAY=34#.#DELAY=34##SETMARGIN=014,04#or using any other photographic process.
+You can even export 'em with your analog camera#DELAY=34#.#DELAY=34#.#DELAY=34#.#DELAY=34#
+or using any other photographic process.#DELAY=96#
 //page 53
 #PAGE#
-E.C.R. are the new daguerrotypes!
+E.C.R. are the new daguerrotypes!#DELAY=96#
 //page 54 SKULL
 #IMAGE=96#
 //page 55 - IMG06
-That#LOADNEXT# was scary,#DELAY=34# :)
+That#LOADNEXT# was scary,#DELAY=34# :)#DELAY=96#
 //page 56
 #PAGE#
 //SFX06
-When they are about to fade away they#LOADSFX# look like a ghost,#SETMARGIN=13,04##DELAY=34#trapped in the machine,#DELAY=34# do they?
+When they are about to fade away they#LOADSFX# look like a ghost...#DELAY=32#
+trapped in the machine...#DELAY=32#
+do they?#DELAY=96#
 //page 57
 #PAGE#
-Try to snap a photo of the next picture.
+Try to snap a photo of the next picture.#DELAY=96#
 //page 58
 #PAGE#
 #SETMARGIN=012,37#Ready?#DELAY=128#
@@ -162,101 +153,115 @@ Try to snap a photo of the next picture.
 #LOADNEXT#Hahaha,#DELAY=34# META AF.#DELAY=34#
 //page 61
 #PAGE#
-When those cyber fucks will analyze this software I sent you#SETMARGIN=13,04#they will find nothing. No patterns to exploit.
+When those cyber fucks will analyze this software I sent you
+they will find nothing. No patterns to exploit.#DELAY=96#
 //page 62
 #PAGE#
 //SFX07
-Just#LOADSFX# meaningless, random 1 bit character.#SETMARGIN=13,04#Scattered all over the place.
+Just#LOADSFX# meaningless, random 1 bit character.#DELAY=32#
+Scattered all over the place.#DELAY=96#
 //page 63
 #PAGE#
-Even if they will try to emulate this machine#SETMARGIN=13,04#they will never understand what this is all about.
+Even if they will try to emulate this machine
+they will never understand what this is all about.#DELAY=96#
 //page 64
 #PAGE#
-It's a world first,#SETMARGIN=13,04#now go try to find that in your datasets, statistical zombies.
+It's a world first.#DELAY=96#
+Now go try to find that in your datasets, statistical zombies.#DELAY=96#
 //page 65 GNGZOMBIE
 #IMAGE=96#
 //page 66 - IMG08
-#LOADNEXT#Sorry, I got carried :) 
+#LOADNEXT#Sorry, I got carried :)#DELAY=96#
 //page 67
 #PAGE#
-Back to our mission: 
+Back to our mission:#DELAY=96#
 //page 68A - SFX08
-#LOADSFX#Use the underground tunnel.#SETMARGIN=14,04#Proceed until you reach the entrance to sector 4. 
+#LOADSFX#Use the underground tunnel.#DELAY=96#
+Proceed until you reach the entrance to sector 4.#DELAY=96#
 //page 68B PETSCII TUNNEL
 #IMAGE=96#
 //page 68C - IMG09 - SFX09
-#LOADNEXT#Behind this is the door in S4 you'll find the server#SETMARGIN=14,04#we#LOADSFX# need to hack, passcode included. 
+#LOADNEXT#Behind this is the door in S4 you'll find the server.#DELAY=32#
+We#LOADSFX# need to hack it, find the passcode included.#DELAY=96#
 //page 68D PETSCII DOOR
 #IMAGE=96#
 //page 68D IMG10
 #PAGE#
-#LOADNEXT#This is a satellite shot of the building where you have to go.
+#LOADNEXT#This is a satellite shot of the building where you have to go.#DELAY=96#
 //SFX10
-#LOADSFX##SETMARGIN=13,04#Reach it and watch out for them.#DELAY=34# Be careful.#DELAY=34#
+#LOADSFX#Reach it and watch out for them.#DELAY=34# Be careful.#DELAY=96#
 //page 68B PETSCII MAP
 #IMAGE=96#
 //page 68E - IMG11
-#LOADNEXT#Now I'll send you the code you need to open that server case.
+#LOADNEXT#Now I'll send you the code you need to open that server case.#DELAY=96#
 //page 69
 #PAGE# 
 //SFX11
-#LOADSFX#I will now display it in a noise generated E.C.R.#SETMARGIN=13,04#Just extra care.#SETMARGIN=14,04#Take a note in a safe place: 
+#LOADSFX#I will now display it in a noise generated E.C.R.
+Just extra care.#DELAY=32#
+Take a note in a safe place:#DELAY=96# 
 //page 70 ELDER0010
 #IMAGE=96#
 //page 70A - IMG12 
-#LOADNEXT#Cut the traces to the security chip and we'll do the rest.#DELAY=34#
+#LOADNEXT#Cut the traces to the security chip and we'll take care of the rest.#DELAY=32#
 //SFX12
-#LOADSFX#Do not turn the power off for any reason.#DELAY=34#
+#LOADSFX#Do not turn the power off...#DELAY=32# no matter what.#DELAY=96#
 //page 70B PETSCII TESLA
 #IMAGE=96#
 //page 71 - IMG13
-#LOADNEXT#Ok, #DELAY=34#now that we discovered a safe way to communicate...
+#LOADNEXT#Ok, #DELAY=34#now that we discovered a safe way to communicate...#DELAY=32#
 //page 72 - SFX13
-...we're done with#LOADSFX# the boring stuff.
+...we're done with#LOADSFX# the boring stuff.#DELAY=96#
 //page 73
 #PAGE#
-Today we have a pretty amazing sky, up here:
+Today we have a pretty amazing sky, up here.#DELAY=96#
 //page 74 SKY
 #IMAGE=96#
 //page 75 IMG14
-#LOADNEXT#Sun is still a bright shining star.#SETMARGIN=14,04#
+#LOADNEXT#Sun is still a bright shining star.#DELAY=32#
 //SFX14
-I want to#LOADSFX# breath, again and again.#DELAY=34#
+I want to#LOADSFX# breath, again and again.#DELAY=96#
 //page 76 HAND
 #IMAGE=96#
 //page 77
-#LOADNEXT##SETMARGIN=13,04#The world outside is still worth your battle#SETMARGIN=14,04#for independent digital information.#SETMARGIN=15,04#
-#LOADSFX#We need to fight for the blossom of freedom.
+#LOADNEXT#The world outside is still worth your battle
+for independent digital information.#DELAY=32#
+#LOADSFX#We need to fight for the blossom of freedom.#DELAY=96#
 //page 78 FLOWER
 #IMAGE=96#
 //IMG15 - SFX15
-#LOADNEXT##SETMARGIN=13,04#E METTERE QUA UN BEL BLA BLA! E anche un quaqquaraqqua!#LOADSFX##DELAY=34##SETMARGIN=14,04#Prova gino..#DELAY=72#
+#LOADNEXT#We insist spending resources to generate bullshit
+that are no match for the real thing.#LOADSFX##DELAY=32#
+Best of all, it's even without a subscription fee.#DELAY=96#
 //page 79 TREE
 #IMAGE=96#
 //page 80
 //IMG16
-#SETMARGIN=13,04#I know it's hard to keep sane when everything around you#SETMARGIN=14,04#is an#LOADNEXT# artificial mockery.
+It must be hard to keep sane when everything around you#DELAY=32#
+is an#LOADNEXT# artificial mockery.#DELAY=96#
 //page 81
 #PAGE#
-But please, please don't give up.
+But please, please don't give up.#DELAY=96#
 //page 82
 #PAGE#
 //SFX16
-You are our #LOADSFX#last resort.
+You are our #LOADSFX#last resort.#DELAY=96#
 //page 83
 #PAGE#
-#DELAY=128#Drones are almost here, we gotta#SETCURSORSPEED=8# move.
+#DELAY=128#Drones are almost here, we gotta#SETCURSORSPEED=8# move.#DELAY=96#
 //page 84
 #PAGE#
-I'll leave you with the last trick:#SETMARGIN=13,04#if you squint a little bit it works even better.
+I'll leave you with the last trick:#DELAY=32#
+if you squint a little bit it works even better.#DELAY=96#
 //page 85
 #PAGE#
-Try that, now.
+#BREAKPOINT#
+Try that, now.#DELAY=96#
 //page 86 TIPA
 #IMAGE=96#
 //page 89
 //IMG17 - SFX17
-#LOADNEXT##DELAY=64##LOADSFX##DELAY=96#I love you
+#LOADNEXT##DELAY=128##LOADSFX##DELAY=96#I love you#DELAY=96#
 //page 90
 #PAGE#
 #SETMARGIN=012,38#XXX

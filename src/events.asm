@@ -74,6 +74,9 @@ delay_finished:
         sta can_cursor+1
         :enable_function(write_fn)
         :set_addr(handle_events, event_fn)
+
+        lda #CURSOR_BLINK_SPEED
+        sta cursor_ct+1
 !:
 end_delay_rt:
         rts

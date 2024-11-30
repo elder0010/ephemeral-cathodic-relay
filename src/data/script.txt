@@ -3,7 +3,7 @@
 //IMG00
 Hey.#LOADNEXT##DELAY=96#
 #PAGE#
-It's me.#DELAY=64#
+It's me.#DELAY=96#
 //page 02
 #PAGE#
 //SFX00
@@ -37,7 +37,7 @@ They still don't have pictures of me,#DELAY=32# but they know that I exist.#DELA
 #BREAKPOINT#We need a safe way to exchange images until we meet again in person.#DELAY=96#
 //page 13
 #PAGE#
-Second one is a good one:#DELAY=128#
+Second one is a good one:#DELAY=96#
 //page 15
 #PAGE#
 I found a way to send you images anyway.#DELAY=32#

@@ -4,8 +4,12 @@ event_delay:
 e0_init:
         lda #0
         bne !+
+        
         ldy #1
         sty delay_must_hi+1
+
+        lda #0
+        sta cursor_sw
 
         :sound_off()
         :set_addr(stop_beep, beep_fn)

@@ -15,7 +15,8 @@ the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#
 //page 04
 #PAGE#
 How ironic,#DELAY=16# one of the first personal computer in history
-happens to be one of the last ones still working.#DELAY=96#
+#BREAKPOINT#happens to be one of the last ones still working.#DELAY=80#
+//page rinza
 #PAGE# 
 //page 06
 Now, let's get to work.#DELAY=32#
@@ -261,14 +262,14 @@ Try that, now.#DELAY=96#
 #IMAGE=96#
 //page 89
 //IMG17 - SFX17
-#LOADNEXT##DELAY=128##LOADSFX##DELAY=96#I love you#DELAY=96#
+#LOADNEXT##DELAY=128##LOADSFX##DELAY=96#I love you#DELAY=128#
 //page 90
 #PAGE#
 #SETMARGIN=012,38#XXX
 //page 92 LOGO DF 
 #IMAGE=96#
 //page 93 LOGO GP - IMG18 - SFX18
-#LOADNEXT##DELAY=96##LOADSFX##DELAY=96#
+#LOADNEXT##DELAY=96##LOADSFX##DELAY=192#
 #IMAGE=96#
 //page 94
 #PAGE#

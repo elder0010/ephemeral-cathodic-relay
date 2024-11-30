@@ -7,7 +7,7 @@ It's me.#DELAY=64#
 //page 02
 #PAGE#
 //SFX00
-I really#DELAY=32# #STRING=5#REALLY#DELAY=32# hope you still got that one I left you, down there.#LOADSFX##DELAY=96#
+I really#DELAY=32# #STRING=5#REALLY#DELAY=32# hope you still got that one I left you, down #LOADSFX#there.#DELAY=96#
 //page 03
 #PAGE#
 Well, if you're reading this it means you survived#DELAY=32#
@@ -15,7 +15,7 @@ the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#
 //page 04
 #PAGE#
 How ironic,#DELAY=16# one of the first personal computer in history
-#BREAKPOINT#happens to be one of the last ones still working.#DELAY=80#
+#BREAKPOINT#happens to be one of the last ones still working.#DELAY=96#
 //page rinza
 #PAGE# 
 //page 06
@@ -53,11 +53,6 @@ I like to call it#DELAY=96#
 #PAGE#
 It's E.C.R., for short :)#DELAY=96#
 //page 20
-//#PAGE#
-//This bulky, gorgeous display of yours is a very powerful device.#DELAY=32#
-//It hides an incredible feature.#DELAY=32#
-//A feature that was overlooked for more than 50 years.#DELAY=96# 
-//page 21
 #PAGE#
 Even if a 8296 PET has no graphic modes
 and only displays characters with a mere 1 bit colour depth.#DELAY=96#

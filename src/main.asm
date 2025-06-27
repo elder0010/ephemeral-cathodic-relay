@@ -128,7 +128,7 @@ do_reset:
 .pc = * "Beep functions"
 .import source "beep_functions.asm"
 
-.pc = $f00 "TSCrunch"
+.pc = $c00 "TSCrunch"
 .import source("tscrunch/decrunch.asm")
 
 .pc = $2000 "Text"

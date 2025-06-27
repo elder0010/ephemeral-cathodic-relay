@@ -1,7 +1,5 @@
 @echo off
 set KICKASS="bin\KickAss\KickAss.jar"
-set EXOMIZER_PATH = "bin\exomizer\exomizer.exe"
-set SAMPLE_ADDRESS = $2704
 
 java -jar %KICKASS% src/data/sfx/sfx_00.asm -o src/data/sfx/sfx00.prg
 java -jar %KICKASS% src/data/sfx/sfx_01.asm -o src/data/sfx/sfx01.prg
@@ -21,8 +19,6 @@ java -jar %KICKASS% src/data/sfx/sfx_14.asm -o src/data/sfx/sfx14.prg
 java -jar %KICKASS% src/data/sfx/sfx_15.asm -o src/data/sfx/sfx15.prg
 java -jar %KICKASS% src/data/sfx/sfx_16.asm -o src/data/sfx/sfx16.prg
 java -jar %KICKASS% src/data/sfx/sfx_17.asm -o src/data/sfx/sfx17.prg
-java -jar %KICKASS% src/data/sfx/sfx_18.asm -o src/data/sfx/sfx18.prg
-java -jar %KICKASS% src/data/sfx/sfx_19.asm -o src/data/sfx/sfx19.prg
 
 del src\data\sfx\tsx\tscrunch_out.txt
 echo Crunching sfx files..
@@ -44,7 +40,5 @@ bin\tscrunch -i src\data\sfx\sfx14.prg src\data\sfx\tsx\sfx14.prg >> src\data\sf
 bin\tscrunch -i src\data\sfx\sfx15.prg src\data\sfx\tsx\sfx15.prg >> src\data\sfx\tsx\tscrunch_out.txt
 bin\tscrunch -i src\data\sfx\sfx16.prg src\data\sfx\tsx\sfx16.prg >> src\data\sfx\tsx\tscrunch_out.txt
 bin\tscrunch -i src\data\sfx\sfx17.prg src\data\sfx\tsx\sfx17.prg >> src\data\sfx\tsx\tscrunch_out.txt
-bin\tscrunch -i src\data\sfx\sfx18.prg src\data\sfx\tsx\sfx18.prg >> src\data\sfx\tsx\tscrunch_out.txt
-bin\tscrunch -i src\data\sfx\sfx19.prg src\data\sfx\tsx\sfx19.prg >> src\data\sfx\tsx\tscrunch_out.txt
 
 echo done.

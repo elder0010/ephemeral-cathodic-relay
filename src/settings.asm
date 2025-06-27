@@ -15,7 +15,7 @@
 .const DEFAULT_CURSOR_Y = 12
 .const DEFAULT_CURSOR_X = 4
 
-.const DEFAULT_DELAY_ON_LINEBREAK = 64 //how many frames to wait after a linebreak
+.const DEFAULT_DELAY_ON_LINEBREAK = 0 //how many frames to wait after a linebreak
 
 .const ENABLE_CHARACTER_BEEP = true
 .const ENABLE_NEWPAGE_BEEP = true
@@ -45,7 +45,7 @@
 //Delay between colour ramps (frames)
 .var forced_decay_offset_list = List().add(
     32,  //img00
-    2,  //img01
+    0,  //img01
     0,  //img02
     0,  //img03
     0,  //img04
@@ -61,9 +61,7 @@
     0,  //img14
     0,  //img15
     0,  //img16
-    0,  //img17
-    0,  //img18
-    0  //img19
+    0  //img17
 )
 
 //PETSCII Callback hold time (0 = no callback)
@@ -74,18 +72,16 @@
     0,  //img03
     0,  //img04
     0,  //img05
-    0,  //img06
-    0,  //img07
+    30,  //img06
+    30,  //img07
     30,  //img08
-    30,  //img09
+    0,  //img09
     30,  //img10
     0,  //img11
-    30,  //img12
+    0,  //img12
     0,  //img13
     0,  //img14
     0,  //img15
-    0,  //img16
-    0,  //img17
-    30,  //img18
-    30  //img19
+    30,  //img16
+    30  //img17
 )

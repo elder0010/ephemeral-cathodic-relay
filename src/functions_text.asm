@@ -17,22 +17,7 @@ text_addr:
         ldy #CURSOR_BLINK_SPEED
         sty cursor_ct+1
 
-        lda #0 
-.if(ENABLE_CURSOR_BEEP){
-        sta can_cursor_beep
-}
-        sta can_cursor+1
-
-.if(ENABLE_CHARACTER_BEEP){
-        lda #CHARACTER_BEEP_NOTE
-        sta beep_note+1
-
-        lda #get_octave(CHARACTER_BEEP_OCTAVE)
-        sta beep_0_tbl
-
-        :set_addr(beep_0, beep_fn)
-        :sound_on()
-}
+ 
         inc script_col_pt
         inc col_pt
 
@@ -74,6 +59,23 @@ move_text_pt:
         :inc_addr(text_addr, 1)
 
 finished_write:
+
+       lda #0 
+.if(ENABLE_CURSOR_BEEP){
+        sta can_cursor_beep
+}
+        sta can_cursor+1
+
+.if(ENABLE_CHARACTER_BEEP){
+        lda #CHARACTER_BEEP_NOTE
+        sta beep_note+1
+
+        lda #get_octave(CHARACTER_BEEP_OCTAVE)
+        sta beep_0_tbl
+
+        :set_addr(beep_0, beep_fn)
+        :sound_on()
+}
         rts 
 
 linebreak_delay:

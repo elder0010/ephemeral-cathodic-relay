@@ -78,8 +78,6 @@
         .eval base = base + step
     }
 
- 
-
     .print("Gate values: "+gate_values)
     .print("Notes: "+notes)
 
@@ -95,8 +93,10 @@
         .byte octaves.get(x)
     }
 
+    /*
     .pc = graph_gate "Graph gate"
     .for (var x=0;x<gate_values.size();x++){
         .byte gate_values.get(x)
     }
+    */
 }

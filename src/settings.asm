@@ -60,8 +60,7 @@
     0,  //img13
     0,  //img14
     0,  //img15
-    0,  //img16
-    0  //img17
+    0  //img16
 )
 
 //PETSCII Callback hold time (0 = no callback)
@@ -81,7 +80,6 @@
     0,  //img12
     0,  //img13
     0,  //img14
-    0,  //img15
-    30,  //img16
-    30  //img17
+    30,  //img15
+    30  //img16
 )

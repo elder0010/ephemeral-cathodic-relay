@@ -210,7 +210,7 @@ Take a note in a safe place:#DELAY=96#
 ...we're done with#LOADSFX# the boring stuff.#DELAY=96#
 //page 73
 #PAGE#
-Today we have a pretty amazing sky, up here.#DELAY=96#
+Today we have a pretty amazing sky, up here.#DELAY=32# It's crystal clear.#DELAY=96#
 //page 74 SKY
 #IMAGE=96#
 //page 75 IMG14

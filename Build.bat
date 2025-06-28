@@ -8,6 +8,7 @@ del build\demo.d82
 del src\main.prg /f
 
 python src\parse_script.py
+python .\src\sfx_padder.py
 
 call BuildSamples.bat 
 call BuildImages.bat

@@ -34,6 +34,7 @@ src/data/img07.prg
 src/data/img08.prg
 src/data/img09.prg
 src/data/images/*.prg
+src/data/sfx/raw/padded/*.raw
 src/data/sfx/tsx/*.prg
 src/data/img/tsx/*.prg
 src/data/images/converted/*.png

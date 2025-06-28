@@ -102,7 +102,7 @@ from left to right with a specific timing.#DELAY=96#
 //page 43
 #PAGE# 
 //SFX02
-#LOADSFX#There are way more gray levels inside this box
+#LOADSFX#There are way more green levels inside this box
 from the 80's than we could achieve back then
 with those shitty GPUs.#DELAY=96#
 //page 44
@@ -154,7 +154,7 @@ they will find nothing. No patterns to exploit.#DELAY=96#
 //page 62
 #PAGE#
 //SFX07
-Just#LOADSFX# meaningless, random 1 bit character.#DELAY=32#
+Just#LOADSFX# meaningless, random 1 bit characters.#DELAY=32#
 Scattered all over the place.#DELAY=96#
 //page 63
 #PAGE#

@@ -222,51 +222,48 @@ I want to#LOADSFX# breath, again and again.#DELAY=96#
 //page 77
 #LOADNEXT#The world outside is still worth your battle
 for independent digital information.#DELAY=32#
-#LOADSFX#We need to fight for the blossom of freedom.#DELAY=96#
-//page 78 FLOWER
-#IMAGE=96#
-//IMG15 - SFX15
-#LOADNEXT#We insist spending resources to generate bullshit
+#PAGE#
+We insist spending resources to generate bullshit
 that are no match for the real thing.#LOADSFX##DELAY=32#
 Best of all, it's even without a subscription fee.#DELAY=96#
-//page 79 TREE
+//page 78 TREE
 #IMAGE=96#
-//page 80
+//page 89
 //IMG16
 It must be hard to keep sane when everything around you#DELAY=32#
 is an#LOADNEXT# artificial mockery.#DELAY=96#
-//page 81
+//page 80
 #PAGE#
 But please, please don't give up.#DELAY=96#
-//page 82
+//page 81
 #PAGE#
 //SFX16
 You are our #LOADSFX#last resort.#DELAY=96#
-//page 83
+//page 82
 #PAGE#
 #DELAY=128#Drones are almost here, we gotta#SETCURSORSPEED=8# move.#DELAY=96#
-//page 84
+//page 83
 #PAGE#
 I'll leave you with the last trick:#DELAY=32#
 if you squint a little bit it works even better.#DELAY=96#
-//page 85
+//page 84
 #PAGE#
 #BREAKPOINT#
 Try that, now.#DELAY=96#
-//page 86 TIPA
+//page 85 TIPA
 #IMAGE=96#
-//page 89
+//page 86
 //IMG17 - SFX17
 #LOADNEXT##DELAY=128##LOADSFX##DELAY=96#I love you#DELAY=128#
-//page 90
+//page 87
 #PAGE#
 #SETMARGIN=012,38#XXX
-//page 92 LOGO DF 
+//page 88 LOGO DF 
 #IMAGE=96#
-//page 93 LOGO GP - IMG18 - SFX18
+//page 89 LOGO GP - IMG18 - SFX18
 #LOADNEXT##DELAY=96##LOADSFX##DELAY=192#
 #IMAGE=96#
-//page 94
+//page 90
 #PAGE#
 Credits placeholder.
 #END#

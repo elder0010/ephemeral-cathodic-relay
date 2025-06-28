@@ -1,5 +1,4 @@
-#get a list of all the files in the sfx folder and sort them by size. each file must be padded to the largest file size in the folder
-#all the files must be saved in the padded subfolder
+#pads the sound effects files to the same size by adding null bytes
 import os
 import glob
 
@@ -23,7 +22,6 @@ class SfxPadder:
 
         print(f"All samples files padded to {max_size} bytes and saved in {self.padded_folder_path}")
 
-#run the SfxPadder
 sfx_folder = "src/data/sfx/raw"
 sfx_padder = SfxPadder(sfx_folder)
 sfx_padder.pad_files()

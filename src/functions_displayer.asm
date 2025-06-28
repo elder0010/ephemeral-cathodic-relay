@@ -142,6 +142,13 @@ init_displayer:
         rts
 
 hold_image:
+.if(DOUBLE_IDLE_DELAY_IMAGES){
+hold_dlr:
+        lda #0
+        eor #$ff 
+        sta hold_dlr+1 
+        beq !+
+}
         clc 
         lda hold_tk_lo
         adc #1

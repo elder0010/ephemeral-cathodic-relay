@@ -9,7 +9,8 @@
 .const CRUNCH_CHARS_ON_IMAGE = false 
 .const CRUNCH_HIDE_TIME = $4 //how many frames to hide the crt shake after the crunch
 
-.const HALF_SPEED_TEXT = true
+.const HALF_SPEED_TEXT = true //halves the speed of the text displayer 
+.const DOUBLE_IDLE_DELAY_IMAGES = true //double the display time (wait after draw) for images
 
 .const RESET_CURSOR_TO_DEFAULT_ON_PAGEBREAK = true 
 .const DEFAULT_CURSOR_Y = 12

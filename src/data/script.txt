@@ -214,9 +214,9 @@ Today we have a pretty amazing sky, up here.#DELAY=96#
 //page 74 SKY
 #IMAGE=96#
 //page 75 IMG14
-#LOADNEXT#Sun is still a bright shining star.#DELAY=32#
+#LOADNEXT#Sun...#DELAY=32# is still a bright#DELAY=64##LOADSFX# shining#DELAY=64# star.#DELAY=64#
 //SFX14
-I want to#LOADSFX# breath, again and again.#DELAY=96#
+I want to breath,#DELAY=32# again...#DELAY=32# and again.#DELAY=96#
 //page 76 HAND
 #IMAGE=96#
 //page 77

@@ -216,15 +216,15 @@ Today we have a pretty amazing sky, up here.#DELAY=32# It's crystal clear.#DELAY
 //page 75 IMG14
 #LOADNEXT#Sun...#DELAY=32# is still a bright#DELAY=64##LOADSFX# shining#DELAY=64# star.#DELAY=64#
 //SFX14
-I want to breath,#DELAY=32# again...#DELAY=32# and again.#DELAY=96#
+I want to breath#DELAY=32# again...#DELAY=32# and again.#DELAY=96#
 //page 76 HAND
 #IMAGE=96#
 //page 77
 #LOADNEXT#The world outside is still worth your battle
 for independent digital information.#DELAY=32#
 #PAGE#
-We insist spending resources to generate bullshit
-that are no match for the real thing.#LOADSFX##DELAY=32#
+We insist spending #LOADSFX#resources to generate bullshit
+that are no match for the real thing.#DELAY=32#
 Best of all, it's even without a subscription fee.#DELAY=96#
 //page 78 TREE
 #IMAGE=96#

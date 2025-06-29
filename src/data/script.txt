@@ -155,7 +155,7 @@ Try to snap a photo of the next picture.#DELAY=96#
 //page 61
 #PAGE#
 When those cyber fucks will analyze this software I sent you
-they will find nothing. No patterns to exploit.#DELAY=96#
+they will find nothing. No previously known patterns to exploit.#DELAY=96#
 //page 62
 #PAGE#
 //SFX07
@@ -240,7 +240,7 @@ technology by ourselves, for our own good.#DELAY=96#
 //page 89
 //IMG16
 It must be hard to keep sane when everything around you#DELAY=32#
-is an#LOADNEXT# artificial mockery.#DELAY=96#
+is a#LOADNEXT# statistical mockery.#DELAY=96#
 //page 80
 #PAGE#
 But please, please don't give up.#DELAY=96#

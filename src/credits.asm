@@ -101,6 +101,16 @@
 
         :uppercase()
 
+       // :set_screen(screen_1)
+        lda #$a0 
+        ldx #0
+!:
+    .for(var x=0;x<$8;x++){
+        sta screen+$100*x,x
+}
+        dex 
+        bne !-
+
         jsr init_irq
 
         cli 
@@ -110,15 +120,20 @@
         beq !-
 
 credits_lrnz: 
-        ldx #0
+           ldx #11
 !:
-        .for(var x=0;x<$8;x++)
+
+        .for(var y=0;y<7;y++)
         {
-            lda lrnz_screen_data+$100*x,x 
-           
-            sta screen_0+$100*x,x 
+
+            .if(y!=1){
+            lda [y*$50]+lrnz_screen_data+[$50*8],x 
+            sta [y*$50]+screen_0+[$50*8],x
+            }
+            
         }
-        dex 
+        inx 
+        cpx #71 
         bne !-
 
         lda #0
@@ -132,16 +147,22 @@ credits_lrnz:
         lda #0
         sta can_go_credits
 credits_elder: 
-        ldx #0
+        ldx #11
 !:
-        .for(var x=0;x<$8;x++)
+
+        .for(var y=0;y<7;y++)
         {
-            lda elder_screen_data+$100*x,x 
-           
-            sta screen_0+$100*x,x 
+
+            .if(y!=1){
+            lda [y*$50]+elder_screen_data+[$50*8],x 
+            sta [y*$50]+screen_0+[$50*8],x
+            }
+            
         }
-        dex 
+        inx 
+        cpx #71 
         bne !-
+
 
 
         lda #0
@@ -231,7 +252,7 @@ screen_tm:
         rti 
 
 screen_time:
-.byte $38,$38,$80
+.byte $38,$38,$60
 
 lrnz_screen_data:
 .for(var x=0;x<lrnz_screen.size();x++)

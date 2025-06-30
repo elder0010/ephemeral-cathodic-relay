@@ -17,7 +17,6 @@ java -jar %KICKASS% src/data/sfx/sfx_12.asm -o src/data/sfx/sfx12.prg
 java -jar %KICKASS% src/data/sfx/sfx_13.asm -o src/data/sfx/sfx13.prg
 java -jar %KICKASS% src/data/sfx/sfx_14.asm -o src/data/sfx/sfx14.prg
 java -jar %KICKASS% src/data/sfx/sfx_15.asm -o src/data/sfx/sfx15.prg
-java -jar %KICKASS% src/data/sfx/sfx_16.asm -o src/data/sfx/sfx16.prg
 
 del src\data\sfx\tsx\tscrunch_out.txt
 echo Crunching sfx files..
@@ -37,6 +36,5 @@ bin\tscrunch -i src\data\sfx\sfx12.prg src\data\sfx\tsx\sfx12.prg >> src\data\sf
 bin\tscrunch -i src\data\sfx\sfx13.prg src\data\sfx\tsx\sfx13.prg >> src\data\sfx\tsx\tscrunch_out.txt
 bin\tscrunch -i src\data\sfx\sfx14.prg src\data\sfx\tsx\sfx14.prg >> src\data\sfx\tsx\tscrunch_out.txt
 bin\tscrunch -i src\data\sfx\sfx15.prg src\data\sfx\tsx\sfx15.prg >> src\data\sfx\tsx\tscrunch_out.txt
-bin\tscrunch -i src\data\sfx\sfx16.prg src\data\sfx\tsx\sfx16.prg >> src\data\sfx\tsx\tscrunch_out.txt
 
 echo done.

@@ -215,13 +215,10 @@ Take a note in a safe place:#DELAY=96#
 ...we're done with#LOADSFX# the boring stuff.#DELAY=96#
 //page 73
 #PAGE#
-Today we have a pretty amazing sky, up here.#DELAY=32# It's crystal clear.#DELAY=96#
-//page 74 SKY
-#IMAGE=96#
+Today we have a pretty amazing sky, up here.#DELAY=32#
 //page 75 IMG14
-#LOADNEXT#Sun...#DELAY=32# is still a bright#DELAY=64##LOADSFX# shining#DELAY=64# star.#DELAY=64#
+Sun...#DELAY=32# is still a bright shining star.#DELAY=32#
 //SFX14
-I want to breath#DELAY=32# again...#DELAY=32# and again.#DELAY=96#
 //page 76 HAND
 #IMAGE=96#
 //page 77

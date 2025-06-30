@@ -33,5 +33,5 @@ copy src\data\img\tsx\img12.prg build\SD\IMG12
 copy src\data\img\tsx\img13.prg build\SD\IMG13
 copy src\data\img\tsx\img14.prg build\SD\IMG14
 copy src\data\img\tsx\img15.prg build\SD\IMG15
-copy src\data\img\tsx\img16.prg build\SD\IMG16
+
 

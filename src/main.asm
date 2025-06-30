@@ -1,10 +1,10 @@
 /**
-TextWriter
+EPHEMERAL CATHODIC RELAY
 
 2024 G*P / Distant Future
 Code: Elder0010
 */
-#define INPLACE 		//Enables inplace decrunching. Use -i switch when crunching.
+#define INPLACE 		//Enables inplace decrunching.
 .import source("macros.asm")
 .import source("text_macros.asm")
 .import source("variables.asm")

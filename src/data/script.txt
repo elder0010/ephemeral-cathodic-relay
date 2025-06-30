@@ -77,7 +77,7 @@ I called it the#DELAY=34# #STRING=8#CATHODIC#DELAY=34# #STRING=8#EXPOSURE#DELAY=
 #PAGE# 
 //page 05b
 That's why you should turn of the lights, if possible.#DELAY=32#
-ECR gives it's best in lowlight conditions.#DELAY=96#
+ECR images give their best in lowlight conditions.#DELAY=96#
 //page 34
 #PAGE#
 Now...#DELAY=32#
@@ -115,7 +115,7 @@ with those shitty GPUs.#DELAY=96#
 The only limit is that images are, as the name implies,#DELAY=34# ephemeral.#DELAY=96#
 #PAGE#
 I thought that could be a problem with more complex images.#DELAY=64#
-That's why I started to test this on some simple renders.#DELAY=96#
+So I tested it on some renders with a wider value range:#DELAY=96#
 //page 49 SPHERE
 #IMAGE=96#
 //page 50 - IMG05

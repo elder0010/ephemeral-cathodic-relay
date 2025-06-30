@@ -38,6 +38,7 @@
 .const EVENT_STRING = 9
 .const EVENT_SETCURSORSPEED = 10
 .const EVENT_BREAKPOINT = 11
+.const EVENT_NOTHING = 12
 
 .const WHITE_PIXEL = $e0 
 .const BLACK_PIXEL = $20 

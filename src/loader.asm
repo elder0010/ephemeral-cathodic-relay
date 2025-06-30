@@ -106,6 +106,12 @@ must_decrunch_sample:
         beq !+
         jsr load_callback_sample
 !:
+
+must_show_credits:
+        lda #0
+        beq !+
+        jmp $a00 
+!:
         rts
 
  //restore and write "file not found error"

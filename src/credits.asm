@@ -93,11 +93,20 @@
 .var screen_2 = $9000 
 .var screen_3 = $9800
 
+.var STANDALONE_BUILD = false 
+
+.if(STANDALONE_BUILD){
 *= basic_upstart "Basic upstart"
         :BasicUpstartPET()
+        jmp credits_main
+}
+
+.pc = $a00 "Credits main"
+credits_main:
         sei
         //jsr init_routine
         //cli 
+
 
         :uppercase()
 
@@ -199,6 +208,8 @@ credits_credits:
 
 
 init_irq:      
+
+/*
         lda #$0 
         sta $e811
         sta $e821
@@ -210,10 +221,13 @@ init_irq:
 
         lda #0 
         sta $fff0 
+        */ 
         lda #<timer_irq_body
         sta $90 
         lda #>timer_irq_body
         sta $91
+        
+      //  lda $e812
         rts
 
 can_go_credits:
@@ -250,7 +264,7 @@ screen_tm:
         tax 
         pla
         rti 
-
+ 
 screen_time:
 .byte $38,$38,$60
 

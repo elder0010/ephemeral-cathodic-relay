@@ -198,8 +198,13 @@ event:
         jmp point_next_event
 !:
         cmp #EVENT_END
-        bne noevent
+        bne !+
         jsr event_end
+!:
+
+        cmp #EVENT_NOTHING
+        bne noevent
+        rts 
 !:
 
 point_next_event:

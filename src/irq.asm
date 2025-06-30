@@ -39,6 +39,20 @@ procedural_beep_fn:
         pla
         rti 
 
+blank_irq:
+        lda $e812
+
+        lda #RAMEXP_DISABLE
+        sta $fff0 
+
+
+        pla 
+        tay 
+        pla 
+        tax 
+        pla
+        rti
+
 text_routine:
 event_fn:
         jsr handle_events

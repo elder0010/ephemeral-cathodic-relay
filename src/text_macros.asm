@@ -30,6 +30,7 @@
 
 .macro End(){
     .byte EVENT_END
+    .byte EVENT_NOTHING
 }
 
 .macro LoadNext(){

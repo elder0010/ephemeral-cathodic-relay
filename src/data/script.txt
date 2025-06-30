@@ -264,16 +264,9 @@ Try that, now.#DELAY=96#
 //page 87
 #PAGE#
 #SETMARGIN=012,38#XXX#DELAY=96#
-#SETMARGIN=014,11#(and take care of this pet, we'll need it more than ever!)#DELAY=96#
+#SETMARGIN=014,11#(and take care of this PET, we'll need it more than ever!)#DELAY=96#
 //page 87 ELDER
 #PAGE#
-#STRING=17#Credit ELDER0010.#DELAY=96#
-//page 87 LRNZ
-#PAGE#
-#STRING=12#Credit LRNZ.#DELAY=96#
-//page 87 CREDITS TABLE
-#PAGE#
-#STRING=17#Main Credit page.#DELAY=96#
 //page 88 LOGO DF 
 #IMAGE=96#
 //page 89 LOGO GP - IMG18 - SFX18

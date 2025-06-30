@@ -266,7 +266,27 @@ event_setcursorspeed:
 
 //END
 event_end:
-        jmp do_reset
+        lda #0 
+        sta must_init_image+1
+        sta must_decrunch_sample+1
+
+        lda #1
+        sta must_show_credits+1
+
+        lda #$20 //jsr 
+        sta can_load_file
+
+        lda #<blank_irq
+        sta $90
+        lda #>blank_irq
+        sta $91
+
+        :inc_addr_zp(command_sequence_pt, 1) //skip event byte
+        rts 
+
+nothing:
+        rts
+        //jmp do_reset
 
 //BREAKPOINT
 event_breakpoint:

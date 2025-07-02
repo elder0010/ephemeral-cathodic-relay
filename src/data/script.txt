@@ -10,8 +10,8 @@ It's me.#DELAY=96#
 I really#DELAY=32# #STRING=5#REALLY#DELAY=32# hope you still got that one I left you, down #LOADSFX#there.#DELAY=96#
 //page 03
 #PAGE#
-Well, if you're reading this it means you survived#DELAY=32#
-the drone strike and that you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.#DELAY=96#
+Well, if you're reading this, you survived#DELAY=32#
+the drone strike and you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY=16#6.#DELAY=96#
 //page 04
 #PAGE#
 How ironic,#DELAY=16# one of the first personal computer in history
@@ -23,21 +23,21 @@ Now, let's get to work.#DELAY=32#
 I have some news for you.#DELAY=96#
 //page 07
 #PAGE#
-First one is bad.#DELAY=96#
+The first one is bad.#DELAY=96#
 //page 08
 #PAGE#
 Very bad.#DELAY=96#
 //page 09
 #PAGE#
-They are on us.#DELAY=64#
-They managed to read every data, every image to predict our intentions.#DELAY=32#
+They are onto us.#DELAY=64#
+They managed to read all our data, every image to predict our intentions.#DELAY=32#
 They still don't have pictures of me,#DELAY=32# but they know that I exist.#DELAY=96#
 //page 12
 #PAGE#
 #BREAKPOINT#We need a safe way to exchange images until we meet again in person.#DELAY=96#
 //page 13
 #PAGE#
-Second one is a good one:#DELAY=96#
+The second one is a good one:#DELAY=96#
 //page 15
 #PAGE#
 I found a way to send you images anyway.#DELAY=32#
@@ -54,7 +54,7 @@ I like to call it#DELAY=96#
 It's E.C.R., for short :)#DELAY=96#
 //page 20
 #PAGE#
-Even if a 8296 PET has no graphic modes
+Even though the 8296 PET has no graphic modes
 and only displays characters with a mere 1 bit colour depth.#DELAY=96#
 //page 22
 #PAGE#
@@ -76,7 +76,7 @@ I called it the#DELAY=34# #STRING=8#CATHODIC#DELAY=34# #STRING=8#EXPOSURE#DELAY=
 (yeah, I really love high tech acronyms)#DELAY=96#
 #PAGE# 
 //page 05b
-That's why you should turn of the lights, if possible.#DELAY=32#
+That's why you should turn off the lights, if possible.#DELAY=32#
 ECR images give their best in lowlight conditions.#DELAY=96#
 //page 34
 #PAGE#
@@ -85,7 +85,7 @@ Let's say that I want to represent 4 specific shades of green#DELAY=96#
 //page 35
 #PAGE#
 I just have to linearize the CRT falloff by delaying the character
-tracing by a specific amount of time to set the correct exposure.#DELAY=96#
+tracing for a specific amount of time to set the correct exposure.#DELAY=96#
 //page 36
 #PAGE#
 I can then exploit the phosphor falloff
@@ -103,12 +103,12 @@ It will be easier to understand:#DELAY=96#
 //page 42
 #PAGE#
 It's just done by sweeping a single column
-from left to right with a specific timing.#DELAY=96#
+from left to right with specific timing.#DELAY=96#
 //page 43
 #PAGE# 
 //SFX02
 #LOADSFX#There are way more green levels inside this box
-from the 80's than we could achieve back then
+from the 80s than we could achieve back then
 with those shitty GPUs.#DELAY=96#
 //page 44
 #PAGE#
@@ -124,14 +124,14 @@ So I tested it on some renders with a wider value range:#DELAY=96#
 #PAGE#
 //SFX05
 The falloff time is just enough to appreciate the images,#DELAY=32#
-That peculiar 8296#LOADSFX# scanline surely helps fooling the eye!#DELAY=96#
+That peculiar 8296#LOADSFX# scanline surely helps fool the eye!#DELAY=96#
 //page 52
 #PAGE#
 You can even export 'em with your analog camera#DELAY=34#.#DELAY=34#.#DELAY=34#.#DELAY=34#
 or using any other photographic process.#DELAY=96#
 //page 53
 #PAGE#
-E.C.R. are the new daguerrotypes!#DELAY=96#
+E.C.R. are the new daguerreotypes!#DELAY=96#
 //page 54 SKULL
 #IMAGE=96#
 //page 55 - IMG06
@@ -141,7 +141,7 @@ That#LOADNEXT# was scary,#DELAY=34# :)#DELAY=96#
 //SFX06
 When they are about to fade away they#LOADSFX# look like a ghost...#DELAY=32#
 trapped in the machine...#DELAY=32#
-do they?#DELAY=96#
+don't they?#DELAY=96#
 //page 57
 #PAGE#
 Try to snap a photo of the next picture.#DELAY=96#
@@ -154,17 +154,17 @@ Try to snap a photo of the next picture.#DELAY=96#
 #LOADNEXT#Hahaha,#DELAY=34# META AF.#DELAY=34#
 //page 61
 #PAGE#
-When those cyber fucks will analyze this software I sent you
+When those cyber fucks analyze this software I sent you
 they will find nothing. No previously known patterns to exploit.#DELAY=96#
 //page 62
 #PAGE#
 //SFX07
-Just#LOADSFX# meaningless, random 1 bit characters.#DELAY=32#
+Just#LOADSFX# meaningless, random 1-bit characters.#DELAY=32#
 Scattered all over the place.#DELAY=96#
 //page 63
 #PAGE#
-Even if they will try to emulate this machine
-they will never understand what this is all about.#DELAY=96#
+Even if they try to emulate this machine
+they'll never understand what this is all about.#DELAY=96#
 //page 64
 #PAGE#
 It's a world first.#DELAY=96#
@@ -182,7 +182,7 @@ Proceed until you reach the entrance to sector 4.#DELAY=96#
 //page 68B PETSCII TUNNEL
 #IMAGE=96#
 //page 68C - IMG09 - SFX09
-#LOADNEXT#Behind this is the door in S4 you'll find the server.#DELAY=32#
+#LOADNEXT#Behind this is the door in S4 where you'll find the server.#DELAY=32#
 We#LOADSFX# need to hack it, find the passcode included.#DELAY=96#
 //page 68D PETSCII DOOR
 #IMAGE=96#
@@ -199,7 +199,7 @@ We#LOADSFX# need to hack it, find the passcode included.#DELAY=96#
 #PAGE# 
 //SFX11
 #LOADSFX#I will now display it in a noise generated E.C.R.
-Just extra care.#DELAY=32#
+Just to be extra safe.#DELAY=32#
 Take a note in a safe place:#DELAY=96# 
 //page 70 ELDER0010
 #IMAGE=96#
@@ -210,14 +210,14 @@ Take a note in a safe place:#DELAY=96#
 //page 70B PETSCII TESLA
 #IMAGE=96#
 //page 71 - IMG13
-#LOADNEXT#Ok, #DELAY=34#now that we discovered a safe way to communicate...#DELAY=32#
+#LOADNEXT#Ok, #DELAY=34#now that we've discovered a safe way to communicate...#DELAY=32#
 //page 72 - SFX13
 ...we're done with#LOADSFX# the boring stuff.#DELAY=96#
 //page 73
 #PAGE#
 Today we have a pretty amazing sky, up here.#DELAY=32#
 //page 75 IMG14
-Sun...#DELAY=32# is still a bright shining star.#DELAY=32#
+The sun...#DELAY=32# is still a bright shining star.#DELAY=32#
 //SFX14
 //page 76 HAND
 #IMAGE=96#
@@ -230,7 +230,7 @@ more monopolistic generative bullshit for profit and deception,
 really sucks.#LOADSFX##DELAY=32#
 #PAGE#
 Looks like everybody forgot that reality comes without
-a subscription fee to a bigtech and that we can use 
+a subscription fee to a big tech and that we can use 
 technology by ourselves, for our own good.#DELAY=96#
 //page 78 TREE
 #IMAGE=96#

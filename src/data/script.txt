@@ -20,7 +20,7 @@ How ironic,#DELAY=16# one of the first personal computer in history
 #PAGE# 
 //page 06
 Now, let's get to work.#DELAY=32#
-I have two news for you.#DELAY=96#
+I have some news for you.#DELAY=96#
 //page 07
 #PAGE#
 First one is bad.#DELAY=96#

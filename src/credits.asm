@@ -107,20 +107,12 @@ credits_main:
         //jsr init_routine
         //cli 
 
+  
 
-        :uppercase()
-
-       // :set_screen(screen_1)
-        lda #$a0 
-        ldx #0
-!:
-    .for(var x=0;x<$8;x++){
-        sta screen+$100*x,x
-}
-        dex 
-        bne !-
-
-        jsr init_irq
+        lda #<timer_irq_body
+        sta $90 
+        lda #>timer_irq_body
+        sta $91
 
         cli 
 
@@ -128,8 +120,27 @@ credits_main:
         lda can_go_credits
         beq !-
 
+        
 credits_lrnz: 
-           ldx #11
+        lda #$a0
+        ldx #$4f
+!:
+        .for(var y=0;y<8;y++){
+                sta [y*$50]+screen_0,x 
+        }
+        sta [9*$50]+screen_0,x 
+        
+        .for(var y=15;y<25;y++){
+                sta [y*$50]+screen_0,x 
+        }
+
+        dex 
+        bpl !-
+
+        :uppercase()
+
+
+        ldx #$4f
 !:
 
         .for(var y=0;y<7;y++)
@@ -141,9 +152,8 @@ credits_lrnz:
             }
             
         }
-        inx 
-        cpx #71 
-        bne !-
+        dex 
+        bpl !-
 
         lda #0
         sta can_go_credits
@@ -152,13 +162,12 @@ credits_lrnz:
         lda can_go_credits
         beq !-
 
-
         lda #0
         sta can_go_credits
-credits_elder: 
-        ldx #11
-!:
 
+credits_elder: 
+        ldx #$4f
+!:
         .for(var y=0;y<7;y++)
         {
 
@@ -168,11 +177,8 @@ credits_elder:
             }
             
         }
-        inx 
-        cpx #71 
-        bne !-
-
-
+        dex
+        bpl !-
 
         lda #0
         sta can_go_credits
@@ -206,29 +212,6 @@ credits_credits:
         sta $fff0 
         jsr $fd16
 
-
-init_irq:      
-
-/*
-        lda #$0 
-        sta $e811
-        sta $e821
-        sta $e823
-        sta $e84e
-
-        lda #%10111101
-        sta $e813
-
-        lda #0 
-        sta $fff0 
-        */ 
-        lda #<timer_irq_body
-        sta $90 
-        lda #>timer_irq_body
-        sta $91
-        
-      //  lda $e812
-        rts
 
 can_go_credits:
 .byte $0

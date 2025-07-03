@@ -15,7 +15,7 @@ the drone strike and you still have that #DELAY=16#8#DELAY=16#2#DELAY=16#9#DELAY
 //page 04
 #PAGE#
 How ironic,#DELAY=16# one of the first personal computer in history
-#BREAKPOINT#happens to be one of the last ones still working.#DELAY=96#
+happens to be one of the last ones still working.#DELAY=96#
 //page rinza
 #PAGE# 
 //page 06
@@ -34,7 +34,7 @@ They managed to read all our data, every image to predict our intentions.#DELAY=
 They still don't have pictures of me,#DELAY=32# but they know that I exist.#DELAY=96#
 //page 12
 #PAGE#
-#BREAKPOINT#We need a safe way to exchange images until we meet again in person.#DELAY=96#
+We need a safe way to exchange images until we meet again in person.#DELAY=96#
 //page 13
 #PAGE#
 The second one is a good one:#DELAY=96#
@@ -94,11 +94,6 @@ with endless shades of green, like this.#DELAY=96#
 //page 38b PETSCI QUADRATY
 #IMAGE=96#
 //page 39 //IMG01 - SFX01
-#LOADNEXT#Look at this example.#DELAY=96##LOADSFX#
-It will be easier to understand:#DELAY=96#
-//page 40 GRADIENT V
-#IMAGE=96#
-//page 41 - IMG02 
 #LOADNEXT#See?#DELAY=96#
 //page 42
 #PAGE#
@@ -119,7 +114,7 @@ So I tested it on some renders with a wider value range:#DELAY=96#
 //page 49 SPHERE
 #IMAGE=96#
 //page 50 - IMG05
-#BREAKPOINT#I was blown away:#LOADNEXT##DELAY=32# it worked!#DELAY=96#
+I was blown away:#LOADNEXT##DELAY=32# it worked!#DELAY=96#
 //page 51
 #PAGE#
 //SFX05
@@ -254,7 +249,7 @@ I'll leave you with the last trick:#DELAY=32#
 if you squint a little bit it works even better.#DELAY=96#
 //page 84
 #PAGE#
-#BREAKPOINT#
+
 Try that, now.#DELAY=96#
 //page 85 TIPA
 #IMAGE=96#

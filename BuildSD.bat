@@ -15,8 +15,6 @@ copy src\data\sfx\tsx\sfx11.prg build\SD\SFX11
 copy src\data\sfx\tsx\sfx12.prg build\SD\SFX12
 copy src\data\sfx\tsx\sfx13.prg build\SD\SFX13
 copy src\data\sfx\tsx\sfx14.prg build\SD\SFX14
-copy src\data\sfx\tsx\sfx15.prg build\SD\SFX15
-copy src\data\sfx\tsx\sfx16.prg build\SD\SFX16
 copy src\data\img\tsx\img00.prg build\SD\IMG00
 copy src\data\img\tsx\img01.prg build\SD\IMG01
 copy src\data\img\tsx\img02.prg build\SD\IMG02
@@ -32,6 +30,5 @@ copy src\data\img\tsx\img11.prg build\SD\IMG11
 copy src\data\img\tsx\img12.prg build\SD\IMG12
 copy src\data\img\tsx\img13.prg build\SD\IMG13
 copy src\data\img\tsx\img14.prg build\SD\IMG14
-copy src\data\img\tsx\img15.prg build\SD\IMG15
 copy src\credits.prg build\SD\CRD00
 

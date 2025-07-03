@@ -19,7 +19,6 @@ java -jar %KICKASS% src/data/img/img_11.asm -o src/data/img/img11.prg
 java -jar %KICKASS% src/data/img/img_12.asm -o src/data/img/img12.prg
 java -jar %KICKASS% src/data/img/img_13.asm -o src/data/img/img13.prg
 java -jar %KICKASS% src/data/img/img_14.asm -o src/data/img/img14.prg
-java -jar %KICKASS% src/data/img/img_15.asm -o src/data/img/img15.prg
 
 del src\data\img\tsx\tscrunch_out.txt
 echo Crunching img files..
@@ -38,6 +37,5 @@ bin\tscrunch -i src\data\img\img11.prg src\data\img\tsx\img11.prg >> src\data\im
 bin\tscrunch -i src\data\img\img12.prg src\data\img\tsx\img12.prg >> src\data\img\tsx\tscrunch_out.txt
 bin\tscrunch -i src\data\img\img13.prg src\data\img\tsx\img13.prg >> src\data\img\tsx\tscrunch_out.txt
 bin\tscrunch -i src\data\img\img14.prg src\data\img\tsx\img14.prg >> src\data\img\tsx\tscrunch_out.txt
-bin\tscrunch -i src\data\img\img15.prg src\data\img\tsx\img15.prg >> src\data\img\tsx\tscrunch_out.txt
 
 echo done.

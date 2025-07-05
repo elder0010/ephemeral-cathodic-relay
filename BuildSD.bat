@@ -1,5 +1,5 @@
 @echo off
-copy src\main.prg build\SD\MAIN 
+copy src\main.prg build\SD\EPHEMERAL 
 copy src\data\sfx\tsx\sfx00.prg build\SD\SFX00
 copy src\data\sfx\tsx\sfx01.prg build\SD\SFX01
 copy src\data\sfx\tsx\sfx02.prg build\SD\SFX02

@@ -109,7 +109,7 @@ with those shitty GPUs.#DELAY=96#
 #PAGE#
 The only limit is that images are, as the name implies,#DELAY=34# ephemeral.#DELAY=96#
 #PAGE#
-I thought that could be a problem with more complex images.#DELAY=64#
+I thought it could be a problem with more complex images.#DELAY=64#
 So I tested it on some renders with a wider value range:#DELAY=96#
 //page 49 SPHERE
 #IMAGE=96#
@@ -119,7 +119,7 @@ I was blown away:#LOADNEXT##DELAY=32# it worked!#DELAY=96#
 #PAGE#
 //SFX05
 The falloff time is just enough to appreciate the images,#DELAY=32#
-That peculiar 8296#LOADSFX# scanline surely helps fool the eye!#DELAY=96#
+That peculiar 8296#LOADSFX# scanline surely helps fooling the eye!#DELAY=96#
 //page 52
 #PAGE#
 You can even export 'em with your analog camera#DELAY=34#.#DELAY=34#.#DELAY=34#.#DELAY=34#
@@ -185,7 +185,8 @@ We#LOADSFX# need to hack it, find the passcode included.#DELAY=96#
 #PAGE#
 #LOADNEXT#This is a satellite shot of the building where you have to go.#DELAY=96#
 //SFX10
-#LOADSFX#Reach it and watch out for them.#DELAY=34# Be careful.#DELAY=96#
+#LOADSFX#Reach it and watch out for them.#DELAY=32# Be careful.#DELAY=64# 
+They'll be around.#DELAY=64# Looking for you.#DELAY=96#
 //page 68B PETSCII MAP
 #IMAGE=96#
 //page 68E - IMG11
@@ -201,18 +202,20 @@ Take a note in a safe place:#DELAY=96#
 //page 70A - IMG12 
 #LOADNEXT#Cut the traces to the security chip and we'll take care of the rest.#DELAY=32#
 //SFX12
-#LOADSFX#Do not turn the power off...#DELAY=32# no matter what.#DELAY=96#
-//page 70B PETSCII TESLA
+#LOADSFX#Do not turn the power off...#DELAY=32# no matter what.#DELAY=32#
+Otherwise all the chances to success will be lost.#DELAY=32#
+#DELAY=96#
+//page 70B PETSCII
 #IMAGE=96#
 //page 71 - IMG13
 #LOADNEXT#Ok, #DELAY=34#now that we've discovered a safe way to communicate...#DELAY=32#
 //page 72 - SFX13
-...we're done with#LOADSFX# the boring stuff.#DELAY=96#
+...we're done#LOADSFX# with the boring stuff.#DELAY=96#
 //page 73
 #PAGE#
 Today we have a pretty amazing sky, up here.#DELAY=32#
 //page 75 IMG14
-The sun...#DELAY=32# is still a bright shining star.#DELAY=32#
+The sun...#DELAY=32# is still A BRIGHT#DELAY=64# SHINING#DELAY=64# STAR.#DELAY=64#
 //SFX14
 //page 76 HAND
 #IMAGE=96#
@@ -221,17 +224,17 @@ The sun...#DELAY=32# is still a bright shining star.#DELAY=32#
 for independent digital information.#DELAY=32#
 #PAGE#
 Witnessing such a waste of everybody's resources, all just to provide 
-more monopolistic generative bullshit for profit and deception, 
-really sucks.#LOADSFX##DELAY=32#
+more#LOADSFX# monopolistic generative bullshit for profit and deception, 
+really sucks.#DELAY=32#
 #PAGE#
 Looks like everybody forgot that reality comes without
 a subscription fee to a big tech and that we can use 
-technology by ourselves, for our own good.#DELAY=96#
+technology by ourselves...#DELAY=64# only for our own good.#DELAY=96#
 //page 78 TREE
 #IMAGE=96#
 //page 89
 //IMG16
-It must be hard to keep sane when everything around you#DELAY=32#
+It must be hard to keep sane when everything around you
 is a#LOADNEXT# statistical mockery.#DELAY=96#
 //page 80
 #PAGE#
@@ -249,7 +252,6 @@ I'll leave you with the last trick:#DELAY=32#
 if you squint a little bit it works even better.#DELAY=96#
 //page 84
 #PAGE#
-
 Try that, now.#DELAY=96#
 //page 85 TIPA
 #IMAGE=96#
@@ -265,7 +267,7 @@ Try that, now.#DELAY=96#
 //page 88 LOGO DF 
 #IMAGE=96#
 //page 89 LOGO GP - IMG18 - SFX18
-#LOADNEXT##DELAY=96##LOADSFX##DELAY=192#
+#LOADNEXT##DELAY=160##LOADSFX##DELAY=336#
 #IMAGE=96#
 //page 90
 #END#

@@ -1,5 +1,5 @@
 # Ephemeral Cathodic Relay
-Ephemeral Cathodic Relay - CBM 8296 PET demo released in 2025 by Genesis Project and Distant Future. 
+Ephemeral Cathodic Relay - CBM 8296 PET demo released at Nordlicht 2025 by Genesis Project and Distant Future. 
 - [YouTube](https://www.youtube.com/watch?v=n87d7j0hfOE)
 - [pouët.net](https://www.pouet.net/prod.php?which=91735)
 
